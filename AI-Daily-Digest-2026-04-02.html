@@ -1,1 +1,217 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — April 2, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Thursday, April 2, 2026</div>
+    <div class="reading-time">~5 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank">TechCrunch</a></div>
+    <h3><a href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank">OpenAI Pulls the Plug on Sora, Redirects $1M-a-Day Compute Budget to Enterprise AI</a></h3>
+    <p class="summary">OpenAI has officially begun shutting down Sora, its AI video-generation tool, after the app burned through roughly $1 million per day while active users cratered from 1 million to under 500,000. The consumer app shuts down April 26, with the API following in September. CEO Sam Altman is reallocating the freed compute toward coding tools, enterprise products, and a unified "super app" combining ChatGPT with other capabilities.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The Sora shutdown is a clear signal that even the most well-funded AI labs are prioritizing revenue-generating enterprise use cases over consumer moonshots. For wealth managers, this reinforces that the AI tools most likely to endure — and merit client discussion — are those with clear business models and enterprise demand.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.cnbc.com/2026/01/12/apple-google-ai-siri-gemini.html" target="_blank">CNBC</a></div>
+    <h3><a href="https://9to5mac.com/2026/03/20/apples-gemini-powered-siri-upgrade-could-still-arrive-this-month/" target="_blank">Apple's $1B Gemini-Powered Siri Overhaul Nears Launch with On-Screen Awareness and Agentic Tasks</a></h3>
+    <p class="summary">Apple's reimagined Siri, built on Google's Gemini models through a $1 billion annual partnership, is approaching its public debut alongside iOS 26.4. Codenamed "Project Campos," the upgrade brings on-screen awareness (Siri interprets what's displayed in real time), persistent conversational memory, and agentic functionality that can execute multi-step tasks across third-party apps autonomously.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> An agentic Siri on over a billion Apple devices could fundamentally change how consumers interact with financial apps. Wealth managers should prepare for clients who can ask Siri to check portfolio performance, compare fund options, or schedule advisory calls — all without opening an app.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.crescendo.ai/news/latest-ai-news-and-updates" target="_blank">Crescendo AI</a></div>
+    <h3><a href="https://www.crescendo.ai/news/latest-ai-news-and-updates" target="_blank">Samsung Targets 800 Million Gemini-Equipped Devices by Year-End, Doubling AI Footprint</a></h3>
+    <p class="summary">Samsung Electronics has announced plans to double the number of mobile devices equipped with Google's Gemini AI to 800 million units by the end of 2026. The push extends advanced generative AI features — including on-device summarization, photo editing, and real-time translation — from flagship phones to mid-tier and budget smartphones and tablets.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> As Gemini AI reaches hundreds of millions of budget and mid-range devices, AI-powered financial literacy tools become accessible to a far broader demographic. This expansion of the addressable market creates opportunities for wealth management firms to engage younger and mass-affluent segments through AI-native interfaces.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.nextgov.com/artificial-intelligence/2026/03/white-house-releases-regulatory-vision-ai/412274/" target="_blank">Nextgov/FCW</a></div>
+    <h3><a href="https://www.nextgov.com/artificial-intelligence/2026/03/white-house-releases-regulatory-vision-ai/412274/" target="_blank">State AI Laws Take Effect as White House Pushes for Federal Preemption Framework</a></h3>
+    <p class="summary">As multiple state-level AI laws begin taking effect in 2026, creating a patchwork of compliance requirements, the White House is actively pushing its National AI Policy Framework through Congress. The framework calls for federal preemption of "overly burdensome" state regulations while establishing regulatory sandboxes for AI testing. The Commerce Department has been directed to identify conflicting state laws for referral to the federal task force.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Financial services firms deploying AI across state lines face mounting compliance complexity. A federal preemption framework would simplify deployment of AI-driven advisory, compliance, and risk tools — but until it passes, firms must navigate a growing web of state-by-state requirements.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://fortune.com/2026/03/26/ai-personal-finance-investing-services-robinhood-advisors/" target="_blank">Fortune</a></div>
+    <h3><a href="https://fortune.com/2026/03/26/ai-personal-finance-investing-services-robinhood-advisors/" target="_blank">Robinhood's AI Strategies Tool Hits 250,000 Paying Subscribers as Consumer AI Investing Goes Mainstream</a></h3>
+    <p class="summary">Robinhood now counts 250,000 customers paying an average of $250 annually for its AI-powered "Strategies" tool, which pairs algorithmic portfolio guidance with human advisor oversight. The milestone comes as a McKinsey report finds over a third of consumers across all age groups now consult AI chatbots like Claude and ChatGPT for investment guidance before meeting their human financial advisor.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> AI-informed clients are arriving at advisory meetings with pre-formed views on allocation and strategy. Advisors who understand what these AI tools are recommending — and where they fall short — will be better positioned to add value and retain client trust in an increasingly AI-literate market.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.kitces.com/blog/the-latest-in-financial-advisortech-january-2026-finny-ai-prospecting-tools-charles-schwab-zeplyn-nevis-chatgpt/" target="_blank">Kitces</a></div>
+    <h3><a href="https://www.kitces.com/blog/the-latest-in-financial-advisortech-january-2026-finny-ai-prospecting-tools-charles-schwab-zeplyn-nevis-chatgpt/" target="_blank">FINNY Raises $17M Series A for AI-Powered Advisor Prospecting as AdvisorTech Funding Rebounds</a></h3>
+    <p class="summary">FINNY, an AI-powered prospecting solution for financial advisors, has raised $17 million in Series A funding, highlighting renewed investor confidence in advisor-focused AI tools. The platform uses generative AI to identify and qualify prospects, automate outreach, and personalize engagement — targeting the advisor productivity gap that McKinsey projects will widen as the industry faces a wave of retirements.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> With over 100,000 U.S. advisors approaching retirement over the next decade, AI prospecting tools like FINNY address a critical capacity challenge. Firms that adopt these tools early can scale their client acquisition pipeline without proportionally scaling headcount — a key competitive advantage in a tightening talent market.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.faciletechnolab.com/blog/top-15-ai-trends-revolutionizing-financial-services-in-2026/" target="_blank">Facile Technolab</a></div>
+    <h3><a href="https://ctomagazine.com/rise-of-robo-advisors-in-financial-sector/" target="_blank">Global AI in Financial Services Market Surpasses $35 Billion as Agentic Wealth Platforms Emerge</a></h3>
+    <p class="summary">The global AI market in financial services has surged past $35 billion in 2026, up from $26.67 billion in 2025, growing at a 24.5% CAGR. The fastest-growing segment is "agentic AI" — platforms that proactively manage portfolios by monitoring tax-loss harvesting opportunities, rebalancing triggers, and real-time market events without waiting for human instructions.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The shift from reactive robo-advisors to proactive agentic AI marks the biggest architectural change in automated wealth management since the first robo-advisors launched. Advisors who integrate agentic tools into their practice can deliver institutional-grade, always-on portfolio management to a broader client base.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Thursday, April 2, 2026
+  </div>
+
+</div>
+</body>
+</html>
