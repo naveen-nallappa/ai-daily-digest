@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — April 23, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Thursday, April 23, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://cloud.google.com/blog/topics/google-cloud-next/welcome-to-google-cloud-next26" target="_blank">Google Cloud Next 2026 / Gemini Enterprise</a></div>
+    <h3><a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform" target="_blank">Google Launches Gemini Enterprise Agent Platform, TPU 8t/8i Silicon, and a $750M Partner Fund — a Full-Stack Bid to Become the "Operating System for Enterprise AI"</a></h3>
+    <p class="summary">At Cloud Next 2026 on April 22, Google unveiled the Gemini Enterprise Agent Platform — the successor to Vertex AI — bringing model selection, agent building, a unified Agent Designer, and a new Inbox for managing long-running agents under one roof. The same keynote introduced TPU 8t (Broadcom-designed, codename "Sunfish") for training and TPU 8i (MediaTek "Zebrafish") for inference, with Google claiming 2.7x better price-performance over the prior generation. Google also announced a $750 million partner fund to accelerate agentic AI across its 120,000-member ecosystem, with enterprise-ready agents from Adobe, Atlassian, Deloitte, Oracle, Palo Alto Networks, Salesforce, ServiceNow, S&P Global, and Workday now discoverable inside Gemini Enterprise. Agent Development Kit v1.0 ships across Python, Go, Java, and TypeScript with native A2A protocol support.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Google has stitched together models, silicon, agent tooling, and a distribution layer into the most complete enterprise AI stack in the market — the same week Citi Wealth made it the foundation of "Citi Sky" (below). For wealth CIOs, Gemini Enterprise is now a credible third procurement lane alongside Microsoft/OpenAI and AWS/Anthropic. For asset managers, the S&P Global, Workday, Salesforce, and ServiceNow partner-agent lineup is the clearest "which SaaS names survive the agent era" signal yet.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/" target="_blank">OpenAI / Workspace Agents</a></div>
+    <h3><a href="https://openai.com/index/scaling-codex-to-enterprises-worldwide/" target="_blank">OpenAI Ships Codex-Powered "Workspace Agents" in ChatGPT and Partners with Accenture, PwC, Cognizant, and Infosys on Enterprise Codex Rollout — 4M Weekly Codex Users Disclosed</a></h3>
+    <p class="summary">OpenAI on April 22 launched workspace agents in ChatGPT — shared, Codex-powered agents that run in the cloud, plug into Slack, Salesforce and other connected apps, and continue long-running work across multiple steps within organizational permissions. The tool is in research preview for ChatGPT Business, Enterprise, Edu, and Teachers, free through May 6, with credit-based pricing afterward. Separately, OpenAI launched Codex Labs and signed systems-integrator partnerships with Accenture, PwC, Cognizant, and Infosys to deploy Codex across the enterprise software development lifecycle, disclosing a milestone of 4 million weekly active Codex users. The announcement lands directly opposite Google's Gemini Enterprise agent push the same day.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> With workspace agents, every ChatGPT Enterprise seat now becomes an agent-authoring surface — effectively pulling "agent ops" into the same contract wealth and asset managers already pay for. Advisors using Jump, Zocks, or internal copilots should pressure-test whether workspace agents can replicate those workflows at no incremental license cost. For allocators, the 4M Codex WAU number is the cleanest productivity datapoint yet to defend AI-native software multiples into Q2 earnings.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.anthropic.com/news/google-broadcom-partnership-compute" target="_blank">Anthropic / Google & Broadcom</a></div>
+    <h3><a href="https://www.fool.com/investing/2026/04/22/anthropic-just-announced-huge-news-for-alphabet-an/" target="_blank">Anthropic Formalizes Multi-Gigawatt TPU Agreement with Google and Broadcom — Capacity Coming Online in 2027 as Run-Rate Crosses $30B</a></h3>
+    <p class="summary">Anthropic on April 22 formalized its expanded partnership with Google Cloud and Broadcom, locking in multiple gigawatts of next-generation TPU capacity (including the new TPU 8t silicon) to come online starting in 2027. The deal — described by CFO Krishna Rao as a continuation of Anthropic's "disciplined scaling" — layers on top of the $25 billion Amazon/Anthropic expansion disclosed April 20, giving Anthropic committed capacity across all three hyperscalers' silicon roadmaps (AWS Trainium, Google TPU, and Nvidia). Anthropic's run-rate revenue has crossed $30 billion, up from ~$9 billion at the end of 2025. The company is now effectively the single largest non-OpenAI buyer of frontier compute in the industry.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Anthropic is now the "multi-silicon" case study — capacity from AWS Trainium, Google TPU 8t, and Nvidia Blackwell simultaneously. For asset managers underwriting the AI capex super-cycle, this confirms the 2027–2028 capacity pipe is contracted, not speculative. For wealth CIOs evaluating model vendors, Anthropic's multi-cloud hedging materially lowers single-provider concentration risk in enterprise AI procurement — and makes Claude the easiest model to stand up regardless of which hyperscaler an advisor's custodian sits on.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://techcrunch.com/2026/04/22/tesla-just-increased-its-capex-to-25b-heres-where-the-money-is-going/" target="_blank">TechCrunch / Tesla Q1 2026</a></div>
+    <h3><a href="https://www.cnbc.com/2026/04/22/tesla-earnings-dont-really-matter-to-the-stock-anymore-what-wall-street-is-watching-for" target="_blank">Tesla Doubles 2026 Capex to $25B — Explicitly Reframes Itself as an "AI and Robotics Company" Across Training, Chip Design, and Robotaxi</a></h3>
+    <p class="summary">Tesla on April 22 reported Q1 2026 results and told investors that 2026 capital expenditures will roughly double to $25 billion, spread across AI training compute, in-house chip design, robotaxi operations, Optimus, and a new semiconductor research fab in Austin. Wedbush's Dan Ives characterized the shift bluntly on CNBC: "Tesla is now more an AI company than a car company." Free cash flow is flipping negative for the year as the company reprices its capital base around autonomy rather than vehicle units. Management pointed to scaling unsupervised FSD, robotaxi commercialization, and Optimus deployments as the near-term milestones valuation now hinges on.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Tesla is the third mega-cap (after Amazon and Microsoft) to explicitly reframe its 2026 capex as "AI infrastructure" — the "AI capex as percentage of GDP" thesis is now inside Mag-7 financials, not commentary. For thematic AI and autonomous-vehicle ETFs, the capex print justifies continued overweight through 2027; for fundamental allocators holding TSLA in growth sleeves, it is time to rebenchmark the stock against AI-infrastructure peers rather than auto OEMs. Expect this reclassification to show up in Q2 factor-attribution reports.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.citigroup.com/global/news/press-release/2026/citi-wealth-unveils-citi-sky-ai-powered-member-google-cloud-deepmind-technologies" target="_blank">Citi Wealth / Google Cloud &amp; DeepMind</a></div>
+    <h3><a href="https://www.wealthprofessional.ca/news/industry-news/citi-rolls-out-ai-powered-sky-to-reshape-wealth-client-experience/392247" target="_blank">Citi Wealth Unveils "Citi Sky" — an Always-On AI Member of the Wealth Team Built on Gemini + DeepMind Avatar Tech, Rolling to Citigold Clients This Summer</a></h3>
+    <p class="summary">Citi Wealth on April 22 unveiled Citi Sky at Google Cloud Next — an AI-powered "member of the Citi Wealth team" built on the Gemini Enterprise Agent Platform and Google DeepMind's real-time avatar technology, with Gemini Live API enabling low-latency audio and video conversations. The tool is positioned as an always-on capability that surfaces market insights, identifies opportunities, and coordinates with human advisors, and will begin a phased U.S. rollout to Citigold clients this summer. Citi framed the product explicitly as advisor augmentation — handling routine interactions and discovery so that human advisors can focus on complex planning — placing it alongside Morgan Stanley's AI @ MS suite, Merrill's Meeting Journey, and JPMorgan Coach AI in the wirehouse AI race.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Citi is the first major U.S. wealth platform to pair a production agent with DeepMind avatar technology for direct client interaction — the client-facing bar is now voice + video, not chat. Advisors at competing platforms should expect requests for "Citi Sky equivalent" demos within weeks. For Schwab, Fidelity, BNY Pershing, and RIA custodians, this pulls the client-facing AI launch window inward from H2 to summer; RFPs against Zocks, Jump, and Addison should now include avatar/voice native support as a line item.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.globenewswire.com/news-release/2026/04/22/3279397/0/en/Raymond-James-Financial-Reports-Fiscal-Second-Quarter-of-2026-Results.html" target="_blank">Raymond James Fiscal Q2 2026 Earnings</a></div>
+    <h3><a href="https://www.fool.com/earnings/call-transcripts/2026/04/22/raymond-james-rjf-q2-2026-earnings-transcript/" target="_blank">Raymond James Q2: Record $3.86B Revenue (+13%), $23B PCG Net New Assets (+160% YoY), $1.1B Annual Tech Spend With Proprietary AI Operational Agents in Rollout</a></h3>
+    <p class="summary">Raymond James on April 22 reported fiscal second-quarter 2026 results: record net revenue of $3.86 billion (+13% YoY), EPS of $2.83 (vs. $2.76 consensus), PCG assets under administration of $1.7 trillion (+15% YoY), and record PCG net new assets of $23 billion — a 160% YoY jump at a 5.8% annualized growth rate. Management disclosed the firm is spending over $1.1 billion annually on technology, with a specific call-out to the ongoing rollout of proprietary AI operational agents alongside the recent GreensLedge close and the pending Clark Capital acquisition. Recruiting and retention comp rose 25% YoY to $111 million, reflecting the strongest advisor pipeline in decades as the firm leans into AI to support capacity expansion.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Raymond James is now the third major IBD (after LPL and Ameriprise) to explicitly tie advisor recruiting leverage to an AI operational-agent rollout — AI is being treated as a retention + capacity asset, not a cost line. Advisors evaluating RJ against LPL/Ameriprise should request a 2026 AI roadmap-vs.-competitors sheet before the next contract reset. For allocators, $23B in net new assets against $1.1B in tech spend implies a ~21:1 asset-to-tech ratio — a benchmark every wealth platform will now have to match.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://news.alphastreet.com/sei-investments-co-seic-q1-2026-earnings-call-transcript/" target="_blank">SEI Investments Q1 2026 Earnings</a></div>
+    <h3><a href="https://www.stocktitan.net/sec-filings/SEIC/8-k-sei-investments-co-reports-material-event-a0c56e865da9.html" target="_blank">SEI Q1: Revenue $622M (+13%), EPS $1.40 (+20%), Record $67M Net Sales (+40% vs. Prior High) — IBM Watsonx Collaboration Cited as Margin Expansion Driver</a></h3>
+    <p class="summary">SEI Investments on April 22 reported Q1 2026 revenue of $622.2 million (+13% YoY), operating income of $189.5 million (+21%), diluted EPS of $1.40 (+20%), and non-GAAP EPS of $1.44 (+21%) with an adjusted operating margin of 32%. Net sales of $67 million smashed the prior quarterly record by more than 40%. Management explicitly cited the firm's AI-focused collaboration with IBM — using Watsonx for infrastructure modernization, automation, and advisory-platform AI deployment — as a contributor to margin expansion. Assets under management reached $554.1 billion, with administration, platform, and advisement assets totaling $1.336 trillion. New SEI Wealth Platform client adoptions and alternative-funds support were highlighted as near-term growth vectors.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> SEI is the first top-20 wealth-tech platform to publicly attribute margin expansion to a named AI vendor (IBM Watsonx) on an earnings call — a template BNY Pershing, LPL, and Envestnet will now be pressed on during their own Q1 prints. Advisors on the SEI Wealth Platform should expect incremental AI features through 2026 without a separate line-item. For allocators, the $67M record net-sales number — a 40% jump over prior peak — is the cleanest mid-cap wealth-tech signal that AI-era platform upgrades are winning real RFPs, not just deck slides.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results/default.aspx" target="_blank">ServiceNow Q1 2026 Earnings</a></div>
+    <h3><a href="https://www.fool.com/earnings/call-transcripts/2026/04/22/servicenow-now-q1-2026-earnings-transcript/" target="_blank">ServiceNow Q1: Subscription Revenue $3.67B (+22% YoY), AI Product Portfolio On Track to Exceed $1B in 2026, Named Google Cloud Partner of the Year for Agentic Innovation — Armis $7.75B Close Adds Security Agents</a></h3>
+    <p class="summary">ServiceNow on April 22 reported Q1 2026 subscription revenue of $3.67 billion (+22% YoY), beating consensus on $0.97 EPS, and said its AI product portfolio is on track to exceed the $1 billion 2026 target. Sixteen Q1 transactions cleared $5 million in net new ACV (+80% YoY), and the customer base at $5M+ ACV reached 630. Google Cloud named ServiceNow its 2026 Partner of the Year for Global Business Applications and Agentic Innovation, with the two firms unveiling a joint suite across 5G networks, retail, and IT ops. ServiceNow also closed its $7.75 billion Armis cybersecurity acquisition this week, folding Armis agents directly into the AI Control Tower. Shares dropped ~14% on softer near-term subscription growth tied to Iran-war revenue exposure — the first visible enterprise-AI hiccup from geopolitical drag.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> ServiceNow remains the cleanest "AI agents in the enterprise" bellwether — asset managers overweight in enterprise-AI sleeves should read the 80% jump in $5M+ ACV deals as confirmation that Q1 AI budgets are landing in platform consolidators, not point-solutions. The share drop on Iran exposure is a warning flag for thematic AI ETF holders: geopolitical betas are now attached to AI names. Rebenchmark enterprise-AI positions against this earnings reaction when sizing Q2 model-portfolio tilts.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://meyka.com/blog/vrt-earnings-preview-vertiv-holdings-q2-2026-on-april-22-2104/" target="_blank">Vertiv Q1 2026 Earnings</a></div>
+    <h3><a href="https://www.techi.com/ge-vernova-vertiv-ai-data-center/" target="_blank">Vertiv Q1: Net Sales $2.65B (+30%), Americas Core Growth 44%, Adjusted Margin 20.8% — Raises Full-Year 2026 Guidance on AI Data Center Demand</a></h3>
+    <p class="summary">Vertiv on April 22 reported Q1 2026 net sales of $2.65 billion (+30% YoY), adjusted EPS of $1.17 (vs. $1.00 consensus), and adjusted operating margin of 20.8% — up from 16.5% a year earlier. Americas core growth — excluding acquisitions and FX — came in at 44%, driven entirely by AI data center orders for power and cooling equipment. Management raised full-year 2026 guidance on sustained hyperscale demand, though shares traded lower pre-market as the Q2 outlook landed roughly in line rather than above. The beat confirmed the April 20 Amazon/Anthropic 5 GW capacity pull and the April 15 Meta/Broadcom 1 GW+ MTIA extension are translating into real orders, not announcements.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Vertiv is the single best "AI capex is real" signal of the Q1 earnings season — 44% Americas core growth is the cleanest read-through that the Amazon/Anthropic, Google, and Meta hyperscale buildouts are showing up in order books today. For asset managers running AI-infrastructure sleeves (AIPO, IGPT, CHPS, power utilities), this earnings print justifies holding the position through summer. For allocators considering trimming AI capex exposure, the in-line Q2 guide is the first yellow flag to watch at GE Vernova, Eaton, and peer prints next week.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://newsroom.ibm.com/announcements" target="_blank">IBM Q1 2026 Earnings</a></div>
+    <h3><a href="https://www.theglobeandmail.com/investing/markets/stocks/IBM/pressreleases/1463492/ibm-ibm-q1-2026-earnings-call-transcript/" target="_blank">IBM Q1: Revenue $15.9B (+9%), Software +11% Led by Watsonx and Red Hat — Sovereign AI Push and FedRAMP Expansion Position Watsonx as the Enterprise Neutral-Rails Option</a></h3>
+    <p class="summary">IBM on April 22 reported Q1 2026 revenue of $15.9 billion (+9% YoY; +6% CC), non-GAAP EPS of $1.91, gross margin +100 bps to 56.2%, and free cash flow of $2.2 billion (+$300M YoY). Software rose 11% to $7.1 billion, led by Red Hat hybrid cloud and the Watsonx AI platform, with generative-AI demand cited as the strongest driver across enterprise segments. Watsonx secured a FedRAMP expansion earlier in April and IBM advanced sovereign-AI deployments across Europe and Asia, positioning itself as the "neutral rails" alternative to Microsoft, Google, and AWS stacks. Management held full-year guidance on geopolitical uncertainty, tempering the market reaction despite the AI-led beat.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> IBM Watsonx has now been named on two separate April 22 wealth-management earnings calls (SEI above; Northern Trust last week) as an explicit AI partner — the "neutral rails" positioning is gaining real share in regulated verticals where Microsoft/OpenAI concentration is a board-level concern. For asset managers, Watsonx is emerging as the default hedge against hyperscaler AI vendor lock-in; expect it to appear in more Q1 wealth/asset-management supplementals. Add Watsonx-mentions to your earnings-call screener for the next two weeks of Q1 financial-services prints.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Thursday, April 23, 2026
+  </div>
+
+</div>
+</body>
+</html>
