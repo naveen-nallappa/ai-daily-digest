@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — May 12, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Tuesday, May 12, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://aws.amazon.com/about-aws/whats-new/2026/05/claude-platform-aws/" target="_blank">AWS / Anthropic / AWS ML Blog</a></div>
+    <h3><a href="https://aws.amazon.com/blogs/machine-learning/introducing-claude-platform-on-aws-anthropics-native-platform-through-your-aws-account/" target="_blank">AWS Makes Claude Platform Generally Available Monday as First Hyperscaler to Host Anthropic's Native Stack</a></h3>
+    <p class="summary">AWS announced general availability of Claude Platform on AWS on Monday May 11, becoming the first cloud provider to host Anthropic's native platform — Console, Messages API, Files API, Batches API, Managed Agents, Agent Skills, code execution, and tool use — direct through customers' existing AWS accounts. Opus 4.7, Sonnet 4.6, and Haiku 4.5 are available at launch, with new models shipping on the platform as they ship on the native Claude API. The service is live across 18 AWS regions including US East, EU Frankfurt, Tokyo, and Sydney. Customer data is processed by Anthropic outside the AWS security boundary.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Claude Platform on AWS is the model-procurement event of Q2 for any firm that has already standardized on AWS — Amazon Bedrock is now a routing layer rather than the only path to Claude. Heads of AI Procurement at JPMorgan, BofA, BlackRock, and the wirehouses should refresh Anthropic contract surfaces against the new native pathway, and CISOs should re-bid the "data leaves AWS security boundary" disclosure for 2H 2026 RFPs and model-risk inventories.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://group.softbank/en/ir" target="_blank">SoftBank Group IR / Reuters / Bloomberg</a></div>
+    <h3><a href="https://finance.yahoo.com/markets/stocks/articles/softbanks-openai-related-debt-focus-030932539.html" target="_blank">SoftBank Reports Today Wednesday Tokyo With $22.5B OpenAI Commitment and Trimmed $6B Margin Loan in Focus</a></h3>
+    <p class="summary">SoftBank Group reports January–March results today after the Tokyo close, with seven analysts surveyed by LSEG modeling ¥236B (~$1.5B) of net profit and the OpenAI exposure dominating the read-through. The print follows last week's Bloomberg report that SoftBank cut its planned OpenAI-backed margin loan target to ~$6B from $10B as creditors balked. SoftBank still has $25B of 2026 commitments — $16B for Stargate, $9B for ABB Robotics and DigitalBridge — and $22.5B owed to OpenAI by year-end. Prior-quarter results booked a $4.2B mark-to-market gain on OpenAI.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> SoftBank's filings are the cleanest public-market disclosure on OpenAI cash needs and lender appetite — the trimmed margin loan is the first 2026 signal that AI-backed financing is hitting underwriting limits. Credit PMs and EM equity desks should refresh OpenAI-stake-collateralized loan exposures in their TMT debt books, and CIOs at allocators with private-AI sleeves should pressure-test Stargate funding-cliff scenarios before next week's allocation calls.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/" target="_blank">OpenAI / Releasebot / Help Center</a></div>
+    <h3><a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/" target="_blank">OpenAI Ships GPT-5.4 Mini and Nano Monday for High-Volume Workloads</a></h3>
+    <p class="summary">OpenAI launched GPT-5.4 mini and GPT-5.4 nano on Monday May 11, extending its frontier model line down to cost-efficient tiers built for high-volume routing, fan-out, and embedded workflows. The drop follows the May 5 default-model upgrade to GPT-5.5 Instant for ChatGPT, which OpenAI said cut hallucinated claims 52.5% on medicine, law, and finance prompts versus GPT-5.3 Instant. Polymarket pricing on a Q2 GPT-5.6 launch crossed 73% Monday, with Google I/O on May 19 expected to reset the frontier comparison via a Gemini 4-class reveal.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A two-week cadence of OpenAI small-model drops compresses the inference-cost curve faster than 2026 enterprise procurement cycles can absorb. Heads of AI Engineering at wealth and asset management firms should rerun their model-routing tables against the new mini/nano pricing and reserve a vendor-review slot for the post-I/O reset on May 19–20. CFOs should expect Q3 model-cost guidance from vendors like Salesforce, Microsoft, and Workday to embed the latest tier.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.cynren.com/" target="_blank">CYNREN / Hedgeweek / CityAM</a></div>
+    <h3><a href="https://www.hedgeweek.com/former-kpmg-hedge-fund-adviser-launches-ai-driven-advisory-firm-for-wealth-families/" target="_blank">CYNREN Launches Friday With AI-Embedded Advisory Model Targeting Family Offices and Institutions</a></h3>
+    <p class="summary">CYNREN announced Friday May 8 the launch of an independent international advisory firm built around AI-embedded fiduciary services, governance, strategy, and risk advisory for family offices, funds, and institutions. Founders Anthony Cowell (ex-KPMG hedge fund partner), Sunil Nair, and Scott Lennon recruited Lexi Bowes-Lyon as Global Head of Impact and Markets and Claire Griffin (ex-KPMG) as COO. The firm is standing up an internal AI lab to build proprietary tools — including systems that map global organizations and surface senior-leader introductions — with human oversight retained for final decisioning.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> CYNREN is the cleanest 2026 example of a partner-led advisory firm building AI into its operating model from day one, not bolting it onto a legacy book. Heads of Family Office Coverage at JPMorgan Private Bank, Goldman PWM, Rockefeller, and BNY Wealth should treat CYNREN as a fast-moving competitor for next-gen UHNW mandates and refresh AI-platform talking points before Q3 client reviews. Outside fiduciary RFPs should now ask for proprietary-AI-lab disclosure.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://wallace.finance/" target="_blank">Wallace Finance / GlobeNewswire</a></div>
+    <h3><a href="https://www.globenewswire.com/news-release/2026/05/11/3292419/0/en/Wallace-Finance-Expands-AI-Investing-Platform-to-Android-with-Back-Testing-and-One-Tap-Sharing.html" target="_blank">Wallace Finance Brings 10-Year Back-Testing to Android Monday With New RIA-Built AI Investing App</a></h3>
+    <p class="summary">SEC-registered Wallace Finance announced Monday May 11 the Google Play Store release of its AI-powered investing platform, extending Android parity to features previously iOS-only. The Android build adds 10-year strategy back-testing across historical market data and one-tap social sharing of model portfolios. Wallace positions itself as the "AI brokerage" alternative to Schwab, Fidelity, and Vanguard, with hyper-personalized strategy generation in seconds and full RIA fiduciary regulation underneath. The launch lands two weeks before Robinhood is expected to ship its next-generation Cortex Assistant in late May.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Direct-to-consumer AI-RIA platforms now have feature parity across iOS and Android, eroding the "Schwab self-directed has unmatched tools" argument as a defensive moat. Heads of Self-Directed and Retail at Schwab, Fidelity, Vanguard, and Robinhood should benchmark Wallace's back-testing UX against the Schwab AI Portfolio Insights rollout that completes by month-end. RIA technology committees should evaluate whether to license back-testing as a white-labeled module versus building it internally.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.usbank.com/about-us-bank/company-blog/article-library.html" target="_blank">U.S. Bank / AWS / Hipther Fintech Pulse</a></div>
+    <h3><a href="https://hipther.com/latest-news/2026/05/11/111515/fintech-pulse-your-daily-industry-brief-may-11-2026-gresham-fundguard-u-s-bank-aws-addi-and-prosperous-kids/" target="_blank">U.S. Bank Migrates Wealth, Payments, and Commercial Apps to AWS in Multi-Year Modernization</a></h3>
+    <p class="summary">U.S. Bank disclosed Monday May 11 a multi-year migration of "hundreds of mission-critical applications" to AWS, with the wealth management stack named alongside payments processing and commercial banking as the first beneficiaries of a unified cloud foundation. The move pairs directly with AWS's same-day general availability of Claude Platform on AWS, putting Anthropic's native models within the same procurement envelope. U.S. Bank's wealth franchise — anchored by the U.S. Bancorp Investments brokerage and Private Wealth Management — runs approximately $500B in assets under management and administration.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The U.S. Bank migration is the first publicly-disclosed top-10 bank wealth platform to commit to AWS+Claude as a unified procurement stack in 2026. Heads of Wealth Technology at Wells Fargo, BMO, PNC, Truist, and Citizens should pressure-test their own hyperscaler default before negotiating 2H 2026 renewals. AI-vendor sales teams should re-bid Claude Platform on AWS pathways as a wealth-stack-ready procurement option, not a generic API.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://bam.brookfield.com/press-releases/brookfield-invest-500-million-strategic-partnership-openai" target="_blank">Brookfield Asset Management IR / Bloomberg / Reuters</a></div>
+    <h3><a href="https://www.globenewswire.com/news-release/2026/05/11/3291958/0/en/Brookfield-to-Invest-500-Million-in-Strategic-Partnership-with-OpenAI.html" target="_blank">Brookfield Commits $500M to OpenAI Deployment Company Monday Through Brookfield Business Corp</a></h3>
+    <p class="summary">Brookfield Asset Management announced Monday May 11 a $500M investment in The OpenAI Deployment Company, the $10B TPG-anchored joint venture finalized last week to embed OpenAI engineers inside large enterprises. Brookfield Business Corporation, the listed BAM private-equity vehicle, leads the commitment and will deploy the platform across Brookfield's own operating companies. The deal sits inside the broader Deployment Company structure that committed a 17.5% guaranteed annual return over five years to its 19 LPs, including TPG, Advent, Bain Capital, Goldman Sachs, SoftBank, Warburg Pincus, and Dragoneer.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The Brookfield check converts the $10B Deployment Company from a strategic-investor table into a productized vehicle that listed-alts LPs can underwrite — a model peers will replicate. Heads of Manager Research at OCIOs evaluating BAM, BBU, KKR, and Apollo should refresh AI-services-fee earnings power in their underwrites. Allocators in private-credit and infrastructure funds should now request OpenAI Deployment Company exposure disclosures from any GP in the 19-investor consortium.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.blackstone.com/news/press/voltagrid-announces-1-billion-strategic-equity-investment-from-blackstone-and-halliburton-to-fund-growth-and-aquisition-of-propell/" target="_blank">Blackstone IR / Data Center Dynamics / GlobeNewswire</a></div>
+    <h3><a href="https://www.globenewswire.com/news-release/2026/05/11/3291825/0/en/VoltaGrid-Announces-1-Billion-Strategic-Equity-Investment-from-Blackstone-and-Halliburton-to-Fund-Growth-and-Acquisition-of-Propell.html" target="_blank">Blackstone and Halliburton Anchor $1B VoltaGrid Round Monday at $10B+ Behind-the-Meter AI Power Bet</a></h3>
+    <p class="summary">VoltaGrid announced Monday May 11 a $1B strategic equity investment from Blackstone Tactical Opportunities and Halliburton — $775M primary, $225M secondary — at a $10B+ valuation, alongside a definitive agreement to acquire Propell Energy Technology. Proceeds fund behind-the-meter power generation for AI data centers, microgrids, and industrial sites, with two new automated manufacturing plants in Granbury, Texas targeting ~300 MW per month of capacity. Blackstone's William Nicholson called VoltaGrid "one of the most important infrastructure needs of the AI era." Both deals are expected to close mid-2026.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Behind-the-meter power is now a dedicated investable PE sleeve at $10B+ check sizes, validating a thesis that on-site generation rather than grid interconnection is the AI-capex bottleneck for 2027 buildouts. Heads of Private Real Assets at endowments and pensions should refresh their data center power sub-allocation comps with VoltaGrid as the new pricing anchor. CIOs at infrastructure FoFs should request Blackstone Tactical Opportunities co-invest pipelines on AI-power deals before Q3 close.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.ark-funds.com/funds/arkk" target="_blank">ARK Invest / The Motley Fool / TheStreet</a></div>
+    <h3><a href="https://www.fool.com/investing/2026/05/11/cathie-wood-goes-bargain-hunting-3-stocks-she-just/" target="_blank">ARK Adds to CoreWeave, Cloudflare, and Toast Friday After AI-Infrastructure Single-Day Sell-Off</a></h3>
+    <p class="summary">ARK Invest disclosed in Friday May 8 daily trade files — reported in detail through Monday — that Cathie Wood added to existing positions in CoreWeave (-14% on the week), Cloudflare (-24%), and Toast (-11%) following an AI-infrastructure sell-off. The buying continues ARK's 2026 rotation away from AMD and into hyperscaler suppliers and rare-earths exposure, with the firm publishing a $1.4T 2030 AI-infrastructure spend forecast in January. ARKK closed Monday with CoreWeave reentering the top-10 weight and Cloudflare added across ARKK, ARKW, and ARKQ on the same daily ticket.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> ARK's documented buy-the-dip behavior on AI-infrastructure names is a real-money confirmation that thematic-ETF flow remains pro-cyclical even as SoftBank trims OpenAI-backed leverage. Equity PMs running adjacent AI baskets should refresh CoreWeave and Cloudflare ownership concentration versus ARK's daily prints. Asset managers pitching active thematic AI ETFs against ARK should re-bid their CRWV and NET active-weight positioning before the May 19 Google I/O reset.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Tuesday, May 12, 2026
+  </div>
+
+</div>
+</body>
+</html>
