@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — May 18, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Monday, May 18, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://developers.googleblog.com/get-ready-for-google-io-2026/" target="_blank">Google Developers / Reuters / Bloomberg</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-05-18/google-io-2026-gemini-4-android-17-preview" target="_blank">Google I/O 2026 Keynote Opens Tuesday With Gemini 4, Agentic Coding, and Android 17</a></h3>
+    <p class="summary">Google's two-day I/O 2026 developer conference opens Tuesday May 19 at 10am PT at the Shoreline Amphitheatre, with a keynote framed around "the latest Gemini model updates" and "agentic coding." Press previews this weekend pointed to a Gemini 4 reveal, an agentic coding tool positioned against Claude Code and Cursor, Android 17 with deeper Gemini integration, and Aluminium OS powering the new Googlebook laptop class. Long-context sessions hint at a 10M-token window able to ingest 1M+ lines of code in a single API call.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Google's Tuesday keynote sets the second-half-2026 frontier-model benchmark and forces every enterprise AI roadmap built around Claude Opus 4.7 or GPT-5.5 Instant to be re-scoped. Heads of AI at the wirehouses and asset managers should defer Q3 model-vendor commitments until they've read the Wednesday Gemini benchmarks, and developer-platform PMs at Atlassian, Salesforce, and HubSpot should pre-stage Gemini 4 connector work this week.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://openai.com/news/" target="_blank">OpenAI / The Information / Reuters</a></div>
+    <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026" target="_blank">OpenAI Merges ChatGPT, Codex, and API Sunday Under Codex Chief Thibault Sottiaux</a></h3>
+    <p class="summary">OpenAI announced Sunday May 17 it is consolidating ChatGPT, Codex, and the developer API into a single unified product team led by Codex boss Thibault Sottiaux. The reorganization is paired with deeper integration into OpenAI's forthcoming Atlas browser, pushing the company from chatbot vendor toward a full agentic-computing platform that combines conversation, coding, browsing, and developer access in one surface. The move follows OpenAI's May 4 $10B Deployment Company joint venture with TPG and the April 27 Microsoft restructure capping revenue share at $38B through 2030.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> One unified product team accelerates OpenAI's enterprise platform push and tightens Atlas's role as the agentic-browser primitive Microsoft Edge and Chrome must respond to. CIOs at the asset managers and wealth platforms should refresh their multi-model strategy ahead of June ChatGPT Enterprise renewals, and procurement teams already signed to the OpenAI Deployment Company should map which engagements now route through Sottiaux's combined org.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation" target="_blank">Bloomberg / Reuters / Yahoo Finance</a></div>
+    <h3><a href="https://finance.yahoo.com/news/anthropic-talks-raise-30-billion-210804604.html" target="_blank">Anthropic $30B Round at $900B Valuation Tracked to Close by End-May</a></h3>
+    <p class="summary">Anthropic's $30B fundraising round at a $900B pre-money valuation is on track to close as soon as the end of May per Bloomberg's Tuesday May 12 reporting, with Dragoneer, Greenoaks, Sequoia, and Altimeter each committing at least $2B as lead investors. If finalized at terms, the company would surpass OpenAI's $852B March valuation. Q1 2026 ARR has crossed $44B (up 80x year-over-year per the May 11 disclosure), and the count of customers spending $1M+ annually doubled from 500 to 1,000+ in two months.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A late-May Anthropic close at $900B resets the AI-vendor concentration risk that allocators have been managing around OpenAI exposure since 2024. ETF strategists at iShares, WisdomTree, and Global X should pressure-test thematic-AI weightings before June rebalances, and CIOs at the wirehouses should refresh Claude-versus-GPT enterprise-license sizing while the round terms are still settling.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.reuters.com/technology/microsoft-shopping-ai-startups-prepare-life-after-openai-2026-05-13" target="_blank">Reuters / Bloomberg / FT</a></div>
+    <h3><a href="https://money.usnews.com/investing/news/articles/2026-05-13/exclusive-microsoft-eyeing-startup-deals-for-life-after-openai" target="_blank">Microsoft Shopping AI Startups Wednesday for Life After OpenAI Cap of $38B</a></h3>
+    <p class="summary">Reuters reported Wednesday May 13 that Microsoft is shopping for AI startups to reduce reliance on OpenAI after the April 27 restructuring capped revenue share at $38B through 2030 and ended exclusivity. The company is in active talks with Palo Alto-based Inception, founded by Stanford professor Stefano Ermon and previously seeded by M12 in late 2025. Microsoft considered acquiring Cursor (which grew ARR from zero to $2B in three years) but walked away over regulator overlap with GitHub Copilot. Executive Michael Wetter disclosed in Musk v. OpenAI testimony that Microsoft has spent over $100B on OpenAI investments, Azure infrastructure, and hosting.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Microsoft acquiring frontier-model and code-agent startups closes the optionality gap Satya Nadella opened in April and reshapes the M&A premium for every AI-native software target. M&A bankers at MS, GS, and Evercore should re-bid AI-startup comp tables before second-quarter pitches, and tech PMs at Fidelity, T. Rowe Price, and Capital Group should refresh Microsoft-OpenAI scenario weights before June model-portfolio decisions.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://newsroom.envestnet.com/2026-05-14-Envestnet-Elevate-2026-Envestnet-Unveils-AI-Strategy-Purpose-built-for-the-Future-of-Advice" target="_blank">Envestnet IR / Morningstar / PR Newswire</a></div>
+    <h3><a href="https://www.prnewswire.com/news-releases/envestnet-elevate-2026-envestnet-unveils-ai-strategy-purpose-built-for-the-future-of-advice-302772931.html" target="_blank">Envestnet Elevate 2026 Opens Tuesday in Phoenix With Enterprise AI Strategy Reveal</a></h3>
+    <p class="summary">Envestnet's Elevate 2026 conference opens Tuesday May 19 at the Phoenix Convention Center and will headline with a full reveal of its enterprise AI strategy across investment management, financial planning, practice management, and client engagement. Per the May 14 program disclosure, the strategy embeds intelligence and governance across unified household data and advisor workflows. Day 1 sessions include "Stronger Together: Turning AI Innovation into Advisor Impact" with CTO Bhaskar Peddhapati and AWS's Andrea Sabet, and a keynote with Conor Grennan on "From Hype to Habit."</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Envestnet's Phoenix reveal sits one week after Vestmark's Pulse launch and lands as the direct platform-level response, forcing Orion and Black Diamond to accelerate AI roadmaps. Heads of Platform at LPL, Cetera, Osaic, and Commonwealth should send senior product reps Tuesday for live capability comparison, and supervision leads should pre-stage governance documentation before the AI-strategy unified-data layer requires firm-wide attestations.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.broadridge.com/press-release/2026/broadridge-deploys-agentic-ai" target="_blank">Broadridge IR / Morningstar / PR Newswire</a></div>
+    <h3><a href="https://finance.yahoo.com/news/broadridge-deploys-agentic-ai-across-152733036.html" target="_blank">Broadridge Goes Live Monday With Agentic AI at Institutional Scale and 30% Day-1 Cost Cut</a></h3>
+    <p class="summary">Broadridge Financial Solutions announced Monday May 11 that agentic AI capabilities are now live in production across capital markets and wealth management workflows, claiming up to 30% Day-1 operational cost reduction for new clients via managed-services or standalone deployment. The platform — built with DeepSee on workflows that already processed $15T in daily trading and millions of monthly transactions across more than 40 clients since 2024 — automates trade fails resolution, account opening and maintenance, real-time valuation exceptions, customer inquiries, and email handling for post-trade and client services teams.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A 30% post-trade and account-services cost cut at institutional scale reprices the wealth-operations cost base every custodian and broker-dealer prints into 2027 budgets. COOs at LPL, Raymond James, and BNY Pershing should refresh build-versus-buy decisions before next quarter's tech-spend reviews, and operations consultants at Deloitte and Accenture should pre-stage Broadridge-versus-in-house benchmarks for RIA enterprise clients.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.raymondjames.com/news-and-media/press-releases/2026/01/27/raymond-james-launches-proprietary-digital-ai-agent-to-bolster-operational-excellence" target="_blank">Raymond James IR / InvestmentNews / Yahoo Finance</a></div>
+    <h3><a href="https://finance.yahoo.com/sectors/technology/articles/raymond-james-announces-client-360-142610471.html" target="_blank">Raymond James Goes Live With Client 360 and RJ AI Academy Following $1.1B Tech Commitment</a></h3>
+    <p class="summary">Raymond James unveiled Client 360 at its Las Vegas annual conference Tuesday May 5 and confirmed last week the platform has moved out of beta into general availability, consolidating client activity, CRM content, and milestones into the firm's existing Client Center for ~8,800 advisors. The firm also launched RJ AI Academy under its Tech Savvy education program, debuting May virtual workshops on prompting, agents, Microsoft 365 integrations, and proprietary RJ tools. CIO Vin Campagnoli reaffirmed a $1.1B technology commitment over the next year, with the AI stack running on AWS and Anthropic's Claude.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Raymond James converts AI rhetoric into shipped advisor-experience product and a firmwide training curriculum, raising the bar against LPL's AccountView Next Gen prototypes and Stifel's wait-and-see posture. Advisor recruiting teams at Ameriprise, Edward Jones, and Wells Fargo should refresh tech-platform comp talking points before summer recruiting cycles, and home-office training leads should pre-stage AI-curriculum buildouts to match RJ AI Academy's May cadence.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.pionline.com/alternatives/how-large-hedge-funds-aqr-balyasny-man-group-are-using-ai/" target="_blank">Pensions & Investments / Institutional Investor</a></div>
+    <h3><a href="https://www.pionline.com/alternative-investments/pi-ai-hedge-fund-blackrock-aqr-balyasny-skills/" target="_blank">AQR, Balyasny, BlackRock, Man Group, Point72 Detail AI Hiring Shift Thursday at P&I</a></h3>
+    <p class="summary">Pensions & Investments published Thursday May 14 a feature in which AI and quant leads at AQR Capital Management, Balyasny Asset Management, BlackRock, Man Group, and Point72 Asset Management described the hiring shifts AI is forcing on their research benches. AQR confirmed it now fully embeds machine learning into trading strategies across asset classes. Man Group's parallel May commentary argued European hardware specialists become unavoidable as frontier-model training crosses a million GPUs in parallel. The piece signals demand has tilted toward agent-orchestration engineers over traditional quant coders.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The five largest discretionary-quant shops publicly reorganizing around agentic-AI hiring resets the labor market for mid-career quants and the cost basis for every fund-of-funds running comparable book sizes. Heads of Manager Research at Mercer, Cambridge, and Wilshire should refresh DDQ AI-staffing questions before next-quarter manager reviews, and bank tech recruiters should pre-stage compensation benchmarks against AQR and Balyasny before summer hiring sprees.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-b-investment-round" target="_blank">Isomorphic Labs IR / Reuters / PR Newswire</a></div>
+    <h3><a href="https://finance.yahoo.com/sectors/healthcare/articles/isomorphic-labs-raises-2-1-164235060.html" target="_blank">Isomorphic Labs Raises $2.1B Tuesday Led by Thrive to Scale AI Drug Design Engine</a></h3>
+    <p class="summary">Isomorphic Labs — the AI drug-design company spun out of Google DeepMind and led by Sir Demis Hassabis — announced Tuesday May 12 a $2.1B Series B led by Thrive Capital with Alphabet, GV, MGX, Temasek, CapitalG, and the UK Sovereign AI Fund participating. Proceeds fund the IsoDDE drug-design engine, an expanded therapeutic pipeline toward clinical readout, and senior hires across London, Cambridge MA, and Lausanne. The round caps the largest healthcare-AI raise of 2026 and complements existing partnerships with Novartis, Lilly, and Johnson & Johnson.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A $2.1B Series B led by Thrive at clinical-stage gates puts a near-term IPO marker on every healthcare-AI portfolio at the long-only managers. Biotech PMs at T. Rowe Price, Fidelity, and Wellington should refresh AI-discovery comp valuations before summer pipeline readouts, and SWF allocators tracking MGX and UK Sovereign AI Fund should treat IsoDDE as the new benchmark for cross-border AI-bio co-investment terms.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.roboticstomorrow.com/news/2026/05/14/wisdomtree-launches-physical-ai-humanoids-and-drones-fund-wdrn/26566/" target="_blank">WisdomTree IR / BusinessWire / Morningstar</a></div>
+    <h3><a href="https://www.morningstar.com/news/business-wire/20260514860387/wisdomtree-launches-physical-ai-humanoids-and-drones-fund-wdrn" target="_blank">WisdomTree Launches WDRN Physical AI, Humanoids, and Drones ETF Thursday at 45bps</a></h3>
+    <p class="summary">WisdomTree launched Thursday May 14 the Physical AI, Humanoids, and Drones Fund (WDRN) on Cboe BZX at a 45bps expense ratio. The index targets global companies in humanoid and collaborative robotics, autonomous drones and vehicles, AI-enabled manufacturing, warehouse and supply-chain automation, and intelligent machines across healthcare, construction, agriculture, and defense. The launch extends WisdomTree's AI thematic shelf one day before Friday's Roundhill DRAM milestone and one trading day after Cerebras's CBRS IPO debut, isolating the physical-AI sub-theme from the memory and compute layers of the broader build-out.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> WDRN gives advisors a single-ticker entry into the physical-AI extension that Nvidia, Boston Dynamics, and Symbotic have been pulling out of compute thematic indices, formalizing the third leg of the AI build-out alongside compute and memory. ETF strategists at the wirehouses should re-bid recommended-list AI exposure mix before June IC reviews, and model-portfolio PMs at Goldman, Morgan Stanley, and JPMorgan should map WDRN against existing robotics-ETF holdings to avoid duplication.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Monday, May 18, 2026
+  </div>
+
+</div>
+</body>
+</html>
