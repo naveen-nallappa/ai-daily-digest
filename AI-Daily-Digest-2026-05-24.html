@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — May 24, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Sunday, May 24, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/" target="_blank">OpenAI</a></div>
+    <h3><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/" target="_blank">OpenAI Model Autonomously Disproves an 80-Year-Old Geometry Conjecture</a></h3>
+    <p class="summary">OpenAI said on May 20 that one of its internal general-purpose reasoning models autonomously disproved the Erdős unit-distance conjecture, a discrete-geometry problem open since 1946. The model produced a 125-page proof, approaching the question through algebraic number theory rather than the grid arrangements mathematicians long assumed optimal. Fields medalist Tim Gowers called the result "a milestone in AI mathematics," and Princeton's Will Sawin quantified the improvement in a companion paper. The model was not trained for the problem and received only the problem statement.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> This is the first time an AI system has independently cracked a prominent open problem at the center of a mathematical field, not just a competition benchmark. PMs sizing AI exposure should treat genuine research-grade reasoning as a capability now demonstrated rather than promised — a data point that strengthens the bull case behind richly valued model labs and their pre-IPO marks.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.cnbc.com/2026/05/20/meta-layoffs-zuckerberg-says-success-isnt-a-given-in-memo.html" target="_blank">CNBC</a></div>
+    <h3><a href="https://www.cnbc.com/2026/05/20/meta-layoffs-zuckerberg-says-success-isnt-a-given-in-memo.html" target="_blank">Meta Cuts 8,000 Jobs to Fund a $125 Billion-Plus AI Buildout</a></h3>
+    <p class="summary">Meta laid off roughly 8,000 employees — about 10% of its workforce — on May 20, its largest cut since 2023, while canceling plans to hire 6,000 more and shifting 7,000 staff into AI-focused roles. CEO Mark Zuckerberg told employees "success isn't a given" in the AI race. The company has guided to $125–145 billion in 2026 capital expenditure, more than double its 2025 outlay, even as it posted record quarterly revenue near $56 billion.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Meta has made the trade explicit: headcount dollars are being redirected to AI infrastructure, and other large software firms are following. Equity PMs holding megacap AI names should watch whether capex at this scale converts to margin expansion or simply compounds depreciation. The layoff-to-capex pattern is now a recurring signal across the sector worth tracking through earnings season.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://time.com/article/2026/05/22/anthropic-claude-code-jack-clark-ai-safety/" target="_blank">TIME</a></div>
+    <h3><a href="https://time.com/article/2026/05/22/anthropic-claude-code-jack-clark-ai-safety/" target="_blank">Anthropic Researchers Put 60% Odds on AI Training Its Successor by 2028</a></h3>
+    <p class="summary">The Anthropic Institute, the company's research arm on AI's societal effects, published a research agenda this month that explicitly uses the term "intelligence explosion," citing early signs of AI accelerating AI development. Co-founder Jack Clark, in the May 20 Cosmos Lecture at Oxford, said there is a 60%-plus chance a model could fully train its own successor by the end of 2028. He also predicted AI would help produce a Nobel-worthy discovery within 12 months.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Anthropic is closing on a roughly $900 billion valuation and weighing an IPO, so its own labs' timeline for recursive self-improvement is material context for anyone underwriting AI exposure. Allocators should read these forecasts as the bull-case assumptions embedded in private AI marks — and stress-test portfolios against the tail risk that aggressive lab timelines slip.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://thehackernews.com/2026/05/github-internal-repositories-breached.html" target="_blank">The Hacker News</a></div>
+    <h3><a href="https://thehackernews.com/2026/05/github-internal-repositories-breached.html" target="_blank">Poisoned VS Code Extension Lets Hackers Steal 3,800 GitHub Repositories</a></h3>
+    <p class="summary">GitHub confirmed on May 20 that threat group TeamPCP exfiltrated roughly 3,800 internal repositories after an employee installed a trojanized version of the Nx Console VS Code extension, which was live on Microsoft's marketplace for just 18 minutes on May 18. The malicious build silently harvested GitHub tokens, AWS keys, npm credentials, and developer secrets. The same supply-chain campaign also compromised developer devices at OpenAI and AI startup Mistral.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Supply-chain attacks now enter through the routine packages and extensions developers install, a layer traditional endpoint security barely covers. Technology and compliance leads at advisory and asset-management firms should audit which third-party developer tools and AI coding assistants touch internal systems, shorten credential lifetimes, and confirm vendor due diligence covers extension marketplaces, not just hosted software.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.wealthtechstrategy.com/post/next-investors-backs-transient-ai-in-series-a-funding-round" target="_blank">WealthTech Strategy</a></div>
+    <h3><a href="https://www.wealthtechstrategy.com/post/next-investors-backs-transient-ai-in-series-a-funding-round" target="_blank">NEXT Investors Backs Transient.AI to Push Compliance-First AI Into Trading Operations</a></h3>
+    <p class="summary">NEXT Investors, a private equity firm focused on capital-markets infrastructure, has made a Series A investment in Transient.AI — the platform's first institutional capital — to accelerate deployment of its AI operating system across front-, middle-, and back-office trading operations at regulated financial institutions. The platform emphasizes compliance-first AI, continuously scanning trading activity for anomalies and suspicious patterns. The funding targets a segment where institutional AI adoption has lagged because of regulatory complexity.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> AI trade surveillance and operations automation is reaching the regulated middle and back office, not just advisor-facing tools. Operations and compliance leads should ask whether AI is applied where it adds value — anomaly detection and monitoring — versus deterministic tasks like clearing and settlement where consistency matters more, and vet how any such system documents its surveillance decisions for examiners.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.wealthtechstrategy.com/post/greenboard-raises-20m-to-modernize-securities-compliance-with-ai-native-platform" target="_blank">WealthTech Strategy</a></div>
+    <h3><a href="https://www.wealthtechstrategy.com/post/greenboard-raises-20m-to-modernize-securities-compliance-with-ai-native-platform" target="_blank">Greenboard Raises $20M to Bring AI-Native Compliance to 500-Plus Firms</a></h3>
+    <p class="summary">Greenboard, an AI-native securities compliance platform founded in 2023, has raised $20 million in total funding, including a $15.5 million Series A led by Base10 Partners. The company now serves more than 500 firms with automated communications archiving, marketing reviews, and employee compliance workflows. It also launched GreenboardGo, a conversational AI layer grounded in a firm's own compliance books and records, with early adopters reporting 60% reductions in onboarding time.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Compliance is usually treated as a fixed cost center, but AI tooling that sits on a firm's own records can cut review time without adding headcount. Compliance officers evaluating these platforms should test how the AI handles supervision evidence and recordkeeping under SEC and FINRA rules — automation that cannot produce a defensible audit trail trades one risk for another.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.wealthmanagement.com/regulation-compliance/finra-warns-finfluencers-pose-growing-risk-to-investors" target="_blank">WealthManagement.com</a></div>
+    <h3><a href="https://www.wealthmanagement.com/regulation-compliance/finra-warns-finfluencers-pose-growing-risk-to-investors" target="_blank">FINRA Warns Generative AI Is Amplifying 'Finfluencer' Fraud Risk</a></h3>
+    <p class="summary">At FINRA's annual conference in Washington this month, regulators and compliance executives warned that generative AI tools are intensifying the risks posed by social-media "finfluencers." A FINRA Foundation study found 68% of social-media users and 69% of finfluencer followers reported losing money to fraud, versus under 30% for non-users. Morgan Stanley Wealth compliance director Megan Powers noted clients using tools like ChatGPT may be unknowingly influenced by unvetted finfluencer content.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Clients increasingly arrive with AI-sourced investment ideas that trace back to unregulated influencers. Advisors should treat "my chatbot suggested this" as a prompt for a documented suitability conversation, and compliance teams should refresh social-media and AI-use guidance. The advisor's screening role is the oversight layer self-directed investors lack — and a concrete way to demonstrate value.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.hedgeweek.com/lumenai-plans-launch-of-fully-agentic-ai-hedge-fund/" target="_blank">Hedgeweek</a></div>
+    <h3><a href="https://www.hedgeweek.com/lumenai-plans-launch-of-fully-agentic-ai-hedge-fund/" target="_blank">Lumenai Prepares June Launch of First Fully Agentic AI Hedge Fund</a></h3>
+    <p class="summary">Lumenai Investments plans to launch the Lumenai Innovation Fund around June 1, describing it as the first institutional hedge fund built on a fully "agentic" AI architecture. The global equity long/short strategy uses autonomous AI agents to generate, evaluate, and manage investment ideas continuously, with humans retained for governance and risk oversight. Lumenai is building the system with ETS Asset Management Factory, a quant research group operating since the late 1980s. The fund has no track record.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Lumenai inverts the usual quant structure — agents lead, humans supervise — and a live fund will test whether that survives real markets. Manager-research teams should scrutinize how autonomous agents are constrained: model error, data bias, and regime shifts are risks the firm itself flags. Treat "agentic" launches as high-variance allocations until a multi-cycle track record exists.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://hedgeco.net/news/05/2026/citadels-quant-chief-ais-new-market-paradox-faster-information-more-crowded-trades.html" target="_blank">HedgeCo</a></div>
+    <h3><a href="https://hedgeco.net/news/05/2026/citadels-quant-chief-ais-new-market-paradox-faster-information-more-crowded-trades.html" target="_blank">Citadel and Goldman Quants Warn AI Adoption Is Crowding Trades</a></h3>
+    <p class="summary">As elite quant firms embed AI across research, senior quants are warning that broad adoption may make markets faster without making them more efficient. Goldman Sachs Asset Management's Osman Ali argues that when many investors query similar models on similar data, the models generate correlated answers — and correlated trades. Citadel has launched an AI assistant for equities investors, trained on filings, transcripts, and brokerage research, while stressing that final investment judgment stays with humans.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> If AI tooling converges on the same signals, crowding and unwind risk rise even as research gets cheaper. PMs and allocators should ask managers where AI sits in the process — research only, or trade selection — and how they guard against machine consensus. Differentiated data and a willingness to fade obvious model output, not raw AI usage, is the edge.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.pionline.com/latest-news/pi-man-group-anthropic-ai-alpha/" target="_blank">Pensions &amp; Investments</a></div>
+    <h3><a href="https://www.pionline.com/latest-news/pi-man-group-anthropic-ai-alpha/" target="_blank">Man Group's AlphaGPT Generates Live Trading Signals as AI Moves Into Alpha</a></h3>
+    <p class="summary">Man Group, the largest publicly listed hedge fund manager, is pushing AI past back-office efficiency into alpha generation, Pensions &amp; Investments reported this month. Its internally built AlphaGPT mimics a quant analyst's research process — mining historical data, formulating rule-based signals, writing the code, and backtesting performance — and has already produced several dozen investment signals approved for live trading. A separate tool, ManGPT, is used monthly by roughly half the firm for coding and research, with human oversight kept in the loop.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Man Group moving AI from a productivity tool to a signal generator sets a line other quant shops will be measured against. Allocators should update due-diligence questions: ask whether a manager's AI produces ideas humans vet or merely speeds existing research, and how AI-generated signals are backtested and risk-controlled before they reach live capital.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Sunday, May 24, 2026
+  </div>
+
+</div>
+</body>
+</html>
