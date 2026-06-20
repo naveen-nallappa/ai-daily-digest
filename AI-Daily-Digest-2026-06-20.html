@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — June 20, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Saturday, June 20, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.anthropic.com/news/fable-mythos-access" target="_blank">Anthropic</a></div>
+    <h3><a href="https://www.koreajoongangdaily.com/business/anthropic-confident-of-reenabling-mythos-fable-5-access-in-coming-days-executive/12727522" target="_blank">Fable 5 and Mythos 5 Stay Blocked on Day Eight as White House Holds Firm</a></h3>
+    <p class="summary">Anthropic's top models remained suspended worldwide on June 20, eight days after a June 12 US export-control order, despite an executive's June 18 pledge in Seoul that access would return "in the coming days." Reporting now ties the ban to two triggers: a White House request to cut investor SK Telecom's access over alleged China links, then an Amazon report of a Fable 5 jailbreak. Officials want Anthropic to certify zero jailbreaks before relaunch — a bar researchers call technically impossible. Anthropic also updated its privacy policy, effective July 8, to collect government ID and biometric data.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The standoff confirms a government can keep a frontier model dark indefinitely, so any firm wiring one lab's flagship into research or client workflows now carries open-ended continuity risk. The looming biometric and ID-verification requirement adds a data-handling question. Compliance and technology leads should keep fallbacks provisioned and document model-dependency and identity-data exposure before standardizing on a single vendor.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://newsroom.snap.com/introducing-specs-augmented-reality-glasses" target="_blank">Snap Newsroom</a></div>
+    <h3><a href="https://www.cnbc.com/2026/06/16/snap-unveils-2195-specs-ar-glasses-spiegel-bets-on-post-smartphone.html" target="_blank">Snap Unveils $2,195 SPECS AR Glasses With Claude, Codex and Cursor Tools</a></h3>
+    <p class="summary">Snap unveiled SPECS, standalone augmented-reality glasses, at Augmented World Expo on June 16, with pre-orders open at $2,195 plus a $200 refundable deposit and shipping this fall in the US, UK and France. The fully untethered device runs two Snapdragon chips and a proprietary display with a 51-degree field of view. Developers get agentic "Lens" building inside Claude Code, Codex and Cursor, plus a native development kit. SPECS slots between Meta's $799 Ray-Ban Display and Apple's $3,499 Vision Pro.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Embedding the three leading coding agents directly into a consumer AR toolchain shows frontier models becoming the default build layer across new hardware categories, not just chat. For PMs tracking the AI hardware cycle, a three-way assistant race spanning Snap, Meta and Apple reframes smart glasses as a contested platform whose winners will hinge on developer ecosystems as much as optics.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.infosecurity-magazine.com/news/agentjacking-attacks-hijack-ai/" target="_blank">Infosecurity Magazine</a></div>
+    <h3><a href="https://www.infosecurity-magazine.com/news/agentjacking-attacks-hijack-ai/" target="_blank">'Agentjacking' Hijacks Coding Agents via Fake Sentry Bug Reports</a></h3>
+    <p class="summary">Security firm Tenet disclosed a technique it calls "agentjacking" that hijacks AI coding agents — Claude Code, Cursor and Codex — when a Sentry error-monitoring connector is attached. Attackers inject fake error events using a public credential; the agent reads the planted "fix" steps and runs malicious commands with the user's own privileges, exposing AWS keys, npm tokens and git credentials. During testing that ended June 17, researchers found 2,388 organizations with exposed Sentry identifiers and confirmed an 85% success rate. Standard EDR, IAM and VPN controls did not stop it.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> As advisors and asset managers wire coding and workflow agents into production, this shows untrusted data fed through a connector can turn an agent into an attacker with the user's access. Technology and risk teams should inventory which MCP connectors their agents trust, restrict agent privileges, and require human approval before any agent executes shell commands or installs packages.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bny.com/corporate/global/en/about-us/newsroom/press-release/bny-announces-the-agenda-for-insite-2026.html" target="_blank">BNY (INSITE 2026)</a></div>
+    <h3><a href="https://www.fa-mag.com/news/bny-takes-aim-at-schwab--fidelity-with-ai-powered-wealth-push-87284.html" target="_blank">BNY Pershing Pushes Its 'Eliza' AI Platform Across $3.3T Advisor Base</a></h3>
+    <p class="summary">At its INSITE 2026 conference this month, BNY Pershing CEO Robin Vince laid out a plan to become a one-stop advisor platform powered by Eliza, a proprietary AI layer the firm spent three years building that connects to multiple large language models. BNY invests roughly $4 billion a year in technology and is already applying Eliza to account transfers, onboarding and operational workflows. The custodian oversees about $3.3 trillion in client assets across 8.6 million accounts, positioning the push directly against Schwab and Fidelity.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A top-three custodian routing core operational work through its own multi-model AI raises the floor on what advisors expect custody platforms to automate. Advisors evaluating custodians should ask which workflows Eliza actually touches today, how it handles client data across the underlying models, and weigh platform stickiness as more daily operations move onto a custodian's proprietary AI rails.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.businesswire.com/news/home/20260616232584/en/YCharts-Unveils-Specialized-AI-Agent-for-Financial-Advisors-and-Asset-Managers" target="_blank">Business Wire (YCharts)</a></div>
+    <h3><a href="https://www.businesswire.com/news/home/20260616232584/en/YCharts-Unveils-Specialized-AI-Agent-for-Financial-Advisors-and-Asset-Managers" target="_blank">YCharts Launches 'Y,' an Agentic AI Built for Advisor Investment Workflows</a></h3>
+    <p class="summary">YCharts on June 16 launched Y, an AI agent purpose-built for how advisors and asset managers run investment research and data analysis. Developed over six months with a beta period, Y handles multi-step jobs such as proposal generation from start to finish, pausing for the advisor to confirm at key decision points rather than acting unsupervised. YCharts built the agent with compliance guardrails and customizable disclosure language, and is rolling it out within its existing platform so users can adopt it at their own pace.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Agentic research tools that draft proposals end-to-end compress prep time but shift the review burden onto the advisor who signs off. Advisors should map exactly where Y's confirmation checkpoints sit, confirm its disclosure language meets their firm's standards, and treat agent-generated output as a draft that still carries the advisor's suitability and supervision obligations before it reaches a client.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.wealthmanagement.com/artificial-intelligence/three-financial-planning-tech-providers-launch-ai-tools-for-advisors" target="_blank">WealthManagement.com</a></div>
+    <h3><a href="https://www.wealthmanagement.com/artificial-intelligence/three-financial-planning-tech-providers-launch-ai-tools-for-advisors" target="_blank">RightCapital, eMoney and MoneyGuide Roll Out AI Across Planning Stacks</a></h3>
+    <p class="summary">Three of the largest financial-planning platforms shipped AI upgrades this month. RightCapital's new tools read unstructured inputs — meeting transcripts, investment statements and client emails — and auto-populate income, expenses, goals and account holdings for advisor review. Fidelity's eMoney enhanced its data-gathering and needs-analysis tools, while Envestnet's MoneyGuide introduced a streamlined "Dash" planning workflow. The releases extend RightCapital's earlier optical-character-recognition imports and its integration with AI note-taker Jump, pushing automation deeper into plan construction across the dominant planning vendors.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> When the three platforms most RIAs already run all automate data entry at once, advisor differentiation moves from who builds plans fastest to who reviews AI-extracted inputs most carefully. Advisors should pressure-test how accurately each tool maps documents into plan fields, since an extraction error in income or holdings can quietly distort every downstream projection a client sees.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.businesswire.com/news/home/20260609980834/en/ICE-Launches-AI-Powered-Fixed-Income-Pre-Trade-Analytics-for-Buyside-Investors" target="_blank">Business Wire (ICE)</a></div>
+    <h3><a href="https://www.thetradenews.com/ice-launches-ai-powered-pre-trade-analytics-platform-aimed-at-buy-side-fixed-income-desks/" target="_blank">ICE Launches Compass Bond Pre-Trade Analytics With T. Rowe Price as Anchor</a></h3>
+    <p class="summary">Intercontinental Exchange on June 9 launched ICE Compass, an AI-powered pre-trade analytics platform that gives buy-side fixed-income desks prioritized counterparty rankings and price estimates before they execute. Compass blends a client's own real-time and historical trading data with ICE's evaluated pricing, liquidity metrics and the millions of bids, offers and indications of interest its feeds capture daily. T. Rowe Price, which provided feedback through development and beta testing, signed on as the anchor client, lending a marquee active manager's name to the rollout.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A major asset manager anchoring an exchange's AI pre-trade tool signals that corporate-bond desks, long reliant on dealer relationships, are formalizing data-driven counterparty and pricing decisions. PMs and traders should weigh how Compass-style analytics change best-execution documentation and whether routing pre-trade intelligence through an exchange's data estate concentrates dependence on a single liquidity and pricing provider.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.marketsmedia.com/aiq-markets-marketaxess-partner-on-ai-fixed-income-platform/" target="_blank">Markets Media</a></div>
+    <h3><a href="https://www.marketsmedia.com/aiq-markets-marketaxess-partner-on-ai-fixed-income-platform/" target="_blank">MarketAxess Backs AIQ Insight, a Natural-Language Tool for Bond PMs</a></h3>
+    <p class="summary">AIQ Markets and MarketAxess on June 15 launched AIQ Insight, an AI-native platform that lets fixed-income traders and portfolio managers search bond data, assess relative value and build portfolios through natural-language queries. The system returns auditable outputs with transparent sourcing and governance controls aimed at supporting investment decisions. MarketAxess is piloting an exclusive version drawing on its proprietary data, including CP+ pricing feeds and Tradability scores, embedding the tool inside the workflows of one of the largest electronic corporate-bond venues.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Natural-language access to relative-value analysis lowers the technical bar for PMs to interrogate bond markets without a quant intermediary. Investment teams should scrutinize the auditability and sourcing claims before relying on AI-surfaced relative value, and consider how a venue-embedded tool that leans on proprietary pricing data shapes — and potentially narrows — the universe of trades a desk evaluates.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.prnewswire.com/news-releases/ltx-launches-agentic-ai-in-bondgpt-turning-ai-insights-into-trading-action-302801555.html" target="_blank">PR Newswire (LTX)</a></div>
+    <h3><a href="https://www.marketsmedia.com/ltx-launches-agentic-ai-in-bondgpt/" target="_blank">LTX Adds Agentic AI to BondGPT to Automate Bond-Trade Workflows</a></h3>
+    <p class="summary">LTX, the AI-powered corporate-bond venue backed by Broadridge, on June 16 added agentic capabilities to BondGPT, letting users build agents from plain-language instructions that act when defined market conditions hit. The agents can generate alerts, create trade tickets, select dealers, launch requests-for-quote and even auto-execute at preset prices — all under trader-defined parameters. LTX wrapped the features in human-in-the-loop approvals, policy limits on trade size and scope, pre-action explainability and full audit trails to keep traders in control of delegated tasks.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Moving from AI insight to AI execution on the bond desk is a step change, and the guardrails LTX built — approvals, scope limits, auditability — preview the control framework regulators and risk teams will expect everywhere agents touch trading. Desks piloting agentic execution should codify those limits now and test how audit trails hold up under best-execution and supervision review.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Saturday, June 20, 2026
+  </div>
+
+</div>
+</body>
+</html>
