@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — June 25, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Thursday, June 25, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-unveil-llm-optimized-intelligence-processor" target="_blank">Broadcom / OpenAI</a></div>
+    <h3><a href="https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html" target="_blank">OpenAI and Broadcom Unveil 'Jalapeño,' OpenAI's First Custom Inference Chip</a></h3>
+    <p class="summary">OpenAI and Broadcom on June 24 revealed Jalapeño, a custom LLM-inference accelerator built on TSMC's 3nm process with eight HBM stacks and a near-reticle-sized ~840mm² die. OpenAI says the chip went from initial design to tape-out in nine months — possibly the fastest cycle in advanced semiconductors — and credits its own models for compressing the schedule. Prototype deployments are slated for late 2026, with production ramping through 2027 and 2028. The move extends OpenAI's push to own more of its compute stack rather than rely solely on Nvidia.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A second hyperscale buyer designing its own inference silicon validates the custom-ASIC thesis that has lifted Broadcom and pressured Nvidia's pricing power. Equity PMs holding semiconductor or AI-infrastructure sleeves should reassess how much of the merchant-GPU TAM migrates in-house by 2028, and whether current Nvidia multiples price in that share shift.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank">Anthropic</a></div>
+    <h3><a href="https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack/" target="_blank">Anthropic Launches Claude Tag, an AI Teammate That Lives in Slack Channels</a></h3>
+    <p class="summary">Anthropic on June 23 launched Claude Tag in beta for Claude Enterprise and Team customers, letting employees tag @Claude into Slack channels to delegate tasks that the agent breaks into stages and works through asynchronously. A single shared Claude "identity" lets colleagues hand off half-finished work, with admin controls, audit logs, and spend limits built in. The tool will replace the existing Claude in Slack app, which retires August 3; admins have a 30-day window from launch to migrate.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Embedding a shared, persistent agent inside collaboration tools moves AI from individual copilots toward team-level workflow infrastructure. Operations and compliance leaders at advisory and asset-management firms should confirm that channel-level agent actions, data access, and outputs are captured under existing books-and-records and supervision policies before enabling Claude Tag in client-facing teams.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.business-standard.com/companies/news/yotta-to-deploy-7-bn-in-capex-this-year-eyes-global-ai-cloud-market-126062400873_1.html" target="_blank">Business Standard</a></div>
+    <h3><a href="https://www.business-standard.com/companies/news/yotta-to-deploy-7-bn-in-capex-this-year-eyes-global-ai-cloud-market-126062400873_1.html" target="_blank">Yotta to Deploy About $7 Billion of AI Capex This Year, Then Roughly Double It</a></h3>
+    <p class="summary">Data-center and AI-cloud firm Yotta said on June 24 it will deploy about $7 billion of capex in 2026 and roughly double that next year as it scales its GPU-cloud business toward a global AI-infrastructure footprint. Yotta had committed $3 billion by that date and expects $4 billion-plus more between November and January, lifting operating capacity to roughly 175–180 megawatts by year-end. The plan adds to a 2026 buildout where the five largest US cloud and AI providers have committed $660–690 billion combined.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> AI compute buildouts are increasingly debt-funded and span emerging-market operators, widening the universe of issuers that credit allocators are now underwriting. Fixed-income and private-credit teams should map their direct and indirect exposure to data-center developers and stress-test coverage against an AI-capex slowdown, since these leveraged balance sheets depend on sustained GPU-rental demand.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.salesforce.com/blog/agentic-advisor-agentforce-financial-services/" target="_blank">Salesforce</a></div>
+    <h3><a href="https://www.investmentnews.com/fintech/salesforce-launches-agentic-advisor-as-ai-notetakers-threaten-crm-dominance/267076" target="_blank">Salesforce Launches Agentic Advisor to Defend Its Grip on the Advisor Stack</a></h3>
+    <p class="summary">Salesforce on June 24 unveiled Agentic Advisor, a suite of six agentic capabilities built into Agentforce for Financial Services. Meeting Concierge went generally available in June, auto-preparing advisors with client context, capturing meetings, and generating follow-ups; Run My Day and an enhanced Client Details page are slated for July–August. EP Wealth Advisors, a $40 billion RIA, reported early administrative-workload reductions. RIABiz noted advisers' cost and implementation concerns as Salesforce moves to counter AI notetakers encroaching on the CRM.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The incumbent CRM is fighting to stay the system of record as AI notetakers like Jump and Zocks expand into workflow and prospecting. Firms standardizing on Salesforce should price total cost — including implementation and per-seat agent fees — against best-of-breed point tools, and pin down which system owns the client record before committing their whole stack to one agentic platform.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Launches-AI-Powered-Capability-That-Helps-Investors-Understand-Portfolio-Performance-and-Market-Activity/default.aspx" target="_blank">Charles Schwab</a></div>
+    <h3><a href="https://www.wealthmanagement.com/ria-news/schwab-makes-ai-push-with-client-facing-agents-to-roll-out-in-june" target="_blank">Schwab Begins Rolling Out Client-Facing AI Assistants Over Chat and Voice</a></h3>
+    <p class="summary">Schwab is introducing its first client-facing AI assistants this month across chat and voice, handling general inquiries and beginning to test a limited set of client-initiated actions such as setting beneficiaries via a voice agent. The firm is building with an outside AI-agent partner and emphasizes structured guardrails plus escalation to human reps. CEO Rick Wurster has framed AI as a future "front door" able to extend advice and resources to mass-affluent clients holding under $1 million in assets.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The largest US custodian putting AI agents directly in front of retail clients signals where servicing economics are headed for the sub-$1M segment many RIAs deprioritize. Advisors on Schwab's platform should track which client-initiated actions the agent can execute, since automated servicing reshapes both the competitive floor for mass-affluent advice and the supervision scope for agent-handled transactions.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.wealthmanagement.com/artificial-intelligence/rightcapital-launches-iris" target="_blank">WealthManagement.com</a></div>
+    <h3><a href="https://www.investmentnews.com/fintech/rightcapital-claims-industry-first-with-ai-agent-for-financial-planning/267144" target="_blank">RightCapital Ships 'Iris,' a Planning-Focused AI Agent for Advisors</a></h3>
+    <p class="summary">RightCapital launched Iris on June 23, an AI agent that reads client data directly inside the planning workflow. Its three features: Double Check flags missing or inconsistent profile data; Cash Flow Reviews surface assumption risks and planning gaps; and Plan Builder lets advisors set a probability-of-success target, choose adjustable levers like retirement age, and returns three strategies to hit the goal. Iris is included at no extra cost for Premium and Platinum subscribers, positioning it against generic copilots bolted onto planning tools.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> An agent embedded in a widely used planning platform — rather than a standalone chatbot — targets the review-and-QA time that consumes advisor hours per plan. Advisors should test whether Iris's anomaly flags and probability-driven strategies align with their own assumptions before presenting them as advice, and confirm that generated plan rationales are documented for suitability and Reg BI files.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.man.com/insights/2026-h2-credit-outlook" target="_blank">Man Group</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-06-16/man-group-sees-bubble-risks-as-ai-bond-sales-break-records" target="_blank">Man Group Warns AI Bond Issuance Is Building Dot-Com-Style Bubble Risk</a></h3>
+    <p class="summary">Man Group has flagged that debt financing tied to AI infrastructure could create conditions reminiscent of past bubbles, with AI and hyperscaler issuance approaching $465 billion — nearly 20% of total issuance — and exceeding dot-com-era levels. The firm points to high-yield and leveraged-loan issuers still generating negative free cash flow, short-duration assets funded with long-duration debt, and circular demand signals. It warns risk is migrating off tech balance sheets into utilities, insurers, data-center operators, private-credit funds, pensions, and retail vehicles.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A major systematic manager is naming the channel through which an AI-capex stumble would hit portfolios — credit, not just equities. Multi-asset and fixed-income PMs should inventory indirect AI exposure across private-credit sleeves, insurance-linked holdings, and data-center debt, and stress-test what a repricing of GPU-rental demand does to spreads in names that screen as defensive but are funding the buildout.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2026-06-24/new-hedge-funds-are-using-ai-bots-to-rival-industry-giants" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-06-24/new-hedge-funds-are-using-ai-bots-to-rival-industry-giants" target="_blank">Magnetar and a Wave of New Funds Put AI Bots in the Analyst Seat</a></h3>
+    <p class="summary">Bloomberg reported on June 24 that a new cohort of managers is using AI agents to challenge established firms. Magnetar Capital, an $18 billion manager, will forgo human analysts for its newest offering, deploying hundreds of bots to scour the universe, analyze stocks, and forecast trends while humans retain final trade decisions. Instacart co-founder Apoorva Mehta's Palo Alto firm Abundance runs thousands of agents end-to-end. The piece cautioned that recent contests of eight frontier AI systems mostly lost money.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Agent-run research lowers the cost of standing up a credible systematic shop, compressing the analyst-headcount moat that justified incumbent fees. Allocators screening these launches should demand live, audited track records rather than backtests, probe how the models behave in regime shifts, and weigh key-person and model-governance risk before treating an agent-driven fund as a diversifier.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002078265&type=485APOS" target="_blank">SEC EDGAR (Corgi ETF Trust)</a></div>
+    <h3><a href="https://www.thestreet.com/investing/yorkville-america-corgi-securities-mangos-ai-etf" target="_blank">Asset Managers File 'MANGOS' AI ETFs Tracking Six Frontier Names</a></h3>
+    <p class="summary">Yorkville America and Corgi Securities filed with the SEC in mid-June for ETFs built around the "MANGOS" basket — Meta, Anthropic, Nvidia, Alphabet, OpenAI, and SpaceX. Yorkville filed a "Mango Plus" fund plus an income variant blending the core basket with a "Parabolic 7" sleeve; Corgi filed to track the six core names. Funds could begin trading by late August. The structural catch: Anthropic, OpenAI, and SpaceX are private, complicating daily pricing, liquidity, and redemptions for a standard equity ETF.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Packaging private frontier labs into a daily-liquid ETF wrapper tests where the 40-Act framework bends, and advisors will field client demand for "owning OpenAI" the moment these list. Due-diligence teams should scrutinize how private holdings are valued and capped, what liquidity sleeve backs redemptions, and whether the marketing acronym masks concentration risk before adding these to model portfolios.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Thursday, June 25, 2026
+  </div>
+
+</div>
+</body>
+</html>
