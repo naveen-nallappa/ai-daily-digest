@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — July 5, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Sunday, July 5, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank">Anthropic</a></div>
+    <h3><a href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/" target="_blank">Anthropic Ships Claude Sonnet 5 at a Steep Discount to Opus</a></h3>
+    <p class="summary">Anthropic launched Claude Sonnet 5 on June 30, its most agentic mid-tier model, able to plan and autonomously use browsers and terminals at performance close to flagship Opus 4.8. It ships with introductory pricing of $2 per million input tokens and $10 per million output through August 31, then $3 and $15 — well under top-tier rates. Sonnet 5 is now the default model for Free and Pro plans and available across Claude Code and the Claude Platform.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Cheaper near-frontier models change the build-versus-buy math for any firm running AI agents at volume. Wealth and asset managers piping models into research, drafting, or client-servicing agents should re-price their per-query costs and revisit which workloads were previously too expensive to automate, since a lower token floor makes production-scale deployment materially more affordable.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" target="_blank">The White House</a></div>
+    <h3><a href="https://www.axios.com/2026/05/20/ai-trump-executive-order-white-house-infighting" target="_blank">White House Nears Voluntary AI Release Standards With Top Labs</a></h3>
+    <p class="summary">The White House is in advanced talks with OpenAI, Google, and Anthropic on voluntary standards for releasing frontier AI models, with an announcement possible within a week per July 3 reporting. The framework builds on President Trump's June 2 executive order, which asks labs to submit their most powerful models for government testing up to 30 days before public release. The order explicitly bars any mandatory licensing, pre-clearance, or permitting regime for new models.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Voluntary pre-release testing still inserts a government checkpoint into model launch timelines. Firms whose advisor and PM tools depend on the newest models should treat release dates as policy-sensitive and build vendor contracts and continuity plans that tolerate 30-day review windows, rather than assuming frontier upgrades ship on the labs' engineering schedule alone.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://openai.com/index/openai-submits-confidential-s-1/" target="_blank">OpenAI</a></div>
+    <h3><a href="https://www.cnbc.com/2026/06/08/openai-confidentially-files-for-ipo-prepping-wall-street-for-ai-debut.html" target="_blank">OpenAI Targets a September IPO With Goldman and Morgan Stanley Leading</a></h3>
+    <p class="summary">OpenAI has confidentially filed a draft S-1 with the SEC and is targeting a public debut as early as September 2026, with Goldman Sachs, Morgan Stanley, and reportedly JPMorgan leading the underwriting. Its last private valuation was $852 billion post-money, and it plans a tender offer letting employees sell at that mark. The move follows Anthropic's own June 1 confidential filing at a $965 billion valuation, setting up near-simultaneous mega-listings from the two largest AI labs.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Twin near-trillion-dollar AI listings will reset public-market benchmarks for the sector and pull index and model-portfolio weights toward AI names. PMs should pressure-test how much concentration a listed OpenAI or Anthropic would add to growth and tech sleeves, and advisors should expect client questions about pre-IPO access and post-listing volatility in the most-watched debuts of the year.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.businesswire.com/news/home/20260629832926/en/Orion-Among-the-First-in-Wealthtech-to-Earn-ISO-42001-the-International-AI-Management-System-Standard" target="_blank">Orion (BusinessWire)</a></div>
+    <h3><a href="https://www.thinkadvisor.com/2026/07/01/orion-earns-ai-management-system-certification/" target="_blank">Orion Becomes First Portfolio-Accounting Provider to Earn ISO 42001 AI Standard</a></h3>
+    <p class="summary">Orion said on June 29 it earned ISO/IEC 42001 certification, the international standard for AI management systems, after an independent audit of the governance behind its Denali AI layer. It is among the first wealthtech firms — and the first known portfolio-accounting provider — to qualify, joining roughly 100 to 150 certified organizations globally, including Microsoft, AWS, Google Cloud, and Anthropic. Denali spans CRM, planning, portfolio management, and reporting, with outputs designed to be reviewed by professionals before client use.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A formal AI-governance certification gives advisors a concrete diligence checkpoint beyond vendor marketing. Firms selecting an AI-enabled platform can now ask whether a provider holds ISO 42001 and how its controls handle model outputs, data, and human review — a sharper question than "do you use AI" as regulators intensify scrutiny of AI in client-facing workflows.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.salesforce.com/blog/agentic-advisor-agentforce-financial-services/" target="_blank">Salesforce</a></div>
+    <h3><a href="https://www.investmentnews.com/fintech/salesforce-launches-agentic-advisor-as-ai-notetakers-threaten-crm-dominance/267076" target="_blank">Salesforce Moves Agentic Advisor Agents to General Availability This Month</a></h3>
+    <p class="summary">Salesforce's Agentic Advisor suite for financial services hits key milestones this month: its Meeting Concierge agent is now generally available, and Run My Day — a command center that opens each advisor's morning with prioritized tasks and at-risk-client signals — plus an agentic Enhanced Client Details page reach general availability in July or August. The six-capability suite follows a phased rollout extending into late 2026, embedding automation directly into the CRM advisors already run on.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> With the dominant advisory CRM shipping native agents, standalone AI notetakers and meeting-prep tools face a squeeze from the platform of record. Advisors already on Salesforce should test whether bundled agents cover enough of their prep and task workflows to retire point subscriptions, and set data-residency and approval controls before letting an agent auto-update client records.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.prnewswire.com/news-releases/wealthfeed-selected-by-the-mather-group-as-exclusive-prospecting-platform-302812735.html" target="_blank">WealthFeed (PR Newswire)</a></div>
+    <h3><a href="https://www.advisorhub.com/resources/the-mather-group-taps-wealthfeed-as-exclusive-prospecting-platform/" target="_blank">$17 Billion Mather Group Names WealthFeed Its Exclusive AI Prospecting Platform</a></h3>
+    <p class="summary">WealthFeed said on June 30 that The Mather Group, a Chicago-based RIA with roughly $17 billion in assets and about 100 advisors across 14 offices, named it the firm's sole enterprise prospecting platform. The AI tool flags real-time "money-in-motion" signals — inheritances, liquidity events, business sales, promotions, and retirements — plus warm-introduction paths and compliant outreach. The mandate standardizes prospecting across offices and more than 20 acquired teams onto a single, consistent process.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A large, acquisitive RIA standardizing organic-growth technology firm-wide signals that AI prospecting is becoming enterprise infrastructure, not a solo-advisor gadget. Firms integrating acquired books should weigh whether one money-in-motion platform can unify inconsistent prospecting habits, and vendors should note that exclusivity mandates — rare in wealthtech — are emerging as the real prize in enterprise deals.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2025-04-23/aqr-bets-on-machine-learning-as-cliff-asness-becomes-ai-believer" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2025-04-23/aqr-bets-on-machine-learning-as-cliff-asness-becomes-ai-believer" target="_blank">AQR Says Machine Learning Now Drives a Fifth of Its Flagship Signals</a></h3>
+    <p class="summary">AQR Capital, which manages about $187 billion after a $73 billion asset gain in 2025, has moved machine learning to the core of its process, with the technique now generating roughly a fifth of the trading signals in its flagship multi-strategy fund. Founder Cliff Asness, long an AI skeptic, has become a believer, and the firm is raising outside capital for two dedicated machine-learning strategies. Natural-language models also help analysts mine data and refine factor models.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> When a factor-investing pioneer concedes that opaque ML signals now drive real capital, allocators can no longer treat "AI-driven" as marketing gloss. Investors should press quant managers on how much of returns traces to machine-learning models, how those signals are governed and explained, and whether crowding into similar data and techniques raises correlation risk across nominally distinct funds.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/" target="_blank">TechCrunch</a></div>
+    <h3><a href="https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/" target="_blank">Ex-DeepMind Poker-AI Team Hits $500M Valuation Trading for Tower Research</a></h3>
+    <p class="summary">EquiLibre Technologies, a Prague lab founded by three former DeepMind researchers who built a poker-beating AI, raised a Creandum-led Series A at a $500 million valuation, TechCrunch reported June 30. Its reinforcement-learning agents trade billions in daily volume across the S&P 500 and Nasdaq through a partnership with quant firm Tower Research Capital, and the firm claims zero negative months since inception. Founders stress the shop is "a lab first, not a finance firm."</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Reinforcement learning — the technique behind game-playing AI — is moving from research into live equity execution at institutional scale. Allocators evaluating quant managers should ask whether returns lean on RL agents, how those models behave in regimes unlike their training data, and treat "zero negative months" claims skeptically given short track records and undisclosed strategy capacity.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.prnewswire.com/news-releases/linqalpha-raises-22-million-to-build-the-alpha-intelligence-layer-for-global-public-markets-302816647.html" target="_blank">LinqAlpha (PR Newswire)</a></div>
+    <h3><a href="https://techfundingnews.com/linqalpha-raises-22m-avp-ai-research-platform/" target="_blank">LinqAlpha Raises $22M Series A for AI Research Serving $5 Trillion in Assets</a></h3>
+    <p class="summary">LinqAlpha, an AI research platform founded by former Goldman Sachs analysts and MIT PhDs, said on July 2 it raised a $22 million Series A led by AVP, Atinum Investment, and GFT Ventures. Its agents mine filings, transcripts, and market data for sell- and buy-side research teams at more than 70 institutions, including Causeway Capital and Schonfeld, whose buy-side users collectively manage over $5 trillion. The round adds a broad Asian financial-institution syndicate.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Fresh capital pouring into "alpha intelligence" layers shows AI research copilots moving from experiment to institutional infrastructure at firms overseeing trillions. Allocators should ask managers which research platforms they rely on and how outputs are validated, while PMs weighing build-versus-buy can benchmark in-house tooling against funded specialists before committing budget to proprietary research agents.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Sunday, July 5, 2026
+  </div>
+
+</div>
+</body>
+</html>

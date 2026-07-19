@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — July 2, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Thursday, July 2, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.anthropic.com/news" target="_blank">Anthropic</a></div>
+    <h3><a href="https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html" target="_blank">Anthropic Restores Claude Fable 5 Globally After U.S. Lifts Export-Control Order</a></h3>
+    <p class="summary">The U.S. Commerce Department on June 30 lifted the export controls it had placed on Anthropic's Fable 5 and Mythos 5 models, and Anthropic redeployed Fable 5 on July 1 across Claude.ai, the Claude Platform, Claude Code, and Cowork. The June 12 order, triggered by an Amazon-discovered jailbreak, had forced Anthropic to pull both models for all users for roughly two and a half weeks. Anthropic trained a new safety classifier that blocks the flagged technique in over 99% of cases.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The episode shows frontier-model availability now hinges on Washington, not just engineering, an operational risk for any firm embedding a single vendor's model into client workflows. Advisors and PMs relying on AI copilots should confirm fallback models and continuity plans, since a security flaw or federal order can pull a production model offline overnight.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank">OpenAI</a></div>
+    <h3><a href="https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump" target="_blank">OpenAI's GPT-5.6 Stays Locked to Roughly 20 Vetted Organizations as Federal Review Closes</a></h3>
+    <p class="summary">OpenAI previewed its GPT-5.6 family — Sol, Terra, and Luna — on June 26 but limited access to about 20 vetted organizations pending U.S. government sign-off. The gating follows a June 2 executive order directing federal agencies to benchmark new frontier models before wide release, a 30-day process that concludes July 2. Sol is positioned as the top-tier model for complex reasoning, extended coding sessions, and agentic workflows.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Government pre-clearance of frontier models introduces a new release-timing variable for anyone planning AI product roadmaps. Vendors selling advisor and PM tools built on the newest models may face staggered, approval-gated rollouts, so buyers should ask providers which model tier they can actually deploy today versus what remains behind a federal access list.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-unveil-llm-optimized-intelligence-processor" target="_blank">Broadcom / OpenAI</a></div>
+    <h3><a href="https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html" target="_blank">OpenAI and Broadcom Unveil Jalapeño, a Custom Inference Chip Built in Nine Months</a></h3>
+    <p class="summary">OpenAI and Broadcom on June 24 unveiled Jalapeño, OpenAI's first custom AI accelerator, a reticle-sized ASIC taken from design to manufacturing tape-out in about nine months using AI-assisted development. Built specifically for large-language-model inference, the chip is projected to deliver performance per watt substantially better than current hardware, with initial deployment targeted for late 2026. It anchors a multi-generation compute platform the two companies are building together.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A model maker designing its own inference silicon directly challenges Nvidia's merchant-GPU economics and the pricing power baked into today's chip valuations. PMs holding semiconductor names should track whether custom ASICs meaningfully shift inference cost curves, since cheaper inference reshapes both AI-infrastructure demand forecasts and the margin math underpinning the sector.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://gemini.google/release-notes/" target="_blank">Google</a></div>
+    <h3><a href="https://www.techtimes.com/articles/319318/20260629/gemini-35-pro-cleared-july-launch-fable-5-nears-return-gpt-56-stays-locked.htm" target="_blank">Google Clears Gemini 3.5 Pro for July General-Availability Launch After a June Slip</a></h3>
+    <p class="summary">Google has cleared Gemini 3.5 Pro for a July general-availability release after pushing the launch from its original June target for quality refinements. Announced at I/O on May 19, the model carries a 2-million-token context window — roughly double most rivals — and a Deep Think reasoning mode. As of late June it remained in limited Vertex AI enterprise preview, with estimated pricing near $15 input and $60 output per million tokens.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A generally available 2-million-token model widens the practical ceiling for document-heavy workflows like parsing filings, contracts, and long client histories in a single pass. Firms selecting an AI stack should weigh context window and per-token cost against incumbents, since a larger window can cut the retrieval engineering — and cost — of feeding big document sets to a model.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.salesforce.com/blog/agentic-advisor-agentforce-financial-services/" target="_blank">Salesforce</a></div>
+    <h3><a href="https://www.investmentnews.com/fintech/salesforce-launches-agentic-advisor-as-ai-notetakers-threaten-crm-dominance/267076" target="_blank">Salesforce Launches Agentic Advisor With Meeting Concierge Going Generally Available This Month</a></h3>
+    <p class="summary">Salesforce on June 24 launched Agentic Advisor, a suite of six AI capabilities built natively into Agentforce for Financial Services. The centerpiece, Meeting Concierge — which generates pre-meeting briefings, guides live conversations, and drafts summaries and follow-up tasks — becomes generally available this month, competing directly with notetakers like Jump and Zocks. Run My Day and an Enhanced Client Details Page follow by August, with remaining features phasing in through late 2026.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Salesforce embedding meeting automation inside its own CRM and governance model pressures the standalone AI notetakers advisors currently bolt on. Firms already on Salesforce should assess whether native agents shrink their vendor stack and audit-trail complexity, while those weighing point solutions must factor in that their CRM incumbent now bundles the same capability.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.prnewswire.com/news-releases/addepar-advances-its-ai-innovation-across-agents-data-and-workflow-capabilities-302779567.html" target="_blank">Addepar</a></div>
+    <h3><a href="https://www.wealthmanagement.com/advisor-support-platforms/addepar-unveils-ai-agents-data-tools-at-addeconf26" target="_blank">Addepar Debuts a Data-Operations AI Agent and Expands Addison at AddeConf26</a></h3>
+    <p class="summary">Addepar, which oversees roughly $9 trillion across more than 1,400 firms, used its AddeConf26 conference to preview a data-operations AI agent that detects portfolio-data issues, diagnoses root causes, and recommends fixes for human review. The firm also expanded Addison, its native AI assistant launched in March, adding alternatives and private-markets data, improved visualizations, and new partner integrations, alongside fresh connectivity for its recently launched Data Exchange.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Targeting data quality, not just chat, tackles the reconciliation grind that undermines reporting accuracy on large, alternatives-heavy books. Firms on Addepar should scope which manual data-cleanup work an agent can absorb and confirm the human-review controls, since automated remediation touching portfolio records carries real accuracy and audit implications for client reporting.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.investmentnews.com/goria/technology/ai-centric-ria-arca-launches-with-anthropic-backing-and-64m-in-funding/267181" target="_blank">InvestmentNews</a></div>
+    <h3><a href="https://www.wealthmanagement.com/ria-news/ai-native-wealth-manager-arca-raises-64m" target="_blank">AI-Native RIA Arca Launches From Stealth With $64 Million and Over $1 Billion in Assets</a></h3>
+    <p class="summary">Arca, a registered investment advisor built around AI-assisted advisors, emerged from stealth managing more than $1 billion in client assets after raising $64 million from General Catalyst, Index Ventures, and Venrock. The firm markets AI tooling that augments human advisors rather than replacing them, and cites a client it describes as an Anthropic leader. It joins a growing wave of well-funded, AI-native RIAs targeting the advice market.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Venture-backed AI-native RIAs launching with real assets signal that the efficiency case for AI advice is drawing serious capital and could compress advisory pricing. Established firms should benchmark their own AI-enabled advisor productivity against these entrants, since a structurally lower cost-to-serve would pressure fee schedules and sharpen competition for mass-affluent and next-gen clients.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/" target="_blank">TechCrunch</a></div>
+    <h3><a href="https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/" target="_blank">Poker-AI Startup EquiLibre Raises Series A Valuing It Near $500 Million to Trade Markets</a></h3>
+    <p class="summary">EquiLibre Technologies, a Prague-based lab founded by three former DeepMind researchers who built a champion poker AI, raised a Series A reportedly valuing it near $500 million, per June 30 reporting. Partnering with quant firm Tower Research Capital, its agents trade billions in daily volume across the S&P 500 and Nasdaq and, on crypto since 2025, claim zero negative months since inception. The founders have no finance background.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A game-theory AI lab trading at scale through an established quant partner shows reinforcement-learning techniques crossing into systematic markets. Allocators screening emerging managers should press hard on the audited track record, capacity, and whether "zero negative months" survives a real drawdown, since novel methods with short live histories carry outsized model and key-person risk.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/newsletters/2026-07-01/ai-models-could-make-hedge-fund-trading-riskier-wall-street-researchers-warn" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-07-01/wall-street-s-ai-race-is-fueling-new-fears-of-crowded-trading" target="_blank">Researchers Warn AI Is Crowding Hedge-Fund Trades and Shortening Signal Lifespans</a></h3>
+    <p class="summary">Wall Street researchers cautioned on July 1 that widespread AI adoption is making trades more crowded and risk harder to control. NYU researchers analyzing nearly one million institutional holdings found portfolio similarity rising fastest among heavy AI users, while separate work suggests a profitable signal that once lasted five to seven years now sees its excess return halve in about 18 months. Models also proved defenseless against subtly manipulated news headlines.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> If AI compresses the half-life of alpha and pushes managers into the same positions, diversification across "uncorrelated" quant funds may be more illusory than allocators assume. Investors building hedge-fund sleeves should probe how differentiated each manager's data and models truly are, and stress-test for correlated drawdowns when crowded AI-driven trades unwind together.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2026-06-24/new-hedge-funds-are-using-ai-bots-to-rival-industry-giants" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.hedgeweek.com/ai-powered-hedge-fund-startups-seek-edge-over-industry-giants/" target="_blank">New AI-Native Hedge Funds Deploy Agent Fleets to Challenge Established Quant Giants</a></h3>
+    <p class="summary">A wave of newer managers is building investment processes around fleets of AI agents that screen companies, parse earnings, and generate trade ideas at scale, aiming to rival incumbents like Citadel and Two Sigma, per late-June reporting. The shift tracks a broader adoption curve: in one AIMA survey, 58% of fund managers said they expect to use AI more in their process, up from 20% two years earlier.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Cheaper AI research pipelines lower the cost of standing up a credible systematic strategy, widening the field of managers allocators must evaluate. Diligence teams should separate genuine, proprietary AI edge from repackaged off-the-shelf models, since a low barrier to "AI-powered" branding will crowd the market with lookalike strategies chasing the same signals.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Thursday, July 2, 2026
+  </div>
+
+</div>
+</body>
+</html>

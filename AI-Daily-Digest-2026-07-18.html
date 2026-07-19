@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — July 18, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Saturday, July 18, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals" target="_blank">Moonshot ships Kimi K3, a 2.8-trillion-parameter open-weight frontier model</a></h3>
+    <p class="summary">China's Moonshot AI released Kimi K3 on July 16, a 2.8-trillion-parameter multimodal reasoning model it calls the largest open-weight system shipped to date, with a one-million-token context window and always-on reasoning. It went live through Kimi's app and API at $3 per million input tokens and $15 per million output, with full open weights due by July 27. Bloomberg reported the model trails only Anthropic's Claude Fable 5 and OpenAI's GPT-5.6 on overall capability.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> An open-weight model within reach of the US frontier resets the cost curve for any firm deploying AI internally. Technology teams weighing build-versus-buy should price self-hosted Kimi K3 against frontier API contracts, and allocators holding US-lab exposure should watch whether cheap, near-frontier open weights compress the pricing power baked into those private valuations.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals" target="_blank">Google delays flagship Gemini 3.5 Pro after a ground-up model rebuild</a></h3>
+    <p class="summary">Google has slipped the launch of Gemini 3.5 Pro, its most powerful model, by months after internal testing showed weak coding and long-horizon reasoning, Bloomberg reported July 16. DeepMind discarded a near-ready version and ordered a full pre-training restart on a native Gemini 3 foundation. The stumble coincided with four senior DeepMind researchers leaving in a single week, including Gemini co-lead Noam Shazeer to OpenAI and Nobel laureate John Jumper to Anthropic. A stopgap Flash upgrade is now in testing.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The leaderboard reshuffles fastest when the presumed front-runner stalls. PMs holding Alphabet should separate the near-term model gap from Google's distribution and cloud moat, while enterprise buyers standardizing on one model provider should keep a second vendor qualified — a flagship delay plus talent flight is exactly the concentration risk multi-model procurement is meant to hedge.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://nvidianews.nvidia.com/news/japans-robotics-and-manufacturing-leaders-build-on-nvidia-cosmos-to-advance-physical-ai-frontier" target="_blank">NVIDIA</a></div>
+    <h3><a href="https://www.cnbc.com/2026/07/16/nvidia-reveals-new-ai-model-and-expands-japans-physical-ai-ecosystem.html" target="_blank">Nvidia launches Cosmos 3 Edge and anchors Japan's first national physical-AI grid</a></h3>
+    <p class="summary">Nvidia unveiled Cosmos 3 Edge on July 16, a four-billion-parameter "world model" for on-device robot perception that developers can adapt to specific robots and sensors in about a day. Fanuc, Yaskawa, Fujitsu, Hitachi and Sony joined its Cosmos Coalition to build open physical-AI models. Nvidia also partnered with Noetra to stand up a Vera Rubin AI factory of 13,750 Vera CPUs and 27,500 Rubin GPUs, which it billed as the world's first national physical-AI infrastructure.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The AI-capex story is broadening from data-center training into sovereign, robotics-grade compute — a second demand leg beyond hyperscalers. PMs with semiconductor or industrial-automation exposure should track physical AI as a distinct thesis, and note that national-infrastructure deals give Nvidia government-backed, multi-year revenue that is less sensitive to any single hyperscaler's capex pause.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2026-07-10/apple-sues-openai-for-trade-secret-theft-in-blockbuster-case" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-07-10/apple-sues-openai-for-trade-secret-theft-in-blockbuster-case" target="_blank">Apple escalates its OpenAI trade-secret suit with preservation letters to ex-staff</a></h3>
+    <p class="summary">Apple sent legal-preservation letters to roughly 40 former employees now at OpenAI on July 17, escalating the trade-secret lawsuit it filed July 10 in California federal court. Apple alleges OpenAI systematically took its hardware intellectual property, pointing to its hardware chief and former Apple vice president Tang Tan, job candidates asked to bring "actual parts" to interviews, and a departing engineer accused of taking a company laptop. OpenAI is building consumer hardware intended to rival the iPhone.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> AI-talent poaching now carries live litigation risk, not just noncompete friction. For anyone modeling OpenAI's hardware ambitions, an injunction or damages finding is a tail risk worth pricing, and firms hiring aggressively from competitors should tighten onboarding controls — the discovery Apple is compelling here sets a template rivals across the AI race can copy.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/2q2026.pdf" target="_blank">Morgan Stanley</a></div>
+    <h3><a href="https://www.financial-planning.com/news/behind-the-marvel-movie-inspired-ai-super-agents-coming-to-morgan-stanley" target="_blank">Morgan Stanley's wealth arm adds a record $148 billion as it scales AI agents</a></h3>
+    <p class="summary">Morgan Stanley reported second-quarter results on July 16 with wealth management pulling in a record $148 billion of net new assets and total client assets across wealth and investment management reaching $10 trillion. Firmwide net revenue was $21.3 billion and net income $5.6 billion, or $3.46 a share. Wealth head Jed Finn said the unit now runs more than 3,500 AI tools and is assembling "super agents" — clusters of smaller agents that answer client questions, open accounts and move money under advisor sign-off.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The largest wealth platform pairing record flows with a named agent roadmap raises the automation bar every competing advisor is measured against. Advisors benchmarking their stack should ask which routine workflows — onboarding, money movement, servicing — vendors can automate end-to-end, and insist on the human-approval checkpoints Morgan Stanley is keeping, since unattended agent actions on client accounts carry direct compliance exposure.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://newsroom.bankofamerica.com/" target="_blank">Bank of America</a></div>
+    <h3><a href="https://www.benzinga.com/news/26/07/60442721/bank-america-q2-2026-earnings-call-transcript" target="_blank">Bank of America's wealth unit hits record $6.9 billion revenue on AI-aided productivity</a></h3>
+    <p class="summary">Bank of America's Global Wealth &amp; Investment Management posted record second-quarter revenue of $6.9 billion, up 16%, with client balances at an all-time $4.9 trillion and segment net income up 42% to $1.4 billion, per its July 14 report. The bank added roughly 6,000 net new affluent households in the quarter. Executives credited new AI-enabled tools that help Merrill and Private Bank advisors prepare for client meetings, surface opportunities and personalize advice, alongside its Erica assistant powering client-facing digital activity.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A second wirehouse tying record wealth economics to advisor-facing AI turns productivity tooling into a growth argument, not just a cost story. Advisors evaluating platforms should probe whether "meeting prep" and "opportunity surfacing" features are grounded in a clean client record, and RIAs should benchmark their own household-growth capacity against firms now scaling advisors with agents.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.rightcapital.com/iris-ai-planning-agent/" target="_blank">RightCapital</a></div>
+    <h3><a href="https://www.investmentnews.com/fintech/rightcapital-claims-industry-first-with-ai-agent-for-financial-planning/267144" target="_blank">RightCapital launches Iris, billed as the first planning-focused AI agent for advisors</a></h3>
+    <p class="summary">RightCapital launched Iris, which it calls the first AI agent built specifically for financial planning, giving advisors on its Premium and Platinum tiers a tool that reads client profile data, flags plan anomalies and runs retirement simulations inside the workflow at no extra cost. Iris includes double-check, cash-flow-review and Plan Builder functions to catch data gaps and draft strategies in real time. All outputs are drawn from RightCapital's proprietary calculation engine rather than external models, a deliberate compliance choice.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Planning software embedding an agent that touches the plan itself — not just notes or CRM — moves AI closer to the advice output regulators scrutinize. Advisors should test whether Iris's anomaly flags reduce plan-error risk, and note the pattern of grounding outputs in a firm's own calculation engine, which is how vendors are answering the hallucination objection in regulated workflows.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.hedgeweek.com/crowded-ai-trades-hit-hedge-funds-as-quant-and-stockpickers-cut-risk/" target="_blank">Hedgeweek</a></div>
+    <h3><a href="https://www.hedgeweek.com/crowded-ai-trades-hit-hedge-funds-as-quant-and-stockpickers-cut-risk/" target="_blank">Quant funds surrender a quarter of their 2026 gains as crowded AI trades unwind</a></h3>
+    <p class="summary">Systematic hedge funds were among the hardest hit in a late-June and early-July reversal, with average quant returns falling to 10.8% for the year from 14.4% on June 22, according to industry data reported by Hedgeweek. Losses clustered in heavily owned US equities and developed-Asian markets, amplified by sharp semiconductor swings and elevated leverage among South Korean investors. Both quants and stock-pickers cut exposure, dragging hedge-fund leverage to its lowest level of the past year.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> When many managers run similar models on the same crowded book, diversification you thought you owned can vanish in a drawdown. Allocators should look through headline strategy labels to underlying position overlap, stress-test how correlated their systematic sleeves are to the AI-momentum complex, and treat the speed of this deleveraging as evidence that crowding, not thesis, drove the losses.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://corporate.vanguard.com/content/corporatesite/us/en/corp/articles/machine-learning-role-in-hunt-alpha.html" target="_blank">Vanguard</a></div>
+    <h3><a href="https://www.pionline.com/asset-management/pi-artificial-intelligence-vanguard-custom-ai-approach/" target="_blank">Vanguard's $93 billion Strategic Equity Fund draws half its signals from machine learning</a></h3>
+    <p class="summary">Vanguard's Quantitative Equity Group has rebuilt stock selection for its roughly $93 billion Strategic Equity Fund around an ensemble of dozens of machine-learning models tracking tens of millions of financial and economic interactions. Senior portfolio manager Cesar Orosco describes a blend in which half the inputs come from the team's decades-old fundamental approach and half from machine learning. The group frames the goal as replicating a good fundamental investor's judgment systematically and at scale across small- and mid-cap names.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A low-cost giant folding machine learning into a mainstream active fund signals the technique is migrating from hedge-fund alpha into everyday products retail investors already hold. Advisors doing due diligence should ask managers how much of a strategy's process is now model-driven, how those models are validated, and whether the machine-learning overlay changes the fund's factor tilts or turnover.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2026-07-01/wall-street-s-ai-race-is-fueling-new-fears-of-crowded-trading" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-07-01/wall-street-s-ai-race-is-fueling-new-fears-of-crowded-trading" target="_blank">Wall Street researchers warn AI could shrink a trading edge to eighteen months</a></h3>
+    <p class="summary">A profitable trading signal could lose half its excess return in about 18 months, down from five to seven years before AI became widespread, according to research highlighted by Bloomberg on July 1. The authors argue each new AI entrant shortens the lifespan of every exploitable pattern at an increasing rate as models converge on the same trades. The same work found AI strategies vulnerable to manipulation, with one model's return dropping about 18 points after a single doctored headline.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> If alpha decays this fast, the edge shifts from having a model to constantly refreshing it — and to guarding data inputs against adversarial manipulation. PMs building AI-driven strategies should budget for continuous retraining rather than treating a backtest as durable, and risk teams should add headline- and data-poisoning scenarios to model validation, since one corrupted input can swing returns materially.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Saturday, July 18, 2026
+  </div>
+
+</div>
+</body>
+</html>
