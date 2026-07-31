@@ -34,6 +34,7 @@
       font-size: 15px;
     }
 
+    /* ── Header ── */
     .header {
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
       color: var(--white);
@@ -41,65 +42,198 @@
       text-align: center;
     }
     .header-eyebrow {
-      font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
-      text-transform: uppercase; color: #93c5fd; margin-bottom: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #93c5fd;
+      margin-bottom: 10px;
     }
-    .header h1 { font-size: clamp(26px, 5vw, 38px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .header-date { font-size: 14px; color: #bfdbfe; font-weight: 400; }
-    .header-divider { width: 48px; height: 3px; background: #3b82f6; border-radius: 2px; margin: 18px auto 0; }
+    .header h1 {
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .header-date {
+      font-size: 14px;
+      color: #bfdbfe;
+      font-weight: 400;
+    }
+    .header-divider {
+      width: 48px;
+      height: 3px;
+      background: #3b82f6;
+      border-radius: 2px;
+      margin: 18px auto 0;
+    }
 
-    .container { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; }
+    /* ── Layout ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
 
-    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; margin-top: 48px; }
+    /* ── Section Headers ── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      margin-top: 48px;
+    }
     .section-header:first-of-type { margin-top: 0; }
     .section-icon {
-      width: 38px; height: 38px; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
     }
     .section-icon.major { background: var(--accent-light); }
     .section-icon.wealth { background: var(--gold-light); }
-    .section-title { font-size: 20px; font-weight: 700; color: var(--navy); letter-spacing: -0.3px; }
-    .section-count { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-top: 2px; }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.3px;
+    }
+    .section-count {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
 
+    /* ── Story Cards ── */
     .story-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 14px; padding: 26px 28px; margin-bottom: 18px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px 28px;
+      margin-bottom: 18px;
       transition: box-shadow 0.2s ease;
     }
     .story-card:hover { box-shadow: 0 4px 20px rgba(15, 32, 68, 0.08); }
 
-    .story-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
-    .story-source { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
-    .story-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--border); flex-shrink: 0; }
-    .story-tag {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-      background: var(--tag-bg); color: var(--tag-color); padding: 2px 8px; border-radius: 100px;
+    .story-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
     }
-    .story-tag.gold { background: #fef3c7; color: #92400e; }
+    .story-source {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .story-dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+    .story-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--tag-bg);
+      color: var(--tag-color);
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+    .story-tag.gold {
+      background: #fef3c7;
+      color: #92400e;
+    }
 
-    .story-headline { font-size: 18px; font-weight: 700; color: var(--navy); line-height: 1.35; margin-bottom: 12px; letter-spacing: -0.2px; }
-    .story-headline a { color: inherit; text-decoration: none; }
+    .story-headline {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.35;
+      margin-bottom: 12px;
+      letter-spacing: -0.2px;
+    }
+    .story-headline a {
+      color: inherit;
+      text-decoration: none;
+    }
     .story-headline a:hover { color: var(--accent); text-decoration: underline; }
 
-    .story-summary { font-size: 14.5px; color: #374151; line-height: 1.7; margin-bottom: 16px; }
+    .story-summary {
+      font-size: 14.5px;
+      color: #374151;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
 
     .why-matters {
-      background: var(--accent-light); border-left: 3px solid var(--accent);
-      border-radius: 0 8px 8px 0; padding: 12px 16px;
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
     }
-    .why-matters.gold-theme { background: var(--gold-light); border-left-color: var(--gold); }
-    .why-matters-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+    .why-matters.gold-theme {
+      background: var(--gold-light);
+      border-left-color: var(--gold);
+    }
+    .why-matters-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
     .why-matters.gold-theme .why-matters-label { color: var(--gold); }
-    .why-matters p { font-size: 13.5px; color: #1e3a5f; line-height: 1.6; }
+    .why-matters p {
+      font-size: 13.5px;
+      color: #1e3a5f;
+      line-height: 1.6;
+    }
     .why-matters.gold-theme p { color: #78350f; }
 
-    .section-divider { border: none; border-top: 1px solid var(--border); margin: 44px 0 0; }
+    /* ── Divider ── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 44px 0 0;
+    }
 
-    .footer { text-align: center; padding: 32px 20px; background: var(--white); border-top: 1px solid var(--border); margin-top: 48px; }
-    .footer-logo { font-size: 13px; font-weight: 700; color: var(--navy); letter-spacing: -0.2px; margin-bottom: 6px; }
-    .footer p { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
-    .footer a { color: var(--accent); text-decoration: none; }
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      margin-top: 48px;
+    }
+    .footer-logo {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.2px;
+      margin-bottom: 6px;
+    }
+    .footer p {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
     .footer a:hover { text-decoration: underline; }
 
     @media (max-width: 600px) {
@@ -111,6 +245,7 @@
 </head>
 <body>
 
+  <!-- ── Header ── -->
   <header class="header">
     <p class="header-eyebrow">Prepared for Naveen</p>
     <h1>AI Daily Digest</h1>
@@ -118,16 +253,19 @@
     <div class="header-divider"></div>
   </header>
 
+  <!-- ── Body ── -->
   <main class="container">
 
+    <!-- ══ SECTION 1: Major AI Updates ══ -->
     <div class="section-header">
-      <div class="section-icon major">&#127760;</div>
+      <div class="section-icon major">🌐</div>
       <div>
         <div class="section-title">Major AI Updates</div>
-        <div class="section-count">5 stories &#183; ~3 min read</div>
+        <div class="section-count">5 stories · ~3 min read</div>
       </div>
     </div>
 
+    <!-- Story 1 -->
     <article class="story-card">
       <div class="story-meta">
         <span class="story-source">CNBC</span>
@@ -140,14 +278,15 @@
         </a>
       </h2>
       <p class="story-summary">
-        The Trump administration released its National Policy Framework for Artificial Intelligence on March 20, outlining seven pillars aimed at promoting innovation while consolidating federal authority over AI governance. The framework explicitly calls on Congress to preempt a growing patchwork of state AI laws &#8212; including California's AI Transparency Act and Colorado's AI Act (effective June 30, 2026) &#8212; arguing that fragmented state rules impede U.S. competitiveness. Rather than creating a new regulatory body, the administration advocates a sector-specific approach, keeping AI oversight with existing regulators such as the SEC, CFTC, and FINRA.
+        The Trump administration released its National Policy Framework for Artificial Intelligence on March 20, outlining seven pillars aimed at promoting innovation while consolidating federal authority over AI governance. The framework explicitly calls on Congress to preempt a growing patchwork of state AI laws — including California's AI Transparency Act and Colorado's AI Act (effective June 30, 2026) — arguing that fragmented state rules impede U.S. competitiveness. Rather than creating a new regulatory body, the administration advocates a sector-specific approach, keeping AI oversight with existing regulators such as the SEC, CFTC, and FINRA.
       </p>
       <div class="why-matters">
         <div class="why-matters-label">Why it matters</div>
-        <p>For wealth management firms, the federal-versus-state tension is directly relevant: if the preemption effort succeeds, compliance teams may be able to rationalize their AI governance programs around a single federal framework rather than managing divergent state-level obligations. The sector-specific approach also means the SEC is likely to remain your primary AI regulator &#8212; watch for updated guidance on AI-generated advice disclosures.</p>
+        <p>For wealth management firms, the federal-versus-state tension is directly relevant: if the preemption effort succeeds, compliance teams may be able to rationalize their AI governance programs around a single federal framework rather than managing divergent state-level obligations. The sector-specific approach also means the SEC is likely to remain your primary AI regulator — watch for updated guidance on AI-generated advice disclosures.</p>
       </div>
     </article>
 
+    <!-- Story 2 -->
     <article class="story-card">
       <div class="story-meta">
         <span class="story-source">CNBC</span>
@@ -160,14 +299,15 @@
         </a>
       </h2>
       <p class="story-summary">
-        Harvey, which builds autonomous AI agents for legal work, closed a $200 million funding round this week at an $11 billion valuation &#8212; cementing its status as one of the most valuable vertical AI companies in the world. The fresh capital will fund expansion of Harvey's AI agents (tools that independently complete multi-step legal tasks) and grow embedded legal engineering teams globally. The round signals that venture investors are shifting bets from foundational model companies toward domain-specific AI applications with defensible data moats.
+        Harvey, which builds autonomous AI agents for legal work, closed a $200 million funding round this week at an $11 billion valuation — cementing its status as one of the most valuable vertical AI companies in the world. The fresh capital will fund expansion of Harvey's AI agents (tools that independently complete multi-step legal tasks) and grow embedded legal engineering teams globally. The round signals that venture investors are shifting bets from foundational model companies toward domain-specific AI applications with defensible data moats.
       </p>
       <div class="why-matters">
         <div class="why-matters-label">Why it matters</div>
-        <p>Harvey's trajectory is a bellwether for professional-services AI. If legal AI agents can reach $11B in value by automating complex, regulated, document-heavy work, the same blueprint applies squarely to wealth management. Expect accelerating investment in similarly vertical AI platforms for financial advice, compliance documentation, and portfolio reporting &#8212; and increasing pressure on incumbents to match those capabilities.</p>
+        <p>Harvey's trajectory is a bellwether for professional-services AI. If legal AI agents can reach $11B in value by automating complex, regulated, document-heavy work, the same blueprint applies squarely to wealth management. Expect accelerating investment in similarly vertical AI platforms for financial advice, compliance documentation, and portfolio reporting — and increasing pressure on incumbents to match those capabilities.</p>
       </div>
     </article>
 
+    <!-- Story 3 -->
     <article class="story-card">
       <div class="story-meta">
         <span class="story-source">TechCrunch</span>
@@ -180,14 +320,15 @@
         </a>
       </h2>
       <p class="story-summary">
-        AMI Labs, the AI research venture co-founded by Turing Award winner and former Meta chief AI scientist Yann LeCun, closed a $1.03 billion Series A at a $3.5 billion pre-money valuation. The company is developing "world models" &#8212; AI systems that learn cause-and-effect relationships from real-world experience rather than purely from text &#8212; which LeCun argues is a necessary step beyond current large language models. The raise is one of the largest Series A rounds in AI history and underscores continued investor conviction in foundational AI research despite a maturing market.
+        AMI Labs, the AI research venture co-founded by Turing Award winner and former Meta chief AI scientist Yann LeCun, closed a $1.03 billion Series A at a $3.5 billion pre-money valuation. The company is developing "world models" — AI systems that learn cause-and-effect relationships from real-world experience rather than purely from text — which LeCun argues is a necessary step beyond current large language models. The raise is one of the largest Series A rounds in AI history and underscores continued investor conviction in foundational AI research despite a maturing market.
       </p>
       <div class="why-matters">
         <div class="why-matters-label">Why it matters</div>
-        <p>World models could eventually enable AI that reasons more reliably about financial scenarios &#8212; simulating portfolio behavior under novel market conditions rather than pattern-matching on historical data. LeCun's track record and the size of the raise suggest this is a credible long-horizon bet worth monitoring, even if commercial applications are still years away.</p>
+        <p>World models could eventually enable AI that reasons more reliably about financial scenarios — simulating portfolio behavior under novel market conditions rather than pattern-matching on historical data. LeCun's track record and the size of the raise suggest this is a credible long-horizon bet worth monitoring, even if commercial applications are still years away.</p>
       </div>
     </article>
 
+    <!-- Story 4 -->
     <article class="story-card">
       <div class="story-meta">
         <span class="story-source">Bloomberg LP</span>
@@ -200,7 +341,7 @@
         </a>
       </h2>
       <p class="story-summary">
-        Bloomberg announced it is adopting Anthropic's Model Context Protocol (MCP) &#8212; the emerging open standard for connecting AI agents to external data sources and tools &#8212; to bring agentic AI into production across its terminal and data services. MCP, originally developed by Anthropic and now donated to the Linux Foundation's Agentic AI Foundation, has become the de facto connectivity layer for AI agents, with OpenAI, Microsoft, Google, and now Bloomberg all announcing support. With Bloomberg on board, financial data infrastructure is now natively pluggable into AI agent workflows.
+        Bloomberg announced it is adopting Anthropic's Model Context Protocol (MCP) — the emerging open standard for connecting AI agents to external data sources and tools — to bring agentic AI into production across its terminal and data services. MCP, originally developed by Anthropic and now donated to the Linux Foundation's Agentic AI Foundation, has become the de facto connectivity layer for AI agents, with OpenAI, Microsoft, Google, and now Bloomberg all announcing support. With Bloomberg on board, financial data infrastructure is now natively pluggable into AI agent workflows.
       </p>
       <div class="why-matters">
         <div class="why-matters-label">Why it matters</div>
@@ -208,6 +349,7 @@
       </div>
     </article>
 
+    <!-- Story 5 -->
     <article class="story-card">
       <div class="story-meta">
         <span class="story-source">TechCrunch</span>
@@ -220,24 +362,26 @@
         </a>
       </h2>
       <p class="story-summary">
-        A widely circulated TechCrunch analysis argues that 2026 is the year AI moves from ambitious demos to embedded operational reality. The report cites narrowing cost curves, widespread MCP adoption, and growing enterprise familiarity as the drivers &#8212; pointing to agentic AI (systems that can plan and execute multi-step tasks autonomously) as the primary growth frontier. VC data supports the thesis: AI startups captured the majority of venture dollars so far in 2026, but the deals increasingly favor application-layer companies with clear ROI stories over pure foundational model plays.
+        A widely circulated TechCrunch analysis argues that 2026 is the year AI moves from ambitious demos to embedded operational reality. The report cites narrowing cost curves, widespread MCP adoption, and growing enterprise familiarity as the drivers — pointing to agentic AI (systems that can plan and execute multi-step tasks autonomously) as the primary growth frontier. VC data supports the thesis: AI startups captured the majority of venture dollars so far in 2026, but the deals increasingly favor application-layer companies with clear ROI stories over pure foundational model plays.
       </p>
       <div class="why-matters">
         <div class="why-matters-label">Why it matters</div>
-        <p>The "hype to pragmatism" shift changes the competitive calculus. Firms that treated 2024&#8211;2025 as an AI exploration period now need to show measurable business outcomes &#8212; reduced cost-to-serve, faster client onboarding, or demonstrable compliance lift &#8212; or risk falling behind peers who have moved faster. The window for treating AI as a future initiative is closing.</p>
+        <p>The "hype to pragmatism" shift changes the competitive calculus. Firms that treated 2024–2025 as an AI exploration period now need to show measurable business outcomes — reduced cost-to-serve, faster client onboarding, or demonstrable compliance lift — or risk falling behind peers who have moved faster. The window for treating AI as a future initiative is closing.</p>
       </div>
     </article>
 
     <hr class="section-divider" />
 
+    <!-- ══ SECTION 2: AI in Wealth Management ══ -->
     <div class="section-header">
-      <div class="section-icon wealth">&#128188;</div>
+      <div class="section-icon wealth">💼</div>
       <div>
         <div class="section-title">AI in Wealth Management</div>
-        <div class="section-count">3 stories &#183; ~2 min read</div>
+        <div class="section-count">3 stories · ~2 min read</div>
       </div>
     </div>
 
+    <!-- Story 6 -->
     <article class="story-card">
       <div class="story-meta">
         <span class="story-source">Fintech Global</span>
@@ -250,14 +394,15 @@
         </a>
       </h2>
       <p class="story-summary">
-        Spanish wealthtech firm Flanks &#8212; which processes over 500,000 portfolios monthly across 600+ institutional connections in 33 countries &#8212; launched its AI Financial Advisor on March 25. The tool uses a multi-agent AI framework to let advisors interrogate complex, multi-custodian client portfolios in plain language, receiving instant, contextualised analysis across all asset classes, family structures, and cross-border holdings.
+        Spanish wealthtech firm Flanks — which processes over 500,000 portfolios monthly across 600+ institutional connections in 33 countries — launched its AI Financial Advisor on March 25. The tool uses a multi-agent AI framework to let advisors interrogate complex, multi-custodian client portfolios in plain language, receiving instant, contextualised analysis across all asset classes, family structures, and cross-border holdings. Capabilities include consolidated household views, real-time market sentiment benchmarked against holdings, cash flow and dividend visibility, automated currency normalisation, and private equity capital call tracking. All processing occurs within Flanks' secure in-house environment — no client data touches public AI systems.
       </p>
       <div class="why-matters gold-theme">
         <div class="why-matters-label">Why it matters</div>
-        <p>Flanks' approach directly addresses one of the biggest friction points in advisory work: assembling a unified picture of a client's wealth across multiple custodians. The compliance guardrails &#8212; descriptive analysis only, no investment recommendations &#8212; also show a maturing understanding of how to deploy AI within regulatory constraints.</p>
+        <p>Flanks' approach directly addresses one of the biggest friction points in advisory work: assembling a unified picture of a client's wealth across multiple custodians. The compliance guardrails — descriptive analysis only, no investment recommendations — also show a maturing understanding of how to deploy AI within regulatory constraints. Watch for similar launches from larger platforms in the coming quarters.</p>
       </div>
     </article>
 
+    <!-- Story 7 -->
     <article class="story-card">
       <div class="story-meta">
         <span class="story-source">Wealth Management / Yahoo Finance</span>
@@ -270,14 +415,15 @@
         </a>
       </h2>
       <p class="story-summary">
-        Three financial planning technology providers announced AI tool launches in rapid succession this week. Apex Fintech Solutions and Wavvest announced a partnership integrating AI-powered financial planning directly into Apex's custodial infrastructure. RightCapital launched "Smart Import," which processes unstructured documents to automatically populate planning inputs. Conquest Planning separately announced four AI-powered capabilities coming in April, targeting its base of advisors in the U.S., U.K., and Canada.
+        Three financial planning technology providers announced AI tool launches in rapid succession this week. Apex Fintech Solutions and Wavvest announced a partnership integrating AI-powered financial planning directly into Apex's custodial infrastructure, eliminating manual data import for advisors. RightCapital launched "Smart Import," which processes unstructured documents — meeting transcripts, statements, client emails — to automatically populate planning inputs for advisor review; the tool is available immediately to all RightCapital users at no cost. Conquest Planning separately announced four AI-powered capabilities coming in April, including MCP server access, targeting its base of advisors in the U.S., U.K., and Canada (the firm serves roughly 70% of Canadian advisors).
       </p>
       <div class="why-matters gold-theme">
         <div class="why-matters-label">Why it matters</div>
-        <p>The pace of launches underscores how quickly AI is becoming table stakes in financial planning software. RightCapital's decision to offer Smart Import at no additional charge suggests competitive pressure is already forcing providers to bundle AI features &#8212; meaning advisors should expect richer AI capabilities without proportional price increases.</p>
+        <p>The pace of launches underscores how quickly AI is becoming table stakes in financial planning software. For advisors, the near-term payoff is clear: dramatically reduced data-entry burden and faster plan generation. RightCapital's decision to offer Smart Import at no additional charge suggests competitive pressure is already forcing providers to bundle AI features — meaning advisors should expect richer AI capabilities without proportional price increases.</p>
       </div>
     </article>
 
+    <!-- Story 8 -->
     <article class="story-card">
       <div class="story-meta">
         <span class="story-source">Wealth Management / InvestmentNews</span>
@@ -290,19 +436,20 @@
         </a>
       </h2>
       <p class="story-summary">
-        A new InvestmentNews analysis finds that financial advisors are moving beyond isolated AI experiments and beginning to restructure their technology stacks around AI as a core capability. Agentic AI &#8212; systems capable of planning, reasoning, and executing multi-step workflows &#8212; is emerging as the frontier use case, displacing earlier chatbot-style tools. The report notes a shift in AI adoption patterns: rather than adding AI as a bolt-on feature, leading firms are selecting technology platforms based on their AI architecture from the outset.
+        A new InvestmentNews analysis finds that financial advisors are moving beyond isolated AI experiments and beginning to restructure their technology stacks around AI as a core capability. Agentic AI — systems capable of planning, reasoning, and executing multi-step workflows — is emerging as the frontier use case, displacing earlier chatbot-style tools. The report notes a shift in AI adoption patterns: rather than adding AI as a bolt-on feature, leading firms are selecting technology platforms based on their AI architecture from the outset, creating meaningful switching costs and strategic lock-in.
       </p>
       <div class="why-matters gold-theme">
         <div class="why-matters-label">Why it matters</div>
-        <p>Platform selection decisions made now carry long-term implications. If AI architecture is becoming a primary evaluation criterion, then RFP processes and technology reviews should weight AI roadmap depth, data governance, and agent interoperability (including MCP compatibility) far more heavily than in past cycles. Firms that lock into platforms with weak AI foundations today may face costly migrations in 24&#8211;36 months.</p>
+        <p>Platform selection decisions made now carry long-term implications. If AI architecture is becoming a primary evaluation criterion — not a secondary feature — then RFP processes and technology reviews should weight AI roadmap depth, data governance, and agent interoperability (including MCP compatibility) far more heavily than in past cycles. Firms that lock into platforms with weak AI foundations today may face costly migrations in 24–36 months.</p>
       </div>
     </article>
 
   </main>
 
+  <!-- ── Footer ── -->
   <footer class="footer">
     <div class="footer-logo">AI Daily Digest</div>
-    <p>Prepared for Naveen &#160;&#183;&#160; Generated on March 29, 2026</p>
+    <p>Prepared for Naveen &nbsp;·&nbsp; Generated on March 29, 2026</p>
     <p style="margin-top:6px;">
       Stories sourced from
       <a href="https://www.cnbc.com" target="_blank">CNBC</a>,
