@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — August 8, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Saturday, August 8, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://newsroom.sk.com/news" target="_blank">SK Group Newsroom</a></div>
+    <h3><a href="https://www.koreaherald.com/article/10819890" target="_blank">Nvidia and SK Group sign $500 billion-plus AI infrastructure partnership</a></h3>
+    <p class="summary">Nvidia and South Korea's SK Group signed letters of intent on August 3 for a partnership valued at more than $500 billion spanning AI data centers and next-generation memory. SK Telecom will build a 2-gigawatt AI cloud in South Korea using Nvidia's Vera Rubin systems paired with SK hynix HBM4 chips, with the first data center slated to begin operations in 2027. The agreement, unveiled at a San Francisco meeting between Jensen Huang and President Lee Jae-myung, ties Nvidia's compute roadmap to a captive supply of high-bandwidth memory.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Vertically bundling GPUs with a dedicated HBM supplier signals that memory, not just chips, is now the binding constraint on AI buildouts. Portfolio managers with semiconductor exposure should weight the memory supply chain, not only Nvidia, and treat multiyear compute-and-memory pacts as evidence the capex cycle extends well into 2027 rather than peaking this year.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://corporate.celestica.com/news-releases/news-release-details/celestica-announces-3-billion-equity-offering-accelerate-growth" target="_blank">Celestica</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-08-05/celestica-joins-data-center-funding-rush-with-3-billion-deal" target="_blank">Celestica prices $3 billion equity offering to fund AI infrastructure growth</a></h3>
+    <p class="summary">Celestica, the contract manufacturer that builds servers and networking gear for hyperscalers, priced a $3 billion public equity offering on August 5, selling 9,677,419 shares at $310 apiece. BofA Securities and Citigroup led the deal, priced at up to a 15% discount to the prior close of $362.76, with proceeds earmarked for working capital and capital expenditure to meet what the company called unprecedented multiyear demand. The raise joins a wave of AI-supply-chain firms tapping equity markets to fund data-center expansion.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> When suppliers issue equity at a discount to fund capacity, it confirms order books are running ahead of balance sheets across the AI hardware chain. Investors holding data-center names should watch for dilution and margin pressure as the buildout is increasingly financed on the supply side, and treat these raises as a real-time gauge of how durable hyperscaler demand actually is.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/" target="_blank">Google DeepMind</a></div>
+    <h3><a href="https://roboticsandautomationnews.com/2026/07/31/google-deepmind-unveils-gemini-robotics-2-as-apptronik-humanoid-demonstrates-whole-body-ai/103802/" target="_blank">Google DeepMind ships Gemini Robotics 2 with whole-body robot control</a></h3>
+    <p class="summary">Google DeepMind released Gemini Robotics 2, extending its robotics models from tabletop manipulation to coordinated whole-body control, dexterity, and multi-robot teamwork. Three models ship together, including an on-device version that runs without an internet connection and adapts to new dual-arm platforms using fewer than 200 real-world examples. Demonstrated on Apptronik's Apollo 2 humanoid, the system hit a 92% success rate unscrewing a light bulb but far lower rates picking objects off the floor, underscoring how uneven physical AI remains.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> General-purpose humanoid control moving on-device shortens the path from lab demo to warehouse deployment, a theme investors are already pricing into industrial-automation and robotics names. PMs building thematic exposure should separate capability claims from reliability data, since the gap between a 92% and a sub-50% task success rate is exactly what determines whether these robots reach commercial payback.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000720005&type=8-K" target="_blank">Raymond James (8-K)</a></div>
+    <h3><a href="https://www.wealthmanagement.com/ibd-news/raymond-james-announces-ai-driven-client360-platform-ai-advisor-academy" target="_blank">Raymond James completes enterprise rollout of its Raimond AI assistant</a></h3>
+    <p class="summary">On its fiscal third-quarter call in late July, Raymond James said it finished the enterprise rollout of Raimond, its proprietary AI assistant, reporting 6,500 unique users and a 99.5% satisfaction rate after a phased pilot. The firm launched an internal AI Academy to train advisors and reiterated plans to spend $1.1 billion on technology over the coming year, mostly directed at its Private Client Group. The disclosure accompanied record quarterly net revenue of $3.93 billion, up 16% year over year.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A large independent broker-dealer moving an AI assistant from pilot to firm-wide use, with adoption metrics attached, sets a benchmark rivals will be measured against. Advisors evaluating platforms should ask for comparable usage and satisfaction data rather than feature lists, and operations leaders should note that pairing the tool with formal training is what turns a rollout into actual desktop adoption.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx" target="_blank">Wells Fargo Newsroom</a></div>
+    <h3><a href="https://www.investmentnews.com/fintech/wells-fargo-touts-ai-teammate-to-streamline-advisors-workloads/267464" target="_blank">Wells Fargo embeds AI Teammate across all wealth advisor channels</a></h3>
+    <p class="summary">Wells Fargo launched AI Teammate, a chat-based assistant built into its Advisor Gateway desktop, giving advisors plain-language search that retrieves and summarizes information and surfaces next-step guidance. The tool is available across all Wealth &amp; Investment Management channels, including the independent Wells Fargo Advisors Financial Network. It builds on Advisor Gateway, a one-click hub to more than 200 tools that anchors the unit's $1 billion multiyear technology investment. Wells Fargo positioned the launch as a productivity play rather than client-facing advice.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A wirehouse extending an AI copilot to its independent FiNet channel signals these tools are becoming table stakes for advisor recruiting, not just enterprise employees. Advisors weighing a move should test how deeply an assistant is wired into a firm's actual data and workflows, since a chat layer bolted onto fragmented systems delivers far less than one embedded in the core desktop.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://newsroom.aboutrobinhood.com/" target="_blank">Robinhood Newsroom</a></div>
+    <h3><a href="https://www.investmentnews.com/transformation/robinhood-brings-ai-powered-cortex-to-rias-on-tradepmr/266861" target="_blank">Robinhood expands Cortex AI to advisors across the TradePMR platform</a></h3>
+    <p class="summary">Robinhood expanded Cortex for Advisors, its AI tool for registered investment advisors, across custodian TradePMR's Fusion platform at no additional cost, with broad availability to follow. Cortex generates portfolio summaries, surfaces tax-optimization opportunities, and prepares meeting talking points and follow-up recaps. First unveiled at the SYNERGY26 conference in June, the tool is Robinhood's push to bring the analytics it built for retail traders into the advisor workflow as it scales its RIA custody ambitions.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Bundling AI portfolio and tax tooling into custody at no extra charge pressures standalone advisor-tech vendors that sell the same features by subscription. RIAs choosing a custodian should factor embedded AI into total-cost comparisons, while vendors of point solutions should expect custodians to keep absorbing adjacent workflows, compressing what advisors will pay for a separate meeting-prep or tax tool.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2026-08-05/balyasny-verition-join-hedge-funds-losing-money-in-brutal-july" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.hedgeweek.com/altimeter-among-biggest-july-hedge-fund-losers/" target="_blank">July AI-stock selloff bruises multistrategy and quant hedge funds</a></h3>
+    <p class="summary">A July selloff in AI shares dragged hedge funds into the red, with Balyasny down 1.5% and Verition off 1.1% for the month, while Altimeter Capital fell 11% on holdings like Taiwan Semiconductor and CoreWeave. Systematic and trend-following managers posted their worst month in nearly a year, giving back roughly a quarter of year-to-date gains as returns slid to about 10.8% from 14.4% in late June. The drawdown was triggered by growing investor skepticism over the sustainability of hyperscaler capital spending.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> When multistrategy and quant books lose money together, it points to crowding in the same AI-supply-chain names rather than idiosyncratic bets. Allocators should stress-test manager exposure to a handful of megacap and infrastructure winners, and treat correlated drawdowns across supposedly diversified pods as a signal that AI beta has quietly become the dominant factor in these portfolios.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.ai-street.co/p/bridgewater-trains-ai-to-think-like" target="_blank">AI Street</a></div>
+    <h3><a href="https://www.ai-street.co/p/bridgewater-trains-ai-to-think-like" target="_blank">Bridgewater's AI-run macro fund surpasses $4.5 billion in assets</a></h3>
+    <p class="summary">Bridgewater's AIA Labs macro strategy, live since late 2023 and run with AI as the primary decision-maker, has grown to more than $4.5 billion in assets after generating returns the firm says are uncorrelated to its human-led funds. The system combines Bridgewater's proprietary models with frontier models from OpenAI, Anthropic, and others, while human staff oversee risk and trade execution. Its growth tracks a broader shift, with an industry body reporting that roughly 47% of mid-to-large hedge funds now run generative AI in production.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A marquee macro shop scaling a fund where AI makes the calls, not just assists, moves autonomous investing from experiment to allocatable product. Investors considering AI-driven strategies should probe whether returns are genuinely uncorrelated or simply repackaged factor exposure, and demand clarity on how much discretion the models hold versus the humans still signing off on risk.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.ai-street.co/p/man-group-details-its-alphagpt" target="_blank">AI Street</a></div>
+    <h3><a href="https://www.man.com/insights" target="_blank">Man Group hands trade-idea generation to its AlphaGPT research agent</a></h3>
+    <p class="summary">Man Group's quant equity unit detailed AlphaGPT, an agentic AI workflow that brainstorms investment hypotheses, turns them into code, and backtests potential signals, mimicking how a human researcher develops new strategies. The tool keeps humans in the loop for oversight while letting the roughly $170 billion manager process far more data and evaluate more ideas per researcher. Rivals including Vanguard and T. Rowe Price described similar agent-based tools that compare AI-generated consensus views against their own in-house research.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Pushing agents into signal generation, not just back-office tasks, targets the highest-value part of the quant workflow and could reshape research-team economics. Allocators should ask managers how AI-generated signals are validated and guarded against overfitting, since a tool that spins up thousands of backtested ideas also multiplies the risk of mistaking data-mined noise for durable alpha.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Saturday, August 8, 2026
+  </div>
+
+</div>
+</body>
+</html>
