@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — August 10, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Monday, August 10, 2026</div>
+    <div class="reading-time">~8 min read</div>
+  </div>
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/" target="_blank">TechCrunch</a></div>
+    <h3><a href="https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/" target="_blank">Anthropic builds an in-house team to design custom AI chips for Claude</a></h3>
+    <p class="summary">On August 5, Anthropic confirmed it is hiring senior silicon engineers — advertising salaries up to $485,000 — to design custom chips for its Claude models, the first time it has publicly acknowledged a plan Reuters reported it was weighing back in April. The company framed the effort as part of a broader multi-chip strategy that still leans on AWS, Google, Nvidia, and AMD processors. Anthropic gave no timeline for when its own silicon might reach production.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A software-first lab moving into hardware signals that compute scarcity, not model quality, is now the gating factor on AI economics. PMs holding semiconductor and hyperscaler names should watch whether custom-silicon efforts at the labs gradually erode Nvidia's pricing power, and treat vertical integration as evidence that inference cost has become the industry's central competitive battleground.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank">OpenAI</a></div>
+    <h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank">OpenAI rolls GPT-5.6 Sol into everyday ChatGPT with a reasoning slider</a></h3>
+    <p class="summary">On August 6, OpenAI updated GPT-5.6 Sol for general ChatGPT use, making it more reliable with facts and adding a slider that lets Plus and Pro users dial how much the model "thinks" before answering. Sol, first shown in limited preview on June 27, anchors a 5.6 series that also includes Terra and Luna. The rollout follows OpenAI's August 1 preview of Astra, an unreleased model it announced not with a launch but by solving ten open math problems.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A user-facing control over reasoning depth turns the compute-versus-quality trade-off into an explicit choice, foreshadowing the tiered pricing enterprises will need to budget around. Analysts and advisors wiring AI into research workflows should test whether higher "thinking" settings materially improve output or merely raise cost per query, then standardize a default before deploying tools firm-wide.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.businesswire.com/news/home/20260807600552/en/Energy-Vault-Announces-Strategic-Agreement-to-Deploy-1.25-GW-of-Integrated-Power-Infrastructure-for-Hyperscaler-AI-Data-Center-with-Leading-Power-Generation-EPC-Deploying-Caterpillar-Gensets" target="_blank">Business Wire</a></div>
+    <h3><a href="https://www.businesswire.com/news/home/20260807600552/en/Energy-Vault-Announces-Strategic-Agreement-to-Deploy-1.25-GW-of-Integrated-Power-Infrastructure-for-Hyperscaler-AI-Data-Center-with-Leading-Power-Generation-EPC-Deploying-Caterpillar-Gensets" target="_blank">Energy Vault to deploy 1.25 GW of off-grid power for a Texas AI data center</a></h3>
+    <p class="summary">On August 7, Energy Vault said it signed a strategic agreement to deploy 1.25 gigawatts of integrated, off-grid power infrastructure for a hyperscaler's AI data center in Texas, using Caterpillar gensets through a power-generation EPC. The company expects the initial deployment, backed by a hyperscaler customer contract, to generate roughly $500 million to $600 million in revenue across the second half of 2026 and 2027. The build sidesteps constrained grid-interconnection queues entirely.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Off-grid, gas-fired power for a single campus underscores that electricity, not chips, is the binding constraint on AI buildouts. Investors in utilities, power-equipment, and data-center names should track how many projects bypass the grid, since self-generation reshapes both the capex math and the emissions profile that ESG-mandated portfolios have to screen for.</div>
+  </div>
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.investmentnews.com/fintech/industry-veterans-launch-ai-data-firm-targeting-wealth-managements-infrastructure-problem/267730" target="_blank">InvestmentNews</a></div>
+    <h3><a href="https://www.investmentnews.com/fintech/industry-veterans-launch-ai-data-firm-targeting-wealth-managements-infrastructure-problem/267730" target="_blank">Astraeus launches an AI-native data platform to give advisor firms context</a></h3>
+    <p class="summary">On August 6, Astraeus launched an AI-native infrastructure platform that unifies a wealth firm's client data, advisor relationships, accounts, products, fees, and regulatory requirements into a single semantic layer, so AI tools can operate with firm-specific context. Founded by former MoneyLion executives Phill Rosen and Jon Stevenson, the company has raised more than $10 million from backers including Fintech Collective and F-Prime. Firms can plug in different models by function while retaining ownership of their data, governance, and decision logic.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The pitch targets the real bottleneck behind advisor AI — fragmented, ungoverned data that copilots cannot safely reason over. Executives evaluating tools should press vendors on the data layer beneath the chat interface, since a model without clean, permissioned context produces confident but unusable answers, and infrastructure ownership determines whether a firm ends up locked to a single provider.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://getmili.ai/press-release/mili-and-global-relay-partner-to-keep-ai-generated-advisor-records-compliant" target="_blank">Mili</a></div>
+    <h3><a href="https://www.morningstar.com/news/pr-newswire/20260730io15940/mili-and-global-relay-partner-to-keep-ai-generated-advisor-records-compliant" target="_blank">Mili and Global Relay pull AI-generated advisor records into compliant archives</a></h3>
+    <p class="summary">Mili, an AI platform used by RIAs and broker-dealers overseeing more than $250 billion, partnered with Global Relay to automatically capture every AI-generated record it creates into firms' supervised archives with a full audit trail, through Global Relay's Open Connector API. Announced July 30, the tie-up treats AI meeting notes and summaries with the same recordkeeping obligations firms already apply to email, messaging, and voice. The SEC's off-channel-communications sweep has produced more than $2 billion in penalties since 2021.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> As advisors adopt AI notetakers, the records those tools generate become a new supervision surface regulators will examine. Compliance officers should confirm any AI meeting tool writes into their books-and-records archive rather than a vendor silo, because uncaptured AI output is precisely the gap that turned messaging apps into billion-dollar enforcement cases.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.wealthmanagement.com/artificial-intelligence/insightx-and-ai-lab-transform-wealth-management" target="_blank">WealthManagement.com</a></div>
+    <h3><a href="https://www.wealthmanagement.com/artificial-intelligence/insightx-and-ai-lab-transform-wealth-management" target="_blank">BetaNXT launches InsightX enterprise AI platform and an AI innovation lab</a></h3>
+    <p class="summary">Wealth-infrastructure provider BetaNXT unveiled InsightX, an enterprise AI platform, alongside a new AI Innovation Lab meant to speed delivery of AI features across its advisor and brokerage systems. Its first lab release, Val, applies rules-based intelligence to validate documents, data, and workflows as information moves between systems. BetaNXT runs back- and middle-office operations for large broker-dealers and custodians, positioning the tools as infrastructure-layer plumbing rather than another advisor-facing chatbot.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> AI value in wealth increasingly accrues at the data-and-operations layer advisors never see, where reconciliation and validation errors are costly. Firms assessing platforms should weigh whether a vendor is embedding AI into core processing, not just bolting an assistant onto the front end, since operational accuracy — not conversational polish — is what actually scales headcount and protects margins.</div>
+  </div>
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2026-08-03/millennium-lost-2-last-month-as-ai-trade-whipsawed-hedge-funds" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-08-03/millennium-lost-2-last-month-as-ai-trade-whipsawed-hedge-funds" target="_blank">Quant funds beat multi-strategy rivals through July's AI-stock whipsaw</a></h3>
+    <p class="summary">Systematic quant funds outperformed their human-run peers in a turbulent July, as an AI-stock selloff hit crowded multi-strategy books. Renaissance Technologies' largest external fund, Renaissance Institutional Equities, rose 9.2% for the month, while Quantedge gained 7.8%, lifting its 2026 return to 34.6%; Two Sigma and CFM also posted gains. Multi-strategy managers, by contrast, mostly lost money — Millennium fell about 2% — as stretched AI valuations and leverage amplified declines across the sector.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The split shows "AI beta" has become a crowding risk concentrated in discretionary and multi-strat books, while diversified systematic models sidestepped it. Allocators should map how much of a manager's July move — gain or drawdown — traces to the same handful of AI names, and treat correlation to that trade, not headline returns, as the exposure worth monitoring.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://finance.yahoo.com/technology/ai/articles/arch-announces-additional-series-b-130800486.html" target="_blank">Business Wire</a></div>
+    <h3><a href="https://www.investmentnews.com/alternatives/cais-arch-raise-fresh-capital-as-advisors-lean-into-private-markets/267596" target="_blank">Arch tops $500 billion in assets as Franklin Templeton joins its backers</a></h3>
+    <p class="summary">Arch, an AI-powered platform for administering and monitoring private-markets portfolios, said it surpassed $500 billion in assets — now $539 billion, double a year ago — and disclosed previously unnamed Series B investors including Franklin Templeton and MUFG Innovation Partners. Franklin Templeton, which manages more than $1.74 trillion, uses Arch to support its alternatives business. The platform automates the paperwork, position tracking, and data extraction that bog down advisors and family offices managing fund holdings. It was announced July 29.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> A trillion-dollar manager backing and using an AI alts-operations platform signals that scaling private markets now hinges on automating administrative drag, not just distribution. Advisors expanding client allocations to private funds should check whether their reporting stack can ingest messy fund documents automatically, since manual capital-call and statement processing is the hidden cost that caps how many alternatives a practice can hold.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://finance.yahoo.com/markets/options/articles/us-asset-managers-file-first-215606782.html" target="_blank">Reuters</a></div>
+    <h3><a href="https://finance.yahoo.com/markets/options/articles/us-asset-managers-file-first-215606782.html" target="_blank">AI 'MANGOS' ETFs near launch, bundling public and private AI names</a></h3>
+    <p class="summary">Yorkville America and Corgi Securities filed to launch the first ETFs built around the social-media-coined "MANGOS" basket — Meta, Nvidia, Alphabet, and SpaceX, plus private labs Anthropic and OpenAI — with funds potentially trading by the end of August. Yorkville's Mango Plus variant widens the theme to seven more AI beneficiaries, including Micron and SanDisk. The filings followed SpaceX's June IPO, which made pure-play private-AI exposure investable inside a listed wrapper for the first time.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Packaging private companies like Anthropic and OpenAI into an ETF pushes hard-to-value, illiquid exposure into portfolios through a daily-liquidity structure. Advisors fielding client demand should scrutinize how these funds mark private holdings and manage redemptions, since a mismatch between a listed wrapper and its private underlyings is exactly the structural risk that surfaces in a selloff.</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Prepared for Naveen<br>
+    Generated on Monday, August 10, 2026
+  </div>
+
+</div>
+</body>
+</html>
