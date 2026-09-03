@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — September 3, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .header-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #7ea8ff;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a4bfed;
+  }
+  .header .reading-time {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #7ea8ff;
+    background: rgba(255,255,255,0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #5a6a8a;
+    margin: 36px 0 16px;
+    padding-left: 4px;
+  }
+  .section-title span {
+    display: inline-block;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 4px;
+  }
+
+  /* Card */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
+  .card-source {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3366cc;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .card-source a { color: #3366cc; text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #0f1b3d;
+  }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #3366cc; }
+  .card .summary {
+    font-size: 15px;
+    color: #3a3a4a;
+    margin-bottom: 14px;
+  }
+  .card .why-it-matters {
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f4fa;
+    border-left: 3px solid #3366cc;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .card .why-it-matters strong {
+    color: #1a2f6b;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 13px;
+    color: #8a95a8;
+  }
+  .footer .divider {
+    width: 48px;
+    height: 2px;
+    background: #d0d7e3;
+    margin: 0 auto 16px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 12px 8px 32px; }
+    .header { padding: 28px 20px; border-radius: 12px; }
+    .header h1 { font-size: 26px; }
+    .card { padding: 20px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">Daily Briefing</div>
+    <h1>AI Daily Digest</h1>
+    <div class="date">Thursday, September 3, 2026</div>
+    <div class="reading-time">~7 min read</div>
+  </div>
+
+
+  <!-- Major AI Updates -->
+  <div class="section-title"><span>Major AI Updates</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank">Anthropic (company announcement)</a></div>
+    <h3><a href="https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads" target="_blank">Anthropic ships Claude Fable 5.1, cutting agentic workload costs up to 45%</a></h3>
+    <p class="summary">Anthropic released Claude Fable 5.1 and Mythos 5.1 on September 1 — the same model at two safeguard levels, with Mythos limited to vetted US organizations. A 75% cut in cache-read pricing makes typical workloads about 25% cheaper than Fable 5 and highly agentic work up to 45% cheaper, with base token prices unchanged. Anthropic says the model beats Fable 5, Opus 5 and OpenAI's GPT-5.6 Sol on coding and knowledge-work benchmarks, and now flags software vulnerabilities in source code.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The headline is the price, not the benchmark: sustained agent workloads are where enterprise AI budgets actually go, and a 45% cut lands weeks before Anthropic's expected IPO. Firms negotiating model contracts should reprice agentic use cases now — and note the two-tier access template, since restricted-capability models are becoming the industry norm.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/" target="_blank">TechCrunch</a></div>
+    <h3><a href="https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/" target="_blank">OpenAI's Astra is the first model past its 'Critical' cyber threshold</a></h3>
+    <p class="summary">OpenAI disclosed September 1 that Astra, its forthcoming model, is the first LLM to exceed the 'Critical' cybersecurity tier of its Preparedness Framework, posting a perfect ExploitBench score and autonomously finding and exploiting two zero-day vulnerabilities in modified tests. The company plans to release Astra soon but will gate its most advanced cyber capabilities to select partners, adding chain-of-thought monitoring, jailbreak detection and containment-escape evaluations modeled on July's Hugging Face agent incident.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Offensive cyber capability at this level cuts both ways for financial firms: cheaper attacks against them, and gated defensive tooling they may not qualify to access. Security teams should ask vendors now which partner tier their firm sits in, and CISOs should assume adversary capability steps up within months of any release — gated or not.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.thewrap.com/industry-news/tech/trump-administration-openai-new-york-times-ai-copyright/" target="_blank">TheWrap</a></div>
+    <h3><a href="https://www.thewrap.com/industry-news/tech/trump-administration-openai-new-york-times-ai-copyright/" target="_blank">Trump DOJ backs OpenAI's fair-use defense in the New York Times case</a></h3>
+    <p class="summary">The Justice Department filed a statement of interest in Manhattan federal court on September 2 supporting OpenAI's fair-use defense against the New York Times — the administration's first intervention in the wave of publisher copyright suits against AI labs. The brief argues training on publicly available internet materials is fair use "as supported by long-standing and widely accepted precedents," urging courts to reject contrary readings on scientific-advancement and national-security grounds.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Copyright liability is one of the few unpriced tail risks on AI-lab valuations — including Anthropic's, which faces the Sony and Warner Chappell music suit ahead of its IPO. A DOJ thumb on the fair-use scale lowers the odds of a catastrophic damages award, which matters for anyone underwriting exposure to labs going public this fall.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.utilitydive.com/news/texas-hits-pause-data-center-interconnections/827046/" target="_blank">Utility Dive</a></div>
+    <h3><a href="https://www.usnews.com/news/top-news/articles/2026-09-01/analysis-texas-halt-on-powering-data-centers-reflects-us-reckoning-over-ghost-demand" target="_blank">Texas freezes data-center grid hookups over 474 gigawatts of 'ghost' demand</a></h3>
+    <p class="summary">Texas became the first major data-center hub to freeze new grid connections after interconnection requests ballooned from about 48 gigawatts in 2023 to more than 474 gigawatts, with Governor Greg Abbott ordering an audit of every project in the ERCOT queue. A Reuters review published September 1 found US requests from very large power users exceed 700 gigawatts — more than ten times current data-center capacity — as developers file speculative bids without customers or funding. Pennsylvania and Ohio are drafting similar filters.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The power-infrastructure trade PMs rotated into assumes queue numbers translate into demand; this says most won't. Expect utilities to cut headline data-center forecasts as upfront-payment rules bite. Developers with signed interconnects and creditworthy tenants gain scarcity value — screen power and datacenter names on secured capacity, not announced pipeline.</div>
+  </div>
+
+
+  <!-- AI in Wealth Management -->
+  <div class="section-title"><span>AI in Wealth Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.financial-planning.com/news/advisors-think-theyre-good-listeners-12k-ai-tracked-meetings-suggest-otherwise" target="_blank">Financial Planning</a></div>
+    <h3><a href="https://www.financial-planning.com/news/advisors-think-theyre-good-listeners-12k-ai-tracked-meetings-suggest-otherwise" target="_blank">Jump's analysis of 12,000 AI-tracked meetings shows advisors out-talk clients</a></h3>
+    <p class="summary">AI notetaker Jump published an analysis September 1 of nearly 12,000 anonymized advisor-client meetings captured over a year, finding advisors spoke more than their clients in 84% of them. The firm's Client Sentiment Index shows client mood rising from about 6.5 to 7.5 over an average meeting, 48% of meetings surfaced at least one explicit client fear — job loss, portfolio losses and taxes topping the list — and advisors pitched three-plus recommendations per call while clients accepted only one or two.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> This is the first large behavioral dataset to come out of the notetaker category, and it turns meeting capture from a documentation tool into a coaching and benchmarking asset. Firms already paying for Jump, Zocks or Zeplyn should ask what aggregate analytics their contract includes — the data byproduct may be worth more than the notes.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/" target="_blank">TechCrunch</a></div>
+    <h3><a href="https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/" target="_blank">Morgan Stanley joins HiddenLayer's $100 million round for AI-agent security</a></h3>
+    <p class="summary">Austin-based HiddenLayer closed a $100 million Series B on September 2, led by Delta-v Capital with Morgan Stanley, Booz Allen, M12 and Ten Eleven participating. CEO Chris Sestito said ARR grew more than tenfold in the past year to tens of millions, with over 90% of growth from new customers, including a frontier lab serving 700 million-plus weekly users. Funds extend its Agentic Runtime Security platform and a new Agent Harness Security module for AI coding agents.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Morgan Stanley investing in agent-runtime security while building client-facing "super agents" tells you where wirehouse security budgets are heading. Any firm rolling out advisor or client agents should add a runtime-security layer to the vendor stack — and make agent-component vetting a standard diligence question when evaluating wealthtech tools that ship with plug-ins.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://venturebeat.com/" target="_blank">VentureBeat</a></div>
+    <h3><a href="https://techstartups.com/2026/09/02/top-tech-news-today-september-2-2026-anthropic-google-meta-nvidia-perplexity-openai-tencent-more/" target="_blank">Perplexity's hybrid agent keeps confidential files on-device, off the cloud</a></h3>
+    <p class="summary">Perplexity launched a hybrid-compute capability September 2 for its Computer agent that splits a single task between cloud frontier models and open-weight models running locally on Apple silicon Macs. Steps touching confidential files hand off to the on-device model without restarting the workflow or losing context, while harder reasoning stays in the cloud. The design directly targets the data-exposure objection that has stalled enterprise agent adoption in regulated industries.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Client statements, tax documents and account data are exactly what compliance teams refuse to send to cloud agents, and hybrid routing is the first credible middle path. Advisory firms evaluating agent tools should add model-routing and on-device PII handling to RFP requirements — expect wealthtech vendors to copy this architecture within two quarters.</div>
+  </div>
+
+
+  <!-- AI in Asset Management -->
+  <div class="section-title"><span>AI in Asset Management</span></div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial" target="_blank">Broadcom (investor relations)</a></div>
+    <h3><a href="https://www.investing.com/news/transcripts/earnings-call-transcript-broadcom-tops-q3-2026-estimates-as-ai-sales-surge-93CH-4886849" target="_blank">Broadcom raises fiscal 2027 AI revenue target to $115 billion after record quarter</a></h3>
+    <p class="summary">Broadcom reported fiscal third-quarter revenue of $29.6 billion Wednesday, up 86%, with AI semiconductor revenue of $16.7 billion growing 221% — now 56% of total sales at a 68% operating margin. Fourth-quarter guidance calls for $34.8 billion in revenue with AI at $21.7 billion, up 236%. Management lifted the fiscal 2027 AI target to roughly $115 billion — the number that cost the stock 12.6% when left unraised in June — and set fiscal 2028 at about $230 billion, citing long-term agreements with Google, Anthropic and OpenAI.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The raised 2027 target answers the one question that mattered from June, confirming hyperscaler custom-silicon demand is still compounding rather than plateauing. PMs should watch whether semis and QQQ flows repeat the post-Nvidia pattern from August — and note that a $230 billion 2028 target makes Broadcom's AI line alone larger than Nvidia's entire fiscal 2025.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://investors.delltechnologies.com/" target="_blank">Dell Technologies (investor relations)</a></div>
+    <h3><a href="https://finance.yahoo.com/markets/article/dell-stock-surges-on-record-orders-for-ai-servers-205629050.html" target="_blank">Dell books $60.9 billion in AI server orders as backlog hits $95 billion</a></h3>
+    <p class="summary">Dell's fiscal second quarter, reported September 1, showed $47 billion in revenue, up 58%, with AI-optimized server revenue doubling to $16.4 billion. New AI orders reached a record $60.9 billion in the single quarter, swelling backlog to $95 billion and prompting Dell to raise full-year revenue guidance by $25 billion to $192 billion and its AI server sales target to $74 billion from $60 billion. Shares rose about 9% on September 2.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> Paired with Broadcom's print, this is a second independent read that AI hardware demand is broadening beyond Nvidia's chips into the systems layer. The bear case is margin, not demand — server assembly earns a fraction of silicon economics — so within AI-infrastructure sleeves, the Broadcom-versus-Dell margin gap is the cleanest argument for weighting designers over integrators.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-source"><a href="https://www.bloomberg.com/news/articles/2026-09-02/tencent-backed-enflame-s-ipo-draws-4-073-times-retail-demand" target="_blank">Bloomberg</a></div>
+    <h3><a href="https://www.scmp.com/tech/big-tech/article/3366203/chinese-chipmaker-enflame-4073-times-oversubscribed-shanghai-ipo-amid-nvidia-race" target="_blank">Tencent-backed Enflame's $911 million Shanghai IPO draws 4,000-times retail demand</a></h3>
+    <p class="summary">Chinese AI chipmaker Enflame Technology drew orders worth 6,109 times the online tranche of its 6.12 billion yuan ($911 million) Star Market IPO, exchange filings showed September 2, with more than 7 million investor accounts bidding and a final online allotment rate of 0.025%. The eight-year-old GPU designer is unprofitable, and backer Tencent is both a major shareholder and its largest customer. The listing lands as US export curbs push Chinese cloud and model builders toward domestic accelerators.</p>
+    <div class="why-it-matters"><strong>Why it matters:</strong> The subscription frenzy prices China's domestic AI-compute substitution as a policy-guaranteed theme, echoing the DeepSeek-adjacent hard-tech IPO wave covered last week. For EM and China portfolios the trade-off is explicit: state-backed demand tailwinds against single-customer concentration and no profits — position sizing, not thesis, is the real decision on these listings.</div>
+  </div>
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="divider"></div>
+    Compiled September 3, 2026 · Sources linked inline
+  </div>
+
+</div>
+</body>
+</html>
