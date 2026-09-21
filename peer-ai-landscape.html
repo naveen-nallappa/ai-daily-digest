@@ -17,6 +17,8 @@
   .header .pill:hover { background: rgba(255,255,255,0.16); }
   .header .pill-btn { color: #fff; background: rgba(126,168,255,0.28); cursor: pointer; }
   .header .pill-btn.busy { opacity: 0.6; pointer-events: none; }
+  #dl-toast { display: none; position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); max-width: 640px; background: #0f1b3d; color: #fff; font-size: 13.5px; line-height: 1.5; padding: 12px 18px; border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,0.25); z-index: 50; }
+  #dl-toast a { color: #7ea8ff; text-decoration: underline; }
   .section-title { font-size: 13px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: #5a6a8a; margin: 36px 0 16px; padding-left: 4px; }
   .section-title span { display: inline-block; border-bottom: 2px solid #3366cc; padding-bottom: 4px; }
   .card { background: #fff; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
@@ -443,328 +445,42 @@
     var m = d && d.textContent.match(/As of\s+(.+?)(\s+·|$)/);
     return m ? m[1].trim() : '';
   }
+  function toast(html, ms) {
+    var t = document.getElementById('dl-toast');
+    if (!t) { t = document.createElement('div'); t.id = 'dl-toast'; document.body.appendChild(t); }
+    t.innerHTML = html; t.style.display = 'block';
+    clearTimeout(t._h); if (ms) t._h = setTimeout(function () { t.style.display = 'none'; }, ms);
+  }
+  function saveBlob(blob, name) {
+    if (navigator.msSaveOrOpenBlob) { navigator.msSaveOrOpenBlob(blob, name); return null; }
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = name; a.rel = 'noopener'; a.style.display = 'none';
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { document.body.removeChild(a); }, 0);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 120000);
+    return url;
+  }
   function wire(id, which, fileName, subtitle) {
     var btn = document.getElementById(id);
     if (!btn) return;
     btn.addEventListener('click', function (ev) {
       ev.preventDefault();
-      if (typeof PptxGen/* Peer AI Landscape — table-to-PowerPoint export.
-   Works in the browser (window.PptxGenJS from CDN) and in Node (for testing).
-   extractTables(doc) reads the page's tables; buildPeerDeck(PptxGenJS, tables, opts) builds the deck. */
-(function (root) {
-  'use strict';
-
-  var NAVY = '0F1B3D', NAVY2 = '1A2F6B', BLUE = '3366CC', GREY = '3A3A4A', LIGHT = 'F0F4FA', LINE = 'D0D7E3', MUTED = '5A6A8A';
-
-  // One table -> {title, header:[string], rows:[[cell]]}; cell = {runs:[{text, url?}]}
-  function extractTables(doc, which) {
-    var out = [];
-    var sel = which === 'detail' ? '#tool-detail + .card .table-wrap table' : '.table-wrap.matrix table';
-    var tables = doc.querySelectorAll(sel);
-    for (var i = 0; i < tables.length; i++) {
-      var t = tables[i];
-      // title: nearest preceding h4.sub, else section title
-      var title = '';
-      var node = t.parentNode;
-      while (node && !title) {
-        var p = node.previousElementSibling;
-        while (p) {
-          if (p.matches && (p.matches('h4.sub') || p.matches('.section-title'))) { title = p.textContent.trim(); break; }
-          p = p.previousElementSibling;
-        }
-        node = node.parentNode;
-      }
-      var header = [];
-      var ths = t.querySelectorAll('thead th');
-      for (var h = 0; h < ths.length; h++) header.push(ths[h].textContent.trim());
-      var rows = [];
-      var trs = t.querySelectorAll('tbody tr');
-      for (var r = 0; r < trs.length; r++) {
-        var tds = trs[r].children, row = [];
-        for (var c = 0; c < tds.length; c++) row.push({ runs: runsOf(tds[c]) });
-        rows.push(row);
-      }
-      out.push({ title: title, header: header, rows: rows });
-    }
-    return out;
-  }
-
-  function runsOf(el) {
-    var runs = [];
-    for (var i = 0; i < el.childNodes.length; i++) {
-      var n = el.childNodes[i];
-      if (n.nodeType === 3) { if (n.textContent) runs.push({ text: n.textContent }); }
-      else if (n.nodeType === 1) {
-        if (n.tagName === 'A') runs.push({ text: n.textContent, url: n.getAttribute('href') });
-        else runs = runs.concat(runsOf(n));
-      }
-    }
-    // collapse whitespace
-    return runs.map(function (r) { return { text: r.text.replace(/\s+/g, ' '), url: r.url }; })
-               .filter(function (r) { return r.text.length; });
-  }
-
-  function cellText(cell) { return cell.runs.map(function (r) { return r.text; }).join(''); }
-
-  // Estimate a row's height in inches for a given font size and column widths.
-  function rowHeight(row, colW, fs) {
-    var lineH = fs * 1.2 / 72, maxLines = 1;
-    for (var i = 0; i < row.length; i++) {
-      var cpl = Math.max(6, Math.floor((colW[i] - 0.1) * 72 / (fs * 0.43)));
-      var words = cellText(row[i]).split(' '), lines = 1, cur = 0;
-      for (var w = 0; w < words.length; w++) {
-        var L = words[w].length + (cur ? 1 : 0);
-        if (cur + L > cpl) { lines++; cur = words[w].length; } else cur += L;
-      }
-      if (lines > maxLines) maxLines = lines;
-    }
-    return maxLines * lineH + 0.09;
-  }
-
-  function buildPeerDeck(PptxGenJS, tables, opts) {
-    opts = opts || {};
-    var pptx = new PptxGenJS();
-    pptx.layout = 'LAYOUT_WIDE'; // 13.333 x 7.5 in
-    pptx.title = 'Peer AI Landscape in Wealth Management';
-    pptx.author = opts.author || 'Naveen Nallappa';
-    var asOf = opts.asOf || '';
-    var W = 13.333, M = 0.3, TOP = 0.95, BOTTOM = 0.4, tableW = W - 2 * M;
-
-    // Title slide
-    var s0 = pptx.addSlide();
-    s0.background = { color: NAVY };
-    s0.addText('PEER AI LANDSCAPE', { x: 0.8, y: 2.2, w: 11, h: 0.4, fontFace: 'Calibri', fontSize: 12, bold: true, color: '7EA8FF', charSpacing: 3 });
-    s0.addText(opts.title || 'Peer AI Landscape in Wealth Management', { x: 0.8, y: 2.6, w: 11.5, h: 1.0, fontFace: 'Calibri', fontSize: 34, bold: true, color: 'FFFFFF' });
-    s0.addText(opts.subtitle || 'Peers across, capabilities down — one table per slide', { x: 0.8, y: 3.6, w: 11.5, h: 0.5, fontFace: 'Calibri', fontSize: 16, color: 'A4BFED' });
-    if (asOf) s0.addText('As of ' + asOf, { x: 0.8, y: 4.2, w: 11.5, h: 0.4, fontFace: 'Calibri', fontSize: 12, color: 'A4BFED' });
-    if (opts.sourceUrl) s0.addText(opts.sourceUrl, { x: 0.8, y: 6.6, w: 11.5, h: 0.4, fontFace: 'Calibri', fontSize: 10, color: '7EA8FF', hyperlink: { url: opts.sourceUrl } });
-
-    tables.forEach(function (t) {
-      var ncol = t.header.length;
-      if (!ncol) return;
-      var firstW = ncol > 6 ? 1.25 : 1.6;
-      var colW = [firstW];
-      for (var i = 1; i < ncol; i++) colW.push((tableW - firstW) / (ncol - 1));
-      // pick the largest font size (10 -> 6pt) at which the table fits on one slide; else 6pt and paginate
-      var avail = 7.5 - TOP - BOTTOM, fs = 6, headH;
-      var hdr = t.header.map(function (h) { return { runs: [{ text: h }] }; });
-      for (var cand = 10; cand >= 6; cand -= 0.5) {
-        var tot = rowHeight(hdr, colW, cand) + 0.05;
-        t.rows.forEach(function (row) { tot += rowHeight(row, colW, cand); });
-        if (tot <= avail) { fs = cand; break; }
-      }
-      headH = rowHeight(hdr, colW, fs) + 0.05;
-
-      // paginate rows
-      var pages = [], cur = [], used = headH;
-      t.rows.forEach(function (row) {
-        var rh = rowHeight(row, colW, fs);
-        if (cur.length && used + rh > avail) { pages.push(cur); cur = []; used = headH; }
-        cur.push(row); used += rh;
-      });
-      if (cur.length) pages.push(cur);
-
-      pages.forEach(function (rows, pi) {
-        var slide = pptx.addSlide();
-        slide.background = { color: 'FFFFFF' };
-        slide.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: W, h: 0.78, fill: { color: NAVY }, line: { color: NAVY } });
-        var title = t.title + (pages.length > 1 ? '  (' + (pi + 1) + ' of ' + pages.length + ')' : '');
-        slide.addText(title, { x: M, y: 0.14, w: 9.8, h: 0.5, fontFace: 'Calibri', fontSize: 18, bold: true, color: 'FFFFFF' });
-        if (asOf) slide.addText('As of ' + asOf, { x: 9.9, y: 0.22, w: 3.0, h: 0.35, fontFace: 'Calibri', fontSize: 10, color: 'A4BFED', align: 'right' });
-
-        var data = [t.header.map(function (h, ci) {
-          return { text: h, options: { bold: true, color: 'FFFFFF', fill: { color: NAVY2 }, fontSize: fs, valign: 'middle' } };
-        })];
-        rows.forEach(function (row) {
-          data.push(row.map(function (cell, ci) {
-            var runs = cell.runs.map(function (r) {
-              var o = { fontSize: fs, color: ci === 0 ? NAVY : GREY, bold: ci === 0 };
-              if (r.url) { o.hyperlink = { url: r.url }; o.color = BLUE; }
-              return { text: r.text, options: o };
-            });
-            if (!runs.length) runs = [{ text: '', options: { fontSize: fs } }];
-            return { text: runs, options: { valign: 'top', fill: ci === 0 ? { color: LIGHT } : { color: 'FFFFFF' } } };
-          }));
-        });
-        slide.addTable(data, {
-          x: M, y: TOP, w: tableW, colW: colW,
-          fontFace: 'Calibri', fontSize: fs, margin: 0.04,
-          border: { type: 'solid', pt: 0.5, color: LINE }, autoPage: false
-        });
-        slide.addText((opts.footer || 'AI Daily Digest — Peer AI Landscape') + (opts.sourceUrl ? '  ·  ' + opts.sourceUrl : ''),
-          { x: M, y: 7.12, w: tableW, h: 0.3, fontFace: 'Calibri', fontSize: 8, color: MUTED, align: 'center' });
-      });
-    });
-    return pptx;
-  }
-
-  var api = { extractTables: extractTables, buildPeerDeck: buildPeerDeck };
-  if (typeof module !== 'undefined' && module.exports) module.exports = api;
-  root.PeerDeck = api;
-})(typeof window !== 'undefined' ? window : globalThis);
- === 'undefined') { alert('The PowerPoint library did not load (offline?). Reload the page and try again.'); return; }
+      if (typeof PptxGenJS === 'undefined') { toast('The PowerPoint library did not load (offline or blocked). Reload the page and try again.', 8000); return; }
       btn.classList.add('busy');
+      toast('Building the deck\u2026');
+      var name = fileName + '-' + new Date().toISOString().slice(0, 10) + '.pptx';
       try {
         var tables = PeerDeck.extractTables(document, which);
-        var pptx = PeerDeck.buildPeerDeck(PptxGen/* Peer AI Landscape — table-to-PowerPoint export.
-   Works in the browser (window.PptxGenJS from CDN) and in Node (for testing).
-   extractTables(doc) reads the page's tables; buildPeerDeck(PptxGenJS, tables, opts) builds the deck. */
-(function (root) {
-  'use strict';
-
-  var NAVY = '0F1B3D', NAVY2 = '1A2F6B', BLUE = '3366CC', GREY = '3A3A4A', LIGHT = 'F0F4FA', LINE = 'D0D7E3', MUTED = '5A6A8A';
-
-  // One table -> {title, header:[string], rows:[[cell]]}; cell = {runs:[{text, url?}]}
-  function extractTables(doc, which) {
-    var out = [];
-    var sel = which === 'detail' ? '#tool-detail + .card .table-wrap table' : '.table-wrap.matrix table';
-    var tables = doc.querySelectorAll(sel);
-    for (var i = 0; i < tables.length; i++) {
-      var t = tables[i];
-      // title: nearest preceding h4.sub, else section title
-      var title = '';
-      var node = t.parentNode;
-      while (node && !title) {
-        var p = node.previousElementSibling;
-        while (p) {
-          if (p.matches && (p.matches('h4.sub') || p.matches('.section-title'))) { title = p.textContent.trim(); break; }
-          p = p.previousElementSibling;
-        }
-        node = node.parentNode;
-      }
-      var header = [];
-      var ths = t.querySelectorAll('thead th');
-      for (var h = 0; h < ths.length; h++) header.push(ths[h].textContent.trim());
-      var rows = [];
-      var trs = t.querySelectorAll('tbody tr');
-      for (var r = 0; r < trs.length; r++) {
-        var tds = trs[r].children, row = [];
-        for (var c = 0; c < tds.length; c++) row.push({ runs: runsOf(tds[c]) });
-        rows.push(row);
-      }
-      out.push({ title: title, header: header, rows: rows });
-    }
-    return out;
-  }
-
-  function runsOf(el) {
-    var runs = [];
-    for (var i = 0; i < el.childNodes.length; i++) {
-      var n = el.childNodes[i];
-      if (n.nodeType === 3) { if (n.textContent) runs.push({ text: n.textContent }); }
-      else if (n.nodeType === 1) {
-        if (n.tagName === 'A') runs.push({ text: n.textContent, url: n.getAttribute('href') });
-        else runs = runs.concat(runsOf(n));
-      }
-    }
-    // collapse whitespace
-    return runs.map(function (r) { return { text: r.text.replace(/\s+/g, ' '), url: r.url }; })
-               .filter(function (r) { return r.text.length; });
-  }
-
-  function cellText(cell) { return cell.runs.map(function (r) { return r.text; }).join(''); }
-
-  // Estimate a row's height in inches for a given font size and column widths.
-  function rowHeight(row, colW, fs) {
-    var lineH = fs * 1.2 / 72, maxLines = 1;
-    for (var i = 0; i < row.length; i++) {
-      var cpl = Math.max(6, Math.floor((colW[i] - 0.1) * 72 / (fs * 0.43)));
-      var words = cellText(row[i]).split(' '), lines = 1, cur = 0;
-      for (var w = 0; w < words.length; w++) {
-        var L = words[w].length + (cur ? 1 : 0);
-        if (cur + L > cpl) { lines++; cur = words[w].length; } else cur += L;
-      }
-      if (lines > maxLines) maxLines = lines;
-    }
-    return maxLines * lineH + 0.09;
-  }
-
-  function buildPeerDeck(PptxGenJS, tables, opts) {
-    opts = opts || {};
-    var pptx = new PptxGenJS();
-    pptx.layout = 'LAYOUT_WIDE'; // 13.333 x 7.5 in
-    pptx.title = 'Peer AI Landscape in Wealth Management';
-    pptx.author = opts.author || 'Naveen Nallappa';
-    var asOf = opts.asOf || '';
-    var W = 13.333, M = 0.3, TOP = 0.95, BOTTOM = 0.4, tableW = W - 2 * M;
-
-    // Title slide
-    var s0 = pptx.addSlide();
-    s0.background = { color: NAVY };
-    s0.addText('PEER AI LANDSCAPE', { x: 0.8, y: 2.2, w: 11, h: 0.4, fontFace: 'Calibri', fontSize: 12, bold: true, color: '7EA8FF', charSpacing: 3 });
-    s0.addText(opts.title || 'Peer AI Landscape in Wealth Management', { x: 0.8, y: 2.6, w: 11.5, h: 1.0, fontFace: 'Calibri', fontSize: 34, bold: true, color: 'FFFFFF' });
-    s0.addText(opts.subtitle || 'Peers across, capabilities down — one table per slide', { x: 0.8, y: 3.6, w: 11.5, h: 0.5, fontFace: 'Calibri', fontSize: 16, color: 'A4BFED' });
-    if (asOf) s0.addText('As of ' + asOf, { x: 0.8, y: 4.2, w: 11.5, h: 0.4, fontFace: 'Calibri', fontSize: 12, color: 'A4BFED' });
-    if (opts.sourceUrl) s0.addText(opts.sourceUrl, { x: 0.8, y: 6.6, w: 11.5, h: 0.4, fontFace: 'Calibri', fontSize: 10, color: '7EA8FF', hyperlink: { url: opts.sourceUrl } });
-
-    tables.forEach(function (t) {
-      var ncol = t.header.length;
-      if (!ncol) return;
-      var firstW = ncol > 6 ? 1.25 : 1.6;
-      var colW = [firstW];
-      for (var i = 1; i < ncol; i++) colW.push((tableW - firstW) / (ncol - 1));
-      // pick the largest font size (10 -> 6pt) at which the table fits on one slide; else 6pt and paginate
-      var avail = 7.5 - TOP - BOTTOM, fs = 6, headH;
-      var hdr = t.header.map(function (h) { return { runs: [{ text: h }] }; });
-      for (var cand = 10; cand >= 6; cand -= 0.5) {
-        var tot = rowHeight(hdr, colW, cand) + 0.05;
-        t.rows.forEach(function (row) { tot += rowHeight(row, colW, cand); });
-        if (tot <= avail) { fs = cand; break; }
-      }
-      headH = rowHeight(hdr, colW, fs) + 0.05;
-
-      // paginate rows
-      var pages = [], cur = [], used = headH;
-      t.rows.forEach(function (row) {
-        var rh = rowHeight(row, colW, fs);
-        if (cur.length && used + rh > avail) { pages.push(cur); cur = []; used = headH; }
-        cur.push(row); used += rh;
-      });
-      if (cur.length) pages.push(cur);
-
-      pages.forEach(function (rows, pi) {
-        var slide = pptx.addSlide();
-        slide.background = { color: 'FFFFFF' };
-        slide.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: W, h: 0.78, fill: { color: NAVY }, line: { color: NAVY } });
-        var title = t.title + (pages.length > 1 ? '  (' + (pi + 1) + ' of ' + pages.length + ')' : '');
-        slide.addText(title, { x: M, y: 0.14, w: 9.8, h: 0.5, fontFace: 'Calibri', fontSize: 18, bold: true, color: 'FFFFFF' });
-        if (asOf) slide.addText('As of ' + asOf, { x: 9.9, y: 0.22, w: 3.0, h: 0.35, fontFace: 'Calibri', fontSize: 10, color: 'A4BFED', align: 'right' });
-
-        var data = [t.header.map(function (h, ci) {
-          return { text: h, options: { bold: true, color: 'FFFFFF', fill: { color: NAVY2 }, fontSize: fs, valign: 'middle' } };
-        })];
-        rows.forEach(function (row) {
-          data.push(row.map(function (cell, ci) {
-            var runs = cell.runs.map(function (r) {
-              var o = { fontSize: fs, color: ci === 0 ? NAVY : GREY, bold: ci === 0 };
-              if (r.url) { o.hyperlink = { url: r.url }; o.color = BLUE; }
-              return { text: r.text, options: o };
-            });
-            if (!runs.length) runs = [{ text: '', options: { fontSize: fs } }];
-            return { text: runs, options: { valign: 'top', fill: ci === 0 ? { color: LIGHT } : { color: 'FFFFFF' } } };
-          }));
-        });
-        slide.addTable(data, {
-          x: M, y: TOP, w: tableW, colW: colW,
-          fontFace: 'Calibri', fontSize: fs, margin: 0.04,
-          border: { type: 'solid', pt: 0.5, color: LINE }, autoPage: false
-        });
-        slide.addText((opts.footer || 'AI Daily Digest — Peer AI Landscape') + (opts.sourceUrl ? '  ·  ' + opts.sourceUrl : ''),
-          { x: M, y: 7.12, w: tableW, h: 0.3, fontFace: 'Calibri', fontSize: 8, color: MUTED, align: 'center' });
-      });
-    });
-    return pptx;
-  }
-
-  var api = { extractTables: extractTables, buildPeerDeck: buildPeerDeck };
-  if (typeof module !== 'undefined' && module.exports) module.exports = api;
-  root.PeerDeck = api;
-})(typeof window !== 'undefined' ? window : globalThis);
-, tables, { asOf: asOf(), sourceUrl: PAGE, subtitle: subtitle });
-        var stamp = new Date().toISOString().slice(0, 10);
-        pptx.writeFile({ fileName: fileName + '-' + stamp + '.pptx' }).then(function () { btn.classList.remove('busy'); })
-          .catch(function (e) { btn.classList.remove('busy'); alert('Export failed: ' + e); });
-      } catch (e) { btn.classList.remove('busy'); alert('Export failed: ' + e); }
+        var pptx = PeerDeck.buildPeerDeck(PptxGenJS, tables, { asOf: asOf(), sourceUrl: PAGE, subtitle: subtitle });
+        pptx.write({ outputType: 'blob' }).then(function (blob) {
+          btn.classList.remove('busy');
+          var url = saveBlob(blob, name);
+          var kb = Math.round(blob.size / 1024);
+          toast('Download started: <strong>' + name + '</strong> (' + kb + ' KB, ' + (pptx.slides ? pptx.slides.length : '') + ' slides).' +
+                (url ? ' Nothing appeared? <a href="' + url + '" download="' + name + '">Click here to save it</a>. If this page is open inside the Claude app, open it in Chrome or Safari to download.' : ''), 60000);
+        }).catch(function (e) { btn.classList.remove('busy'); toast('Export failed: ' + e, 10000); });
+      } catch (e) { btn.classList.remove('busy'); toast('Export failed: ' + e, 10000); }
     });
   }
   wire('dl-matrix', 'matrix', 'Peer-AI-Landscape-tables', 'Peers across, capabilities down \u2014 one table per slide');
