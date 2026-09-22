@@ -1,0 +1,3060 @@
+{
+ "buckets": [
+  {
+   "id": "1",
+   "title": "Bucket 1: Wirehouses and Private Banks",
+   "heading": "Wirehouses and private banks",
+   "subtables": [
+    {
+     "id": "1",
+     "name": null,
+     "firms": [
+      {
+       "name": "Morgan Stanley",
+       "segment": null
+      },
+      {
+       "name": "UBS",
+       "segment": null
+      },
+      {
+       "name": "JPMorgan",
+       "segment": null
+      },
+      {
+       "name": "BofA / Merrill",
+       "segment": null
+      },
+      {
+       "name": "Citi Wealth",
+       "segment": null
+      },
+      {
+       "name": "Wells Fargo WIM",
+       "segment": null
+      },
+      {
+       "name": "Goldman Sachs",
+       "segment": null
+      }
+     ],
+     "rows": [
+      {
+       "cap": "General assistant / knowledge Q&A",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://openai.com/index/morgan-stanley/\" target=\"_blank\">AI @ MS Assistant</a>: GenAI Q&amp;A over ~100k internal documents; 98% of FA teams; document access 20% to 80% — Scaled adoption · since Sept 2023",
+         "evidence": "V",
+         "tools": [
+          {
+           "name": "AI @ MS Assistant",
+           "url": "https://openai.com/index/morgan-stanley/",
+           "desc": "GenAI Q&A over ~100k internal documents; 98% of FA teams; document access 20% to 80%",
+           "maturity": "Scaled adoption",
+           "evidence": "V",
+           "date": "Sep 2023",
+           "status_note": "since Sept 2023",
+           "short": "Q&A over ~100k internal docs; 98% of FA teams"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "V"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.ubs.com/global/en/our-firm/what-we-do/technology/innovation-and-ai.html\" target=\"_blank\">Red</a> + M365 Copilot: firm-wide knowledge assistant (~100k employees, 25M+ queries); Copilot at 85%+ of US advisors — Scaled adoption · live",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Red + M365 Copilot",
+           "url": "https://www.ubs.com/global/en/our-firm/what-we-do/technology/innovation-and-ai.html",
+           "desc": "firm-wide knowledge assistant (~100k employees, 25M+ queries); Copilot at 85%+ of US advisors",
+           "maturity": "Scaled adoption",
+           "evidence": "C",
+           "date": "",
+           "status_note": "live",
+           "short": "Knowledge assistant; Copilot at 85%+ of US advisors"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.forbes.com/sites/bernardmarr/2026/07/01/how-jpmorgan-chase-is-building-the-ai-powered-bank-of-the-future/\" target=\"_blank\">LLM Suite</a>: firm-wide GenAI portal, ~230-250k users — Scaled adoption · since July 2024",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "LLM Suite",
+           "url": "https://www.forbes.com/sites/bernardmarr/2026/07/01/how-jpmorgan-chase-is-building-the-ai-powered-bank-of-the-future/",
+           "desc": "firm-wide GenAI portal, ~230-250k users",
+           "maturity": "Scaled adoption",
+           "evidence": "D",
+           "date": "Jul 2024",
+           "status_note": "since July 2024",
+           "short": "Firm-wide GenAI portal, ~230-250k users"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.prnewswire.com/news-releases/ai-adoption-by-bofas-global-workforce-improves-productivity-client-service-302423333.html\" target=\"_blank\">ask MERRILL / ask Private Banking</a>: advisor information retrieval; 23M+ interactions in 2024 — Scaled adoption · live",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "ask MERRILL / ask Private Banking",
+           "url": "https://www.prnewswire.com/news-releases/ai-adoption-by-bofas-global-workforce-improves-productivity-client-service-302423333.html",
+           "desc": "advisor information retrieval; 23M+ interactions in 2024",
+           "maturity": "Scaled adoption",
+           "evidence": "C",
+           "date": "",
+           "status_note": "live",
+           "short": "Advisor information retrieval; 23M+ interactions in 2024"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience\" target=\"_blank\">AskWealth CIO</a>: CIO research Q&amp;A — Pilot · Apr 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "AskWealth CIO",
+           "url": "https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience",
+           "desc": "CIO research Q&A",
+           "maturity": "Pilot",
+           "evidence": "C",
+           "date": "Apr 2026",
+           "status_note": "Apr 2026",
+           "short": "CIO research Q&A"
+          }
+         ],
+         "heat": {
+          "maturity": "Pilot",
+          "level": 2,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx\" target=\"_blank\">AI Teammate</a>: chat in Advisor Gateway for policy and workflow search, guided next steps; all WIM channels incl. FiNet — Live · July 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "AI Teammate",
+           "url": "https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx",
+           "desc": "chat in Advisor Gateway for policy and workflow search, guided next steps; all WIM channels incl. FiNet",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Jul 2026",
+           "status_note": "July 2026",
+           "short": "Policy and workflow search in Advisor Gateway"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://fortune.com/2025/06/24/goldman-sachs-internal-ai-assistant\" target=\"_blank\">GS AI Assistant</a>: firm-wide drafting and summarization assistant — Live · firm-wide June 2025",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "GS AI Assistant",
+           "url": "https://fortune.com/2025/06/24/goldman-sachs-internal-ai-assistant",
+           "desc": "firm-wide drafting and summarization assistant",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "Jun 2025",
+           "status_note": "firm-wide June 2025",
+           "short": "Firm-wide drafting and summarization"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        }
+       ]
+      },
+      {
+       "cap": "Meeting prep, notes & CRM logging",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch\" target=\"_blank\">Debrief</a>: Zoom meeting notes, action items, follow-up emails, Salesforce logging — Scaled adoption · live June 2024; mobile and non-advisor staff July 2025",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Debrief",
+           "url": "https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch",
+           "desc": "Zoom meeting notes, action items, follow-up emails, Salesforce logging",
+           "maturity": "Scaled adoption",
+           "evidence": "C",
+           "date": "Jun 2024",
+           "status_note": "live June 2024; mobile and non-advisor staff July 2025",
+           "short": "Zoom notes, follow-ups, Salesforce logging"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "Pre-meeting briefs generated inside STAAT Insights (see Client insights)",
+         "evidence": "D",
+         "xref": true,
+         "text": "Pre-meeting briefs generated inside STAAT Insights (see Client insights)",
+         "tools": [
+          {
+           "name": "via STAAT Insights",
+           "url": null,
+           "desc": "Pre-meeting briefs generated inside STAAT Insights (see Client insights)",
+           "short": "Pre-meeting briefs generated inside STAAT Insights",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "",
+           "status_note": "",
+           "xref_of": "STAAT Insights"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        null,
+        {
+         "full_html": "<a href=\"https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html\" target=\"_blank\">AI-Powered Meeting Journey</a>: plan-my-day, meeting prep, Zoom notetaker, follow-up tasks; ~15,000 employees; up to 4 hrs saved per meeting per <a href=\"https://www.americanbanker.com/news/bank-of-america-gives-merrill-lynch-an-ai-makeover\" target=\"_blank\">American Banker</a> — Scaled adoption · live March 2026 after 1,500-advisor beta",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "AI-Powered Meeting Journey",
+           "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html",
+           "desc": "plan-my-day, meeting prep, Zoom notetaker, follow-up tasks; ~15,000 employees; up to 4 hrs saved per meeting per American Banker",
+           "maturity": "Scaled adoption",
+           "evidence": "C",
+           "date": "Mar 2026",
+           "status_note": "live March 2026 after 1,500-advisor beta",
+           "short": "Plan-my-day, notetaker, follow-ups; ~15,000 staff"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience\" target=\"_blank\">CitiScribe</a>: notetaker for all NA advisors — Live · Q1 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "CitiScribe",
+           "url": "https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience",
+           "desc": "notetaker for all NA advisors",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Q1 2026",
+           "status_note": "Q1 2026",
+           "short": "Notetaker for all NA advisors"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Research & portfolio analysis",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        null,
+        null,
+        {
+         "full_html": "<a href=\"https://finance.yahoo.com/news/jpmorgan-says-ai-helped-boost-170825108.html\" target=\"_blank\">Coach AI</a>: research retrieval and client prep for ~4,000 PB advisors; research 95% faster; +20% gross sales 2023-24 — Scaled adoption · live disclosed May 2025",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Coach AI",
+           "url": "https://finance.yahoo.com/news/jpmorgan-says-ai-helped-boost-170825108.html",
+           "desc": "research retrieval and client prep for ~4,000 PB advisors; research 95% faster; +20% gross sales 2023-24",
+           "maturity": "Scaled adoption",
+           "evidence": "D",
+           "date": "May 2025",
+           "status_note": "live disclosed May 2025",
+           "short": "Research retrieval for ~4,000 PB advisors; +20% gross sales"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "D"
+         }
+        },
+        null,
+        null,
+        {
+         "full_html": "<a href=\"https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-launches-Advisor-Gateway-for-financial-advisors/default.aspx\" target=\"_blank\">Auto Commentary</a>: AI narratives from risk analytics for client meetings inside the new Advisor Gateway desktop (BlackRock Aladdin Wealth) — Live · May 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Auto Commentary",
+           "url": "https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-launches-Advisor-Gateway-for-financial-advisors/default.aspx",
+           "desc": "AI narratives from risk analytics for client meetings inside the new Advisor Gateway desktop (BlackRock Aladdin Wealth)",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "May 2026",
+           "status_note": "May 2026",
+           "short": "AI narratives from Aladdin risk analytics"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null
+       ]
+      },
+      {
+       "cap": "Compliance, comms & drafting",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+         "full_html": "<a href=\"https://finance.yahoo.com/news/goldman-assembling-growing-arsenal-ai-164501078.html\" target=\"_blank\">Banker Copilot</a>: deal data, filings, S-1 drafting for IB; \"dozens\" of users May 2025 — Pilot · early stage; 2026 status not found",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Banker Copilot",
+           "url": "https://finance.yahoo.com/news/goldman-assembling-growing-arsenal-ai-164501078.html",
+           "desc": "deal data, filings, S-1 drafting for IB; \"dozens\" of users May 2025",
+           "maturity": "Pilot",
+           "evidence": "D",
+           "date": "May 2025",
+           "status_note": "early stage; 2026 status not found",
+           "short": "Deal data, filings, S-1 drafting for IB"
+          }
+         ],
+         "heat": {
+          "maturity": "Pilot",
+          "level": 2,
+          "evidence": "D"
+         }
+        }
+       ]
+      },
+      {
+       "cap": "Client insights & next-best-action",
+       "group": "Growth analytics & next-best-action",
+       "footer": false,
+       "cells": [
+        null,
+        {
+         "full_html": "<a href=\"https://www.financial-planning.com/news/ubs-turns-to-ai-to-gain-wallet-share-find-new-clients\" target=\"_blank\">STAAT Insights</a>: ML opportunity engine (CD maturities, liquidity events), pre-meeting briefs; 5,000+ US advisors, 20M opportunities in 2025, ~10,000 hrs/month saved — Scaled adoption · live expanded 2025",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "STAAT Insights",
+           "url": "https://www.financial-planning.com/news/ubs-turns-to-ai-to-gain-wallet-share-find-new-clients",
+           "desc": "ML opportunity engine (CD maturities, liquidity events), pre-meeting briefs; 5,000+ US advisors, 20M opportunities in 2025, ~10,000 hrs/month saved",
+           "maturity": "Scaled adoption",
+           "evidence": "D",
+           "date": "2025",
+           "status_note": "live expanded 2025",
+           "short": "ML opportunity engine; 5,000+ advisors, 20M opportunities"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://fortune.com/2026/04/29/capcom-virgin-voyages-bet-on-ai-to-reshape-gaming-and-cruise-travel/\" target=\"_blank\">Connect Coach</a>: insight extraction for advisors and asset managers — Live · cited Apr 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Connect Coach",
+           "url": "https://fortune.com/2026/04/29/capcom-virgin-voyages-bet-on-ai-to-reshape-gaming-and-cruise-travel/",
+           "desc": "insight extraction for advisors and asset managers",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "Apr 2026",
+           "status_note": "cited Apr 2026",
+           "short": "Insight extraction for advisors and asset managers"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        null,
+        {
+         "full_html": "<a href=\"https://www.citigroup.com/global/news/press-release/2025/citi-wealth-launches-advisor-insights-askwealth\" target=\"_blank\">Advisor Insights</a>: market and portfolio alert dashboard; <a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience\" target=\"_blank\">Client 360</a>: single-screen client view — Pilot (Advisor Insights, Aug 2025, expanding) · Live (Client 360, Apr 2026)",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Advisor Insights",
+           "url": "https://www.citigroup.com/global/news/press-release/2025/citi-wealth-launches-advisor-insights-askwealth",
+           "desc": "market and portfolio alert dashboard",
+           "short": "Alert dashboard (pilot)",
+           "maturity": "Pilot",
+           "evidence": "C",
+           "date": "Aug 2025",
+           "status_note": "Aug 2025, expanding"
+          },
+          {
+           "name": "Client 360",
+           "url": "https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience",
+           "desc": "single-screen client view",
+           "short": "Single-screen client view (live)",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Apr 2026",
+           "status_note": "Apr 2026"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Client-facing assistant / digital advice",
+       "group": "Client-facing experiences",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "24/7 client agents with human approval, planned as a later phase of Super agents (see Ops) — Announced · no dates",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "24/7 client agents",
+           "url": null,
+           "desc": "human-approved client agents, planned as a later phase of Super agents",
+           "maturity": "Announced",
+           "evidence": "D",
+           "date": "",
+           "status_note": "no dates",
+           "short": "Human-approved client agents, later phase of Super agents"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://fortune.com/europe/2025/05/20/ubs-bank-ai-generated-video-avatars-analysts/\" target=\"_blank\">AI analyst avatars</a>: synthetic video of research analysts, toward 5,000 videos/yr (OpenAI, Synthesia) — Live · May 2025",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "AI analyst avatars",
+           "url": "https://fortune.com/europe/2025/05/20/ubs-bank-ai-generated-video-avatars-analysts/",
+           "desc": "synthetic video of research analysts, toward 5,000 videos/yr (OpenAI, Synthesia)",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "May 2025",
+           "status_note": "May 2025",
+           "short": "Synthetic research videos, toward 5,000/yr"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.roic.ai/news/jpmorgan-to-deploy-more-powerful-ai-agents-this-year-06-09-2026\" target=\"_blank\">Client-facing agents</a>: life-event detection and product recommendation agents — Announced · intent only, June 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Client-facing agents",
+           "url": "https://www.roic.ai/news/jpmorgan-to-deploy-more-powerful-ai-agents-this-year-06-09-2026",
+           "desc": "life-event detection and product recommendation agents",
+           "maturity": "Announced",
+           "evidence": "D",
+           "date": "Jun 2026",
+           "status_note": "intent only, June 2026",
+           "short": "Life-event detection and product recommendation"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "D"
+         }
+        },
+        null,
+        {
+         "full_html": "<a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience\" target=\"_blank\">Portfolio Intelligence</a>: personalized portfolio view with CIO insights; advisors push messages (Google Cloud, Palantir). <a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-unveils-citi-sky-ai-powered-member-google-cloud-deepmind-technologies\" target=\"_blank\">Citi Sky</a>: voice and avatar agent for CD alerts, CIO insights, portfolio lookups; English and Spanish (Google Gemini, DeepMind) — Limited rollout (Portfolio Intelligence: PB North America Apr 2026, all Wealth clients by YE 2026) · Announced (Citi Sky: Citigold rollout from summer 2026)",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Portfolio Intelligence",
+           "url": "https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience",
+           "desc": "personalized portfolio view with CIO insights; advisors push messages (Google Cloud, Palantir)",
+           "short": "Personalized CIO portfolio view; PB North America first",
+           "maturity": "Limited rollout",
+           "evidence": "C",
+           "date": "Apr 2026",
+           "status_note": "PB North America Apr 2026; all Wealth clients by YE 2026"
+          },
+          {
+           "name": "Citi Sky",
+           "url": "https://www.citigroup.com/global/news/press-release/2026/citi-wealth-unveils-citi-sky-ai-powered-member-google-cloud-deepmind-technologies",
+           "desc": "voice and avatar agent for CD alerts, CIO insights, portfolio lookups; English and Spanish (Google Gemini, DeepMind)",
+           "short": "Voice and avatar agent; Citigold rollout from summer 2026",
+           "maturity": "Announced",
+           "evidence": "C",
+           "date": "Apr 2026",
+           "status_note": "Citigold rollout from summer 2026"
+          }
+         ],
+         "heat": {
+          "maturity": "Limited rollout",
+          "level": 3,
+          "evidence": "C"
+         }
+        },
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Ops & account-servicing agents",
+       "group": "Agentic workflow automation",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://www.financial-planning.com/news/behind-the-marvel-movie-inspired-ai-super-agents-coming-to-morgan-stanley\" target=\"_blank\">Super agents</a>: orchestrator over hundreds of small agents (account opening, money movement, beneficiaries) (OpenAI) — Announced · Feb 2026; no dates",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Super agents",
+           "url": "https://www.financial-planning.com/news/behind-the-marvel-movie-inspired-ai-super-agents-coming-to-morgan-stanley",
+           "desc": "orchestrator over hundreds of small agents (account opening, money movement, beneficiaries) (OpenAI)",
+           "maturity": "Announced",
+           "evidence": "D",
+           "date": "Feb 2026",
+           "status_note": "Feb 2026; no dates",
+           "short": "Orchestrator over hundreds of small agents (OpenAI)"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "D"
+         }
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/wirehouses/bny-goldman-double-down-on-tech-with-digital-employees-and-ai-agents/265198\" target=\"_blank\">Claude agents</a>: trade accounting and KYC onboarding agents (Anthropic) — Announced · in development, Feb 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Claude agents",
+           "url": "https://www.investmentnews.com/wirehouses/bny-goldman-double-down-on-tech-with-digital-employees-and-ai-agents/265198",
+           "desc": "trade accounting and KYC onboarding agents (Anthropic)",
+           "maturity": "Announced",
+           "evidence": "D",
+           "date": "Feb 2026",
+           "status_note": "in development, Feb 2026",
+           "short": "Trade accounting and KYC onboarding agents (Anthropic)"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "D"
+         }
+        }
+       ]
+      },
+      {
+       "cap": "Agent access (MCP, bring-your-own-agent)",
+       "group": "External-agent access",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://mlq.ai/news/morgan-stanley-opens-wealth-management-platform-to-external-ai-agents-via-mcp/\" target=\"_blank\">Shareworks / Equity Edge via MCP</a>: corporate clients' own AI agents read plan, vesting and tax data; all 3,400 admin clients by next year (<a href=\"https://www.retailbankerinternational.com/news/morgan-stanley-stock-plan-ai/\" target=\"_blank\">Retail Banker International</a>) — Limited rollout · early access June 2026; full rollout 2027",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Shareworks via MCP",
+           "url": "https://mlq.ai/news/morgan-stanley-opens-wealth-management-platform-to-external-ai-agents-via-mcp/",
+           "desc": "corporate clients' own AI agents read plan, vesting and tax data; all 3,400 admin clients by next year (Retail Banker International)",
+           "maturity": "Limited rollout",
+           "evidence": "D",
+           "date": "Jun 2026",
+           "status_note": "early access June 2026; full rollout 2027",
+           "short": "Corporate clients' agents read plan, vesting and tax data"
+          }
+         ],
+         "heat": {
+          "maturity": "Limited rollout",
+          "level": 3,
+          "evidence": "D"
+         }
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Firm-wide program / partners",
+       "group": null,
+       "footer": true,
+       "cells": [
+        {
+         "full_html": "OpenAI as primary model partner; open MCP standard for Shareworks",
+         "evidence": null,
+         "footer": true,
+         "text": "OpenAI as primary model partner; open MCP standard for Shareworks",
+         "short": "OpenAI as primary model partner; open MCP standard for Shareworks"
+        },
+        {
+         "full_html": "<a href=\"https://www.ubs.com/global/en/media/display-page-ndp/en-20251016-ai-strategy.html\" target=\"_blank\">Group AI strategy</a>: Chief AI Officer (Jan 2026), \"Big Rocks\" front- and back-office redesign, 300+ live use cases; multi-model (Claves), Azure OpenAI, Microsoft — Announced Oct 2025",
+         "evidence": "C",
+         "footer": true,
+         "text": "Group AI strategy: Chief AI Officer (Jan 2026), \"Big Rocks\" front- and back-office redesign, 300+ live use cases; multi-model (Claves), Azure OpenAI, Microsoft — Announced Oct 2025",
+         "short": "Chief AI Officer (Jan 2026); 300+ live use cases; multi-model"
+        },
+        {
+         "full_html": "OpenAI, Anthropic and in-house models; ~$2B annual AI spend",
+         "evidence": null,
+         "footer": true,
+         "text": "OpenAI, Anthropic and in-house models; ~$2B annual AI spend",
+         "short": "OpenAI, Anthropic and in-house models; ~$2B annual AI spend"
+        },
+        {
+         "full_html": "In-house Erica platform; Salesforce FSC and Zoom stack",
+         "evidence": null,
+         "footer": true,
+         "text": "In-house Erica platform; Salesforce FSC and Zoom stack",
+         "short": "In-house Erica platform; Salesforce FSC and Zoom stack"
+        },
+        {
+         "full_html": "Google Cloud, Gemini and DeepMind, Palantir, in-house",
+         "evidence": null,
+         "footer": true,
+         "text": "Google Cloud, Gemini and DeepMind, Palantir, in-house",
+         "short": "Google Cloud, Gemini and DeepMind, Palantir, in-house"
+        },
+        {
+         "full_html": "In-house on Google Cloud enterprise stack; BlackRock Aladdin Wealth for analytics",
+         "evidence": null,
+         "footer": true,
+         "text": "In-house on Google Cloud enterprise stack; BlackRock Aladdin Wealth for analytics",
+         "short": "In-house on Google Cloud; Aladdin Wealth for analytics"
+        },
+        {
+         "full_html": "GS AI Platform (OpenAI, Gemini); Anthropic for agents",
+         "evidence": null,
+         "footer": true,
+         "text": "GS AI Platform (OpenAI, Gemini); Anthropic for agents",
+         "short": "GS AI Platform (OpenAI, Gemini); Anthropic for agents"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "All six have a live advisor assistant; only Citi and Morgan Stanley have anything client-facing in production. Goldman rows are included as the comparator.",
+   "after_html": "<p><strong>Posture by firm.</strong> Morgan Stanley is the exclusive-partner platform play, now pivoting from productivity to agentic execution and interoperability. UBS is multi-model and growth-analytics-led, with the hardest published numbers. JPMorgan is the scale-infrastructure play with wealth apps on top, and the only one quoting sales lift. BofA is build-once-reuse on Erica, narrowly workflow-centric. Citi is the most partner-heavy and the most client-facing, with few adoption metrics. Wells is the latest mover, riding Google Cloud and Aladdin. Goldman has no wealth-specific AI in the public record.</p>\n    <p>Corrections to the handoff: the Citi April 2026 release names three advisor tools plus Portfolio Intelligence (four total), not four advisor tools; \"~16k advisors\" at Morgan Stanley does not appear in any AI source; IndexGPT has no evidence of being a live product; Morgan Stanley \"Reflect\" was not found.</p>"
+  },
+  {
+   "id": "2",
+   "title": "Bucket 2: RIAs and Independents",
+   "heading": "RIAs and independents",
+   "subtables": [
+    {
+     "id": "2a",
+     "name": "Broker-dealers and national firms",
+     "firms": [
+      {
+       "name": "LPL Financial",
+       "segment": null
+      },
+      {
+       "name": "Raymond James",
+       "segment": null
+      },
+      {
+       "name": "Ameriprise",
+       "segment": null
+      },
+      {
+       "name": "Edward Jones",
+       "segment": null
+      },
+      {
+       "name": "Osaic",
+       "segment": null
+      },
+      {
+       "name": "Cetera",
+       "segment": null
+      },
+      {
+       "name": "Commonwealth (LPL)",
+       "segment": null
+      }
+     ],
+     "rows": [
+      {
+       "cap": "General assistant / knowledge Q&A",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/independent-broker-dealers/will-ai-replace-the-advisor-lpls-rich-steinmeier-adamant-as-firm-announces-2b-tech-push/267762\" target=\"_blank\">Cyan agent + Latitude platform</a>: conversational agent in ClientWorks for account maintenance, planning summaries, meeting materials; 32,000+ advisors; investor app on the roadmap — Announced · demoed Aug 2026; \"launching later this year\"",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Cyan agent + Latitude",
+           "url": "https://www.investmentnews.com/independent-broker-dealers/will-ai-replace-the-advisor-lpls-rich-steinmeier-adamant-as-firm-announces-2b-tech-push/267762",
+           "desc": "conversational agent in ClientWorks for account maintenance, planning summaries, meeting materials; 32,000+ advisors; investor app on the roadmap",
+           "maturity": "Announced",
+           "evidence": "D",
+           "date": "Aug 2026",
+           "status_note": "demoed Aug 2026; \"launching later this year\"",
+           "short": "Conversational agent in ClientWorks; 32,000+ advisors"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "D"
+         }
+        },
+        null,
+        {
+         "full_html": "<a href=\"https://ir.ameriprise.com/news/news-details/2026/Ameriprise-Advances-AI-Innovation-Across-the-Advisor-and-Client-Experience-with-1B-Annual-Spend-on-Technology-and-AI-Capabilities/default.aspx\" target=\"_blank\">Advisor Assistant</a>: advisor-facing assistant — Announced · Later 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Advisor Assistant",
+           "url": "https://ir.ameriprise.com/news/news-details/2026/Ameriprise-Advances-AI-Innovation-Across-the-Advisor-and-Client-Experience-with-1B-Annual-Spend-on-Technology-and-AI-Capabilities/default.aspx",
+           "desc": "advisor-facing assistant",
+           "maturity": "Announced",
+           "evidence": "C",
+           "date": "later 2026",
+           "status_note": "Later 2026",
+           "short": "Advisor-facing assistant, later 2026"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "C"
+         }
+        },
+        null,
+        null,
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Meeting prep, notes & CRM logging",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "Jump and M365 Copilot offered through AI Advisor Solutions (see Firm-wide)",
+         "evidence": "C",
+         "xref": true,
+         "text": "Jump and M365 Copilot offered through AI Advisor Solutions (see Firm-wide)",
+         "tools": [
+          {
+           "name": "via AI Advisor Solutions",
+           "url": null,
+           "desc": "Jump and M365 Copilot offered through AI Advisor Solutions (see Firm-wide)",
+           "short": "Jump and M365 Copilot offered through AI Advisor Solutions",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "",
+           "status_note": "",
+           "xref_of": "AI Advisor Solutions"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "Zoom summaries into CRM inside Client360 (see Client insights)",
+         "evidence": "D",
+         "xref": true,
+         "text": "Zoom summaries into CRM inside Client360 (see Client insights)",
+         "tools": [
+          {
+           "name": "via Client360",
+           "url": null,
+           "desc": "Zoom summaries into CRM inside Client360 (see Client insights)",
+           "short": "Zoom summaries into CRM inside Client360",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "",
+           "status_note": "",
+           "xref_of": "Client360"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "Meeting automation: prep and e-meeting summaries; 10-20 hrs/wk saved per advisor claimed — Live",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Meeting automation",
+           "url": null,
+           "desc": "prep and e-meeting summaries; 10-20 hrs/wk saved per advisor claimed",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "",
+           "status_note": "",
+           "short": "Prep and e-meeting summaries; 10-20 hrs/wk claimed"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.edwardjones.com/us-en/why-edward-jones/news-media/press-releases/edward-jones-ventures-invests-ai-driven-solutions-help-families-navigate-lifes-biggest-financial\" target=\"_blank\">Embedded AI</a>: scheduling and prep automation — Live · 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Embedded AI",
+           "url": "https://www.edwardjones.com/us-en/why-edward-jones/news-media/press-releases/edward-jones-ventures-invests-ai-driven-solutions-help-families-navigate-lifes-biggest-financial",
+           "desc": "scheduling and prep automation",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "2026",
+           "status_note": "2026",
+           "short": "Scheduling and prep automation"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/independent-broker-dealers/osaics-ai-tools-have-had-the-fastest-ever-adoption-among-advisors-ceo-jamie-price/266375\" target=\"_blank\">Jump + Zocks, Scribe AI</a>: notes and CRM; ~30% take-up in under a year across ~11,000 advisors — Live · 2025-26",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Jump + Zocks, Scribe AI",
+           "url": "https://www.investmentnews.com/independent-broker-dealers/osaics-ai-tools-have-had-the-fastest-ever-adoption-among-advisors-ceo-jamie-price/266375",
+           "desc": "notes and CRM; ~30% take-up in under a year across ~11,000 advisors",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "2025-26",
+           "status_note": "2025-26",
+           "short": "Notes and CRM; ~30% take-up across ~11,000 advisors"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.businesswire.com/news/home/20260331025131/en/Cetera-Selects-Zocks-to-Offer-AI-Assistant-to-12000-Financial-Professionals\" target=\"_blank\">Zocks</a>: AI assistant and notetaker for ~12,000 professionals — Live · Mar 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Zocks",
+           "url": "https://www.businesswire.com/news/home/20260331025131/en/Cetera-Selects-Zocks-to-Offer-AI-Assistant-to-12000-Financial-Professionals",
+           "desc": "AI assistant and notetaker for ~12,000 professionals",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Mar 2026",
+           "status_note": "Mar 2026",
+           "short": "AI assistant and notetaker for ~12,000 professionals"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.wealthmanagement.com/artificial-intelligence/commonwealth-makes-ai-notetaking-platform-zocks-available-to-its-advisors\" target=\"_blank\">Zocks</a>: advisor-paid, opt-in notetaker; 2,900 eligible — Live · May 2025",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Zocks",
+           "url": "https://www.wealthmanagement.com/artificial-intelligence/commonwealth-makes-ai-notetaking-platform-zocks-available-to-its-advisors",
+           "desc": "advisor-paid, opt-in notetaker; 2,900 eligible",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "May 2025",
+           "status_note": "May 2025",
+           "short": "Advisor-paid, opt-in notetaker; 2,900 eligible"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        }
+       ]
+      },
+      {
+       "cap": "Compliance, comms & drafting",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        null,
+        null,
+        {
+         "full_html": "AI-drafted client letters — Live",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "AI-drafted client letters",
+           "url": null,
+           "desc": "",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "",
+           "status_note": "",
+           "short": "AI-drafted client letters"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null,
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Client insights & next-best-action",
+       "group": "Growth analytics & next-best-action",
+       "footer": false,
+       "cells": [
+        null,
+        {
+         "full_html": "<a href=\"https://www.wealthmanagement.com/ibd-news/raymond-james-announces-ai-driven-client360-platform-ai-advisor-academy\" target=\"_blank\">Client360</a>: AI client insights in one view; Zoom summaries into CRM; AI Academy — Live · May 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Client360",
+           "url": "https://www.wealthmanagement.com/ibd-news/raymond-james-announces-ai-driven-client360-platform-ai-advisor-academy",
+           "desc": "AI client insights in one view; Zoom summaries into CRM; AI Academy",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "May 2026",
+           "status_note": "May 2026",
+           "short": "AI client insights in one view; Zoom summaries into CRM"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "Book insights for advisors — Live",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Book insights for advisors",
+           "url": null,
+           "desc": "",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "",
+           "status_note": "",
+           "short": "Book insights for advisors"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null,
+        {
+         "full_html": "<a href=\"https://www.businesswire.com/news/home/20260331025131/en/Cetera-Selects-Zocks-to-Offer-AI-Assistant-to-12000-Financial-Professionals\" target=\"_blank\">IntelligenceEngine</a>: whitespace and held-away-asset detection, outreach triggers — Live · July 2025",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "IntelligenceEngine",
+           "url": "https://www.businesswire.com/news/home/20260331025131/en/Cetera-Selects-Zocks-to-Offer-AI-Assistant-to-12000-Financial-Professionals",
+           "desc": "whitespace and held-away-asset detection, outreach triggers",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Jul 2025",
+           "status_note": "July 2025",
+           "short": "Whitespace and held-away-asset detection, outreach triggers"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null
+       ]
+      },
+      {
+       "cap": "Client-facing assistant / digital advice",
+       "group": "Client-facing experiences",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "Investor app on the Cyan roadmap — Announced · no dates",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Investor app",
+           "url": null,
+           "desc": "on the Cyan roadmap",
+           "maturity": "Announced",
+           "evidence": "D",
+           "date": "",
+           "status_note": "no dates",
+           "short": "On the Cyan roadmap, no dates"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "D"
+         }
+        },
+        null,
+        null,
+        {
+         "full_html": "Ventures portfolio piloted with 70%+ of advisors: Alix (estate), Grantd (equity comp), Waterlily (LTC) — Pilot · 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Ventures portfolio",
+           "url": null,
+           "desc": "Alix (estate), Grantd (equity comp), Waterlily (LTC) piloted with 70%+ of advisors",
+           "maturity": "Pilot",
+           "evidence": "D",
+           "date": "2026",
+           "status_note": "2026",
+           "short": "Alix, Grantd, Waterlily piloted with 70%+ of advisors"
+          }
+         ],
+         "heat": {
+          "maturity": "Pilot",
+          "level": 2,
+          "evidence": "D"
+         }
+        },
+        null,
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Ops & account-servicing agents",
+       "group": "Agentic workflow automation",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "Account maintenance via Cyan (see General assistant)",
+         "evidence": "D",
+         "xref": true,
+         "text": "Account maintenance via Cyan (see General assistant)",
+         "tools": [
+          {
+           "name": "via Cyan",
+           "url": null,
+           "desc": "Account maintenance via Cyan (see General assistant)",
+           "short": "Account maintenance via Cyan (not yet launched)",
+           "maturity": "Announced",
+           "evidence": "D",
+           "date": "",
+           "status_note": "",
+           "xref_of": "Cyan agent + Latitude",
+           "deviation": "Referenced tool is Announced, so Live would misstate it"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.raymondjames.com/news-and-media/press-releases/2026/01/27/raymond-james-launches-proprietary-digital-ai-agent-to-bolster-operational-excellence\" target=\"_blank\">Rai ops agent</a>: GenAI over ops knowledge bases, evolving to task execution; 10,000+ associates on conversational AI (AWS + Anthropic) — Live · enterprise rollout Jan 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Rai ops agent",
+           "url": "https://www.raymondjames.com/news-and-media/press-releases/2026/01/27/raymond-james-launches-proprietary-digital-ai-agent-to-bolster-operational-excellence",
+           "desc": "GenAI over ops knowledge bases, evolving to task execution; 10,000+ associates on conversational AI (AWS + Anthropic)",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Jan 2026",
+           "status_note": "enterprise rollout Jan 2026",
+           "short": "GenAI over ops knowledge bases; 10,000+ associates"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Firm-wide program / partners",
+       "group": null,
+       "footer": true,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://www.lpl.com/news-media/press-releases/lpl-financial-launches-curated-ai-solutions-for-advisors.html\" target=\"_blank\">AI Advisor Solutions</a>: curated vendor list (Jump, M365 Copilot, FMG, FactSet) — Live Nov 2024; $2B tech push over 3 yrs; build + buy",
+         "evidence": "C",
+         "footer": true,
+         "text": "AI Advisor Solutions: curated vendor list (Jump, M365 Copilot, FMG, FactSet) — Live Nov 2024; $2B tech push over 3 yrs; build + buy",
+         "short": "AI Advisor Solutions vendor list; $2B tech push over 3 yrs"
+        },
+        {
+         "full_html": "$1.1B tech budget; build on AWS + Anthropic; AI Academy",
+         "evidence": null,
+         "footer": true,
+         "text": "$1.1B tech budget; build on AWS + Anthropic; AI Academy",
+         "short": "$1.1B tech budget; build on AWS + Anthropic; AI Academy"
+        },
+        {
+         "full_html": "$1B annual tech and AI spend; build on data lake",
+         "evidence": null,
+         "footer": true,
+         "text": "$1B annual tech and AI spend; build on data lake",
+         "short": "$1B annual tech and AI spend; build on data lake"
+        },
+        {
+         "full_html": "Build + invest via Edward Jones Ventures",
+         "evidence": null,
+         "footer": true,
+         "text": "Build + invest via Edward Jones Ventures",
+         "short": "Build + invest via Edward Jones Ventures"
+        },
+        {
+         "full_html": "Buy (Jump, Zocks)",
+         "evidence": null,
+         "footer": true,
+         "text": "Buy (Jump, Zocks)",
+         "short": "Buy (Jump, Zocks)"
+        },
+        {
+         "full_html": "Buy + build",
+         "evidence": null,
+         "footer": true,
+         "text": "Buy + build",
+         "short": "Buy + build"
+        },
+        {
+         "full_html": "Buy (Zocks); now part of LPL",
+         "evidence": null,
+         "footer": true,
+         "text": "Buy (Zocks); now part of LPL",
+         "short": "Buy (Zocks); now part of LPL"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2b",
+     "name": "RIA aggregators and consolidators",
+     "firms": [
+      {
+       "name": "Focus Financial",
+       "segment": null
+      },
+      {
+       "name": "Hightower",
+       "segment": null
+      },
+      {
+       "name": "Carson Group",
+       "segment": null
+      },
+      {
+       "name": "Mercer Advisors",
+       "segment": null
+      },
+      {
+       "name": "Dynasty",
+       "segment": null
+      },
+      {
+       "name": "Stifel, Creative Planning, Fisher, Captrust, Corient, WEG, Mariner",
+       "segment": null
+      }
+     ],
+     "rows": [
+      {
+       "cap": "General assistant / knowledge Q&A",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        null,
+        null,
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/fintech/ai-wrap-carson-deploys-in-house-chatbot-tifin-launches-ai-agent-platform/260531\" target=\"_blank\">Steve chatbot</a>: internal knowledge bot — Live · 2025",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Steve chatbot",
+           "url": "https://www.investmentnews.com/fintech/ai-wrap-carson-deploys-in-house-chatbot-tifin-launches-ai-agent-platform/260531",
+           "desc": "internal knowledge bot",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "2025",
+           "status_note": "2025",
+           "short": "Internal knowledge bot"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.wealthmanagement.com/artificial-intelligence/mercer-global-advisors-launches-ai-native-aspen-20\" target=\"_blank\">Aspen 2.0</a>: AI-native OS on a knowledge graph; agents across planning, tax, estate; $110B AUM (built with Avantos) — Announced · July 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Aspen 2.0",
+           "url": "https://www.wealthmanagement.com/artificial-intelligence/mercer-global-advisors-launches-ai-native-aspen-20",
+           "desc": "AI-native OS on a knowledge graph; agents across planning, tax, estate; $110B AUM (built with Avantos)",
+           "maturity": "Announced",
+           "evidence": "D",
+           "date": "Jul 2026",
+           "status_note": "July 2026",
+           "short": "AI-native OS on a knowledge graph; $110B AUM"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.01net.it/dynasty-financial-partners-builds-its-next-generation-ai-os-for-wealth-on-claude/\" target=\"_blank\">AI OS on Claude</a>: book-level chat (\"who should I talk to today?\"), Virtual Chief of Staff; 60 firms, $135B+ (Anthropic) — Pilot · early release Sept 2026; Q4 2026 / Q1 2027",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "AI OS on Claude",
+           "url": "https://www.01net.it/dynasty-financial-partners-builds-its-next-generation-ai-os-for-wealth-on-claude/",
+           "desc": "book-level chat (\"who should I talk to today?\"), Virtual Chief of Staff; 60 firms, $135B+ (Anthropic)",
+           "maturity": "Pilot",
+           "evidence": "D",
+           "date": "Sep 2026",
+           "status_note": "early release Sept 2026; Q4 2026 / Q1 2027",
+           "short": "Book-level chat and Virtual Chief of Staff; 60 firms, $135B+"
+          }
+         ],
+         "heat": {
+          "maturity": "Pilot",
+          "level": 2,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "None disclosed: no public AI deployment found in 2025-26 press; Stifel CEO: \"advice is not an algorithm\" — Unverified",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "None disclosed",
+           "url": null,
+           "desc": "no public AI deployment found in 2025-26 press; Stifel CEO: \"advice is not an algorithm\"",
+           "maturity": null,
+           "evidence": "D",
+           "date": "",
+           "status_note": "Unverified",
+           "short": "No public AI deployment found in 2025-26 press"
+          }
+         ],
+         "heat": null
+        }
+       ]
+      },
+      {
+       "cap": "Meeting prep, notes & CRM logging",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/transformation/focus-financial-rolls-out-jump-ai-to-800-advisors-after-pilot/264959\" target=\"_blank\">Jump</a>: 800 advisors after 8-week pilot; 70% cut in prep/notes/follow-up time — Scaled adoption · live Jan 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Jump",
+           "url": "https://www.investmentnews.com/transformation/focus-financial-rolls-out-jump-ai-to-800-advisors-after-pilot/264959",
+           "desc": "800 advisors after 8-week pilot; 70% cut in prep/notes/follow-up time",
+           "maturity": "Scaled adoption",
+           "evidence": "C",
+           "date": "Jan 2026",
+           "status_note": "live Jan 2026",
+           "short": "800 advisors after 8-week pilot; 70% less prep time"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/fintech/zocks-jump-expand-advisor-reach-with-new-enterprise-integrations/266805\" target=\"_blank\">Zocks (exclusive)</a>: conversation capture to Salesforce and planning; ~650 advisors, $352B — Scaled adoption · live June 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Zocks (exclusive)",
+           "url": "https://www.investmentnews.com/fintech/zocks-jump-expand-advisor-reach-with-new-enterprise-integrations/266805",
+           "desc": "conversation capture to Salesforce and planning; ~650 advisors, $352B",
+           "maturity": "Scaled adoption",
+           "evidence": "C",
+           "date": "Jun 2026",
+           "status_note": "live June 2026",
+           "short": "Exclusive conversation capture to Salesforce; ~650 advisors"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "Zocks: 97% weekly active, 8 hrs/advisor/wk (vendor-reported) — Scaled adoption · live 2025",
+         "evidence": "V",
+         "tools": [
+          {
+           "name": "Zocks",
+           "url": null,
+           "desc": "97% weekly active, 8 hrs/advisor/wk (vendor-reported)",
+           "maturity": "Scaled adoption",
+           "evidence": "V",
+           "date": "2025",
+           "status_note": "live 2025",
+           "short": "97% weekly active, 8 hrs/advisor/wk (vendor-reported)"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "V"
+         }
+        },
+        null,
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Client-facing assistant / digital advice",
+       "group": "Client-facing experiences",
+       "footer": false,
+       "cells": [
+        null,
+        null,
+        null,
+        {
+         "full_html": "Aspen 2.0 spans the client experience — Announced · July 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Aspen 2.0",
+           "url": null,
+           "desc": "spans the client experience",
+           "maturity": "Announced",
+           "evidence": "D",
+           "date": "Jul 2026",
+           "status_note": "July 2026",
+           "short": "Aspen 2.0 spans the client experience"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "Client-ready outputs from the AI OS — Pilot · early release Sept 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "AI OS client outputs",
+           "url": null,
+           "desc": "client-ready outputs from the AI OS",
+           "maturity": "Pilot",
+           "evidence": "D",
+           "date": "Sep 2026",
+           "status_note": "early release Sept 2026",
+           "short": "Client-ready outputs from the AI OS"
+          }
+         ],
+         "heat": {
+          "maturity": "Pilot",
+          "level": 2,
+          "evidence": "D"
+         }
+        },
+        null
+       ]
+      },
+      {
+       "cap": "Firm-wide program / partners",
+       "group": null,
+       "footer": true,
+       "cells": [
+        {
+         "full_html": "Buy",
+         "evidence": null,
+         "footer": true,
+         "text": "Buy",
+         "short": "Buy"
+        },
+        {
+         "full_html": "Buy",
+         "evidence": null,
+         "footer": true,
+         "text": "Buy",
+         "short": "Buy"
+        },
+        {
+         "full_html": "Build + buy",
+         "evidence": null,
+         "footer": true,
+         "text": "Build + buy",
+         "short": "Build + buy"
+        },
+        {
+         "full_html": "Build with Avantos",
+         "evidence": null,
+         "footer": true,
+         "text": "Build with Avantos",
+         "short": "Build with Avantos"
+        },
+        {
+         "full_html": "Build on Anthropic",
+         "evidence": null,
+         "footer": true,
+         "text": "Build on Anthropic",
+         "short": "Build on Anthropic"
+        },
+        null
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2c",
+     "name": "Custodians and vendors",
+     "firms": [
+      {
+       "name": "Schwab Advisor Services",
+       "segment": null
+      },
+      {
+       "name": "Fidelity Institutional",
+       "segment": null
+      },
+      {
+       "name": "Jump",
+       "segment": null
+      },
+      {
+       "name": "Zocks",
+       "segment": null
+      },
+      {
+       "name": "Zeplyn",
+       "segment": null
+      },
+      {
+       "name": "Salesforce",
+       "segment": null
+      },
+      {
+       "name": "Envestnet",
+       "segment": null
+      }
+     ],
+     "rows": [
+      {
+       "cap": "General assistant / knowledge Q&A",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors\" target=\"_blank\">Claude for Financial Advisors</a>: research, prep, planning, CRM updates with MCP connectors to Schwab Advisor Center; 16,000+ RIAs (Anthropic) — Announced · Sept 15, 2026; ~$70-120 per user per month all-in (Anthropic's Peter Nolan, Sept 14; usage credit for licenses requested by Sept 30)",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Claude for Financial Advisors",
+           "url": "https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors",
+           "desc": "research, prep, planning, CRM updates with MCP connectors to Schwab Advisor Center; 16,000+ RIAs (Anthropic)",
+           "maturity": "Announced",
+           "evidence": "C",
+           "date": "Sep 2026",
+           "status_note": "Sept 15, 2026; ~$70-120 per user per month all-in (Anthropic's Peter Nolan, Sept 14; usage credit for licenses requested by Sept 30)",
+           "short": "Research, prep, planning with Schwab MCP connectors; 16,000+ RIAs"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "C"
+         }
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+         "full_html": "<a href=\"https://www.wealthmanagement.com/advisor-support-platforms/envestnet-amplify-zeplyn-roll-out-new-features\" target=\"_blank\">R3 2026 AI dashboard assistant</a>: conversational assistant from any Insights view; dashboard opt-in for larger clients from mid-Sept — Live · Sept 18, 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "AI dashboard assistant",
+           "url": "https://www.wealthmanagement.com/advisor-support-platforms/envestnet-amplify-zeplyn-roll-out-new-features",
+           "desc": "R3 2026: conversational assistant from any Insights view; dashboard opt-in for larger clients from mid-Sept",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Sep 2026",
+           "status_note": "Sept 18, 2026",
+           "short": "Conversational assistant from any Insights view"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        }
+       ]
+      },
+      {
+       "cap": "Meeting prep, notes & CRM logging",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        null,
+        null,
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/fintech/jump-expands-ai-platform-with-end-to-end-client-onboarding-tools/267153\" target=\"_blank\">Jump</a>: meeting notes, prep and follow-ups; 35,000+ users, 22.7% T3 share — Scaled adoption · live",
+         "evidence": "V",
+         "tools": [
+          {
+           "name": "Jump",
+           "url": "https://www.investmentnews.com/fintech/jump-expands-ai-platform-with-end-to-end-client-onboarding-tools/267153",
+           "desc": "meeting notes, prep and follow-ups; 35,000+ users, 22.7% T3 share",
+           "maturity": "Scaled adoption",
+           "evidence": "V",
+           "date": "",
+           "status_note": "live",
+           "short": "Meeting notes and follow-ups; 35,000+ users, 22.7% T3 share"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "V"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.businesswire.com/news/home/20260126549388/en/Zocks-Raises-$45M-Series-B-to-Accelerate-AI-Powered-Automation-for-Financial-Advisors\" target=\"_blank\">Zocks</a>: notetaker and CRM automation; 5,000+ firms — Scaled adoption · live",
+         "evidence": "V",
+         "tools": [
+          {
+           "name": "Zocks",
+           "url": "https://www.businesswire.com/news/home/20260126549388/en/Zocks-Raises-$45M-Series-B-to-Accelerate-AI-Powered-Automation-for-Financial-Advisors",
+           "desc": "notetaker and CRM automation; 5,000+ firms",
+           "maturity": "Scaled adoption",
+           "evidence": "V",
+           "date": "",
+           "status_note": "live",
+           "short": "Notetaker and CRM automation; 5,000+ firms"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "V"
+         }
+        },
+        null,
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/fintech/salesforce-launches-agentic-advisor-as-ai-notetakers-threaten-crm-dominance/267076\" target=\"_blank\">Agentic Advisor</a>: Meeting Concierge, Run My Day; EP Wealth early adopter — Live · June 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Agentic Advisor",
+           "url": "https://www.investmentnews.com/fintech/salesforce-launches-agentic-advisor-as-ai-notetakers-threaten-crm-dominance/267076",
+           "desc": "Meeting Concierge, Run My Day; EP Wealth early adopter",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Jun 2026",
+           "status_note": "June 2026",
+           "short": "Meeting Concierge, Run My Day; EP Wealth early adopter"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null
+       ]
+      },
+      {
+       "cap": "Research & portfolio analysis",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+         "full_html": "Tamarac AI Data Analyst Agent: natural-language account queries and legacy-report migration — Live · Sept 18, 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Tamarac AI Data Analyst Agent",
+           "url": null,
+           "desc": "natural-language account queries and legacy-report migration",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Sep 2026",
+           "status_note": "Sept 18, 2026",
+           "short": "Natural-language account queries, legacy-report migration"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        }
+       ]
+      },
+      {
+       "cap": "Compliance, comms & drafting",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        null,
+        {
+         "full_html": "Saifr for compliance review — Live · Sept 2025",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Saifr",
+           "url": null,
+           "desc": "compliance review",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Sep 2025",
+           "status_note": "Sept 2025",
+           "short": "Compliance review"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Client insights & next-best-action",
+       "group": "Growth analytics & next-best-action",
+       "footer": false,
+       "cells": [
+        null,
+        {
+         "full_html": "<a href=\"https://newsroom.fidelity.com/pressreleases/fidelity-investments-launches-wealthscapesm-intelligence-and-introduces-new--fully-digital-onboardin/s/aaf9079d-0ecd-49b2-84f2-7e546a4fc693\" target=\"_blank\">Wealthscape Intelligence</a>: insights dashboard; Catchlight for prospecting — Live · Sept 2025",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Wealthscape Intelligence",
+           "url": "https://newsroom.fidelity.com/pressreleases/fidelity-investments-launches-wealthscapesm-intelligence-and-introduces-new--fully-digital-onboardin/s/aaf9079d-0ecd-49b2-84f2-7e546a4fc693",
+           "desc": "insights dashboard; Catchlight for prospecting",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Sep 2025",
+           "status_note": "Sept 2025",
+           "short": "Insights dashboard; Catchlight for prospecting"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        {
+         "full_html": "Book-scanning agents extending from notes — Live",
+         "evidence": "V",
+         "tools": [
+          {
+           "name": "Book-scanning agents",
+           "url": null,
+           "desc": "extending from notes",
+           "maturity": "Live",
+           "evidence": "V",
+           "date": "",
+           "status_note": "",
+           "short": "Book-scanning agents extending from notes"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "V"
+         }
+        },
+        null,
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Ops & account-servicing agents",
+       "group": "Agentic workflow automation",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://finance.yahoo.com/technology/ai/articles/zeplyn-launches-first-agentic-account-130000932.html\" target=\"_blank\">Zeplyn agentic account opening</a>: one-prompt account opening; NIGO down ~80% in pilots — Live · Aug 2026",
+         "evidence": "V",
+         "tools": [
+          {
+           "name": "Zeplyn agentic account opening",
+           "url": "https://finance.yahoo.com/technology/ai/articles/zeplyn-launches-first-agentic-account-130000932.html",
+           "desc": "one-prompt account opening; NIGO down ~80% in pilots",
+           "maturity": "Live",
+           "evidence": "V",
+           "date": "Aug 2026",
+           "status_note": "Aug 2026",
+           "short": "One-prompt account opening; NIGO down ~80% in pilots"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "V"
+         }
+        },
+        null,
+        {
+         "full_html": "End-to-end client onboarding tools — Live. <a href=\"https://www.businesswire.com/news/home/20260914989068/en/Jump-Introduces-AI-Assisted-Real-Time-Account-Opening-with-Schwab-Advisor-Services-and-Fidelity\" target=\"_blank\">Real-time account opening</a>: conversation-to-signed application within one meeting on Schwab Advisor Services and Fidelity (via Dispatch); ~10 minutes vs 2–3 hours, NIGO pre-checks — Live (onboarding tools) · Limited rollout (real-time account opening, limited beta Sept 14, 2026)",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Client onboarding tools",
+           "url": "https://www.investmentnews.com/fintech/jump-expands-ai-platform-with-end-to-end-client-onboarding-tools/267153",
+           "desc": "end-to-end client onboarding tools",
+           "short": "End-to-end client onboarding tools",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "",
+           "status_note": ""
+          },
+          {
+           "name": "Real-time account opening",
+           "url": "https://www.businesswire.com/news/home/20260914989068/en/Jump-Introduces-AI-Assisted-Real-Time-Account-Opening-with-Schwab-Advisor-Services-and-Fidelity",
+           "desc": "conversation-to-signed application within one meeting on Schwab Advisor Services and Fidelity (via Dispatch); ~10 minutes vs 2–3 hours, NIGO pre-checks",
+           "short": "Signed application within one meeting on Schwab and Fidelity",
+           "maturity": "Limited rollout",
+           "evidence": "V",
+           "date": "Sep 2026",
+           "status_note": "limited beta Sept 14, 2026"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "Account opening and scheduling agents — Live",
+         "evidence": "V",
+         "tools": [
+          {
+           "name": "Account opening and scheduling agents",
+           "url": null,
+           "desc": "",
+           "maturity": "Live",
+           "evidence": "V",
+           "date": "",
+           "status_note": "",
+           "short": "Account opening and scheduling agents"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "V"
+         }
+        },
+        {
+         "full_html": "Agentic account opening on Schwab (see Schwab column) — Live · Aug 2026",
+         "evidence": "V",
+         "tools": [
+          {
+           "name": "Agentic account opening",
+           "url": null,
+           "desc": "on Schwab Advisor Center (see Schwab column)",
+           "maturity": "Live",
+           "evidence": "V",
+           "date": "Aug 2026",
+           "status_note": "Aug 2026",
+           "short": "On Schwab Advisor Center; NIGO down ~80% in pilots"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "V"
+         }
+        },
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Agent access (MCP, bring-your-own-agent)",
+       "group": "External-agent access",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "MCP connectors to Schwab Advisor Center inside Claude for Financial Advisors (see General assistant)",
+         "evidence": "C",
+         "xref": true,
+         "text": "MCP connectors to Schwab Advisor Center inside Claude for Financial Advisors (see General assistant)",
+         "tools": [
+          {
+           "name": "via Claude for Financial Advisors",
+           "url": null,
+           "desc": "MCP connectors to Schwab Advisor Center inside Claude for Financial Advisors (see General assistant)",
+           "short": "MCP connectors to Schwab Advisor Center inside Claude",
+           "maturity": "Announced",
+           "evidence": "C",
+           "date": "",
+           "status_note": "",
+           "xref_of": "Claude for Financial Advisors",
+           "deviation": "Referenced tool is Announced, so Live would misstate it"
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "C"
+         }
+        },
+        null,
+        null,
+        null,
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/fintech/advisors-get-the-keys-advisorcrm-and-zeplyn-let-firms-build-their-own-ai-tools/268248\" target=\"_blank\">Agent Studio + MCP server</a>: no-code studio where firms define agents in plain language and expose them plus 60+ wealth tools to Claude, ChatGPT, Copilot and Slack; role-based access, audit trails, PII redaction — Live · Sept 2026",
+         "evidence": "V",
+         "tools": [
+          {
+           "name": "Agent Studio + MCP server",
+           "url": "https://www.investmentnews.com/fintech/advisors-get-the-keys-advisorcrm-and-zeplyn-let-firms-build-their-own-ai-tools/268248",
+           "desc": "no-code studio where firms define agents in plain language and expose them plus 60+ wealth tools to Claude, ChatGPT, Copilot and Slack; role-based access, audit trails, PII redaction",
+           "maturity": "Live",
+           "evidence": "V",
+           "date": "Sep 2026",
+           "status_note": "Sept 2026",
+           "short": "No-code agent studio; 60+ tools exposed to Claude, ChatGPT, Copilot"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "V"
+         }
+        },
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Firm-wide program / partners",
+       "group": null,
+       "footer": true,
+       "cells": [
+        {
+         "full_html": "Anthropic; Zeplyn",
+         "evidence": null,
+         "footer": true,
+         "text": "Anthropic; Zeplyn",
+         "short": "Anthropic; Zeplyn"
+        },
+        {
+         "full_html": "Build",
+         "evidence": null,
+         "footer": true,
+         "text": "Build",
+         "short": "Build"
+        },
+        {
+         "full_html": "$80M Series B",
+         "evidence": null,
+         "footer": true,
+         "text": "$80M Series B",
+         "short": "$80M Series B"
+        },
+        {
+         "full_html": "$45M Series B",
+         "evidence": null,
+         "footer": true,
+         "text": "$45M Series B",
+         "short": "$45M Series B"
+        },
+        {
+         "full_html": "AdvisorCRM Studio launched the same week to 50 firms",
+         "evidence": null,
+         "footer": true,
+         "text": "AdvisorCRM Studio launched the same week to 50 firms",
+         "short": "AdvisorCRM Studio launched to 50 firms"
+        },
+        {
+         "full_html": "<a href=\"https://newsroom.accenture.com/blogs/2026/accenture-launches-accenture-trusted-wealth-ops-powered-by-salesforce-and-claude-to-help-wealth-advisors-deepen-client-relationships\" target=\"_blank\">Accenture Trusted Wealth Ops</a>: Agentforce Financial Services + Data 360 with Claude as reasoning layer for onboarding and servicing; targets 24-hour onboarding, NIGO under 5%, up to 25% advisor productivity — Announced Sept 11, 2026",
+         "evidence": "V",
+         "footer": true,
+         "text": "Accenture Trusted Wealth Ops: Agentforce Financial Services + Data 360 with Claude as reasoning layer for onboarding and servicing; targets 24-hour onboarding, NIGO under 5%, up to 25% advisor productivity — Announced Sept 11, 2026",
+         "short": "Accenture Trusted Wealth Ops on Agentforce + Claude (Sep 2026)"
+        },
+        {
+         "full_html": "Build; sponsor self-service due in R4",
+         "evidence": null,
+         "footer": true,
+         "text": "Build; sponsor self-service due in R4",
+         "short": "Build; sponsor self-service due in R4"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "This segment buys rather than builds, moves in weeks rather than quarters, and has almost nothing client-facing. An enterprise-licensed notetaker (Jump or Zocks) with CRM write-back is universal; the larger, data-rich platforms (LPL, Raymond James, Ameriprise, Dynasty, Mercer) are now building proprietary agents on top.",
+   "after_html": "<p><strong>Vendor layer.</strong> <a href=\"https://www.investmentnews.com/fintech/jump-expands-ai-platform-with-end-to-end-client-onboarding-tools/267153\" target=\"_blank\">Jump</a> (35,000+ users, $80M Series B, 22.7% T3 share) and <a href=\"https://www.businesswire.com/news/home/20260126549388/en/Zocks-Raises-$45M-Series-B-to-Accelerate-AI-Powered-Automation-for-Financial-Advisors\" target=\"_blank\">Zocks</a> (5,000+ firms, $45M Series B) are extending from notes into account opening, scheduling, and book-scanning agents, which is why Salesforce answered with Agentic Advisor. Orion Denali AI, Envestnet's R3 2026 release (AI dashboard assistant, Tamarac Data Analyst Agent; Sept 18), eMoney CoPlanner, and Nitrogen Nucleus are the planning-and-platform layer; Holistiplan holds ~39% of tax-planning share.</p>\n    <p><strong>Adoption.</strong> 63% of Schwab-custodied RIAs use AI, up from under 30% in 2023, but only ~10% call it fully integrated (<a href=\"https://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx\" target=\"_blank\">Schwab 2026 RIA &amp; AI Study</a>). 42.9% of practices report an AI notetaker in the <a href=\"https://www.financial-planning.com/news/jump-zocks-top-category-as-ai-note-taker-adoption-soars\" target=\"_blank\">T3 2026 survey</a>; 70% of $1B+ RIAs per Cerulli. 64% of wealth firms lack a unified data layer for AI (<a href=\"https://f2strategy.com/research/q2-2026-trend-report\" target=\"_blank\">F2 Strategy</a>), which is the real constraint on anything beyond notes.</p>\n    <p><strong>Client-facing.</strong> Nothing in this bucket is client self-service. The closest are Ameriprise's AI-drafted client letters, advisor-mediated proposals from Dynasty, Mercer, and LPL Cyan, and Edward Jones' venture tools reaching clients through advisor pilots. Client-facing AI is a 2027 story here.</p>"
+  },
+  {
+   "id": "3",
+   "title": "Bucket 3: Fintechs",
+   "heading": "Fintechs",
+   "subtables": [
+    {
+     "id": "3a",
+     "name": "Brokerages and robo-advisors",
+     "firms": [
+      {
+       "name": "Robinhood",
+       "segment": "Mass to mass-affluent; HENRY"
+      },
+      {
+       "name": "Public",
+       "segment": "Affluent self-directed"
+      },
+      {
+       "name": "Wealthfront",
+       "segment": "Mass-affluent"
+      },
+      {
+       "name": "Betterment",
+       "segment": "Mass"
+      },
+      {
+       "name": "SoFi",
+       "segment": "Mass"
+      },
+      {
+       "name": "Schwab (retail)",
+       "segment": "Mass to HNW self-directed"
+      },
+      {
+       "name": "Fidelity (retail)",
+       "segment": "Mass"
+      },
+      {
+       "name": "Scalable Capital (EU)",
+       "segment": "Mass-affluent"
+      }
+     ],
+     "rows": [
+      {
+       "cap": "Research & portfolio analysis",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "Portfolio analysis inside Cortex (above)",
+         "evidence": "C",
+         "xref": true,
+         "text": "Portfolio analysis inside Cortex (above)",
+         "tools": [
+          {
+           "name": "via Cortex",
+           "url": null,
+           "desc": "Portfolio analysis inside Cortex (above)",
+           "short": "Portfolio analysis inside Cortex",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "",
+           "status_note": "",
+           "xref_of": "Cortex"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+         "full_html": "Portfolio Insights: AI performance and market-driver summaries — Live · May 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Portfolio Insights",
+           "url": null,
+           "desc": "AI performance and market-driver summaries",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "May 2026",
+           "status_note": "May 2026",
+           "short": "AI performance and market-driver summaries"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Client-facing assistant / digital advice",
+       "group": "Client-facing experiences",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://robinhood.com/us/en/newsroom/robinhood-presents-yes-no-event\" target=\"_blank\">Cortex</a>: conversational analysis tied to holdings, trades in conversation; 1M+ users; 4.8M Gold subscribers — Scaled adoption · live Q1 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Cortex",
+           "url": "https://robinhood.com/us/en/newsroom/robinhood-presents-yes-no-event",
+           "desc": "conversational analysis tied to holdings, trades in conversation; 1M+ users; 4.8M Gold subscribers",
+           "maturity": "Scaled adoption",
+           "evidence": "C",
+           "date": "Q1 2026",
+           "status_note": "live Q1 2026",
+           "short": "Conversational analysis and trading; 1M+ users"
+          }
+         ],
+         "heat": {
+          "maturity": "Scaled adoption",
+          "level": 5,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.prnewswire.com/news-releases/public-becomes-the-first-brokerage-to-introduce-ai-agents-for-your-portfolio-302729050.html\" target=\"_blank\">AI Agents and Portfolio Builder</a>: prompt-defined strategies executed unattended — Live · Nov 2025 / Mar 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "AI Agents and Portfolio Builder",
+           "url": "https://www.prnewswire.com/news-releases/public-becomes-the-first-brokerage-to-introduce-ai-agents-for-your-portfolio-302729050.html",
+           "desc": "prompt-defined strategies executed unattended",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Nov 2025",
+           "status_note": "Nov 2025 / Mar 2026",
+           "short": "Prompt-defined strategies executed unattended"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.fool.com/earnings/call-transcripts/2026/09/10/wealthfront-wlth-q2-2027-earnings-call-transcript/\" target=\"_blank\">LLM assistant</a>: first client AI test (emergency-fund sizing); $100.9B platform assets, 1.5M clients — Pilot · Sept 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "LLM assistant",
+           "url": "https://www.fool.com/earnings/call-transcripts/2026/09/10/wealthfront-wlth-q2-2027-earnings-call-transcript/",
+           "desc": "first client AI test (emergency-fund sizing); $100.9B platform assets, 1.5M clients",
+           "maturity": "Pilot",
+           "evidence": "D",
+           "date": "Sep 2026",
+           "status_note": "Sept 2026",
+           "short": "First client AI test (emergency-fund sizing); 1.5M clients"
+          }
+         ],
+         "heat": {
+          "maturity": "Pilot",
+          "level": 2,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.prnewswire.com/news-releases/betterment-launches-ai-enabled-account-recommender-advancing-enterprise-ai-strategy-302707654.html\" target=\"_blank\">AI Account Recommender</a>: account-type recommendation with AI explanations; $65B+ AUM — Live · Mar 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "AI Account Recommender",
+           "url": "https://www.prnewswire.com/news-releases/betterment-launches-ai-enabled-account-recommender-advancing-enterprise-ai-strategy-302707654.html",
+           "desc": "account-type recommendation with AI explanations; $65B+ AUM",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Mar 2026",
+           "status_note": "Mar 2026",
+           "short": "Account-type recommendation with AI explanations; $65B+ AUM"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://investors.sofi.com/news/news-details/2026/Introducing-SoFi-Coach-An-AI-Powered-Financial-Guide-to-Help-Members-Get-Their-Money-Right/default.aspx\" target=\"_blank\">SoFi Coach</a>: chatbot over connected accounts; \"not financial advice\"; 14.7M members — Live · June 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "SoFi Coach",
+           "url": "https://investors.sofi.com/news/news-details/2026/Introducing-SoFi-Coach-An-AI-Powered-Financial-Guide-to-Help-Members-Get-Their-Money-Right/default.aspx",
+           "desc": "chatbot over connected accounts; \"not financial advice\"; 14.7M members",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Jun 2026",
+           "status_note": "June 2026",
+           "short": "Chatbot over connected accounts; 14.7M members"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Launches-AI-Powered-Capability-That-Helps-Investors-Understand-Portfolio-Performance-and-Market-Activity/default.aspx\" target=\"_blank\">Investor AI assistant</a>: voice/chat with limited actions; \"inform not advise\" — Announced · Summer 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Investor AI assistant",
+           "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Launches-AI-Powered-Capability-That-Helps-Investors-Understand-Portfolio-Performance-and-Market-Activity/default.aspx",
+           "desc": "voice/chat with limited actions; \"inform not advise\"",
+           "maturity": "Announced",
+           "evidence": "C",
+           "date": "summer 2026",
+           "status_note": "Summer 2026",
+           "short": "Voice/chat with limited actions; \"inform not advise\""
+          }
+         ],
+         "heat": {
+          "maturity": "Announced",
+          "level": 1,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.fstech.co.uk/fst/Fidelity_Launches_Conversational_GenAI_Tool.php\" target=\"_blank\">Freya (UK)</a>: conversational GenAI, halts near advice; no US retail equivalent found — Live · Sept 2025 (UK)",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Freya (UK)",
+           "url": "https://www.fstech.co.uk/fst/Fidelity_Launches_Conversational_GenAI_Tool.php",
+           "desc": "conversational GenAI, halts near advice; no US retail equivalent found",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "Sep 2025",
+           "status_note": "Sept 2025 (UK)",
+           "short": "UK conversational GenAI; halts near advice"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        null
+       ]
+      },
+      {
+       "cap": "Agent access (MCP, bring-your-own-agent)",
+       "group": "External-agent access",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/\" target=\"_blank\">Agentic Trading via MCP</a>: Claude/ChatGPT trade equities in a segregated sub-account; ~100k accounts, &gt;$100M custody — Limited rollout · beta May 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Agentic Trading via MCP",
+           "url": "https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/",
+           "desc": "Claude/ChatGPT trade equities in a segregated sub-account; ~100k accounts, >$100M custody",
+           "maturity": "Limited rollout",
+           "evidence": "C",
+           "date": "May 2026",
+           "status_note": "beta May 2026",
+           "short": "Claude/ChatGPT trade in a sub-account; ~100k accounts"
+          }
+         ],
+         "heat": {
+          "maturity": "Limited rollout",
+          "level": 3,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "Hosted MCP: external agents trade stocks, options, crypto, bonds — Live · Mar 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Hosted MCP",
+           "url": null,
+           "desc": "external agents trade stocks, options, crypto, bonds",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Mar 2026",
+           "status_note": "Mar 2026",
+           "short": "External agents trade stocks, options, crypto, bonds"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null,
+        null,
+        {
+         "full_html": "No official MCP",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "No official MCP",
+           "url": null,
+           "desc": "",
+           "maturity": null,
+           "evidence": "D",
+           "date": "",
+           "status_note": "",
+           "short": "No official MCP"
+          }
+         ],
+         "heat": null
+        },
+        {
+         "full_html": "No MCP found",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "No MCP found",
+           "url": null,
+           "desc": "",
+           "maturity": null,
+           "evidence": "D",
+           "date": "",
+           "status_note": "",
+           "short": "No MCP found"
+          }
+         ],
+         "heat": null
+        },
+        {
+         "full_html": "<a href=\"https://fortune.com/2026/08/26/scalable-capital-claude-chatgpt-traders-bank-invest/\" target=\"_blank\">Agentic Investing</a>: first European bank with MCP trading via ChatGPT, Claude, Grok; every trade user-approved — Live · Aug 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Agentic Investing",
+           "url": "https://fortune.com/2026/08/26/scalable-capital-claude-chatgpt-traders-bank-invest/",
+           "desc": "first European bank with MCP trading via ChatGPT, Claude, Grok; every trade user-approved",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "Aug 2026",
+           "status_note": "Aug 2026",
+           "short": "First European bank with MCP trading; every trade user-approved"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        }
+       ]
+      },
+      {
+       "cap": "Broader program / partners",
+       "group": null,
+       "footer": true,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://investors.robinhood.com/news-releases/news-release-details/robinhood-reports-second-quarter-2026-results\" target=\"_blank\">Strategies + Banking + concierge tax/estate</a>: managed accounts (~$2B, 300k+), \"private banking\" with estate and tax pros, trusts, $695 Platinum card; Cortex for Advisors via TradePMR — Live 2025-26",
+         "evidence": "C",
+         "footer": true,
+         "text": "Strategies + Banking + concierge tax/estate: managed accounts (~$2B, 300k+), \"private banking\" with estate and tax pros, trusts, $695 Platinum card; Cortex for Advisors via TradePMR — Live 2025-26",
+         "short": "Strategies, Banking, concierge tax/estate; ~$2B managed"
+        },
+        null,
+        null,
+        {
+         "full_html": "Enterprise AI strategy behind the recommender",
+         "evidence": null,
+         "footer": true,
+         "text": "Enterprise AI strategy behind the recommender",
+         "short": "Enterprise AI strategy behind the recommender"
+        },
+        null,
+        null,
+        null,
+        null
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3b",
+     "name": "AI-native RIAs and advice startups",
+     "firms": [
+      {
+       "name": "Range",
+       "segment": "Affluent, HENRY"
+      },
+      {
+       "name": "Farther",
+       "segment": "HNW, UHNW"
+      },
+      {
+       "name": "Savvy Wealth",
+       "segment": "HNW"
+      },
+      {
+       "name": "Compound Planning",
+       "segment": "HNW, UHNW founders"
+      },
+      {
+       "name": "Altruist (Vanguard)",
+       "segment": "HNW via RIAs"
+      },
+      {
+       "name": "Arta Finance",
+       "segment": "Affluent, accredited"
+      },
+      {
+       "name": "Origin, Mezzi, PortfolioPilot",
+       "segment": "Mass-affluent"
+      }
+     ],
+     "rows": [
+      {
+       "cap": "General assistant / advisor copilot",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        null,
+        {
+         "full_html": "<a href=\"https://www.farther.com/post/farther-raises-150m-series-d-led-by-general-atlantic-to-scale-intelligent-wealth-management\" target=\"_blank\">Intelligent Wealth Management</a>: AI-native RIA stack recruiting wirehouse advisors; $23B recruited assets — Live",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Intelligent Wealth Management",
+           "url": "https://www.farther.com/post/farther-raises-150m-series-d-led-by-general-atlantic-to-scale-intelligent-wealth-management",
+           "desc": "AI-native RIA stack recruiting wirehouse advisors; $23B recruited assets",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "",
+           "status_note": "",
+           "short": "AI-native RIA stack; $23B recruited assets"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.wealthmanagement.com/ria-news/savvy-wealth-raises-100m-valuation-hits-600m\" target=\"_blank\">Savvy Intelligence</a>: agents on OpenAI and Anthropic for planning, tax, performance; $9B AUM, 150+ advisors — Live",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Savvy Intelligence",
+           "url": "https://www.wealthmanagement.com/ria-news/savvy-wealth-raises-100m-valuation-hits-600m",
+           "desc": "agents on OpenAI and Anthropic for planning, tax, performance; $9B AUM, 150+ advisors",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "",
+           "status_note": "",
+           "short": "Agents for planning, tax, performance; $9B AUM"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://finance.yahoo.com/technology/ai/articles/compound-planning-launches-compoundai-embedding-110000820.html\" target=\"_blank\">CompoundAI</a>: agents prep work over holdings, notes, transcripts for advisor approval; $5B+ AUM — Live · July 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "CompoundAI",
+           "url": "https://finance.yahoo.com/technology/ai/articles/compound-planning-launches-compoundai-embedding-110000820.html",
+           "desc": "agents prep work over holdings, notes, transcripts for advisor approval; $5B+ AUM",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "Jul 2026",
+           "status_note": "July 2026",
+           "short": "Agents prep work for advisor approval; $5B+ AUM"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/transformation/altruists-hazel-builds-ai-agent-to-create-financial-plans-in-minutes/268020\" target=\"_blank\">Hazel</a>: tax and financial-planning agents on deterministic calc engines; ~1,600 RIAs in first month — Live",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Hazel",
+           "url": "https://www.investmentnews.com/transformation/altruists-hazel-builds-ai-agent-to-create-financial-plans-in-minutes/268020",
+           "desc": "tax and financial-planning agents on deterministic calc engines; ~1,600 RIAs in first month",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "",
+           "status_note": "",
+           "short": "Tax and planning agents; ~1,600 RIAs in first month"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Client-facing assistant / digital advice",
+       "group": "Client-facing experiences",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://www.investmentnews.com/ria-news/ria-startup-range-plans-to-eliminate-its-advisor-workforce-as-ai-takes-over/265586\" target=\"_blank\">Rai AI advisor</a>: flat-fee ($3-10k/yr) AI planner over linked accounts; plan to eliminate human advisors in 1-3 yrs; ~$700M AUM — Live · Oct 2025",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Rai AI advisor",
+           "url": "https://www.investmentnews.com/ria-news/ria-startup-range-plans-to-eliminate-its-advisor-workforce-as-ai-takes-over/265586",
+           "desc": "flat-fee ($3-10k/yr) AI planner over linked accounts; plan to eliminate human advisors in 1-3 yrs; ~$700M AUM",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "Oct 2025",
+           "status_note": "Oct 2025",
+           "short": "Flat-fee AI planner over linked accounts; ~$700M AUM"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "Client insights in the advisor stack",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Client insights",
+           "url": null,
+           "desc": "in the advisor stack",
+           "maturity": null,
+           "evidence": "D",
+           "date": "",
+           "status_note": "",
+           "short": "Client insights in the advisor stack"
+          }
+         ],
+         "heat": null
+        },
+        null,
+        {
+         "full_html": "Client app fed by CompoundAI — Live · July 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Client app",
+           "url": null,
+           "desc": "fed by CompoundAI",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "Jul 2026",
+           "status_note": "July 2026",
+           "short": "Client app fed by CompoundAI"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        null,
+        {
+         "full_html": "<a href=\"https://artafinance.com/insights/meet-arta-ai-private-wealth-guided-by-ai-agents\" target=\"_blank\">Arta AI</a>: three agents (planner, product specialist, research) for accredited investors; AUM undisclosed — Live · Apr 2025",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Arta AI",
+           "url": "https://artafinance.com/insights/meet-arta-ai-private-wealth-guided-by-ai-agents",
+           "desc": "three agents (planner, product specialist, research) for accredited investors; AUM undisclosed",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Apr 2025",
+           "status_note": "Apr 2025",
+           "short": "Three agents for accredited investors"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.businesswire.com/news/home/20250909759834/en/Origin-Unveils-First-AI-Financial-Advisor-Regulated-by-the-SEC-Outsmarts-Every-Leading-AI-Model-on-the-CFP-Exam\" target=\"_blank\">SEC-registered AI advisors</a>: subscription AI advice ($29-99/mo); Mezzi Concierge Sept 2026; scale thin — Live",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "SEC-registered AI advisors",
+           "url": "https://www.businesswire.com/news/home/20250909759834/en/Origin-Unveils-First-AI-Financial-Advisor-Regulated-by-the-SEC-Outsmarts-Every-Leading-AI-Model-on-the-CFP-Exam",
+           "desc": "subscription AI advice ($29-99/mo); Mezzi Concierge Sept 2026; scale thin",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "",
+           "status_note": "",
+           "short": "Subscription AI advice ($29-99/mo); scale thin"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        }
+       ]
+      },
+      {
+       "cap": "Broader program / funding",
+       "group": null,
+       "footer": true,
+       "cells": [
+        {
+         "full_html": "$60M Series C",
+         "evidence": null,
+         "footer": true,
+         "text": "$60M Series C",
+         "short": "$60M Series C"
+        },
+        {
+         "full_html": "$150M Series D, unicorn — May 2026",
+         "evidence": null,
+         "footer": true,
+         "text": "$150M Series D, unicorn — May 2026",
+         "short": "$150M Series D, unicorn — May 2026"
+        },
+        {
+         "full_html": "$100M Series C at $600M — Sept 2026",
+         "evidence": null,
+         "footer": true,
+         "text": "$100M Series C at $600M — Sept 2026",
+         "short": "$100M Series C at $600M — Sept 2026"
+        },
+        null,
+        {
+         "full_html": "<a href=\"https://wealthtechtoday.com/2026/08/26/vanguard-altruist-acquisition-hazel/\" target=\"_blank\">Vanguard to acquire for ~$4B</a> — Aug 2026",
+         "evidence": "D",
+         "footer": true,
+         "text": "Vanguard to acquire for ~$4B — Aug 2026",
+         "short": "Vanguard to acquire for ~$4B (Aug 2026)"
+        },
+        null,
+        null
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3c",
+     "name": "AI labs, data providers and asset-manager platforms",
+     "firms": [
+      {
+       "name": "OpenAI",
+       "segment": "Consumer (Pro, then Plus); institutions"
+      },
+      {
+       "name": "Anthropic",
+       "segment": "RIAs to wirehouses"
+      },
+      {
+       "name": "Perplexity",
+       "segment": "Mass-affluent consumer"
+      },
+      {
+       "name": "Morningstar",
+       "segment": "Advisors"
+      },
+      {
+       "name": "Vanguard",
+       "segment": "Advisor channel"
+      }
+     ],
+     "rows": [
+      {
+       "cap": "General assistant / advisor copilot",
+       "group": "Advisor productivity",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://openai.com/index/introducing-chatgpt-financial-services/\" target=\"_blank\">ChatGPT for Financial Services</a>: research and client materials with entitled data (S&amp;P, MSCI, Moody's); Morgan Stanley and Evercore design partners — Live · Sept 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "ChatGPT for Financial Services",
+           "url": "https://openai.com/index/introducing-chatgpt-financial-services/",
+           "desc": "research and client materials with entitled data (S&P, MSCI, Moody's); Morgan Stanley and Evercore design partners",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Sep 2026",
+           "status_note": "Sept 2026",
+           "short": "Research and client materials with entitled data"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors\" target=\"_blank\">Claude for Financial Advisors</a>: onboarding, alt briefs, compliance, estate and tax, meeting notes — Live · Sept 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Claude for Financial Advisors",
+           "url": "https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors",
+           "desc": "onboarding, alt briefs, compliance, estate and tax, meeting notes",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Sep 2026",
+           "status_note": "Sept 2026",
+           "short": "Onboarding, alt briefs, compliance, estate and tax"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        {
+         "full_html": "<a href=\"https://www.wealthmanagement.com/artificial-intelligence/morningstar-launches-ai-assistant-for-direct-advisory-suite-platform\" target=\"_blank\">Direct Advisory Suite agents</a>: research, proposals from statements, meeting briefs — Pilot · beta Mar 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Direct Advisory Suite agents",
+           "url": "https://www.wealthmanagement.com/artificial-intelligence/morningstar-launches-ai-assistant-for-direct-advisory-suite-platform",
+           "desc": "research, proposals from statements, meeting briefs",
+           "maturity": "Pilot",
+           "evidence": "D",
+           "date": "Mar 2026",
+           "status_note": "beta Mar 2026",
+           "short": "Research, proposals from statements, meeting briefs"
+          }
+         ],
+         "heat": {
+          "maturity": "Pilot",
+          "level": 2,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "<a href=\"https://corporate.vanguard.com/content/corporatesite/us/en/corp/who-we-are/pressroom/press-release-vanguard-launches-expert-insights-equipping-advisors-with-ai-powered-portfolio-analysis-expertise-04092026.html\" target=\"_blank\">Expert Insights</a>: GenAI portfolio analysis for advisors — Pilot · Apr 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Expert Insights",
+           "url": "https://corporate.vanguard.com/content/corporatesite/us/en/corp/who-we-are/pressroom/press-release-vanguard-launches-expert-insights-equipping-advisors-with-ai-powered-portfolio-analysis-expertise-04092026.html",
+           "desc": "GenAI portfolio analysis for advisors",
+           "maturity": "Pilot",
+           "evidence": "C",
+           "date": "Apr 2026",
+           "status_note": "Apr 2026",
+           "short": "GenAI portfolio analysis for advisors"
+          }
+         ],
+         "heat": {
+          "maturity": "Pilot",
+          "level": 2,
+          "evidence": "C"
+         }
+        }
+       ]
+      },
+      {
+       "cap": "Client-facing assistant / digital advice",
+       "group": "Client-facing experiences",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "<a href=\"https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/\" target=\"_blank\">ChatGPT Finances</a>: read-only portfolio and spending view via Plaid across Schwab, Fidelity, Chase, Robinhood — Live · May 2026",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "ChatGPT Finances",
+           "url": "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/",
+           "desc": "read-only portfolio and spending view via Plaid across Schwab, Fidelity, Chase, Robinhood",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "May 2026",
+           "status_note": "May 2026",
+           "short": "Read-only portfolio view via Plaid"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        null,
+        {
+         "full_html": "<a href=\"https://www.perplexity.ai/hub/blog/plaid-integration-provides-full-view-of-personal-finances\" target=\"_blank\">Finance + Plaid</a>: net-worth view and planners; read-only — Live · Apr 2026",
+         "evidence": "C",
+         "tools": [
+          {
+           "name": "Finance + Plaid",
+           "url": "https://www.perplexity.ai/hub/blog/plaid-integration-provides-full-view-of-personal-finances",
+           "desc": "net-worth view and planners; read-only",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "Apr 2026",
+           "status_note": "Apr 2026",
+           "short": "Net-worth view and planners; read-only"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null
+       ]
+      },
+      {
+       "cap": "Agent access (MCP, bring-your-own-agent)",
+       "group": "External-agent access",
+       "footer": false,
+       "cells": [
+        {
+         "full_html": "Plaid account connections (read-only)",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Plaid connections",
+           "url": null,
+           "desc": "read-only account connections (via ChatGPT Finances)",
+           "maturity": "Live",
+           "evidence": "D",
+           "date": "",
+           "status_note": "",
+           "short": "Plaid account connections (read-only)",
+           "xref_note": "Status inherited from ChatGPT Finances"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "D"
+         }
+        },
+        {
+         "full_html": "Connectors to Schwab, BlackRock, Addepar, Envestnet, Orion, iCapital",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Connectors",
+           "url": null,
+           "desc": "connectors to Schwab, BlackRock, Addepar, Envestnet, Orion, iCapital (via Claude for Financial Advisors)",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "",
+           "status_note": "",
+           "short": "Connectors to Schwab, BlackRock, Addepar, Envestnet, Orion, iCapital",
+           "xref_note": "Status inherited from Claude for Financial Advisors"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        {
+         "full_html": "Plaid account connections (read-only)",
+         "evidence": "D",
+         "tools": [
+          {
+           "name": "Plaid connections",
+           "url": null,
+           "desc": "read-only account connections (via Finance + Plaid)",
+           "maturity": "Live",
+           "evidence": "C",
+           "date": "",
+           "status_note": "",
+           "short": "Plaid account connections (read-only)",
+           "xref_note": "Status inherited from Finance + Plaid"
+          }
+         ],
+         "heat": {
+          "maturity": "Live",
+          "level": 4,
+          "evidence": "C"
+         }
+        },
+        null,
+        null
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "This is where client-facing AI actually lives. The credible pressure on HNW and UHNW incumbents comes from three directions: brokerages normalizing agent access to accounts, AI-native RIAs pulling advisors and their books out of wirehouses, and custodians and AI labs bundling advisor AI into the RIA channel. Fully AI-only advice remains small and mass-affluent.",
+   "after_html": "<p><strong>Threat assessment.</strong> Credible near-term pressure on HNW incumbents: Farther, Savvy, and Compound (advisor and book migration on AI-driven margin, not client disintermediation); Vanguard plus Altruist (a low-cost incumbent owning advisor AI and custody for ~20k RIAs); Robinhood's ladder from Gold to \"private banking\" to the TradePMR RIA channel; and Morgan Stanley's open MCP door raising what HNW clients expect. Unproven at HNW: Range, Arta, and the SEC-registered AI advisors. Mass-market noise for UHNW purposes: SoFi Coach, Betterment, Boldin, Schwab Portfolio Insights, Fidelity Freya, and Ask IBKR, all informational and guardrailed.</p>\n    <p><strong>The agent-access pattern.</strong> Read-only aggregation is mainstream (ChatGPT, Perplexity, SoFi over Plaid). Write and trade access via MCP is live at seven US brokers plus Scalable; Schwab and Fidelity have none. Brokerages disclaim supervision of the agent (\"Public does not control, supervise, monitor, recommend, or audit any third-party AI agent\"). Altruist's CEO is <a href=\"https://riabiz.com/a/2026/9/3/ceo-jason-wenk-says-altruists-ai-hazel-is-ready-for-its-second-act-a-financial-planning-service-that-will-blow-away-the-market-with-one-big-caveat-advisors-must-be-ready-to-provide-pdfs-if-rivals-refuse-api-access\" target=\"_blank\">publicly warning</a> that rivals will refuse API access, so data-access fights will decide who can deliver agentic advice.</p>\n    <p><strong>Regulatory posture.</strong> The SEC withdrew the predictive-analytics rule in 2025; Chair Atkins (<a href=\"https://www.sec.gov/newsroom/speeches-statements/atkins-remarks-iac-091026\" target=\"_blank\">Sept 2026</a>) treats AI as a tool under existing fiduciary and Reg BI rules with enforcement aimed at AI-washing. The <a href=\"https://www.finra.org/rules-guidance/guidance/reports/2026-finra-annual-regulatory-oversight-report/gen-ai\" target=\"_blank\">FINRA 2026 report</a> adds an agentic-AI section (scope, traceability, human-in-the-loop) but does not address AI recommendations to retail, a gap firms use via \"information, not advice\" disclaimers or segregated agent sub-accounts.</p>"
+  }
+ ],
+ "detail_tables": [
+  {
+   "id": "bucket-1",
+   "title": "Bucket 1: Wirehouses and private banks",
+   "thead": "<tr><th>Firm</th><th>Tool</th><th>Internal / client-facing</th><th>What it does</th><th>Partner</th><th>Maturity</th><th>Evidence</th></tr>",
+   "tbody": "<tr><td>Morgan Stanley</td><td><a href=\"https://openai.com/index/morgan-stanley/\" target=\"_blank\">AI @ MS Assistant</a></td><td>Internal</td><td>GenAI Q&amp;A over ~100k internal documents; 98% of FA teams; document access 20% to 80%</td><td>OpenAI</td><td>Scaled adoption · since Sept 2023</td><td><span class=\"ev ev-v\">V</span> vendor-reported</td></tr>\n        <tr><td>Morgan Stanley</td><td><a href=\"https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch\" target=\"_blank\">Debrief</a></td><td>Internal</td><td>Zoom meeting notes, action items, follow-up emails, Salesforce logging</td><td>OpenAI</td><td>Scaled adoption · live June 2024; mobile and non-advisor staff July 2025</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Morgan Stanley</td><td><a href=\"https://www.financial-planning.com/news/behind-the-marvel-movie-inspired-ai-super-agents-coming-to-morgan-stanley\" target=\"_blank\">Super agents</a></td><td>Internal, then client-facing</td><td>Orchestrator over hundreds of small agents (account opening, money movement, beneficiaries); later 24/7 client agents with human approval</td><td>OpenAI</td><td>Announced · Feb 2026; no dates</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Morgan Stanley at Work</td><td><a href=\"https://mlq.ai/news/morgan-stanley-opens-wealth-management-platform-to-external-ai-agents-via-mcp/\" target=\"_blank\">Shareworks / Equity Edge via MCP</a></td><td>Client-facing</td><td>Corporate clients' own AI agents read plan, vesting, and tax data directly; all 3,400 admin clients by next year (<a href=\"https://www.retailbankerinternational.com/news/morgan-stanley-stock-plan-ai/\" target=\"_blank\">Retail Banker International</a>); $1.2T workplace-channel figure per TheStreet</td><td>Open MCP standard</td><td>Limited rollout · early access June 2026; full rollout 2027</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>UBS</td><td><a href=\"https://www.financial-planning.com/news/ubs-turns-to-ai-to-gain-wallet-share-find-new-clients\" target=\"_blank\">STAAT Insights</a></td><td>Internal</td><td>ML opportunity engine (CD maturities, liquidity events), pre-meeting briefs; 5,000+ US advisors, 20M opportunities in 2025, ~10,000 hrs/month saved</td><td>In-house</td><td>Scaled adoption · live expanded 2025</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>UBS</td><td><a href=\"https://www.ubs.com/global/en/our-firm/what-we-do/technology/innovation-and-ai.html\" target=\"_blank\">Red</a> + M365 Copilot</td><td>Internal</td><td>Firm-wide knowledge assistant (~100k employees, 25M+ queries); Copilot at 85%+ of US advisors</td><td>Azure OpenAI, Microsoft</td><td>Scaled adoption · live</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>UBS</td><td><a href=\"https://fortune.com/europe/2025/05/20/ubs-bank-ai-generated-video-avatars-analysts/\" target=\"_blank\">AI analyst avatars</a></td><td>Client-facing (research)</td><td>Synthetic video of research analysts, toward 5,000 videos/yr</td><td>OpenAI, Synthesia</td><td>Live · May 2025</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>UBS</td><td><a href=\"https://www.ubs.com/global/en/media/display-page-ndp/en-20251016-ai-strategy.html\" target=\"_blank\">Group AI strategy</a></td><td>Firm-wide</td><td>Chief AI Officer (Jan 2026), \"Big Rocks\" front- and back-office redesign, 300+ live use cases</td><td>Multi-model (Claves)</td><td>Announced · Oct 2025</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>JPMorgan</td><td><a href=\"https://www.forbes.com/sites/bernardmarr/2026/07/01/how-jpmorgan-chase-is-building-the-ai-powered-bank-of-the-future/\" target=\"_blank\">LLM Suite</a></td><td>Internal</td><td>Firm-wide GenAI portal, ~230-250k users, ~$2B annual AI spend</td><td>OpenAI, Anthropic, in-house</td><td>Scaled adoption · since July 2024</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>JPMorgan Private Bank</td><td><a href=\"https://finance.yahoo.com/news/jpmorgan-says-ai-helped-boost-170825108.html\" target=\"_blank\">Coach AI</a></td><td>Internal</td><td>Research retrieval and client-prep for ~4,000 PB advisors; research 95% faster; +20% gross sales 2023-24</td><td>In-house</td><td>Scaled adoption · live disclosed May 2025</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>JPMorgan AWM</td><td><a href=\"https://fortune.com/2026/04/29/capcom-virgin-voyages-bet-on-ai-to-reshape-gaming-and-cruise-travel/\" target=\"_blank\">Connect Coach</a></td><td>Internal</td><td>Insight extraction for advisors and asset managers</td><td>In-house</td><td>Live · cited Apr 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>JPMorgan</td><td><a href=\"https://www.roic.ai/news/jpmorgan-to-deploy-more-powerful-ai-agents-this-year-06-09-2026\" target=\"_blank\">Client-facing agents</a></td><td>Client-facing</td><td>Life-event detection and product recommendation agents</td><td>Multi-vendor</td><td>Announced · intent only, June 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>BofA Merrill / Private Bank</td><td><a href=\"https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html\" target=\"_blank\">AI-Powered Meeting Journey</a></td><td>Internal</td><td>Plan-my-day, meeting prep, Zoom notetaker, follow-up tasks; up to 4 hrs saved per meeting; ~15,000 employees and the Salesforce/Zoom stack per <a href=\"https://www.americanbanker.com/news/bank-of-america-gives-merrill-lynch-an-ai-makeover\" target=\"_blank\">American Banker</a>, not the release</td><td>Salesforce FSC, Zoom; on Erica platform</td><td>Scaled adoption · live March 2026 after 1,500-advisor beta</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>BofA</td><td><a href=\"https://www.prnewswire.com/news-releases/ai-adoption-by-bofas-global-workforce-improves-productivity-client-service-302423333.html\" target=\"_blank\">ask MERRILL / ask Private Banking</a></td><td>Internal</td><td>Advisor information retrieval; 23M+ interactions in 2024</td><td>In-house (Erica)</td><td>Scaled adoption · live</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Citi Wealth</td><td><a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience\" target=\"_blank\">Portfolio Intelligence</a></td><td>Client-facing</td><td>Personalized portfolio view with CIO insights; advisors push messages</td><td>Google Cloud, Palantir</td><td>Limited rollout · Apr 2026 (PB N. America); all Wealth clients by YE 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Citi Wealth</td><td><a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-unveils-citi-sky-ai-powered-member-google-cloud-deepmind-technologies\" target=\"_blank\">Citi Sky</a></td><td>Client-facing</td><td>Voice and avatar agent: CD alerts, CIO insights, portfolio lookups; English and Spanish</td><td>Google Gemini, DeepMind</td><td>Announced · Apr 2026; Citigold rollout from summer 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Citi Wealth</td><td><a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience\" target=\"_blank\">CitiScribe, AskWealth CIO, Client 360</a></td><td>Internal</td><td>Notetaker (all NA advisors Q1 2026), CIO research Q&amp;A (pilot), single-screen client view</td><td>In-house, Palantir</td><td>Live (CitiScribe, all NA advisors) / Pilot (AskWealth CIO) · Apr 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Citi Wealth</td><td><a href=\"https://www.citigroup.com/global/news/press-release/2025/citi-wealth-launches-advisor-insights-askwealth\" target=\"_blank\">Advisor Insights, AskWealth</a></td><td>Internal</td><td>Market and portfolio alert dashboard; GenAI over research and client portfolios</td><td>In-house</td><td>Pilot · Aug 2025, expanding</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Wells Fargo WIM</td><td><a href=\"https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx\" target=\"_blank\">AI Teammate</a></td><td>Internal</td><td>Chat in Advisor Gateway: policy and workflow search, guided next steps; all WIM channels incl. FiNet</td><td>In-house (Google Cloud enterprise stack, not named)</td><td>Live · July 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Wells Fargo WIM</td><td><a href=\"https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-launches-Advisor-Gateway-for-financial-advisors/default.aspx\" target=\"_blank\">Advisor Gateway + Auto Commentary</a></td><td>Internal</td><td>New advisor desktop; AI narratives from risk analytics for client meetings</td><td>BlackRock Aladdin Wealth</td><td>Live · May 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Goldman Sachs</td><td><a href=\"https://fortune.com/2025/06/24/goldman-sachs-internal-ai-assistant\" target=\"_blank\">GS AI Assistant</a></td><td>Internal</td><td>Firm-wide drafting and summarization assistant</td><td>OpenAI, Gemini via GS AI Platform</td><td>Live · firm-wide June 2025</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Goldman Sachs</td><td><a href=\"https://finance.yahoo.com/news/goldman-assembling-growing-arsenal-ai-164501078.html\" target=\"_blank\">Banker Copilot</a></td><td>Internal (IB)</td><td>Deal data, filings, S-1 drafting; \"dozens\" of users May 2025</td><td>In-house</td><td>Pilot · early stage; 2026 status not found</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Goldman Sachs</td><td><a href=\"https://www.investmentnews.com/wirehouses/bny-goldman-double-down-on-tech-with-digital-employees-and-ai-agents/265198\" target=\"_blank\">Claude agents</a></td><td>Internal (ops)</td><td>Trade accounting, KYC onboarding agents</td><td>Anthropic</td><td>Announced · in development, Feb 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>"
+  },
+  {
+   "id": "bucket-2",
+   "title": "Bucket 2: RIAs, independents, custodians and vendors",
+   "thead": "<tr><th>Firm</th><th>Tool</th><th>Internal / client-facing</th><th>What it does</th><th>Partner</th><th>Maturity</th><th>Evidence</th></tr>",
+   "tbody": "<tr><td>LPL Financial</td><td><a href=\"https://www.investmentnews.com/independent-broker-dealers/will-ai-replace-the-advisor-lpls-rich-steinmeier-adamant-as-firm-announces-2b-tech-push/267762\" target=\"_blank\">Cyan agent + Latitude platform</a></td><td>Internal; investor app roadmap</td><td>Conversational agent in ClientWorks: account maintenance, planning summaries, meeting materials; $2B over 3 yrs, 32,000+ advisors</td><td>Build</td><td>Announced · demoed Aug 2026; \"launching later this year\"</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>LPL Financial</td><td><a href=\"https://www.lpl.com/news-media/press-releases/lpl-financial-launches-curated-ai-solutions-for-advisors.html\" target=\"_blank\">AI Advisor Solutions</a></td><td>Internal</td><td>Curated vendor list: Jump, M365 Copilot, FMG, FactSet</td><td>Buy</td><td>Live · Nov 2024</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Raymond James</td><td><a href=\"https://www.raymondjames.com/news-and-media/press-releases/2026/01/27/raymond-james-launches-proprietary-digital-ai-agent-to-bolster-operational-excellence\" target=\"_blank\">Rai ops agent</a></td><td>Internal</td><td>GenAI over ops knowledge bases, evolving to task execution; 10,000+ associates on conversational AI; $1.1B tech budget</td><td>Build on AWS + Anthropic</td><td>Live · enterprise rollout Jan 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Raymond James</td><td><a href=\"https://www.wealthmanagement.com/ibd-news/raymond-james-announces-ai-driven-client360-platform-ai-advisor-academy\" target=\"_blank\">Client360</a></td><td>Internal</td><td>AI client insights in one view; Zoom summaries into CRM; AI Academy</td><td>Build</td><td>Live · May 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Ameriprise</td><td><a href=\"https://ir.ameriprise.com/news/news-details/2026/Ameriprise-Advances-AI-Innovation-Across-the-Advisor-and-Client-Experience-with-1B-Annual-Spend-on-Technology-and-AI-Capabilities/default.aspx\" target=\"_blank\">Meeting automation, book insights, Advisor Assistant</a></td><td>Internal; AI-drafted client letters</td><td>Prep, e-meeting summaries, drafted letters; 10-20 hrs/wk saved per advisor claimed; $1B annual tech spend</td><td>Build on data lake</td><td>Live · Advisor Assistant announced for later 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Edward Jones</td><td><a href=\"https://www.edwardjones.com/us-en/why-edward-jones/news-media/press-releases/edward-jones-ventures-invests-ai-driven-solutions-help-families-navigate-lifes-biggest-financial\" target=\"_blank\">Embedded AI + Ventures portfolio</a></td><td>Internal; client-facing via advisor pilots</td><td>Scheduling and prep automation; Alix (estate), Grantd (equity comp), Waterlily (LTC) piloted with 70%+ of advisors</td><td>Build + invest</td><td>Live (Embedded AI) / Pilot (Ventures portfolio) · 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Osaic</td><td><a href=\"https://www.investmentnews.com/independent-broker-dealers/osaics-ai-tools-have-had-the-fastest-ever-adoption-among-advisors-ceo-jamie-price/266375\" target=\"_blank\">Jump + Zocks, Scribe AI</a></td><td>Internal</td><td>Notes and CRM; ~30% take-up in under a year across ~11,000 advisors</td><td>Buy</td><td>Live · 2025-26</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Cetera</td><td><a href=\"https://www.businesswire.com/news/home/20260331025131/en/Cetera-Selects-Zocks-to-Offer-AI-Assistant-to-12000-Financial-Professionals\" target=\"_blank\">IntelligenceEngine + Zocks</a></td><td>Internal</td><td>Whitespace and held-away-asset detection, outreach triggers; ~12,000 professionals</td><td>Buy + build</td><td>Live · July 2025 / Mar 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Commonwealth (LPL)</td><td><a href=\"https://www.wealthmanagement.com/artificial-intelligence/commonwealth-makes-ai-notetaking-platform-zocks-available-to-its-advisors\" target=\"_blank\">Zocks</a></td><td>Internal</td><td>Advisor-paid, opt-in notetaker; 2,900 eligible</td><td>Buy</td><td>Live · May 2025</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Focus Financial</td><td><a href=\"https://www.investmentnews.com/transformation/focus-financial-rolls-out-jump-ai-to-800-advisors-after-pilot/264959\" target=\"_blank\">Jump</a></td><td>Internal</td><td>800 advisors after 8-week pilot; 70% cut in prep/notes/follow-up time</td><td>Buy</td><td>Scaled adoption · live Jan 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Hightower</td><td><a href=\"https://www.investmentnews.com/fintech/zocks-jump-expand-advisor-reach-with-new-enterprise-integrations/266805\" target=\"_blank\">Zocks (exclusive)</a></td><td>Internal</td><td>Conversation capture to Salesforce and planning; ~650 advisors, $352B</td><td>Buy</td><td>Scaled adoption · live June 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Carson Group</td><td><a href=\"https://www.investmentnews.com/fintech/ai-wrap-carson-deploys-in-house-chatbot-tifin-launches-ai-agent-platform/260531\" target=\"_blank\">Steve chatbot + Zocks</a></td><td>Internal</td><td>Internal knowledge bot; Zocks at 97% weekly active, 8 hrs/advisor/wk (vendor-reported)</td><td>Build + buy</td><td>Scaled adoption · live 2025</td><td><span class=\"ev ev-v\">V</span> vendor-reported</td></tr>\n        <tr><td>Mercer Advisors</td><td><a href=\"https://www.wealthmanagement.com/artificial-intelligence/mercer-global-advisors-launches-ai-native-aspen-20\" target=\"_blank\">Aspen 2.0</a></td><td>Internal + client experience</td><td>AI-native OS on a knowledge graph; agents across planning, tax, estate; $110B AUM</td><td>Build with Avantos</td><td>Announced · July 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Dynasty</td><td><a href=\"https://www.01net.it/dynasty-financial-partners-builds-its-next-generation-ai-os-for-wealth-on-claude/\" target=\"_blank\">AI OS on Claude</a></td><td>Internal; client-ready outputs</td><td>Book-level chat (\"who should I talk to today?\"), Virtual Chief of Staff; 60 firms, $135B+</td><td>Build on Anthropic</td><td>Pilot · early release Sept 2026; Q4 2026 / Q1 2027</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Schwab Advisor Services</td><td><a href=\"https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors\" target=\"_blank\">Claude for Financial Advisors</a></td><td>Internal (RIAs)</td><td>Research, prep, planning, CRM updates with MCP connectors to Schwab Advisor Center; 16,000+ RIAs</td><td>Anthropic</td><td>Announced · Sept 15, 2026; ~$70–120 per user per month all-in (Anthropic's Peter Nolan, Sept 14; usage credit for licenses requested by Sept 30)</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Schwab Advisor Services</td><td><a href=\"https://finance.yahoo.com/technology/ai/articles/zeplyn-launches-first-agentic-account-130000932.html\" target=\"_blank\">Zeplyn agentic account opening</a></td><td>Internal</td><td>One-prompt account opening; NIGO down ~80% in pilots</td><td>Zeplyn</td><td>Live · Aug 2026</td><td><span class=\"ev ev-v\">V</span> vendor-reported</td></tr>\n        <tr><td>Fidelity Institutional</td><td><a href=\"https://newsroom.fidelity.com/pressreleases/fidelity-investments-launches-wealthscapesm-intelligence-and-introduces-new--fully-digital-onboardin/s/aaf9079d-0ecd-49b2-84f2-7e546a4fc693\" target=\"_blank\">Wealthscape Intelligence</a></td><td>Internal</td><td>Insights dashboard; Catchlight and Saifr for prospecting and compliance</td><td>Build</td><td>Live · Sept 2025</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Salesforce</td><td><a href=\"https://www.investmentnews.com/fintech/salesforce-launches-agentic-advisor-as-ai-notetakers-threaten-crm-dominance/267076\" target=\"_blank\">Agentic Advisor</a></td><td>Internal</td><td>Meeting Concierge, Run My Day; EP Wealth early adopter</td><td>Salesforce</td><td>Live · June 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Envestnet</td><td><a href=\"https://www.wealthmanagement.com/advisor-support-platforms/envestnet-amplify-zeplyn-roll-out-new-features\" target=\"_blank\">R3 2026: AI dashboard assistant + Tamarac AI Data Analyst Agent</a></td><td>Internal</td><td>Conversational assistant from any Insights view; natural-language account queries and legacy-report migration in Tamarac; dashboard opt-in for larger clients from mid-Sept; sponsor self-service due in R4</td><td>Build</td><td>Live · Sept 18, 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Zeplyn</td><td><a href=\"https://www.investmentnews.com/fintech/advisors-get-the-keys-advisorcrm-and-zeplyn-let-firms-build-their-own-ai-tools/268248\" target=\"_blank\">Agent Studio + MCP server</a></td><td>Internal</td><td>No-code studio: firms define agents in plain language and expose them plus 60+ wealth tools to Claude, ChatGPT, Copilot and Slack; role-based access, audit trails, PII redaction; AdvisorCRM Studio launched the same week to 50 firms</td><td>Zeplyn</td><td>Live · Sept 2026</td><td><span class=\"ev ev-v\">V</span> vendor-reported</td></tr>\n        <tr><td>Stifel, Creative Planning, Fisher, Captrust, Corient, WEG, Mariner</td><td>None disclosed</td><td></td><td>No public AI deployment found in 2025-26 press; Stifel CEO: \"advice is not an algorithm\"</td><td></td><td>Not disclosed</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Jump</td><td><a href=\"https://www.businesswire.com/news/home/20260914989068/en/Jump-Introduces-AI-Assisted-Real-Time-Account-Opening-with-Schwab-Advisor-Services-and-Fidelity\" target=\"_blank\">Real-time account opening</a></td><td>Internal</td><td>Draws meeting audio, documents, forms and CRM data to complete, validate and e-sign an account application within one client meeting on Schwab Advisor Services and Fidelity (via Dispatch); NIGO pre-checks; ~10 minutes vs 2–3 hours (Jump estimate); independent firms self-enable, enterprises need home-office approval</td><td>Schwab Advisor Services; Fidelity; Dispatch; Docusign</td><td>Limited rollout · limited beta Sept 14, 2026</td><td><span class=\"ev ev-v\">V</span> vendor-reported</td></tr>\n        <tr><td>Salesforce</td><td><a href=\"https://newsroom.accenture.com/blogs/2026/accenture-launches-accenture-trusted-wealth-ops-powered-by-salesforce-and-claude-to-help-wealth-advisors-deepen-client-relationships\" target=\"_blank\">Accenture Trusted Wealth Ops</a></td><td>Internal</td><td>Packaged wealth-ops offering: Agentforce Financial Services and Data 360 as governed data and execution layer, Claude as reasoning layer, Accenture workflows and controls; background agents monitor portfolios and draft client communications for advisor approval; targets 24-hour onboarding, NIGO under 5%, up to 25% advisor productivity</td><td>Accenture; Anthropic</td><td>Announced · Sept 11, 2026</td><td><span class=\"ev ev-v\">V</span> vendor-reported</td></tr>"
+  },
+  {
+   "id": "bucket-3",
+   "title": "Bucket 3: Fintechs",
+   "thead": "<tr><th>Company</th><th>Product</th><th>Facing</th><th>What it does</th><th>Segment</th><th>Maturity</th><th>Evidence</th></tr>",
+   "tbody": "<tr><td>Robinhood</td><td><a href=\"https://robinhood.com/us/en/newsroom/robinhood-presents-yes-no-event\" target=\"_blank\">Cortex</a></td><td>Client</td><td>Conversational analysis tied to holdings, trades in conversation; 1M+ users; 4.8M Gold subscribers</td><td>Mass to mass-affluent</td><td>Scaled adoption · live Q1 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Robinhood</td><td><a href=\"https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/\" target=\"_blank\">Agentic Trading via MCP</a></td><td>Client (own agent)</td><td>Claude/ChatGPT trade equities in a segregated sub-account; ~100k accounts, &gt;$100M custody</td><td>Self-directed</td><td>Limited rollout · beta May 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Robinhood</td><td><a href=\"https://investors.robinhood.com/news-releases/news-release-details/robinhood-reports-second-quarter-2026-results\" target=\"_blank\">Strategies + Banking + concierge tax/estate</a></td><td>Client</td><td>Managed accounts (~$2B, 300k+), \"private banking\" with estate and tax pros, trusts, $695 Platinum card; Cortex for Advisors via TradePMR</td><td>Mass-affluent, HENRY</td><td>Live · 2025-26</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Public</td><td><a href=\"https://www.prnewswire.com/news-releases/public-becomes-the-first-brokerage-to-introduce-ai-agents-for-your-portfolio-302729050.html\" target=\"_blank\">AI Agents, Portfolio Builder, hosted MCP</a></td><td>Client</td><td>Prompt-defined strategies executed unattended; external agents trade stocks, options, crypto, bonds</td><td>Affluent self-directed</td><td>Live · Nov 2025 / Mar 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Wealthfront</td><td><a href=\"https://www.fool.com/earnings/call-transcripts/2026/09/10/wealthfront-wlth-q2-2027-earnings-call-transcript/\" target=\"_blank\">LLM assistant</a></td><td>Client</td><td>First client AI test (emergency-fund sizing); $100.9B platform assets, 1.5M clients</td><td>Mass-affluent</td><td>Pilot · Sept 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Betterment</td><td><a href=\"https://www.prnewswire.com/news-releases/betterment-launches-ai-enabled-account-recommender-advancing-enterprise-ai-strategy-302707654.html\" target=\"_blank\">AI Account Recommender</a></td><td>Client</td><td>Account-type recommendation with AI explanations; $65B+ AUM</td><td>Mass</td><td>Live · Mar 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>SoFi</td><td><a href=\"https://investors.sofi.com/news/news-details/2026/Introducing-SoFi-Coach-An-AI-Powered-Financial-Guide-to-Help-Members-Get-Their-Money-Right/default.aspx\" target=\"_blank\">SoFi Coach</a></td><td>Client</td><td>Chatbot over connected accounts; \"not financial advice\"; 14.7M members</td><td>Mass</td><td>Live · June 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Range</td><td><a href=\"https://www.investmentnews.com/ria-news/ria-startup-range-plans-to-eliminate-its-advisor-workforce-as-ai-takes-over/265586\" target=\"_blank\">Rai AI advisor</a></td><td>Client</td><td>Flat-fee ($3-10k/yr) AI planner over linked accounts; plan to eliminate human advisors in 1-3 yrs; ~$700M AUM, $60M Series C</td><td>Affluent, HENRY</td><td>Live · Oct 2025</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Farther</td><td><a href=\"https://www.farther.com/post/farther-raises-150m-series-d-led-by-general-atlantic-to-scale-intelligent-wealth-management\" target=\"_blank\">Intelligent Wealth Management</a></td><td>Advisor; client insights</td><td>AI-native RIA stack recruiting wirehouse advisors; $23B recruited assets; $150M Series D, unicorn</td><td>HNW, UHNW</td><td>Live · May 2026 raise</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Savvy Wealth</td><td><a href=\"https://www.wealthmanagement.com/ria-news/savvy-wealth-raises-100m-valuation-hits-600m\" target=\"_blank\">Savvy Intelligence</a></td><td>Advisor</td><td>Agents on OpenAI and Anthropic for planning, tax, performance; $9B AUM, 150+ advisors; $100M Series C at $600M</td><td>HNW</td><td>Live · Sept 2026 raise</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Compound Planning</td><td><a href=\"https://finance.yahoo.com/technology/ai/articles/compound-planning-launches-compoundai-embedding-110000820.html\" target=\"_blank\">CompoundAI</a></td><td>Advisor; client app</td><td>Agents prep work over holdings, notes, transcripts for advisor approval; $5B+ AUM</td><td>HNW, UHNW founders</td><td>Live · July 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Altruist (Vanguard)</td><td><a href=\"https://www.investmentnews.com/transformation/altruists-hazel-builds-ai-agent-to-create-financial-plans-in-minutes/268020\" target=\"_blank\">Hazel</a></td><td>Advisor</td><td>Tax and financial-planning agents on deterministic calc engines; ~1,600 RIAs in first month; <a href=\"https://wealthtechtoday.com/2026/08/26/vanguard-altruist-acquisition-hazel/\" target=\"_blank\">Vanguard to acquire for ~$4B</a></td><td>HNW via RIAs</td><td>Live · deal Aug 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Arta Finance</td><td><a href=\"https://artafinance.com/insights/meet-arta-ai-private-wealth-guided-by-ai-agents\" target=\"_blank\">Arta AI</a></td><td>Client</td><td>Three agents (planner, product specialist, research) for accredited investors; AUM undisclosed</td><td>Affluent, accredited</td><td>Live · Apr 2025</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Origin, Mezzi, PortfolioPilot</td><td><a href=\"https://www.businesswire.com/news/home/20250909759834/en/Origin-Unveils-First-AI-Financial-Advisor-Regulated-by-the-SEC-Outsmarts-Every-Leading-AI-Model-on-the-CFP-Exam\" target=\"_blank\">SEC-registered AI advisors</a></td><td>Client</td><td>Subscription AI advice ($29-99/mo); Mezzi Concierge Sept 2026; scale thin</td><td>Mass-affluent</td><td>Live</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Schwab</td><td><a href=\"https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Launches-AI-Powered-Capability-That-Helps-Investors-Understand-Portfolio-Performance-and-Market-Activity/default.aspx\" target=\"_blank\">Portfolio Insights + Investor AI assistant</a></td><td>Client</td><td>AI performance and market-driver summaries; voice/chat with limited actions; \"inform not advise\"; no official MCP</td><td>Mass to HNW self-directed</td><td>Live (Portfolio Insights, May 2026) / Announced (Investor AI assistant, summer 2026)</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Fidelity</td><td><a href=\"https://www.fstech.co.uk/fst/Fidelity_Launches_Conversational_GenAI_Tool.php\" target=\"_blank\">Freya (UK)</a></td><td>Client</td><td>Conversational GenAI, halts near advice; no US retail equivalent or MCP found</td><td>Mass</td><td>Live · Sept 2025 (UK)</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Vanguard</td><td><a href=\"https://corporate.vanguard.com/content/corporatesite/us/en/corp/who-we-are/pressroom/press-release-vanguard-launches-expert-insights-equipping-advisors-with-ai-powered-portfolio-analysis-expertise-04092026.html\" target=\"_blank\">Expert Insights</a></td><td>Advisor</td><td>GenAI portfolio analysis for advisors</td><td>Advisor channel</td><td>Pilot · Apr 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>OpenAI</td><td><a href=\"https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/\" target=\"_blank\">ChatGPT Finances</a></td><td>Consumer</td><td>Read-only portfolio and spending view via Plaid across Schwab, Fidelity, Chase, Robinhood</td><td>Pro, then Plus</td><td>Live · May 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>OpenAI</td><td><a href=\"https://openai.com/index/introducing-chatgpt-financial-services/\" target=\"_blank\">ChatGPT for Financial Services</a></td><td>Enterprise</td><td>Research and client materials with entitled data (S&amp;P, MSCI, Moody's); Morgan Stanley and Evercore design partners</td><td>Institutions</td><td>Live · Sept 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Anthropic</td><td><a href=\"https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors\" target=\"_blank\">Claude for Financial Advisors</a></td><td>Advisor</td><td>Onboarding, alt briefs, compliance, estate and tax, meeting notes; connectors to Schwab, BlackRock, Addepar, Envestnet, Orion, iCapital</td><td>RIAs to wirehouses</td><td>Live · Sept 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Perplexity</td><td><a href=\"https://www.perplexity.ai/hub/blog/plaid-integration-provides-full-view-of-personal-finances\" target=\"_blank\">Finance + Plaid</a></td><td>Consumer</td><td>Net-worth view and planners; read-only</td><td>Mass-affluent</td><td>Live · Apr 2026</td><td><span class=\"ev ev-c\">C</span> company-reported</td></tr>\n        <tr><td>Morningstar</td><td><a href=\"https://www.wealthmanagement.com/artificial-intelligence/morningstar-launches-ai-assistant-for-direct-advisory-suite-platform\" target=\"_blank\">Direct Advisory Suite agents</a></td><td>Advisor</td><td>Research, proposals from statements, meeting briefs</td><td>Advisor</td><td>Pilot · beta Mar 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>\n        <tr><td>Scalable Capital (EU)</td><td><a href=\"https://fortune.com/2026/08/26/scalable-capital-claude-chatgpt-traders-bank-invest/\" target=\"_blank\">Agentic Investing</a></td><td>Client (own agent)</td><td>First European bank with MCP trading via ChatGPT, Claude, Grok; every trade user-approved</td><td>Mass-affluent</td><td>Live · Aug 2026</td><td><span class=\"ev ev-d\">D</span> directional</td></tr>"
+  }
+ ],
+ "prose": {
+  "scope": "<p>This tracks how peers use AI in wealth management, split into internal (advisor productivity, compliance, operations) and client-facing (personalized insights, digital advice, agent access). It covers live production tools and announced pilots, with dates, so a line can be re-checked as things ship.</p>\n    <p>Three buckets: wirehouses and private banks (Morgan Stanley, UBS, JPMorgan, Bank of America/Merrill, Citi, Wells Fargo, with Goldman as the comparator), RIAs and independents (IBDs, aggregators, large RIAs, and the custodians and vendors they buy from), and fintechs pushing into wealth (brokerages, robos, AI-native RIAs, and the AI labs themselves). Every row links to the page the claim was taken from; rows marked \"unverified\" are hearsay or blocked pages.</p>\n    <p>A weekday scan at 7am ET updates the tables and logs each change in the <a href=\"#changes\">change log</a>; the executive takeaways are refreshed monthly by hand, not by the scan.</p>",
+  "how_to_read": "<p>Three conventions were added on September 21, 2026 after reviewer feedback; every matrix below and every table on the <a href=\"peer-ai-tool-detail.html\">Tool detail page</a> follows them. Click any bucket heading (or its Expand button) to open that bucket full-screen, with every peer column fitted to the width of your screen and the header row pinned.</p>\n    <p><strong>Capability groups.</strong> Rows are grouped into five families so like-for-like comparison holds across firms: <strong>Advisor productivity</strong> (general assistant, meeting prep, research, compliance and drafting) &middot; <strong>Growth analytics &amp; next-best-action</strong> &middot; <strong>Client-facing experiences</strong> &middot; <strong>Agentic workflow automation</strong> (ops and account-servicing agents) &middot; <strong>External-agent access</strong> (MCP, bring-your-own-agent). &ldquo;Firm-wide program / partners&rdquo; is a footer row, not a capability.</p>\n    <p><strong>Maturity scale.</strong> Every dated status uses one of five levels: <span class=\"lvl\">Announced</span> (stated intent, demo or roadmap; no users) &rarr; <span class=\"lvl\">Pilot</span> (limited users, beta or early access) &rarr; <span class=\"lvl\">Limited rollout</span> (in production for a defined subset: a region, client tier or waitlist) &rarr; <span class=\"lvl\">Live</span> (generally available to the target population; adoption not disclosed) &rarr; <span class=\"lvl\">Scaled adoption</span> (a disclosed adoption or usage metric covering the majority of the target population, or a firm-wide user count). Availability alone never earns Scaled adoption; a cell holding two tools shows both levels.</p>\n    <p><strong>Evidence tags.</strong> Each populated cell ends with a tag for the strength of its best source: <span class=\"ev ev-p\">P</span> primary-verified (SEC filing, earnings transcript, regulator record, or a firm disclosure corroborated by Reuters, Bloomberg, WSJ, FT or CNBC) &middot; <span class=\"ev ev-c\">C</span> company-reported (the firm&rsquo;s own release, newsroom, IR page or a named executive quote) &middot; <span class=\"ev ev-v\">V</span> vendor-reported (the vendor&rsquo;s or partner&rsquo;s release, customer story or self-reported metric) &middot; <span class=\"ev ev-d\">D</span> directional (a single trade-press or syndicated report, a survey, or unverified). Adoption and ROI figures tagged V are self-reported and should not be weighted as audited. No cell yet qualifies for P; upgrading the wirehouse rows from earnings transcripts is the open workstream, as is replacing the remaining syndicated links with primary pages.</p>",
+  "exec": "<p>The earlier read holds: meeting-workflow automation is table stakes across all three buckets, and client-facing AI is where differentiation now sits. Three things changed in the last six months that sharpen it.</p>\n    <p><strong>1. Client-facing has moved from \"none\" to \"two live and one open door.\"</strong> Citi is the most aggressive wirehouse: <a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience\" target=\"_blank\">Portfolio Intelligence</a> went live for Private Bank clients in April 2026 and reaches all Citi Wealth clients by year-end, and <a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-unveils-citi-sky-ai-powered-member-google-cloud-deepmind-technologies\" target=\"_blank\">Citi Sky</a>, a voice-and-avatar agent on Google DeepMind, is rolling to Citigold from summer 2026. Morgan Stanley took a different route: rather than build a client chatbot, it <a href=\"https://mlq.ai/news/morgan-stanley-opens-wealth-management-platform-to-external-ai-agents-via-mcp/\" target=\"_blank\">opened Shareworks and Equity Edge to clients' own AI agents via MCP</a> (early access June 2026, full rollout 2027). JPMorgan has stated intent only; BofA, UBS, and Wells have nothing client-facing in wealth.</p>\n    <p><strong>2. \"Bring your own agent\" is now a client expectation being set by brokerages, not banks.</strong> Robinhood (<a href=\"https://investors.robinhood.com/news-releases/news-release-details/robinhood-reports-second-quarter-2026-results\" target=\"_blank\">~100k agentic accounts, &gt;$100M in custody</a> by Q2 2026), Public, and five other US brokers let Claude or ChatGPT read and trade accounts through MCP. <a href=\"https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/\" target=\"_blank\">ChatGPT Finances</a> (May 2026) and Perplexity already read Schwab, Fidelity, and Chase balances via Plaid whether or not those firms cooperate. Schwab and Fidelity have no official agent access. The question for any private bank is no longer whether to build a chatbot but whether to let the client's agent in, and on what terms.</p>\n    <p><strong>3. The internal layer has converged on one pattern, and Goldman is behind it.</strong> Every wirehouse now has a notetaker plus a knowledge assistant on a single platform: Morgan Stanley (Assistant + Debrief, <a href=\"https://openai.com/index/morgan-stanley/\" target=\"_blank\">98% of FA teams</a>), BofA (<a href=\"https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html\" target=\"_blank\">Meeting Journey</a>, ~15,000 employees, March 2026), Citi (CitiScribe + AskWealth), UBS (STAAT + Copilot, <a href=\"https://www.financial-planning.com/news/ubs-turns-to-ai-to-gain-wallet-share-find-new-clients\" target=\"_blank\">95% of US advisors use some AI</a>), Wells (<a href=\"https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx\" target=\"_blank\">AI Teammate</a>, July 2026). Independents got there faster by buying Jump or Zocks; 70% of $1B+ RIAs use AI notetaking (<a href=\"https://www.cerulli.com/press-releases/billion-dollar-rias-accelerate-ai-and-data-investments-to-drive-next-stage-growth\" target=\"_blank\">Cerulli</a>). No source describes a wealth-specific AI product at Goldman; the public record is GS AI Assistant, Banker Copilot, and the Anthropic ops agents.</p>\n    <p><strong>Where the next differentiation is forming.</strong> Three vectors are visible: agentic execution behind a human approval gate (Morgan Stanley's \"super agents,\" LPL Cyan, Dynasty's Claude-based AI OS, Mercer Aspen 2.0); growth and wallet-share analytics rather than notes (UBS STAAT's <a href=\"https://www.financial-planning.com/news/ubs-turns-to-ai-to-gain-wallet-share-find-new-clients\" target=\"_blank\">20M opportunities in 2025</a>, JPMorgan Coach AI's +20% gross sales claim); and the AI-native RIAs (Farther at $23B recruited assets, Savvy at $600M valuation, Compound at $5B+) winning advisors and their HNW books on margin, not clients on a persona. Vanguard's <a href=\"https://wealthtechtoday.com/2026/08/26/vanguard-altruist-acquisition-hazel/\" target=\"_blank\">~$4B acquisition of Altruist</a> and Schwab's <a href=\"https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors\" target=\"_blank\">Claude for Financial Advisors</a> deal (September 2026) mean custodians are becoming the AI distribution layer for the RIA channel.</p>\n    <div class=\"callout\"><strong>Implication for Goldman.</strong> The internal layer is a catch-up exercise with a known recipe (notetaker plus knowledge assistant on one platform, measured by adoption). The open decisions are client-facing: a Citi-style owned agent for the mass-affluent tier, a Morgan Stanley-style open door for UHNW clients' own agents and family offices, or both. No firm in bucket 1 has yet paired either with the growth-analytics layer, which is the combination none of the six has shipped.</div>",
+  "watch": "<p class=\"lead\">Items announced but not yet shipped, with the date to re-check, and claims the research could not close.</p>\n    <div class=\"table-wrap\">\n    <table>\n      <thead><tr><th>Item</th><th>Why it matters</th><th>Re-check</th></tr></thead>\n      <tbody>\n        <tr><td>Citi Sky rollout to Citigold</td><td>First voice/avatar client agent at a US wirehouse; no adoption metrics published yet</td><td>Q4 2026</td></tr>\n        <tr><td>Morgan Stanley super agents and full MCP rollout</td><td>Whether agentic execution reaches client service associates, then clients; Shareworks agent access to all ~3,400 admin clients</td><td>2027</td></tr>\n        <tr><td>JPMorgan client-facing agents</td><td>Stated intent (June 2026) with no product; AWM portfolio-construction agents still in backtest</td><td>Q1 2027</td></tr>\n        <tr><td>LPL Cyan launch</td><td>Largest proprietary agentic rollout in the independent channel (32,000+ advisors)</td><td>Dec 2026</td></tr>\n        <tr><td>Schwab-Anthropic Claude for Financial Advisors</td><td>Pricing now reported at ~$70&ndash;120/user/month (Sept 14); still open: launch date and whether Fidelity or Pershing respond; critics call it \"generic and late-coming\"</td><td>Q4 2026</td></tr>\n        <tr><td>Vanguard-Altruist close and Hazel pricing</td><td>If Hazel is bundled with custody, RIA AI becomes table stakes and pressures Schwab/Fidelity custody economics</td><td>Q1 2027</td></tr>\n        <tr><td>Dynasty Virtual Chief of Staff; Mercer Aspen 2.0 outputs</td><td>The two most ambitious agentic-OS builds by RIA platforms; look for measurable results</td><td>Q1 2027</td></tr>\n        <tr><td>Robinhood Agentic Trading beyond equities; Strategies past ~$5B</td><td>Options and crypto for agents; whether Cortex for Advisors becomes a client-facing HNW offering via TradePMR</td><td>Q1 2027</td></tr>\n        <tr><td>Range advisor-elimination timeline</td><td>First test of AI-only fiduciary advice at scale; any SEC exam or enforcement</td><td>2027</td></tr>\n        <tr><td>Schwab or Fidelity official MCP/agent access</td><td>Both absent today; the moment either ships, agent access becomes the default at every custodian</td><td>Ongoing</td></tr>\n        <tr><td>FINRA/SEC guidance on agentic execution in customer accounts</td><td>Segregated agent sub-accounts are a self-regulatory workaround awaiting a rule</td><td>Ongoing</td></tr>\n      </tbody>\n    </table>\n    </div>\n    <p><strong>Open questions from this pass.</strong> Morgan Stanley's advisor headcount for the 98% figure is not stated in any AI source. Wells Fargo has not named the vendor behind AI Teammate. Goldman Banker Copilot's 2026 scale, and any PWM or Ayco AI product, could not be found. Fisher, Captrust, Corient, Wealth Enhancement, Mariner, and Creative Planning show no public AI deployment; absence of disclosure is not absence of use. Vendor-reported ROI figures (Carson/Zocks $2M, Focus/Jump 70%, Ameriprise 10-20 hrs/wk, Zeplyn 80% NIGO reduction) are self-reported. CNBC (June 3 and June 9, 2026), Bloomberg (July 9, 2026), and RIABiz pages were blocked to fetches; those rows rely on syndicated summaries.</p>",
+  "changes": "<p class=\"lead\">Dated log of what the weekday 7am ET scan found, newest first. Only days with a change get a row; entries older than 90 days are rolled into the main tables. Anything the scan could not verify from a primary or trade-press source is marked \"unverified\" until it can be.</p>\n    <div class=\"table-wrap\">\n    <table>\n      <thead><tr><th>Date</th><th>Firm</th><th>Change</th><th>Bucket</th><th>Source</th></tr></thead>\n      <tbody>\n        <tr><td>2026-09-21</td><td>All (framework)</td><td>Framework revision after reviewer feedback: capability rows regrouped into five families; every status normalized to the five-level maturity scale; evidence tag P/C/V/D added to every populated cell; Tool detail tables gain Maturity and Evidence columns; How to Read section added. No facts changed.</td><td>1, 2, 3</td><td><a href=\"#how-to-read\">How to Read the Matrices</a></td></tr>\n        <tr><td>2026-09-21</td><td>Jump</td><td>New tool: AI-assisted real-time account opening on Schwab Advisor Services and Fidelity (via Dispatch), limited beta; Jump ops cell in bucket 2c matrix and Tool detail row added</td><td>2</td><td><a href=\"https://www.businesswire.com/news/home/20260914989068/en/Jump-Introduces-AI-Assisted-Real-Time-Account-Opening-with-Schwab-Advisor-Services-and-Fidelity\" target=\"_blank\">Business Wire, Sept 14</a></td></tr>\n        <tr><td>2026-09-21</td><td>Salesforce / Accenture</td><td>New partnership: Accenture Trusted Wealth Ops packages Agentforce Financial Services, Data 360 and Claude for advisor onboarding and servicing; Salesforce firm-wide cell in bucket 2c matrix and Tool detail row added</td><td>2</td><td><a href=\"https://newsroom.accenture.com/blogs/2026/accenture-launches-accenture-trusted-wealth-ops-powered-by-salesforce-and-claude-to-help-wealth-advisors-deepen-client-relationships\" target=\"_blank\">Accenture Newsroom, Sept 11</a></td></tr>\n        <tr><td>2026-09-20</td><td>Envestnet</td><td>New tool: R3 2026 release ships a conversational AI assistant in the Insights dashboard and a Tamarac AI Data Analyst Agent; row added to bucket 2 table</td><td>2</td><td><a href=\"https://www.wealthmanagement.com/advisor-support-platforms/envestnet-amplify-zeplyn-roll-out-new-features\" target=\"_blank\">WealthManagement.com, Sept 18</a></td></tr>\n        <tr><td>2026-09-20</td><td>Zeplyn</td><td>New tool: Agent Studio and MCP server let firms build governed agents exposed to Claude, ChatGPT, Copilot and Slack; row added to bucket 2 table</td><td>2</td><td><a href=\"https://www.investmentnews.com/fintech/advisors-get-the-keys-advisorcrm-and-zeplyn-let-firms-build-their-own-ai-tools/268248\" target=\"_blank\">InvestmentNews, Sept 17</a></td></tr>\n        <tr><td>2026-09-20</td><td>Schwab Advisor Services / Anthropic</td><td>Watch-list item partly resolved: Claude for Financial Advisors pricing reported at ~$70&ndash;120 per user per month all-in; Schwab row status and watch list updated (launch date still open)</td><td>2</td><td><a href=\"https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors\" target=\"_blank\">WealthManagement.com, Sept 14</a></td></tr>\n        <tr><td>2026-09-19</td><td>All</td><td>Initial build: three buckets tabled, bucket 1 handoff claims verified and corrected (Citi tool count, MS advisor headcount, IndexGPT, \"Reflect\")</td><td>1, 2, 3</td><td>Main tab sources</td></tr>\n      </tbody>\n    </table>\n    </div>",
+  "sources": "<p>Every table row links to its source inline. The primary pages behind the takeaways, grouped by bucket:</p>\n    <p><strong>Wirehouses and private banks.</strong> <a href=\"https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch\" target=\"_blank\">Morgan Stanley Debrief release</a> · <a href=\"https://openai.com/index/morgan-stanley/\" target=\"_blank\">OpenAI Morgan Stanley case study</a> · <a href=\"https://www.financial-planning.com/news/behind-the-marvel-movie-inspired-ai-super-agents-coming-to-morgan-stanley\" target=\"_blank\">Financial Planning on MS super agents</a> · <a href=\"https://mlq.ai/news/morgan-stanley-opens-wealth-management-platform-to-external-ai-agents-via-mcp/\" target=\"_blank\">MS opens platform to external agents</a> · <a href=\"https://www.ubs.com/global/en/media/display-page-ndp/en-20251016-ai-strategy.html\" target=\"_blank\">UBS AI strategy release</a> · <a href=\"https://www.financial-planning.com/news/ubs-turns-to-ai-to-gain-wallet-share-find-new-clients\" target=\"_blank\">UBS wallet-share AI, Financial Planning</a> · <a href=\"https://finance.yahoo.com/news/jpmorgan-says-ai-helped-boost-170825108.html\" target=\"_blank\">JPMorgan Coach AI, Reuters</a> · <a href=\"https://www.forbes.com/sites/bernardmarr/2026/07/01/how-jpmorgan-chase-is-building-the-ai-powered-bank-of-the-future/\" target=\"_blank\">JPMorgan AI bank, Forbes</a> · <a href=\"https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html\" target=\"_blank\">BofA Meeting Journey release</a> · <a href=\"https://www.americanbanker.com/news/bank-of-america-gives-merrill-lynch-an-ai-makeover\" target=\"_blank\">American Banker on Merrill</a> · <a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience\" target=\"_blank\">Citi Wealth AI tools release</a> · <a href=\"https://www.citigroup.com/global/news/press-release/2026/citi-wealth-unveils-citi-sky-ai-powered-member-google-cloud-deepmind-technologies\" target=\"_blank\">Citi Sky release</a> · <a href=\"https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx\" target=\"_blank\">Wells Fargo AI Teammate release</a> · <a href=\"https://fortune.com/2025/06/24/goldman-sachs-internal-ai-assistant\" target=\"_blank\">Goldman AI assistant, Fortune</a> · <a href=\"https://www.investmentnews.com/wirehouses/bny-goldman-double-down-on-tech-with-digital-employees-and-ai-agents/265198\" target=\"_blank\">Goldman and Anthropic agents, InvestmentNews</a></p>\n    <p><strong>RIAs and independents.</strong> <a href=\"https://www.investmentnews.com/independent-broker-dealers/will-ai-replace-the-advisor-lpls-rich-steinmeier-adamant-as-firm-announces-2b-tech-push/267762\" target=\"_blank\">LPL $2B tech push and Cyan</a> · <a href=\"https://www.raymondjames.com/news-and-media/press-releases/2026/01/27/raymond-james-launches-proprietary-digital-ai-agent-to-bolster-operational-excellence\" target=\"_blank\">Raymond James Rai release</a> · <a href=\"https://ir.ameriprise.com/news/news-details/2026/Ameriprise-Advances-AI-Innovation-Across-the-Advisor-and-Client-Experience-with-1B-Annual-Spend-on-Technology-and-AI-Capabilities/default.aspx\" target=\"_blank\">Ameriprise AI release</a> · <a href=\"https://www.investmentnews.com/independent-broker-dealers/osaics-ai-tools-have-had-the-fastest-ever-adoption-among-advisors-ceo-jamie-price/266375\" target=\"_blank\">Osaic adoption, InvestmentNews</a> · <a href=\"https://www.investmentnews.com/transformation/focus-financial-rolls-out-jump-ai-to-800-advisors-after-pilot/264959\" target=\"_blank\">Focus rolls out Jump</a> · <a href=\"https://www.wealthmanagement.com/artificial-intelligence/mercer-global-advisors-launches-ai-native-aspen-20\" target=\"_blank\">Mercer Aspen 2.0</a> · <a href=\"https://www.01net.it/dynasty-financial-partners-builds-its-next-generation-ai-os-for-wealth-on-claude/\" target=\"_blank\">Dynasty AI OS on Claude</a> · <a href=\"https://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx\" target=\"_blank\">Schwab 2026 RIA &amp; AI Study</a> · <a href=\"https://www.financial-planning.com/news/jump-zocks-top-category-as-ai-note-taker-adoption-soars\" target=\"_blank\">T3 2026 notetaker survey</a> · <a href=\"https://www.cerulli.com/press-releases/billion-dollar-rias-accelerate-ai-and-data-investments-to-drive-next-stage-growth\" target=\"_blank\">Cerulli $1B+ RIAs</a> · <a href=\"https://f2strategy.com/research/q2-2026-trend-report\" target=\"_blank\">F2 Strategy Q2 2026</a> · <a href=\"https://www.investmentnews.com/fintech/salesforce-launches-agentic-advisor-as-ai-notetakers-threaten-crm-dominance/267076\" target=\"_blank\">Salesforce Agentic Advisor</a> · <a href=\"https://www.kitces.com/blog/ai-notetakers-client-meeting-for-financial-advisors-adoption-satisfaction-trends-research-productivity/\" target=\"_blank\">Kitces notetaker research</a></p>\n    <p><strong>Fintechs.</strong> <a href=\"https://investors.robinhood.com/news-releases/news-release-details/robinhood-reports-second-quarter-2026-results\" target=\"_blank\">Robinhood Q2 2026 results</a> · <a href=\"https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/\" target=\"_blank\">Robinhood open to agents</a> · <a href=\"https://www.prnewswire.com/news-releases/public-becomes-the-first-brokerage-to-introduce-ai-agents-for-your-portfolio-302729050.html\" target=\"_blank\">Public AI agents</a> · <a href=\"https://www.investmentnews.com/ria-news/ria-startup-range-plans-to-eliminate-its-advisor-workforce-as-ai-takes-over/265586\" target=\"_blank\">Range advisor elimination, InvestmentNews</a> · <a href=\"https://www.farther.com/post/farther-raises-150m-series-d-led-by-general-atlantic-to-scale-intelligent-wealth-management\" target=\"_blank\">Farther Series D</a> · <a href=\"https://www.wealthmanagement.com/ria-news/savvy-wealth-raises-100m-valuation-hits-600m\" target=\"_blank\">Savvy Series C</a> · <a href=\"https://www.investmentnews.com/transformation/altruists-hazel-builds-ai-agent-to-create-financial-plans-in-minutes/268020\" target=\"_blank\">Altruist Hazel</a> · <a href=\"https://wealthtechtoday.com/2026/08/26/vanguard-altruist-acquisition-hazel/\" target=\"_blank\">Vanguard-Altruist</a> · <a href=\"https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Launches-AI-Powered-Capability-That-Helps-Investors-Understand-Portfolio-Performance-and-Market-Activity/default.aspx\" target=\"_blank\">Schwab Portfolio Insights</a> · <a href=\"https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/\" target=\"_blank\">ChatGPT Finances, TechCrunch</a> · <a href=\"https://openai.com/index/introducing-chatgpt-financial-services/\" target=\"_blank\">ChatGPT for Financial Services</a> · <a href=\"https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors\" target=\"_blank\">Claude for Financial Advisors</a> · <a href=\"https://www.sec.gov/newsroom/speeches-statements/atkins-remarks-iac-091026\" target=\"_blank\">SEC Chair Atkins remarks</a> · <a href=\"https://www.finra.org/rules-guidance/guidance/reports/2026-finra-annual-regulatory-oversight-report/gen-ai\" target=\"_blank\">FINRA 2026 oversight report, GenAI</a></p>"
+ },
+ "meta": {
+  "as_of": "2026-09-22",
+  "doc_url": "https://claude.ai/code/artifact/f5338748-fa97-4add-a60d-d782d678c2a4",
+  "site": "https://naveen-nallappa.github.io/ai-daily-digest/"
+ },
+ "groups": [
+  "Advisor productivity",
+  "Growth analytics & next-best-action",
+  "Client-facing experiences",
+  "Agentic workflow automation",
+  "External-agent access"
+ ],
+ "maturity": [
+  {
+   "level": 1,
+   "name": "Announced",
+   "color": "#C8E1FB",
+   "text": "#1C1B1A"
+  },
+  {
+   "level": 2,
+   "name": "Pilot",
+   "color": "#97C2F0",
+   "text": "#1C1B1A"
+  },
+  {
+   "level": 3,
+   "name": "Limited rollout",
+   "color": "#5B97D3",
+   "text": "#1C1B1A"
+  },
+  {
+   "level": 4,
+   "name": "Live",
+   "color": "#1F6CB0",
+   "text": "#FFFFFF"
+  },
+  {
+   "level": 5,
+   "name": "Scaled adoption",
+   "color": "#00447A",
+   "text": "#FFFFFF"
+  }
+ ],
+ "evidence": [
+  {
+   "tag": "P",
+   "name": "Primary-verified"
+  },
+  {
+   "tag": "C",
+   "name": "Company-reported"
+  },
+  {
+   "tag": "V",
+   "name": "Vendor-reported"
+  },
+  {
+   "tag": "D",
+   "name": "Directional"
+  }
+ ]
+}
