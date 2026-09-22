@@ -217,7 +217,7 @@ body.ov-open { overflow: hidden; }
   table.cond tr { border-bottom: 1px solid var(--rule); padding: 6px 0 10px; }
   table.cond tr.fam { padding: 0; }
   table.cond td { border-bottom: 0; padding: 6px 0; position: static; box-shadow: none; }
-  table.cond td:first-child { font-size: 15px; padding-bottom: 8px; }
+  table.cond td:first-child { font-size: 15px; padding-bottom: 8px; box-shadow: none; position: static; }
   table.cond td.empty { display: none; }
   table.cond td[data-firm]:not(:first-child)::before { content: attr(data-firm); display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--caption); margin-bottom: 2px; }
   table.cond tr.foot td[data-firm]:not(:empty)::before { content: attr(data-firm); display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--caption); margin-bottom: 2px; }
