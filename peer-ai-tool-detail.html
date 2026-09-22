@@ -4,75 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Peer AI Landscape — Tool Detail — AI Daily Digest</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
-  .header { background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%); border-radius: 16px; padding: 40px 36px; margin-bottom: 32px; color: #fff; }
-  .header-label { font-size: 12px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: #7ea8ff; margin-bottom: 8px; }
-  .header h1 { font-size: 32px; font-weight: 700; line-height: 1.2; margin-bottom: 6px; }
-  .header .date { font-size: 15px; color: #a4bfed; }
-  .header .pill { display: inline-block; margin-top: 12px; margin-right: 8px; font-size: 13px; color: #7ea8ff; background: rgba(255,255,255,0.08); padding: 4px 12px; border-radius: 20px; text-decoration: none; }
-  .header .pill:hover { background: rgba(255,255,255,0.16); }
-  .header .pill-btn { color: #fff; background: rgba(126,168,255,0.28); cursor: pointer; }
-  .header .pill-btn.busy { opacity: 0.6; pointer-events: none; }
-  #dl-toast { display: none; position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); max-width: 640px; background: #0f1b3d; color: #fff; font-size: 13.5px; line-height: 1.5; padding: 12px 18px; border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,0.25); z-index: 50; }
-  #dl-toast a { color: #7ea8ff; text-decoration: underline; }
-  .section-title { font-size: 13px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: #5a6a8a; margin: 36px 0 16px; padding-left: 4px; }
-  .section-title span { display: inline-block; border-bottom: 2px solid #3366cc; padding-bottom: 4px; }
-  .card { background: #fff; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-  .card p { font-size: 15px; color: #3a3a4a; margin-bottom: 14px; }
-  .card p:last-child { margin-bottom: 0; }
-  .card a { color: #3366cc; text-decoration: none; }
-  .card a:hover { text-decoration: underline; }
-  .card strong { color: #0f1b3d; font-weight: 600; }
-  .lead { font-size: 15px; color: #3a3a4a; margin-bottom: 14px; }
-  .callout { font-size: 14px; color: #4a5568; background: #f0f4fa; border-left: 3px solid #3366cc; padding: 10px 14px; border-radius: 0 8px 8px 0; margin-top: 14px; }
-  .table-wrap { overflow-x: auto; margin: 6px 0 14px; }
-  .legend { background: #f7f9fc; border: 1px solid #e3e9f3; border-radius: 8px; padding: 8px 12px; margin: 0 0 14px; font-size: 11.5px; line-height: 1.6; color: #4a5568; }
-  .legend-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; }
-  .legend-row + .legend-row { margin-top: 4px; padding-top: 4px; border-top: 1px dashed #e3e9f3; }
-  .legend-title { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #5a6a8a; min-width: 62px; }
-  .legend-item { white-space: nowrap; }
-  .legend-item b { color: #1a2f6b; font-weight: 600; }
-  .legend-item em { font-style: normal; color: #8a95a8; }
-  .legend-item em::before { content: " \2014 "; }
-  .legend-arrow { color: #b0bacb; }
-  .legend .ev { margin-left: 0; margin-right: 2px; }
-  .ov-body .legend { position: sticky; left: 0; font-size: 12px; }
-  @media (max-width: 700px) { .legend-item em { display: none; } }
-  .grp { display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: #3366cc; margin-bottom: 2px; }
-  .ev { display: inline-block; font-size: 10px; font-weight: 700; line-height: 1; padding: 3px 5px; border-radius: 4px; margin-left: 4px; vertical-align: middle; color: #fff; }
-  .ev-p { background: #1a7f4b; } .ev-c { background: #3366cc; } .ev-v { background: #b7791f; } .ev-d { background: #8a95a8; }
-  .lvl { font-weight: 600; color: #1a2f6b; }
-  table { width: 100%; border-collapse: collapse; font-size: 13.5px; line-height: 1.5; }
-  th { text-align: left; font-size: 11.5px; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase; color: #5a6a8a; background: #f0f4fa; padding: 10px 10px; border-bottom: 2px solid #d0d7e3; white-space: nowrap; }
-  td { padding: 10px 10px; border-bottom: 1px solid #e6eaf1; vertical-align: top; color: #3a3a4a; }
-  td:first-child { font-weight: 600; color: #0f1b3d; white-space: nowrap; }
-  tr:hover td { background: #fafbfd; }
-  h4.sub { font-size: 14px; font-weight: 600; color: #0f1b3d; margin: 18px 0 6px; }
-  .matrix table { font-size: 12.5px; line-height: 1.45; }
-  .matrix th { white-space: normal; min-width: 170px; }
-  .matrix th:first-child { min-width: 130px; }
-  .matrix td { min-width: 170px; }
-  .matrix td:first-child { white-space: normal; min-width: 130px; font-size: 12.5px; }
-  .sources p { font-size: 13.5px; }
-  .footer { text-align: center; margin-top: 40px; padding: 20px; font-size: 13px; color: #8a95a8; }
-  .footer .divider { width: 48px; height: 2px; background: #d0d7e3; margin: 0 auto 16px; border-radius: 2px; }
-  .footer a { color: #3366cc; text-decoration: none; }
-  @media (max-width: 600px) { .container { padding: 12px 8px 32px; } .header { padding: 28px 20px; border-radius: 12px; } .header h1 { font-size: 26px; } .card { padding: 20px 18px 18px; } td:first-child { white-space: normal; } }
-  .back-link { font-size: 12.5px; margin: 0 0 8px; }
-  h4.sub { scroll-margin-top: 16px; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
+<div class="container wide">
 
   <div class="header">
     <div class="header-label">Living Reference &middot; Detail</div>
     <h1>Peer AI Landscape &mdash; Tool Detail</h1>
-    <div class="date">As of Monday, September 21, 2026 · Naveen Nallappa</div>
+    <div class="date">As of Tuesday, September 22, 2026 · Naveen Nallappa</div>
     <a class="pill" href="index.html">&larr; Back to digests</a>
     <a class="pill" href="peer-ai-landscape.html">&larr; Landscape (matrices)</a>
     <a class="pill" href="https://claude.ai/code/artifact/f5338748-fa97-4add-a60d-d782d678c2a4" target="_blank">Live doc (Claude)</a>
@@ -85,50 +28,36 @@
   <div class="section-title" id="tool-detail"><span>Tool detail (row per tool)</span></div>
   <div class="card">
     <p class="lead">Row-per-tool detail behind the capability matrices on the <a href="peer-ai-landscape.html">landscape page</a>. Same sources; updated with the doc. Maturity uses the five-level scale and Evidence the P/C/V/D tags defined in <a href="peer-ai-landscape.html#how-to-read">How to read the matrices</a>.</p>
-    <div class="legend" aria-label="Key">
-      <div class="legend-row"><span class="legend-title">Evidence</span>
-        <span class="legend-item"><span class="ev ev-p">P</span> Primary-verified <em>filing, transcript, regulator, or top-tier corroboration</em></span>
-        <span class="legend-item"><span class="ev ev-c">C</span> Company-reported <em>firm release, newsroom, IR, exec quote</em></span>
-        <span class="legend-item"><span class="ev ev-v">V</span> Vendor-reported <em>vendor or partner release, self-reported metric</em></span>
-        <span class="legend-item"><span class="ev ev-d">D</span> Directional <em>single trade-press or syndicated report, survey, unverified</em></span>
-      </div>
-      <div class="legend-row"><span class="legend-title">Maturity</span>
-        <span class="legend-item"><b>Announced</b> <em>intent, demo or roadmap</em></span><span class="legend-arrow">&rarr;</span>
-        <span class="legend-item"><b>Pilot</b> <em>limited users, beta, early access</em></span><span class="legend-arrow">&rarr;</span>
-        <span class="legend-item"><b>Limited rollout</b> <em>production for a defined subset</em></span><span class="legend-arrow">&rarr;</span>
-        <span class="legend-item"><b>Live</b> <em>generally available, adoption undisclosed</em></span><span class="legend-arrow">&rarr;</span>
-        <span class="legend-item"><b>Scaled adoption</b> <em>disclosed majority adoption or firm-wide count</em></span>
-      </div>
-    </div>
+    <div class="legend" aria-label="Key"><span class="legend-title">Maturity</span><span class="legend-item"><span class="swatch" style="background:#C8E1FB"></span>Announced</span><span class="legend-item"><span class="swatch" style="background:#97C2F0"></span>Pilot</span><span class="legend-item"><span class="swatch" style="background:#5B97D3"></span>Limited rollout</span><span class="legend-item"><span class="swatch" style="background:#1F6CB0"></span>Live</span><span class="legend-item"><span class="swatch" style="background:#00447A"></span>Scaled adoption</span><span class="legend-div"></span><span class="legend-title">Evidence</span><span class="legend-item"><span class="ev">P</span>Primary-verified</span><span class="legend-item"><span class="ev">C</span>Company-reported</span><span class="legend-item"><span class="ev">V</span>Vendor-reported</span><span class="legend-item"><span class="ev">D</span>Directional</span></div>
     <h4 class="sub" id="bucket-1">Bucket 1: Wirehouses and private banks</h4>
     <p class="lead back-link"><a href="peer-ai-landscape.html#bucket-1">&larr; Back to this bucket&rsquo;s matrices</a></p>
     <div class="table-wrap">
     <table>
       <thead><tr><th>Firm</th><th>Tool</th><th>Internal / client-facing</th><th>What it does</th><th>Partner</th><th>Maturity</th><th>Evidence</th></tr></thead>
       <tbody>
-        <tr><td>Morgan Stanley</td><td><a href="https://openai.com/index/morgan-stanley/" target="_blank">AI @ MS Assistant</a></td><td>Internal</td><td>GenAI Q&amp;A over ~100k internal documents; 98% of FA teams; document access 20% to 80%</td><td>OpenAI</td><td>Scaled adoption · since Sept 2023</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
-        <tr><td>Morgan Stanley</td><td><a href="https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch" target="_blank">Debrief</a></td><td>Internal</td><td>Zoom meeting notes, action items, follow-up emails, Salesforce logging</td><td>OpenAI</td><td>Scaled adoption · live June 2024; mobile and non-advisor staff July 2025</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Morgan Stanley</td><td><a href="https://www.financial-planning.com/news/behind-the-marvel-movie-inspired-ai-super-agents-coming-to-morgan-stanley" target="_blank">Super agents</a></td><td>Internal, then client-facing</td><td>Orchestrator over hundreds of small agents (account opening, money movement, beneficiaries); later 24/7 client agents with human approval</td><td>OpenAI</td><td>Announced · Feb 2026; no dates</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Morgan Stanley at Work</td><td><a href="https://mlq.ai/news/morgan-stanley-opens-wealth-management-platform-to-external-ai-agents-via-mcp/" target="_blank">Shareworks / Equity Edge via MCP</a></td><td>Client-facing</td><td>Corporate clients' own AI agents read plan, vesting, and tax data directly; all 3,400 admin clients by next year (<a href="https://www.retailbankerinternational.com/news/morgan-stanley-stock-plan-ai/" target="_blank">Retail Banker International</a>); $1.2T workplace-channel figure per TheStreet</td><td>Open MCP standard</td><td>Limited rollout · early access June 2026; full rollout 2027</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>UBS</td><td><a href="https://www.financial-planning.com/news/ubs-turns-to-ai-to-gain-wallet-share-find-new-clients" target="_blank">STAAT Insights</a></td><td>Internal</td><td>ML opportunity engine (CD maturities, liquidity events), pre-meeting briefs; 5,000+ US advisors, 20M opportunities in 2025, ~10,000 hrs/month saved</td><td>In-house</td><td>Scaled adoption · live expanded 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>UBS</td><td><a href="https://www.ubs.com/global/en/our-firm/what-we-do/technology/innovation-and-ai.html" target="_blank">Red</a> + M365 Copilot</td><td>Internal</td><td>Firm-wide knowledge assistant (~100k employees, 25M+ queries); Copilot at 85%+ of US advisors</td><td>Azure OpenAI, Microsoft</td><td>Scaled adoption · live</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>UBS</td><td><a href="https://fortune.com/europe/2025/05/20/ubs-bank-ai-generated-video-avatars-analysts/" target="_blank">AI analyst avatars</a></td><td>Client-facing (research)</td><td>Synthetic video of research analysts, toward 5,000 videos/yr</td><td>OpenAI, Synthesia</td><td>Live · May 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>UBS</td><td><a href="https://www.ubs.com/global/en/media/display-page-ndp/en-20251016-ai-strategy.html" target="_blank">Group AI strategy</a></td><td>Firm-wide</td><td>Chief AI Officer (Jan 2026), "Big Rocks" front- and back-office redesign, 300+ live use cases</td><td>Multi-model (Claves)</td><td>Announced · Oct 2025</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>JPMorgan</td><td><a href="https://www.forbes.com/sites/bernardmarr/2026/07/01/how-jpmorgan-chase-is-building-the-ai-powered-bank-of-the-future/" target="_blank">LLM Suite</a></td><td>Internal</td><td>Firm-wide GenAI portal, ~230-250k users, ~$2B annual AI spend</td><td>OpenAI, Anthropic, in-house</td><td>Scaled adoption · since July 2024</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>JPMorgan Private Bank</td><td><a href="https://finance.yahoo.com/news/jpmorgan-says-ai-helped-boost-170825108.html" target="_blank">Coach AI</a></td><td>Internal</td><td>Research retrieval and client-prep for ~4,000 PB advisors; research 95% faster; +20% gross sales 2023-24</td><td>In-house</td><td>Scaled adoption · live disclosed May 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>JPMorgan AWM</td><td><a href="https://fortune.com/2026/04/29/capcom-virgin-voyages-bet-on-ai-to-reshape-gaming-and-cruise-travel/" target="_blank">Connect Coach</a></td><td>Internal</td><td>Insight extraction for advisors and asset managers</td><td>In-house</td><td>Live · cited Apr 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>JPMorgan</td><td><a href="https://www.roic.ai/news/jpmorgan-to-deploy-more-powerful-ai-agents-this-year-06-09-2026" target="_blank">Client-facing agents</a></td><td>Client-facing</td><td>Life-event detection and product recommendation agents</td><td>Multi-vendor</td><td>Announced · intent only, June 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>BofA Merrill / Private Bank</td><td><a href="https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html" target="_blank">AI-Powered Meeting Journey</a></td><td>Internal</td><td>Plan-my-day, meeting prep, Zoom notetaker, follow-up tasks; up to 4 hrs saved per meeting; ~15,000 employees and the Salesforce/Zoom stack per <a href="https://www.americanbanker.com/news/bank-of-america-gives-merrill-lynch-an-ai-makeover" target="_blank">American Banker</a>, not the release</td><td>Salesforce FSC, Zoom; on Erica platform</td><td>Scaled adoption · live March 2026 after 1,500-advisor beta</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>BofA</td><td><a href="https://www.prnewswire.com/news-releases/ai-adoption-by-bofas-global-workforce-improves-productivity-client-service-302423333.html" target="_blank">ask MERRILL / ask Private Banking</a></td><td>Internal</td><td>Advisor information retrieval; 23M+ interactions in 2024</td><td>In-house (Erica)</td><td>Scaled adoption · live</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Citi Wealth</td><td><a href="https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience" target="_blank">Portfolio Intelligence</a></td><td>Client-facing</td><td>Personalized portfolio view with CIO insights; advisors push messages</td><td>Google Cloud, Palantir</td><td>Limited rollout · Apr 2026 (PB N. America); all Wealth clients by YE 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Citi Wealth</td><td><a href="https://www.citigroup.com/global/news/press-release/2026/citi-wealth-unveils-citi-sky-ai-powered-member-google-cloud-deepmind-technologies" target="_blank">Citi Sky</a></td><td>Client-facing</td><td>Voice and avatar agent: CD alerts, CIO insights, portfolio lookups; English and Spanish</td><td>Google Gemini, DeepMind</td><td>Announced · Apr 2026; Citigold rollout from summer 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Citi Wealth</td><td><a href="https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience" target="_blank">CitiScribe, AskWealth CIO, Client 360</a></td><td>Internal</td><td>Notetaker (all NA advisors Q1 2026), CIO research Q&amp;A (pilot), single-screen client view</td><td>In-house, Palantir</td><td>Live (CitiScribe, all NA advisors) / Pilot (AskWealth CIO) · Apr 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Citi Wealth</td><td><a href="https://www.citigroup.com/global/news/press-release/2025/citi-wealth-launches-advisor-insights-askwealth" target="_blank">Advisor Insights, AskWealth</a></td><td>Internal</td><td>Market and portfolio alert dashboard; GenAI over research and client portfolios</td><td>In-house</td><td>Pilot · Aug 2025, expanding</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Wells Fargo WIM</td><td><a href="https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx" target="_blank">AI Teammate</a></td><td>Internal</td><td>Chat in Advisor Gateway: policy and workflow search, guided next steps; all WIM channels incl. FiNet</td><td>In-house (Google Cloud enterprise stack, not named)</td><td>Live · July 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Wells Fargo WIM</td><td><a href="https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-launches-Advisor-Gateway-for-financial-advisors/default.aspx" target="_blank">Advisor Gateway + Auto Commentary</a></td><td>Internal</td><td>New advisor desktop; AI narratives from risk analytics for client meetings</td><td>BlackRock Aladdin Wealth</td><td>Live · May 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Goldman Sachs</td><td><a href="https://fortune.com/2025/06/24/goldman-sachs-internal-ai-assistant" target="_blank">GS AI Assistant</a></td><td>Internal</td><td>Firm-wide drafting and summarization assistant</td><td>OpenAI, Gemini via GS AI Platform</td><td>Live · firm-wide June 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Goldman Sachs</td><td><a href="https://finance.yahoo.com/news/goldman-assembling-growing-arsenal-ai-164501078.html" target="_blank">Banker Copilot</a></td><td>Internal (IB)</td><td>Deal data, filings, S-1 drafting; "dozens" of users May 2025</td><td>In-house</td><td>Pilot · early stage; 2026 status not found</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Goldman Sachs</td><td><a href="https://www.investmentnews.com/wirehouses/bny-goldman-double-down-on-tech-with-digital-employees-and-ai-agents/265198" target="_blank">Claude agents</a></td><td>Internal (ops)</td><td>Trade accounting, KYC onboarding agents</td><td>Anthropic</td><td>Announced · in development, Feb 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+<tr><td>Morgan Stanley</td><td><a href="https://openai.com/index/morgan-stanley/" target="_blank">AI @ MS Assistant</a></td><td>Internal</td><td>GenAI Q&amp;A over ~100k internal documents; 98% of FA teams; document access 20% to 80%</td><td>OpenAI</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · since Sept 2023</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
+        <tr><td>Morgan Stanley</td><td><a href="https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch" target="_blank">Debrief</a></td><td>Internal</td><td>Zoom meeting notes, action items, follow-up emails, Salesforce logging</td><td>OpenAI</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · live June 2024; mobile and non-advisor staff July 2025</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Morgan Stanley</td><td><a href="https://www.financial-planning.com/news/behind-the-marvel-movie-inspired-ai-super-agents-coming-to-morgan-stanley" target="_blank">Super agents</a></td><td>Internal, then client-facing</td><td>Orchestrator over hundreds of small agents (account opening, money movement, beneficiaries); later 24/7 client agents with human approval</td><td>OpenAI</td><td><span class="sw sw-1" data-color="#C8E1FB"></span>Announced · Feb 2026; no dates</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Morgan Stanley at Work</td><td><a href="https://mlq.ai/news/morgan-stanley-opens-wealth-management-platform-to-external-ai-agents-via-mcp/" target="_blank">Shareworks / Equity Edge via MCP</a></td><td>Client-facing</td><td>Corporate clients' own AI agents read plan, vesting, and tax data directly; all 3,400 admin clients by next year (<a href="https://www.retailbankerinternational.com/news/morgan-stanley-stock-plan-ai/" target="_blank">Retail Banker International</a>); $1.2T workplace-channel figure per TheStreet</td><td>Open MCP standard</td><td><span class="sw sw-3" data-color="#5B97D3"></span>Limited rollout · early access June 2026; full rollout 2027</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>UBS</td><td><a href="https://www.financial-planning.com/news/ubs-turns-to-ai-to-gain-wallet-share-find-new-clients" target="_blank">STAAT Insights</a></td><td>Internal</td><td>ML opportunity engine (CD maturities, liquidity events), pre-meeting briefs; 5,000+ US advisors, 20M opportunities in 2025, ~10,000 hrs/month saved</td><td>In-house</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · live expanded 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>UBS</td><td><a href="https://www.ubs.com/global/en/our-firm/what-we-do/technology/innovation-and-ai.html" target="_blank">Red</a> + M365 Copilot</td><td>Internal</td><td>Firm-wide knowledge assistant (~100k employees, 25M+ queries); Copilot at 85%+ of US advisors</td><td>Azure OpenAI, Microsoft</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · live</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>UBS</td><td><a href="https://fortune.com/europe/2025/05/20/ubs-bank-ai-generated-video-avatars-analysts/" target="_blank">AI analyst avatars</a></td><td>Client-facing (research)</td><td>Synthetic video of research analysts, toward 5,000 videos/yr</td><td>OpenAI, Synthesia</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · May 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>UBS</td><td><a href="https://www.ubs.com/global/en/media/display-page-ndp/en-20251016-ai-strategy.html" target="_blank">Group AI strategy</a></td><td>Firm-wide</td><td>Chief AI Officer (Jan 2026), "Big Rocks" front- and back-office redesign, 300+ live use cases</td><td>Multi-model (Claves)</td><td><span class="sw sw-1" data-color="#C8E1FB"></span>Announced · Oct 2025</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>JPMorgan</td><td><a href="https://www.forbes.com/sites/bernardmarr/2026/07/01/how-jpmorgan-chase-is-building-the-ai-powered-bank-of-the-future/" target="_blank">LLM Suite</a></td><td>Internal</td><td>Firm-wide GenAI portal, ~230-250k users, ~$2B annual AI spend</td><td>OpenAI, Anthropic, in-house</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · since July 2024</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>JPMorgan Private Bank</td><td><a href="https://finance.yahoo.com/news/jpmorgan-says-ai-helped-boost-170825108.html" target="_blank">Coach AI</a></td><td>Internal</td><td>Research retrieval and client-prep for ~4,000 PB advisors; research 95% faster; +20% gross sales 2023-24</td><td>In-house</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · live disclosed May 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>JPMorgan AWM</td><td><a href="https://fortune.com/2026/04/29/capcom-virgin-voyages-bet-on-ai-to-reshape-gaming-and-cruise-travel/" target="_blank">Connect Coach</a></td><td>Internal</td><td>Insight extraction for advisors and asset managers</td><td>In-house</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · cited Apr 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>JPMorgan</td><td><a href="https://www.roic.ai/news/jpmorgan-to-deploy-more-powerful-ai-agents-this-year-06-09-2026" target="_blank">Client-facing agents</a></td><td>Client-facing</td><td>Life-event detection and product recommendation agents</td><td>Multi-vendor</td><td><span class="sw sw-1" data-color="#C8E1FB"></span>Announced · intent only, June 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>BofA Merrill / Private Bank</td><td><a href="https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html" target="_blank">AI-Powered Meeting Journey</a></td><td>Internal</td><td>Plan-my-day, meeting prep, Zoom notetaker, follow-up tasks; up to 4 hrs saved per meeting; ~15,000 employees and the Salesforce/Zoom stack per <a href="https://www.americanbanker.com/news/bank-of-america-gives-merrill-lynch-an-ai-makeover" target="_blank">American Banker</a>, not the release</td><td>Salesforce FSC, Zoom; on Erica platform</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · live March 2026 after 1,500-advisor beta</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>BofA</td><td><a href="https://www.prnewswire.com/news-releases/ai-adoption-by-bofas-global-workforce-improves-productivity-client-service-302423333.html" target="_blank">ask MERRILL / ask Private Banking</a></td><td>Internal</td><td>Advisor information retrieval; 23M+ interactions in 2024</td><td>In-house (Erica)</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · live</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Citi Wealth</td><td><a href="https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience" target="_blank">Portfolio Intelligence</a></td><td>Client-facing</td><td>Personalized portfolio view with CIO insights; advisors push messages</td><td>Google Cloud, Palantir</td><td><span class="sw sw-3" data-color="#5B97D3"></span>Limited rollout · Apr 2026 (PB N. America); all Wealth clients by YE 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Citi Wealth</td><td><a href="https://www.citigroup.com/global/news/press-release/2026/citi-wealth-unveils-citi-sky-ai-powered-member-google-cloud-deepmind-technologies" target="_blank">Citi Sky</a></td><td>Client-facing</td><td>Voice and avatar agent: CD alerts, CIO insights, portfolio lookups; English and Spanish</td><td>Google Gemini, DeepMind</td><td><span class="sw sw-1" data-color="#C8E1FB"></span>Announced · Apr 2026; Citigold rollout from summer 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Citi Wealth</td><td><a href="https://www.citigroup.com/global/news/press-release/2026/citi-wealth-deploys-ai-powered-technology-to-enhance-client-experience" target="_blank">CitiScribe, AskWealth CIO, Client 360</a></td><td>Internal</td><td>Notetaker (all NA advisors Q1 2026), CIO research Q&amp;A (pilot), single-screen client view</td><td>In-house, Palantir</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live (CitiScribe, all NA advisors) / Pilot (AskWealth CIO) · Apr 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Citi Wealth</td><td><a href="https://www.citigroup.com/global/news/press-release/2025/citi-wealth-launches-advisor-insights-askwealth" target="_blank">Advisor Insights, AskWealth</a></td><td>Internal</td><td>Market and portfolio alert dashboard; GenAI over research and client portfolios</td><td>In-house</td><td><span class="sw sw-2" data-color="#97C2F0"></span>Pilot · Aug 2025, expanding</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Wells Fargo WIM</td><td><a href="https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx" target="_blank">AI Teammate</a></td><td>Internal</td><td>Chat in Advisor Gateway: policy and workflow search, guided next steps; all WIM channels incl. FiNet</td><td>In-house (Google Cloud enterprise stack, not named)</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · July 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Wells Fargo WIM</td><td><a href="https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-launches-Advisor-Gateway-for-financial-advisors/default.aspx" target="_blank">Advisor Gateway + Auto Commentary</a></td><td>Internal</td><td>New advisor desktop; AI narratives from risk analytics for client meetings</td><td>BlackRock Aladdin Wealth</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · May 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Goldman Sachs</td><td><a href="https://fortune.com/2025/06/24/goldman-sachs-internal-ai-assistant" target="_blank">GS AI Assistant</a></td><td>Internal</td><td>Firm-wide drafting and summarization assistant</td><td>OpenAI, Gemini via GS AI Platform</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · firm-wide June 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Goldman Sachs</td><td><a href="https://finance.yahoo.com/news/goldman-assembling-growing-arsenal-ai-164501078.html" target="_blank">Banker Copilot</a></td><td>Internal (IB)</td><td>Deal data, filings, S-1 drafting; "dozens" of users May 2025</td><td>In-house</td><td><span class="sw sw-2" data-color="#97C2F0"></span>Pilot · early stage; 2026 status not found</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Goldman Sachs</td><td><a href="https://www.investmentnews.com/wirehouses/bny-goldman-double-down-on-tech-with-digital-employees-and-ai-agents/265198" target="_blank">Claude agents</a></td><td>Internal (ops)</td><td>Trade accounting, KYC onboarding agents</td><td>Anthropic</td><td><span class="sw sw-1" data-color="#C8E1FB"></span>Announced · in development, Feb 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
       </tbody>
     </table>
     </div>
@@ -138,29 +67,31 @@
     <table>
       <thead><tr><th>Firm</th><th>Tool</th><th>Internal / client-facing</th><th>What it does</th><th>Partner</th><th>Maturity</th><th>Evidence</th></tr></thead>
       <tbody>
-        <tr><td>LPL Financial</td><td><a href="https://www.investmentnews.com/independent-broker-dealers/will-ai-replace-the-advisor-lpls-rich-steinmeier-adamant-as-firm-announces-2b-tech-push/267762" target="_blank">Cyan agent + Latitude platform</a></td><td>Internal; investor app roadmap</td><td>Conversational agent in ClientWorks: account maintenance, planning summaries, meeting materials; $2B over 3 yrs, 32,000+ advisors</td><td>Build</td><td>Announced · demoed Aug 2026; "launching later this year"</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>LPL Financial</td><td><a href="https://www.lpl.com/news-media/press-releases/lpl-financial-launches-curated-ai-solutions-for-advisors.html" target="_blank">AI Advisor Solutions</a></td><td>Internal</td><td>Curated vendor list: Jump, M365 Copilot, FMG, FactSet</td><td>Buy</td><td>Live · Nov 2024</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Raymond James</td><td><a href="https://www.raymondjames.com/news-and-media/press-releases/2026/01/27/raymond-james-launches-proprietary-digital-ai-agent-to-bolster-operational-excellence" target="_blank">Rai ops agent</a></td><td>Internal</td><td>GenAI over ops knowledge bases, evolving to task execution; 10,000+ associates on conversational AI; $1.1B tech budget</td><td>Build on AWS + Anthropic</td><td>Live · enterprise rollout Jan 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Raymond James</td><td><a href="https://www.wealthmanagement.com/ibd-news/raymond-james-announces-ai-driven-client360-platform-ai-advisor-academy" target="_blank">Client360</a></td><td>Internal</td><td>AI client insights in one view; Zoom summaries into CRM; AI Academy</td><td>Build</td><td>Live · May 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Ameriprise</td><td><a href="https://ir.ameriprise.com/news/news-details/2026/Ameriprise-Advances-AI-Innovation-Across-the-Advisor-and-Client-Experience-with-1B-Annual-Spend-on-Technology-and-AI-Capabilities/default.aspx" target="_blank">Meeting automation, book insights, Advisor Assistant</a></td><td>Internal; AI-drafted client letters</td><td>Prep, e-meeting summaries, drafted letters; 10-20 hrs/wk saved per advisor claimed; $1B annual tech spend</td><td>Build on data lake</td><td>Live · Advisor Assistant announced for later 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Edward Jones</td><td><a href="https://www.edwardjones.com/us-en/why-edward-jones/news-media/press-releases/edward-jones-ventures-invests-ai-driven-solutions-help-families-navigate-lifes-biggest-financial" target="_blank">Embedded AI + Ventures portfolio</a></td><td>Internal; client-facing via advisor pilots</td><td>Scheduling and prep automation; Alix (estate), Grantd (equity comp), Waterlily (LTC) piloted with 70%+ of advisors</td><td>Build + invest</td><td>Live (Embedded AI) / Pilot (Ventures portfolio) · 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Osaic</td><td><a href="https://www.investmentnews.com/independent-broker-dealers/osaics-ai-tools-have-had-the-fastest-ever-adoption-among-advisors-ceo-jamie-price/266375" target="_blank">Jump + Zocks, Scribe AI</a></td><td>Internal</td><td>Notes and CRM; ~30% take-up in under a year across ~11,000 advisors</td><td>Buy</td><td>Live · 2025-26</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Cetera</td><td><a href="https://www.businesswire.com/news/home/20260331025131/en/Cetera-Selects-Zocks-to-Offer-AI-Assistant-to-12000-Financial-Professionals" target="_blank">IntelligenceEngine + Zocks</a></td><td>Internal</td><td>Whitespace and held-away-asset detection, outreach triggers; ~12,000 professionals</td><td>Buy + build</td><td>Live · July 2025 / Mar 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Commonwealth (LPL)</td><td><a href="https://www.wealthmanagement.com/artificial-intelligence/commonwealth-makes-ai-notetaking-platform-zocks-available-to-its-advisors" target="_blank">Zocks</a></td><td>Internal</td><td>Advisor-paid, opt-in notetaker; 2,900 eligible</td><td>Buy</td><td>Live · May 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Focus Financial</td><td><a href="https://www.investmentnews.com/transformation/focus-financial-rolls-out-jump-ai-to-800-advisors-after-pilot/264959" target="_blank">Jump</a></td><td>Internal</td><td>800 advisors after 8-week pilot; 70% cut in prep/notes/follow-up time</td><td>Buy</td><td>Scaled adoption · live Jan 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Hightower</td><td><a href="https://www.investmentnews.com/fintech/zocks-jump-expand-advisor-reach-with-new-enterprise-integrations/266805" target="_blank">Zocks (exclusive)</a></td><td>Internal</td><td>Conversation capture to Salesforce and planning; ~650 advisors, $352B</td><td>Buy</td><td>Scaled adoption · live June 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Carson Group</td><td><a href="https://www.investmentnews.com/fintech/ai-wrap-carson-deploys-in-house-chatbot-tifin-launches-ai-agent-platform/260531" target="_blank">Steve chatbot + Zocks</a></td><td>Internal</td><td>Internal knowledge bot; Zocks at 97% weekly active, 8 hrs/advisor/wk (vendor-reported)</td><td>Build + buy</td><td>Scaled adoption · live 2025</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
-        <tr><td>Mercer Advisors</td><td><a href="https://www.wealthmanagement.com/artificial-intelligence/mercer-global-advisors-launches-ai-native-aspen-20" target="_blank">Aspen 2.0</a></td><td>Internal + client experience</td><td>AI-native OS on a knowledge graph; agents across planning, tax, estate; $110B AUM</td><td>Build with Avantos</td><td>Announced · July 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Dynasty</td><td><a href="https://www.01net.it/dynasty-financial-partners-builds-its-next-generation-ai-os-for-wealth-on-claude/" target="_blank">AI OS on Claude</a></td><td>Internal; client-ready outputs</td><td>Book-level chat ("who should I talk to today?"), Virtual Chief of Staff; 60 firms, $135B+</td><td>Build on Anthropic</td><td>Pilot · early release Sept 2026; Q4 2026 / Q1 2027</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Schwab Advisor Services</td><td><a href="https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors" target="_blank">Claude for Financial Advisors</a></td><td>Internal (RIAs)</td><td>Research, prep, planning, CRM updates with MCP connectors to Schwab Advisor Center; 16,000+ RIAs</td><td>Anthropic</td><td>Announced · Sept 15, 2026; ~$70–120 per user per month all-in (Anthropic's Peter Nolan, Sept 14; usage credit for licenses requested by Sept 30)</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Schwab Advisor Services</td><td><a href="https://finance.yahoo.com/technology/ai/articles/zeplyn-launches-first-agentic-account-130000932.html" target="_blank">Zeplyn agentic account opening</a></td><td>Internal</td><td>One-prompt account opening; NIGO down ~80% in pilots</td><td>Zeplyn</td><td>Live · Aug 2026</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
-        <tr><td>Fidelity Institutional</td><td><a href="https://newsroom.fidelity.com/pressreleases/fidelity-investments-launches-wealthscapesm-intelligence-and-introduces-new--fully-digital-onboardin/s/aaf9079d-0ecd-49b2-84f2-7e546a4fc693" target="_blank">Wealthscape Intelligence</a></td><td>Internal</td><td>Insights dashboard; Catchlight and Saifr for prospecting and compliance</td><td>Build</td><td>Live · Sept 2025</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Salesforce</td><td><a href="https://www.investmentnews.com/fintech/salesforce-launches-agentic-advisor-as-ai-notetakers-threaten-crm-dominance/267076" target="_blank">Agentic Advisor</a></td><td>Internal</td><td>Meeting Concierge, Run My Day; EP Wealth early adopter</td><td>Salesforce</td><td>Live · June 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Envestnet</td><td><a href="https://www.wealthmanagement.com/advisor-support-platforms/envestnet-amplify-zeplyn-roll-out-new-features" target="_blank">R3 2026: AI dashboard assistant + Tamarac AI Data Analyst Agent</a></td><td>Internal</td><td>Conversational assistant from any Insights view; natural-language account queries and legacy-report migration in Tamarac; dashboard opt-in for larger clients from mid-Sept; sponsor self-service due in R4</td><td>Build</td><td>Live · Sept 18, 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Zeplyn</td><td><a href="https://www.investmentnews.com/fintech/advisors-get-the-keys-advisorcrm-and-zeplyn-let-firms-build-their-own-ai-tools/268248" target="_blank">Agent Studio + MCP server</a></td><td>Internal</td><td>No-code studio: firms define agents in plain language and expose them plus 60+ wealth tools to Claude, ChatGPT, Copilot and Slack; role-based access, audit trails, PII redaction; AdvisorCRM Studio launched the same week to 50 firms</td><td>Zeplyn</td><td>Live · Sept 2026</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
+<tr><td>LPL Financial</td><td><a href="https://www.investmentnews.com/independent-broker-dealers/will-ai-replace-the-advisor-lpls-rich-steinmeier-adamant-as-firm-announces-2b-tech-push/267762" target="_blank">Cyan agent + Latitude platform</a></td><td>Internal; investor app roadmap</td><td>Conversational agent in ClientWorks: account maintenance, planning summaries, meeting materials; $2B over 3 yrs, 32,000+ advisors</td><td>Build</td><td><span class="sw sw-1" data-color="#C8E1FB"></span>Announced · demoed Aug 2026; "launching later this year"</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>LPL Financial</td><td><a href="https://www.lpl.com/news-media/press-releases/lpl-financial-launches-curated-ai-solutions-for-advisors.html" target="_blank">AI Advisor Solutions</a></td><td>Internal</td><td>Curated vendor list: Jump, M365 Copilot, FMG, FactSet</td><td>Buy</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Nov 2024</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Raymond James</td><td><a href="https://www.raymondjames.com/news-and-media/press-releases/2026/01/27/raymond-james-launches-proprietary-digital-ai-agent-to-bolster-operational-excellence" target="_blank">Rai ops agent</a></td><td>Internal</td><td>GenAI over ops knowledge bases, evolving to task execution; 10,000+ associates on conversational AI; $1.1B tech budget</td><td>Build on AWS + Anthropic</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · enterprise rollout Jan 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Raymond James</td><td><a href="https://www.wealthmanagement.com/ibd-news/raymond-james-announces-ai-driven-client360-platform-ai-advisor-academy" target="_blank">Client360</a></td><td>Internal</td><td>AI client insights in one view; Zoom summaries into CRM; AI Academy</td><td>Build</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · May 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Ameriprise</td><td><a href="https://ir.ameriprise.com/news/news-details/2026/Ameriprise-Advances-AI-Innovation-Across-the-Advisor-and-Client-Experience-with-1B-Annual-Spend-on-Technology-and-AI-Capabilities/default.aspx" target="_blank">Meeting automation, book insights, Advisor Assistant</a></td><td>Internal; AI-drafted client letters</td><td>Prep, e-meeting summaries, drafted letters; 10-20 hrs/wk saved per advisor claimed; $1B annual tech spend</td><td>Build on data lake</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Advisor Assistant announced for later 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Edward Jones</td><td><a href="https://www.edwardjones.com/us-en/why-edward-jones/news-media/press-releases/edward-jones-ventures-invests-ai-driven-solutions-help-families-navigate-lifes-biggest-financial" target="_blank">Embedded AI + Ventures portfolio</a></td><td>Internal; client-facing via advisor pilots</td><td>Scheduling and prep automation; Alix (estate), Grantd (equity comp), Waterlily (LTC) piloted with 70%+ of advisors</td><td>Build + invest</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live (Embedded AI) / Pilot (Ventures portfolio) · 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Osaic</td><td><a href="https://www.investmentnews.com/independent-broker-dealers/osaics-ai-tools-have-had-the-fastest-ever-adoption-among-advisors-ceo-jamie-price/266375" target="_blank">Jump + Zocks, Scribe AI</a></td><td>Internal</td><td>Notes and CRM; ~30% take-up in under a year across ~11,000 advisors</td><td>Buy</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · 2025-26</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Cetera</td><td><a href="https://www.businesswire.com/news/home/20260331025131/en/Cetera-Selects-Zocks-to-Offer-AI-Assistant-to-12000-Financial-Professionals" target="_blank">IntelligenceEngine + Zocks</a></td><td>Internal</td><td>Whitespace and held-away-asset detection, outreach triggers; ~12,000 professionals</td><td>Buy + build</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · July 2025 / Mar 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Commonwealth (LPL)</td><td><a href="https://www.wealthmanagement.com/artificial-intelligence/commonwealth-makes-ai-notetaking-platform-zocks-available-to-its-advisors" target="_blank">Zocks</a></td><td>Internal</td><td>Advisor-paid, opt-in notetaker; 2,900 eligible</td><td>Buy</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · May 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Focus Financial</td><td><a href="https://www.investmentnews.com/transformation/focus-financial-rolls-out-jump-ai-to-800-advisors-after-pilot/264959" target="_blank">Jump</a></td><td>Internal</td><td>800 advisors after 8-week pilot; 70% cut in prep/notes/follow-up time</td><td>Buy</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · live Jan 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Hightower</td><td><a href="https://www.investmentnews.com/fintech/zocks-jump-expand-advisor-reach-with-new-enterprise-integrations/266805" target="_blank">Zocks (exclusive)</a></td><td>Internal</td><td>Conversation capture to Salesforce and planning; ~650 advisors, $352B</td><td>Buy</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · live June 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Carson Group</td><td><a href="https://www.investmentnews.com/fintech/ai-wrap-carson-deploys-in-house-chatbot-tifin-launches-ai-agent-platform/260531" target="_blank">Steve chatbot + Zocks</a></td><td>Internal</td><td>Internal knowledge bot; Zocks at 97% weekly active, 8 hrs/advisor/wk (vendor-reported)</td><td>Build + buy</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · live 2025</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
+        <tr><td>Mercer Advisors</td><td><a href="https://www.wealthmanagement.com/artificial-intelligence/mercer-global-advisors-launches-ai-native-aspen-20" target="_blank">Aspen 2.0</a></td><td>Internal + client experience</td><td>AI-native OS on a knowledge graph; agents across planning, tax, estate; $110B AUM</td><td>Build with Avantos</td><td><span class="sw sw-1" data-color="#C8E1FB"></span>Announced · July 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Dynasty</td><td><a href="https://www.01net.it/dynasty-financial-partners-builds-its-next-generation-ai-os-for-wealth-on-claude/" target="_blank">AI OS on Claude</a></td><td>Internal; client-ready outputs</td><td>Book-level chat ("who should I talk to today?"), Virtual Chief of Staff; 60 firms, $135B+</td><td>Build on Anthropic</td><td><span class="sw sw-2" data-color="#97C2F0"></span>Pilot · early release Sept 2026; Q4 2026 / Q1 2027</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Schwab Advisor Services</td><td><a href="https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors" target="_blank">Claude for Financial Advisors</a></td><td>Internal (RIAs)</td><td>Research, prep, planning, CRM updates with MCP connectors to Schwab Advisor Center; 16,000+ RIAs</td><td>Anthropic</td><td><span class="sw sw-1" data-color="#C8E1FB"></span>Announced · Sept 15, 2026; ~$70–120 per user per month all-in (Anthropic's Peter Nolan, Sept 14; usage credit for licenses requested by Sept 30); Schwab connector tools planned for Q4 2026, timeline details due at IMPACT in October (<a href="https://www.financial-planning.com/news/claude-entered-the-chat-will-thousands-of-rias-reply" target="_blank">Financial Planning, Sept 21</a>)</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Schwab Advisor Services</td><td><a href="https://finance.yahoo.com/technology/ai/articles/zeplyn-launches-first-agentic-account-130000932.html" target="_blank">Zeplyn agentic account opening</a></td><td>Internal</td><td>One-prompt account opening; NIGO down ~80% in pilots</td><td>Zeplyn</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Aug 2026</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
+        <tr><td>Fidelity Institutional</td><td><a href="https://newsroom.fidelity.com/pressreleases/fidelity-investments-launches-wealthscapesm-intelligence-and-introduces-new--fully-digital-onboardin/s/aaf9079d-0ecd-49b2-84f2-7e546a4fc693" target="_blank">Wealthscape Intelligence</a></td><td>Internal</td><td>Insights dashboard; Catchlight and Saifr for prospecting and compliance</td><td>Build</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Sept 2025</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Salesforce</td><td><a href="https://www.investmentnews.com/fintech/salesforce-launches-agentic-advisor-as-ai-notetakers-threaten-crm-dominance/267076" target="_blank">Agentic Advisor</a></td><td>Internal</td><td>Meeting Concierge, Run My Day; EP Wealth early adopter</td><td>Salesforce</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · June 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Envestnet</td><td><a href="https://www.wealthmanagement.com/advisor-support-platforms/envestnet-amplify-zeplyn-roll-out-new-features" target="_blank">R3 2026: AI dashboard assistant + Tamarac AI Data Analyst Agent</a></td><td>Internal</td><td>Conversational assistant from any Insights view; natural-language account queries and legacy-report migration in Tamarac; dashboard opt-in for larger clients from mid-Sept; sponsor self-service due in R4</td><td>Build</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Sept 18, 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Zeplyn</td><td><a href="https://www.investmentnews.com/fintech/advisors-get-the-keys-advisorcrm-and-zeplyn-let-firms-build-their-own-ai-tools/268248" target="_blank">Agent Studio + MCP server</a></td><td>Internal</td><td>No-code studio: firms define agents in plain language and expose them plus 60+ wealth tools to Claude, ChatGPT, Copilot and Slack; role-based access, audit trails, PII redaction; AdvisorCRM Studio launched the same week to 50 firms</td><td>Zeplyn</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Sept 2026</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
         <tr><td>Stifel, Creative Planning, Fisher, Captrust, Corient, WEG, Mariner</td><td>None disclosed</td><td></td><td>No public AI deployment found in 2025-26 press; Stifel CEO: "advice is not an algorithm"</td><td></td><td>Not disclosed</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Jump</td><td><a href="https://www.businesswire.com/news/home/20260914989068/en/Jump-Introduces-AI-Assisted-Real-Time-Account-Opening-with-Schwab-Advisor-Services-and-Fidelity" target="_blank">Real-time account opening</a></td><td>Internal</td><td>Draws meeting audio, documents, forms and CRM data to complete, validate and e-sign an account application within one client meeting on Schwab Advisor Services and Fidelity (via Dispatch); NIGO pre-checks; ~10 minutes vs 2–3 hours (Jump estimate); independent firms self-enable, enterprises need home-office approval</td><td>Schwab Advisor Services; Fidelity; Dispatch; Docusign</td><td>Limited rollout · limited beta Sept 14, 2026</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
-        <tr><td>Salesforce</td><td><a href="https://newsroom.accenture.com/blogs/2026/accenture-launches-accenture-trusted-wealth-ops-powered-by-salesforce-and-claude-to-help-wealth-advisors-deepen-client-relationships" target="_blank">Accenture Trusted Wealth Ops</a></td><td>Internal</td><td>Packaged wealth-ops offering: Agentforce Financial Services and Data 360 as governed data and execution layer, Claude as reasoning layer, Accenture workflows and controls; background agents monitor portfolios and draft client communications for advisor approval; targets 24-hour onboarding, NIGO under 5%, up to 25% advisor productivity</td><td>Accenture; Anthropic</td><td>Announced · Sept 11, 2026</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
+        <tr><td>Jump</td><td><a href="https://www.businesswire.com/news/home/20260914989068/en/Jump-Introduces-AI-Assisted-Real-Time-Account-Opening-with-Schwab-Advisor-Services-and-Fidelity" target="_blank">Real-time account opening</a></td><td>Internal</td><td>Draws meeting audio, documents, forms and CRM data to complete, validate and e-sign an account application within one client meeting on Schwab Advisor Services and Fidelity (via Dispatch); NIGO pre-checks; ~10 minutes vs 2–3 hours (Jump estimate); independent firms self-enable, enterprises need home-office approval</td><td>Schwab Advisor Services; Fidelity; Dispatch; Docusign</td><td><span class="sw sw-3" data-color="#5B97D3"></span>Limited rollout · limited beta Sept 14, 2026</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
+        <tr><td>Salesforce</td><td><a href="https://newsroom.accenture.com/blogs/2026/accenture-launches-accenture-trusted-wealth-ops-powered-by-salesforce-and-claude-to-help-wealth-advisors-deepen-client-relationships" target="_blank">Accenture Trusted Wealth Ops</a></td><td>Internal</td><td>Packaged wealth-ops offering: Agentforce Financial Services and Data 360 as governed data and execution layer, Claude as reasoning layer, Accenture workflows and controls; background agents monitor portfolios and draft client communications for advisor approval; targets 24-hour onboarding, NIGO under 5%, up to 25% advisor productivity</td><td>Accenture; Anthropic</td><td><span class="sw sw-1" data-color="#C8E1FB"></span>Announced · Sept 11, 2026</td><td><span class="ev ev-v">V</span> vendor-reported</td></tr>
+<tr><td>LPL Financial</td><td><a href="https://www.financial-planning.com/news/claude-entered-the-chat-will-thousands-of-rias-reply" target="_blank">Direct Claude access (exploration)</a></td><td>Internal</td><td>Exploring enabling direct advisor use of Anthropic's Claude; the Cyan agent uses the same Anthropic MCP integrations with added compliance controls (CPTO Greg Gates)</td><td>Anthropic</td><td><span class="sw sw-1" data-color="#C8E1FB"></span>Announced · Sept 21, 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+
       </tbody>
     </table>
     </div>
@@ -170,38 +101,39 @@
     <table>
       <thead><tr><th>Company</th><th>Product</th><th>Facing</th><th>What it does</th><th>Segment</th><th>Maturity</th><th>Evidence</th></tr></thead>
       <tbody>
-        <tr><td>Robinhood</td><td><a href="https://robinhood.com/us/en/newsroom/robinhood-presents-yes-no-event" target="_blank">Cortex</a></td><td>Client</td><td>Conversational analysis tied to holdings, trades in conversation; 1M+ users; 4.8M Gold subscribers</td><td>Mass to mass-affluent</td><td>Scaled adoption · live Q1 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Robinhood</td><td><a href="https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/" target="_blank">Agentic Trading via MCP</a></td><td>Client (own agent)</td><td>Claude/ChatGPT trade equities in a segregated sub-account; ~100k accounts, &gt;$100M custody</td><td>Self-directed</td><td>Limited rollout · beta May 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Robinhood</td><td><a href="https://investors.robinhood.com/news-releases/news-release-details/robinhood-reports-second-quarter-2026-results" target="_blank">Strategies + Banking + concierge tax/estate</a></td><td>Client</td><td>Managed accounts (~$2B, 300k+), "private banking" with estate and tax pros, trusts, $695 Platinum card; Cortex for Advisors via TradePMR</td><td>Mass-affluent, HENRY</td><td>Live · 2025-26</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Public</td><td><a href="https://www.prnewswire.com/news-releases/public-becomes-the-first-brokerage-to-introduce-ai-agents-for-your-portfolio-302729050.html" target="_blank">AI Agents, Portfolio Builder, hosted MCP</a></td><td>Client</td><td>Prompt-defined strategies executed unattended; external agents trade stocks, options, crypto, bonds</td><td>Affluent self-directed</td><td>Live · Nov 2025 / Mar 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Wealthfront</td><td><a href="https://www.fool.com/earnings/call-transcripts/2026/09/10/wealthfront-wlth-q2-2027-earnings-call-transcript/" target="_blank">LLM assistant</a></td><td>Client</td><td>First client AI test (emergency-fund sizing); $100.9B platform assets, 1.5M clients</td><td>Mass-affluent</td><td>Pilot · Sept 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Betterment</td><td><a href="https://www.prnewswire.com/news-releases/betterment-launches-ai-enabled-account-recommender-advancing-enterprise-ai-strategy-302707654.html" target="_blank">AI Account Recommender</a></td><td>Client</td><td>Account-type recommendation with AI explanations; $65B+ AUM</td><td>Mass</td><td>Live · Mar 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>SoFi</td><td><a href="https://investors.sofi.com/news/news-details/2026/Introducing-SoFi-Coach-An-AI-Powered-Financial-Guide-to-Help-Members-Get-Their-Money-Right/default.aspx" target="_blank">SoFi Coach</a></td><td>Client</td><td>Chatbot over connected accounts; "not financial advice"; 14.7M members</td><td>Mass</td><td>Live · June 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Range</td><td><a href="https://www.investmentnews.com/ria-news/ria-startup-range-plans-to-eliminate-its-advisor-workforce-as-ai-takes-over/265586" target="_blank">Rai AI advisor</a></td><td>Client</td><td>Flat-fee ($3-10k/yr) AI planner over linked accounts; plan to eliminate human advisors in 1-3 yrs; ~$700M AUM, $60M Series C</td><td>Affluent, HENRY</td><td>Live · Oct 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Farther</td><td><a href="https://www.farther.com/post/farther-raises-150m-series-d-led-by-general-atlantic-to-scale-intelligent-wealth-management" target="_blank">Intelligent Wealth Management</a></td><td>Advisor; client insights</td><td>AI-native RIA stack recruiting wirehouse advisors; $23B recruited assets; $150M Series D, unicorn</td><td>HNW, UHNW</td><td>Live · May 2026 raise</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Savvy Wealth</td><td><a href="https://www.wealthmanagement.com/ria-news/savvy-wealth-raises-100m-valuation-hits-600m" target="_blank">Savvy Intelligence</a></td><td>Advisor</td><td>Agents on OpenAI and Anthropic for planning, tax, performance; $9B AUM, 150+ advisors; $100M Series C at $600M</td><td>HNW</td><td>Live · Sept 2026 raise</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Compound Planning</td><td><a href="https://finance.yahoo.com/technology/ai/articles/compound-planning-launches-compoundai-embedding-110000820.html" target="_blank">CompoundAI</a></td><td>Advisor; client app</td><td>Agents prep work over holdings, notes, transcripts for advisor approval; $5B+ AUM</td><td>HNW, UHNW founders</td><td>Live · July 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Altruist (Vanguard)</td><td><a href="https://www.investmentnews.com/transformation/altruists-hazel-builds-ai-agent-to-create-financial-plans-in-minutes/268020" target="_blank">Hazel</a></td><td>Advisor</td><td>Tax and financial-planning agents on deterministic calc engines; ~1,600 RIAs in first month; <a href="https://wealthtechtoday.com/2026/08/26/vanguard-altruist-acquisition-hazel/" target="_blank">Vanguard to acquire for ~$4B</a></td><td>HNW via RIAs</td><td>Live · deal Aug 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Arta Finance</td><td><a href="https://artafinance.com/insights/meet-arta-ai-private-wealth-guided-by-ai-agents" target="_blank">Arta AI</a></td><td>Client</td><td>Three agents (planner, product specialist, research) for accredited investors; AUM undisclosed</td><td>Affluent, accredited</td><td>Live · Apr 2025</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Origin, Mezzi, PortfolioPilot</td><td><a href="https://www.businesswire.com/news/home/20250909759834/en/Origin-Unveils-First-AI-Financial-Advisor-Regulated-by-the-SEC-Outsmarts-Every-Leading-AI-Model-on-the-CFP-Exam" target="_blank">SEC-registered AI advisors</a></td><td>Client</td><td>Subscription AI advice ($29-99/mo); Mezzi Concierge Sept 2026; scale thin</td><td>Mass-affluent</td><td>Live</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Schwab</td><td><a href="https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Launches-AI-Powered-Capability-That-Helps-Investors-Understand-Portfolio-Performance-and-Market-Activity/default.aspx" target="_blank">Portfolio Insights + Investor AI assistant</a></td><td>Client</td><td>AI performance and market-driver summaries; voice/chat with limited actions; "inform not advise"; no official MCP</td><td>Mass to HNW self-directed</td><td>Live (Portfolio Insights, May 2026) / Announced (Investor AI assistant, summer 2026)</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Fidelity</td><td><a href="https://www.fstech.co.uk/fst/Fidelity_Launches_Conversational_GenAI_Tool.php" target="_blank">Freya (UK)</a></td><td>Client</td><td>Conversational GenAI, halts near advice; no US retail equivalent or MCP found</td><td>Mass</td><td>Live · Sept 2025 (UK)</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Vanguard</td><td><a href="https://corporate.vanguard.com/content/corporatesite/us/en/corp/who-we-are/pressroom/press-release-vanguard-launches-expert-insights-equipping-advisors-with-ai-powered-portfolio-analysis-expertise-04092026.html" target="_blank">Expert Insights</a></td><td>Advisor</td><td>GenAI portfolio analysis for advisors</td><td>Advisor channel</td><td>Pilot · Apr 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>OpenAI</td><td><a href="https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" target="_blank">ChatGPT Finances</a></td><td>Consumer</td><td>Read-only portfolio and spending view via Plaid across Schwab, Fidelity, Chase, Robinhood</td><td>Pro, then Plus</td><td>Live · May 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>OpenAI</td><td><a href="https://openai.com/index/introducing-chatgpt-financial-services/" target="_blank">ChatGPT for Financial Services</a></td><td>Enterprise</td><td>Research and client materials with entitled data (S&amp;P, MSCI, Moody's); Morgan Stanley and Evercore design partners</td><td>Institutions</td><td>Live · Sept 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Anthropic</td><td><a href="https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors" target="_blank">Claude for Financial Advisors</a></td><td>Advisor</td><td>Onboarding, alt briefs, compliance, estate and tax, meeting notes; connectors to Schwab, BlackRock, Addepar, Envestnet, Orion, iCapital</td><td>RIAs to wirehouses</td><td>Live · Sept 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Perplexity</td><td><a href="https://www.perplexity.ai/hub/blog/plaid-integration-provides-full-view-of-personal-finances" target="_blank">Finance + Plaid</a></td><td>Consumer</td><td>Net-worth view and planners; read-only</td><td>Mass-affluent</td><td>Live · Apr 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
-        <tr><td>Morningstar</td><td><a href="https://www.wealthmanagement.com/artificial-intelligence/morningstar-launches-ai-assistant-for-direct-advisory-suite-platform" target="_blank">Direct Advisory Suite agents</a></td><td>Advisor</td><td>Research, proposals from statements, meeting briefs</td><td>Advisor</td><td>Pilot · beta Mar 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
-        <tr><td>Scalable Capital (EU)</td><td><a href="https://fortune.com/2026/08/26/scalable-capital-claude-chatgpt-traders-bank-invest/" target="_blank">Agentic Investing</a></td><td>Client (own agent)</td><td>First European bank with MCP trading via ChatGPT, Claude, Grok; every trade user-approved</td><td>Mass-affluent</td><td>Live · Aug 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+<tr><td>Robinhood</td><td><a href="https://robinhood.com/us/en/newsroom/robinhood-presents-yes-no-event" target="_blank">Cortex</a></td><td>Client</td><td>Conversational analysis tied to holdings, trades in conversation; 1M+ users; 4.8M Gold subscribers</td><td>Mass to mass-affluent</td><td><span class="sw sw-5" data-color="#00447A"></span>Scaled adoption · live Q1 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Robinhood</td><td><a href="https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/" target="_blank">Agentic Trading via MCP</a></td><td>Client (own agent)</td><td>Claude/ChatGPT trade equities in a segregated sub-account; ~100k accounts, &gt;$100M custody</td><td>Self-directed</td><td><span class="sw sw-3" data-color="#5B97D3"></span>Limited rollout · beta May 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Robinhood</td><td><a href="https://investors.robinhood.com/news-releases/news-release-details/robinhood-reports-second-quarter-2026-results" target="_blank">Strategies + Banking + concierge tax/estate</a></td><td>Client</td><td>Managed accounts (~$2B, 300k+), "private banking" with estate and tax pros, trusts, $695 Platinum card; Cortex for Advisors via TradePMR</td><td>Mass-affluent, HENRY</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · 2025-26</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Public</td><td><a href="https://www.prnewswire.com/news-releases/public-becomes-the-first-brokerage-to-introduce-ai-agents-for-your-portfolio-302729050.html" target="_blank">AI Agents, Portfolio Builder, hosted MCP</a></td><td>Client</td><td>Prompt-defined strategies executed unattended; external agents trade stocks, options, crypto, bonds</td><td>Affluent self-directed</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Nov 2025 / Mar 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Wealthfront</td><td><a href="https://www.fool.com/earnings/call-transcripts/2026/09/10/wealthfront-wlth-q2-2027-earnings-call-transcript/" target="_blank">LLM assistant</a></td><td>Client</td><td>First client AI test (emergency-fund sizing); $100.9B platform assets, 1.5M clients</td><td>Mass-affluent</td><td><span class="sw sw-2" data-color="#97C2F0"></span>Pilot · Sept 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Betterment</td><td><a href="https://www.prnewswire.com/news-releases/betterment-launches-ai-enabled-account-recommender-advancing-enterprise-ai-strategy-302707654.html" target="_blank">AI Account Recommender</a></td><td>Client</td><td>Account-type recommendation with AI explanations; $65B+ AUM</td><td>Mass</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Mar 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>SoFi</td><td><a href="https://investors.sofi.com/news/news-details/2026/Introducing-SoFi-Coach-An-AI-Powered-Financial-Guide-to-Help-Members-Get-Their-Money-Right/default.aspx" target="_blank">SoFi Coach</a></td><td>Client</td><td>Chatbot over connected accounts; "not financial advice"; 14.7M members</td><td>Mass</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · June 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Range</td><td><a href="https://www.investmentnews.com/ria-news/ria-startup-range-plans-to-eliminate-its-advisor-workforce-as-ai-takes-over/265586" target="_blank">Rai AI advisor</a></td><td>Client</td><td>Flat-fee ($3-10k/yr) AI planner over linked accounts; plan to eliminate human advisors in 1-3 yrs; ~$700M AUM, $60M Series C</td><td>Affluent, HENRY</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Oct 2025</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Farther</td><td><a href="https://www.farther.com/post/farther-raises-150m-series-d-led-by-general-atlantic-to-scale-intelligent-wealth-management" target="_blank">Intelligent Wealth Management</a></td><td>Advisor; client insights</td><td>AI-native RIA stack recruiting wirehouse advisors; $23B recruited assets; $150M Series D, unicorn</td><td>HNW, UHNW</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · May 2026 raise</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Savvy Wealth</td><td><a href="https://www.wealthmanagement.com/ria-news/savvy-wealth-raises-100m-valuation-hits-600m" target="_blank">Savvy Intelligence</a></td><td>Advisor</td><td>Agents on OpenAI and Anthropic for planning, tax, performance; $9B AUM, 150+ advisors; $100M Series C at $600M</td><td>HNW</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Sept 2026 raise</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Compound Planning</td><td><a href="https://finance.yahoo.com/technology/ai/articles/compound-planning-launches-compoundai-embedding-110000820.html" target="_blank">CompoundAI</a></td><td>Advisor; client app</td><td>Agents prep work over holdings, notes, transcripts for advisor approval; $5B+ AUM</td><td>HNW, UHNW founders</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · July 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Altruist (Vanguard)</td><td><a href="https://www.investmentnews.com/transformation/altruists-hazel-builds-ai-agent-to-create-financial-plans-in-minutes/268020" target="_blank">Hazel</a></td><td>Advisor</td><td>Tax and financial-planning agents on deterministic calc engines; ~1,600 RIAs in first month; <a href="https://wealthtechtoday.com/2026/08/26/vanguard-altruist-acquisition-hazel/" target="_blank">Vanguard to acquire for ~$4B</a></td><td>HNW via RIAs</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · deal Aug 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Arta Finance</td><td><a href="https://artafinance.com/insights/meet-arta-ai-private-wealth-guided-by-ai-agents" target="_blank">Arta AI</a></td><td>Client</td><td>Three agents (planner, product specialist, research) for accredited investors; AUM undisclosed</td><td>Affluent, accredited</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Apr 2025</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Origin, Mezzi, PortfolioPilot</td><td><a href="https://www.businesswire.com/news/home/20250909759834/en/Origin-Unveils-First-AI-Financial-Advisor-Regulated-by-the-SEC-Outsmarts-Every-Leading-AI-Model-on-the-CFP-Exam" target="_blank">SEC-registered AI advisors</a></td><td>Client</td><td>Subscription AI advice ($29-99/mo); Mezzi Concierge Sept 2026; scale thin</td><td>Mass-affluent</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Schwab</td><td><a href="https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Launches-AI-Powered-Capability-That-Helps-Investors-Understand-Portfolio-Performance-and-Market-Activity/default.aspx" target="_blank">Portfolio Insights + Investor AI assistant</a></td><td>Client</td><td>AI performance and market-driver summaries; voice/chat with limited actions; "inform not advise"; no official MCP</td><td>Mass to HNW self-directed</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live (Portfolio Insights, May 2026) / Announced (Investor AI assistant, summer 2026)</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Fidelity</td><td><a href="https://www.fstech.co.uk/fst/Fidelity_Launches_Conversational_GenAI_Tool.php" target="_blank">Freya (UK)</a></td><td>Client</td><td>Conversational GenAI, halts near advice; no US retail equivalent or MCP found</td><td>Mass</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Sept 2025 (UK)</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Vanguard</td><td><a href="https://corporate.vanguard.com/content/corporatesite/us/en/corp/who-we-are/pressroom/press-release-vanguard-launches-expert-insights-equipping-advisors-with-ai-powered-portfolio-analysis-expertise-04092026.html" target="_blank">Expert Insights</a></td><td>Advisor</td><td>GenAI portfolio analysis for advisors</td><td>Advisor channel</td><td><span class="sw sw-2" data-color="#97C2F0"></span>Pilot · Apr 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>OpenAI</td><td><a href="https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" target="_blank">ChatGPT Finances</a></td><td>Consumer</td><td>Read-only portfolio and spending view via Plaid across Schwab, Fidelity, Chase, Robinhood</td><td>Pro, then Plus</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · May 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>OpenAI</td><td><a href="https://openai.com/index/introducing-chatgpt-financial-services/" target="_blank">ChatGPT for Financial Services</a></td><td>Enterprise</td><td>Research and client materials with entitled data (S&amp;P, MSCI, Moody's); Morgan Stanley and Evercore design partners</td><td>Institutions</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Sept 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Anthropic</td><td><a href="https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors" target="_blank">Claude for Financial Advisors</a></td><td>Advisor</td><td>Onboarding, alt briefs, compliance, estate and tax, meeting notes; connectors to Schwab, BlackRock, Addepar, Envestnet, Orion, iCapital</td><td>RIAs to wirehouses</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Sept 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Perplexity</td><td><a href="https://www.perplexity.ai/hub/blog/plaid-integration-provides-full-view-of-personal-finances" target="_blank">Finance + Plaid</a></td><td>Consumer</td><td>Net-worth view and planners; read-only</td><td>Mass-affluent</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Apr 2026</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+        <tr><td>Morningstar</td><td><a href="https://www.wealthmanagement.com/artificial-intelligence/morningstar-launches-ai-assistant-for-direct-advisory-suite-platform" target="_blank">Direct Advisory Suite agents</a></td><td>Advisor</td><td>Research, proposals from statements, meeting briefs</td><td>Advisor</td><td><span class="sw sw-2" data-color="#97C2F0"></span>Pilot · beta Mar 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+        <tr><td>Scalable Capital (EU)</td><td><a href="https://fortune.com/2026/08/26/scalable-capital-claude-chatgpt-traders-bank-invest/" target="_blank">Agentic Investing</a></td><td>Client (own agent)</td><td>First European bank with MCP trading via ChatGPT, Claude, Grok; every trade user-approved</td><td>Mass-affluent</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Aug 2026</td><td><span class="ev ev-d">D</span> directional</td></tr>
+<tr><td>Evergreen Wealth (Bill Harris)</td><td><a href="https://www.businesswire.com/news/home/20260921725824/en/Fintech-Pioneer-Bill-Harris-Launches-AI-Powered-Financial-Advice-App-Evergreen.ai" target="_blank">Evergreen.ai</a></td><td>Client</td><td>Free AI advice app (planning, retirement, tax, equity comp, home ownership) over Plaid-linked accounts; LLM front end on deterministic calc engines; RIA and fiduciary; beta free through Jan 1, 2028; ~$112M firm assets; seven patents pending</td><td>Mass-affluent</td><td><span class="sw sw-4" data-color="#1F6CB0"></span>Live · Sept 21, 2026 (beta)</td><td><span class="ev ev-c">C</span> company-reported</td></tr>
+
       </tbody>
     </table>
     </div>
   </div>
 
-
   <div class="footer">
     <div class="divider"></div>
-    Mirrors the <a href="https://claude.ai/code/artifact/f5338748-fa97-4add-a60d-d782d678c2a4" target="_blank">living Claude doc</a> (Tool detail tab) as of September 21, 2026 · <a href="peer-ai-landscape.html">Landscape page</a> · <a href="index.html">AI Daily Digest home</a>
+    Mirrors the <a href="https://claude.ai/code/artifact/f5338748-fa97-4add-a60d-d782d678c2a4" target="_blank">living Claude doc</a> (Tool detail tab) as of September 22, 2026 · <a href="peer-ai-landscape.html">Landscape page</a> · <a href="index.html">AI Daily Digest home</a>
   </div>
 
 </div>
@@ -209,21 +141,20 @@
 <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@4.0.1/dist/pptxgen.bundle.js"></script>
 <script>
 /* Peer AI Landscape — table-to-PowerPoint export.
-   Works in the browser (window.PptxGenJS from CDN) and in Node (for testing).
-   extractTables(doc) reads the page's tables; buildPeerDeck(PptxGenJS, tables, opts) builds the deck. */
+   extractTables(doc, which) reads full-text tables from the page; buildPeerDeck(PptxGenJS, tables, opts) builds the deck.
+   Maturity swatches: a <span class="sw" data-color="RRGGBB"> inside a cell becomes a colored square run. */
 (function (root) {
   'use strict';
+  var INK = '1C1B1A', INK2 = '5F5B55', CAP = '7A756D', LINK = '1F5FA8', FILL = 'F4F1EB', LINE = 'E6E2DA';
+  var RAMP = [['Announced','C8E1FB'],['Pilot','97C2F0'],['Limited rollout','5B97D3'],['Live','1F6CB0'],['Scaled adoption','00447A']];
+  var EVID = [['P','Primary-verified'],['C','Company-reported'],['V','Vendor-reported'],['D','Directional']];
 
-  var NAVY = '0F1B3D', NAVY2 = '1A2F6B', BLUE = '3366CC', GREY = '3A3A4A', LIGHT = 'F0F4FA', LINE = 'D0D7E3', MUTED = '5A6A8A';
-
-  // One table -> {title, header:[string], rows:[[cell]]}; cell = {runs:[{text, url?}]}
   function extractTables(doc, which) {
     var out = [];
-    var sel = which === 'detail' ? '#tool-detail + .card .table-wrap table' : '.table-wrap.matrix table';
+    var sel = which === 'detail' ? '#tool-detail + .card .table-wrap table' : '.export-src table';
     var tables = doc.querySelectorAll(sel);
     for (var i = 0; i < tables.length; i++) {
       var t = tables[i];
-      // title: nearest preceding h4.sub, else section title
       var title = '';
       var node = t.parentNode;
       while (node && !title) {
@@ -232,6 +163,7 @@
           if (p.matches && (p.matches('h4.sub') || p.matches('.section-title'))) { title = p.textContent.trim(); break; }
           p = p.previousElementSibling;
         }
+        if (!title && node.querySelector && node.querySelector('h4.sub')) title = node.querySelector('h4.sub').textContent.trim();
         node = node.parentNode;
       }
       var header = [];
@@ -244,11 +176,10 @@
         for (var c = 0; c < tds.length; c++) row.push({ runs: runsOf(tds[c]) });
         rows.push(row);
       }
-      out.push({ title: title, header: header, rows: rows });
+      out.push({ title: title.replace(/\s*matrix.*$/, ''), header: header, rows: rows });
     }
     return out;
   }
-
   function runsOf(el) {
     var runs = [];
     for (var i = 0; i < el.childNodes.length; i++) {
@@ -256,17 +187,16 @@
       if (n.nodeType === 3) { if (n.textContent) runs.push({ text: n.textContent }); }
       else if (n.nodeType === 1) {
         if (n.tagName === 'A') runs.push({ text: n.textContent, url: n.getAttribute('href') });
+        else if (n.classList && n.classList.contains('sw')) runs.push({ text: '■ ', color: n.getAttribute('data-color') || swColor(n) });
+        else if (n.classList && n.classList.contains('ev')) runs.push({ text: '[' + n.textContent.trim() + ']' });
         else runs = runs.concat(runsOf(n));
       }
     }
-    // collapse whitespace
-    return runs.map(function (r) { return { text: r.text.replace(/\s+/g, ' '), url: r.url }; })
+    return runs.map(function (r) { return { text: r.text.replace(/\s+/g, ' '), url: r.url, color: r.color }; })
                .filter(function (r) { return r.text.length; });
   }
-
+  function swColor(n) { var m = (n.className || '').match(/sw-(\d)/); return m ? RAMP[+m[1] - 1][1] : INK2; }
   function cellText(cell) { return cell.runs.map(function (r) { return r.text; }).join(''); }
-
-  // Estimate a row's height in inches for a given font size and column widths.
   function rowHeight(row, colW, fs) {
     var lineH = fs * 1.2 / 72, maxLines = 1;
     for (var i = 0; i < row.length; i++) {
@@ -280,32 +210,33 @@
     }
     return maxLines * lineH + 0.09;
   }
-
+  function addLegend(pptx, slide, x, y) {
+    var runs = [{ text: 'MATURITY  ', options: { bold: true, color: CAP, fontSize: 7, charSpacing: 1 } }];
+    RAMP.forEach(function (r) { runs.push({ text: '■ ', options: { color: r[1], fontSize: 9 } }); runs.push({ text: r[0] + '   ', options: { color: INK, fontSize: 8 } }); });
+    runs.push({ text: '   EVIDENCE  ', options: { bold: true, color: CAP, fontSize: 7, charSpacing: 1 } });
+    EVID.forEach(function (e) { runs.push({ text: '[' + e[0] + '] ', options: { bold: true, color: INK, fontSize: 8 } }); runs.push({ text: e[1] + '   ', options: { color: INK, fontSize: 8 } }); });
+    slide.addText(runs, { x: x, y: y, w: 12.7, h: 0.3, fontFace: 'Calibri', valign: 'middle', fill: { color: 'FFFFFF' }, line: { color: LINE, pt: 0.75 }, margin: 0.06 });
+  }
   function buildPeerDeck(PptxGenJS, tables, opts) {
     opts = opts || {};
     var pptx = new PptxGenJS();
-    pptx.layout = 'LAYOUT_WIDE'; // 13.333 x 7.5 in
+    pptx.layout = 'LAYOUT_WIDE';
     pptx.title = 'Peer AI Landscape in Wealth Management';
     pptx.author = opts.author || 'Naveen Nallappa';
     var asOf = opts.asOf || '';
-    var W = 13.333, M = 0.3, TOP = 0.95, BOTTOM = 0.4, tableW = W - 2 * M;
-
-    // Title slide
+    var W = 13.333, M = 0.3, TOP = 1.3, BOTTOM = 0.4, tableW = W - 2 * M;
     var s0 = pptx.addSlide();
-    s0.background = { color: NAVY };
-    s0.addText('PEER AI LANDSCAPE', { x: 0.8, y: 2.2, w: 11, h: 0.4, fontFace: 'Calibri', fontSize: 12, bold: true, color: '7EA8FF', charSpacing: 3 });
-    s0.addText(opts.title || 'Peer AI Landscape in Wealth Management', { x: 0.8, y: 2.6, w: 11.5, h: 1.0, fontFace: 'Calibri', fontSize: 34, bold: true, color: 'FFFFFF' });
-    s0.addText(opts.subtitle || 'Peers across, capabilities down — one table per slide', { x: 0.8, y: 3.6, w: 11.5, h: 0.5, fontFace: 'Calibri', fontSize: 16, color: 'A4BFED' });
-    if (asOf) s0.addText('As of ' + asOf, { x: 0.8, y: 4.2, w: 11.5, h: 0.4, fontFace: 'Calibri', fontSize: 12, color: 'A4BFED' });
-    if (opts.sourceUrl) s0.addText(opts.sourceUrl, { x: 0.8, y: 6.6, w: 11.5, h: 0.4, fontFace: 'Calibri', fontSize: 10, color: '7EA8FF', hyperlink: { url: opts.sourceUrl } });
-
+    s0.background = { color: INK };
+    s0.addText('PEER AI LANDSCAPE', { x: 0.8, y: 2.2, w: 11, h: 0.4, fontFace: 'Calibri', fontSize: 12, bold: true, color: 'BFBAB2', charSpacing: 3 });
+    s0.addText(opts.title || 'Peer AI Landscape in Wealth Management', { x: 0.8, y: 2.6, w: 11.5, h: 1.0, fontFace: 'Georgia', fontSize: 34, bold: true, color: 'FFFFFF' });
+    s0.addText(opts.subtitle || 'Peers across, capabilities down — one table per slide', { x: 0.8, y: 3.6, w: 11.5, h: 0.5, fontFace: 'Calibri', fontSize: 16, color: 'D9D5CD' });
+    if (asOf) s0.addText('As of ' + asOf, { x: 0.8, y: 4.2, w: 11.5, h: 0.4, fontFace: 'Calibri', fontSize: 12, color: 'D9D5CD' });
+    if (opts.sourceUrl) s0.addText(opts.sourceUrl, { x: 0.8, y: 6.6, w: 11.5, h: 0.4, fontFace: 'Calibri', fontSize: 10, color: 'BFBAB2', hyperlink: { url: opts.sourceUrl } });
     tables.forEach(function (t) {
-      var ncol = t.header.length;
-      if (!ncol) return;
+      var ncol = t.header.length; if (!ncol) return;
       var firstW = ncol > 6 ? 1.25 : 1.6;
       var colW = [firstW];
       for (var i = 1; i < ncol; i++) colW.push((tableW - firstW) / (ncol - 1));
-      // pick the largest font size (10 -> 6pt) at which the table fits on one slide; else 6pt and paginate
       var avail = 7.5 - TOP - BOTTOM, fs = 6, headH;
       var hdr = t.header.map(function (h) { return { runs: [{ text: h }] }; });
       for (var cand = 10; cand >= 6; cand -= 0.5) {
@@ -314,8 +245,6 @@
         if (tot <= avail) { fs = cand; break; }
       }
       headH = rowHeight(hdr, colW, fs) + 0.05;
-
-      // paginate rows
       var pages = [], cur = [], used = headH;
       t.rows.forEach(function (row) {
         var rh = rowHeight(row, colW, fs);
@@ -323,55 +252,45 @@
         cur.push(row); used += rh;
       });
       if (cur.length) pages.push(cur);
-
       pages.forEach(function (rows, pi) {
         var slide = pptx.addSlide();
         slide.background = { color: 'FFFFFF' };
-        slide.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: W, h: 0.78, fill: { color: NAVY }, line: { color: NAVY } });
+        slide.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: W, h: 0.78, fill: { color: INK }, line: { color: INK } });
         var title = t.title + (pages.length > 1 ? '  (' + (pi + 1) + ' of ' + pages.length + ')' : '');
-        slide.addText(title, { x: M, y: 0.14, w: 9.8, h: 0.5, fontFace: 'Calibri', fontSize: 18, bold: true, color: 'FFFFFF' });
-        if (asOf) slide.addText('As of ' + asOf, { x: 9.9, y: 0.22, w: 3.0, h: 0.35, fontFace: 'Calibri', fontSize: 10, color: 'A4BFED', align: 'right' });
-
-        var data = [t.header.map(function (h, ci) {
-          return { text: h, options: { bold: true, color: 'FFFFFF', fill: { color: NAVY2 }, fontSize: fs, valign: 'middle' } };
+        slide.addText(title, { x: M, y: 0.14, w: 9.8, h: 0.5, fontFace: 'Georgia', fontSize: 18, bold: true, color: 'FFFFFF' });
+        if (asOf) slide.addText('As of ' + asOf, { x: 9.9, y: 0.22, w: 3.0, h: 0.35, fontFace: 'Calibri', fontSize: 10, color: 'D9D5CD', align: 'right' });
+        addLegend(pptx, slide, M, 0.88);
+        var data = [t.header.map(function (h) {
+          return { text: h, options: { bold: true, color: INK, fill: { color: 'FFFFFF' }, fontSize: fs, valign: 'middle', border: [{ type: 'none' }, { type: 'none' }, { type: 'solid', pt: 1.5, color: INK }, { type: 'none' }] } };
         })];
         rows.forEach(function (row) {
           data.push(row.map(function (cell, ci) {
             var runs = cell.runs.map(function (r) {
-              var o = { fontSize: fs, color: ci === 0 ? NAVY : GREY, bold: ci === 0 };
-              if (r.url) { o.hyperlink = { url: r.url }; o.color = BLUE; }
+              var o = { fontSize: fs, color: ci === 0 ? INK : INK2, bold: ci === 0 };
+              if (r.url) { o.hyperlink = { url: r.url }; o.color = LINK; }
+              if (r.color) { o.color = r.color; o.bold = true; }
               return { text: r.text, options: o };
             });
             if (!runs.length) runs = [{ text: '', options: { fontSize: fs } }];
-            return { text: runs, options: { valign: 'top', fill: ci === 0 ? { color: LIGHT } : { color: 'FFFFFF' } } };
+            return { text: runs, options: { valign: 'top', fill: ci === 0 ? { color: FILL } : { color: 'FFFFFF' } } };
           }));
         });
-        slide.addTable(data, {
-          x: M, y: TOP, w: tableW, colW: colW,
-          fontFace: 'Calibri', fontSize: fs, margin: 0.04,
-          border: { type: 'solid', pt: 0.5, color: LINE }, autoPage: false
-        });
-        slide.addText((opts.footer || 'AI Daily Digest — Peer AI Landscape') + (opts.sourceUrl ? '  ·  ' + opts.sourceUrl : ''),
-          { x: M, y: 7.12, w: tableW, h: 0.3, fontFace: 'Calibri', fontSize: 8, color: MUTED, align: 'center' });
+        slide.addTable(data, { x: M, y: TOP, w: tableW, colW: colW, fontFace: 'Calibri', fontSize: fs, margin: 0.04, border: { type: 'solid', pt: 0.5, color: LINE }, autoPage: false });
+        slide.addText((opts.footer || 'AI Daily Digest — Peer AI Landscape') + (opts.sourceUrl ? '  ·  ' + opts.sourceUrl : ''), { x: M, y: 7.12, w: tableW, h: 0.3, fontFace: 'Calibri', fontSize: 8, color: CAP, align: 'center' });
       });
     });
     return pptx;
   }
-
   var api = { extractTables: extractTables, buildPeerDeck: buildPeerDeck };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   root.PeerDeck = api;
 })(typeof window !== 'undefined' ? window : globalThis);
-
 </script>
+
 <script>
 (function () {
   var PAGE = 'https://naveen-nallappa.github.io/ai-daily-digest/peer-ai-tool-detail.html';
-  function asOf() {
-    var d = document.querySelector('.header .date');
-    var m = d && d.textContent.match(/As of\s+(.+?)(\s+·|$)/);
-    return m ? m[1].trim() : '';
-  }
+  function asOf() { var d = document.querySelector('.header .date'); var m = d && d.textContent.match(/As of\s+(.+?)(\s+·|$)/); return m ? m[1].trim() : ''; }
   function toast(html, ms) {
     var t = document.getElementById('dl-toast');
     if (!t) { t = document.createElement('div'); t.id = 'dl-toast'; document.body.appendChild(t); }
@@ -388,29 +307,24 @@
     setTimeout(function () { URL.revokeObjectURL(url); }, 120000);
     return url;
   }
-  function wire(id, which, fileName, subtitle) {
-    var btn = document.getElementById(id);
-    if (!btn) return;
-    btn.addEventListener('click', function (ev) {
-      ev.preventDefault();
-      if (typeof PptxGenJS === 'undefined') { toast('The PowerPoint library did not load (offline or blocked). Reload the page and try again.', 8000); return; }
-      btn.classList.add('busy');
-      toast('Building the deck\u2026');
-      var name = fileName + '-' + new Date().toISOString().slice(0, 10) + '.pptx';
-      try {
-        var tables = PeerDeck.extractTables(document, which);
-        var pptx = PeerDeck.buildPeerDeck(PptxGenJS, tables, { asOf: asOf(), sourceUrl: PAGE, subtitle: subtitle });
-        pptx.write({ outputType: 'blob' }).then(function (blob) {
-          btn.classList.remove('busy');
-          var url = saveBlob(blob, name);
-          var kb = Math.round(blob.size / 1024);
-          toast('Download started: <strong>' + name + '</strong> (' + kb + ' KB, ' + (pptx.slides ? pptx.slides.length : '') + ' slides).' +
-                (url ? ' Nothing appeared? <a href="' + url + '" download="' + name + '">Click here to save it</a>. If this page is open inside the Claude app, open it in Chrome or Safari to download.' : ''), 60000);
-        }).catch(function (e) { btn.classList.remove('busy'); toast('Export failed: ' + e, 10000); });
-      } catch (e) { btn.classList.remove('busy'); toast('Export failed: ' + e, 10000); }
-    });
-  }
-  wire('dl-detail', 'detail', 'Peer-AI-Landscape-tool-detail', 'Row-per-tool detail \u2014 one bucket per slide');
+  var btn = document.getElementById('dl-detail');
+  if (!btn) return;
+  btn.addEventListener('click', function (ev) {
+    ev.preventDefault();
+    if (typeof PptxGenJS === 'undefined') { toast('The PowerPoint library did not load (offline or blocked). Reload the page and try again.', 8000); return; }
+    btn.classList.add('busy'); toast('Building the deck\u2026');
+    var name = 'Peer-AI-Landscape-tool-detail-' + new Date().toISOString().slice(0, 10) + '.pptx';
+    try {
+      var tables = PeerDeck.extractTables(document, 'detail');
+      var pptx = PeerDeck.buildPeerDeck(PptxGenJS, tables, { asOf: asOf(), sourceUrl: PAGE, subtitle: 'Row-per-tool detail \u2014 one bucket per slide' });
+      pptx.write({ outputType: 'blob' }).then(function (blob) {
+        btn.classList.remove('busy');
+        var url = saveBlob(blob, name);
+        var kb = Math.round(blob.size / 1024);
+        toast('Download started: <strong>' + name + '</strong> (' + kb + ' KB, ' + (pptx.slides ? pptx.slides.length : '') + ' slides).' + (url ? ' Nothing appeared? <a href="' + url + '" download="' + name + '">Click here to save it</a>. If this page is open inside the Claude app, open it in Chrome or Safari to download.' : ''), 60000);
+      }).catch(function (e) { btn.classList.remove('busy'); toast('Export failed: ' + e, 10000); });
+    } catch (e) { btn.classList.remove('busy'); toast('Export failed: ' + e, 10000); }
+  });
 })();
 </script>
 </body>
