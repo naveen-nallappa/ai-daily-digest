@@ -12,6 +12,10 @@ import json, html, re, os, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 D = json.load(open(os.path.join(HERE, 'peer-data.json')))
+# Cache-buster for the shared stylesheet: GitHub Pages caches styles.css for 10 minutes, so a
+# style change would otherwise render stale on a page that was just regenerated.
+import hashlib
+CSS_VERSION = hashlib.sha1(open(os.path.join(HERE, 'styles.css'), 'rb').read()).hexdigest()[:8]
 DOC = D['meta']['doc_url']
 AS_OF_ISO = D['meta']['as_of']
 AS_OF = datetime.date.fromisoformat(AS_OF_ISO).strftime('%A, %B %-d, %Y')
@@ -34,7 +38,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v={cssv}">
 </head>
 <body>
 <div class="container wide">
@@ -547,7 +551,7 @@ def wiring(page_url, which, btn, fname, subtitle):
 
 def landscape():
     P = D['prose']
-    out = [HEAD.format(title='Peer AI Landscape in Wealth Management — AI Daily Digest')]
+    out = [HEAD.format(title='Peer AI Landscape in Wealth Management — AI Daily Digest', cssv=CSS_VERSION)]
     out.append(f'''
   <div class="header">
     <div class="header-label">Living Reference</div>
@@ -602,7 +606,7 @@ def landscape():
     return ''.join(out)
 
 def detail():
-    out = [HEAD.format(title='Peer AI Landscape — Tool Detail — AI Daily Digest')]
+    out = [HEAD.format(title='Peer AI Landscape — Tool Detail — AI Daily Digest', cssv=CSS_VERSION)]
     out.append(f'''
   <div class="header">
     <div class="header-label">Living Reference &middot; Detail</div>
