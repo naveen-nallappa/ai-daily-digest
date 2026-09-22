@@ -44,7 +44,7 @@ h3 { font-family: var(--sans); font-weight: 600; color: var(--ink); }
 
 /* Layout */
 .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
-.container.wide { max-width: 960px; }
+.container.wide { max-width: 1120px; }
 
 /* Hero / banner */
 .header { background: var(--ink); border-radius: 16px; padding: 40px 36px; margin-bottom: 32px; color: #fff; }
