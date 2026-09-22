@@ -8,7 +8,7 @@
   --fill: #F4F1EB;
   --ink: #1C1B1A;
   --ink-2: #5F5B55;
-  --caption: #7A756D;
+  --caption: #716C64; /* spec: #7A756D; darkened one step so captions on the warm ground and fill clear 4.5:1 */
   --placeholder: #C4BFB6;
   --dot: #D9D5CD;
   --link: #1F5FA8;
