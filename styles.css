@@ -118,6 +118,8 @@ h4.sub { font-family: var(--serif); font-size: 18px; font-weight: 600; color: va
 
 /* Legend strip */
 .legend { display: flex; flex-direction: column; gap: 8px; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 16px; margin: 0 0 18px; font-size: 13px; color: var(--ink); }
+/* Each bucket's legend stays pinned at the top of the window while that bucket is scrolled */
+.card .legend { position: sticky; top: 8px; z-index: 10; box-shadow: 0 2px 10px rgba(28,27,26,0.06); }
 .legend .legend-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
 .legend .legend-title { margin-right: 4px; min-width: 64px; }
 .legend .legend-item { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
