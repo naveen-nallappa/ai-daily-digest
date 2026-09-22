@@ -44,14 +44,15 @@
   .ov-body { flex: 1 1 auto; overflow: auto; padding: 16px 20px 32px; }
   .ov-body .card { padding: 20px 22px; }
   .ov-body .table-wrap { overflow: visible; margin: 6px 0 22px; }
-  .ov-body .matrix table { font-size: 13px; line-height: 1.5; border-collapse: separate; border-spacing: 0; }
-  .ov-body .matrix th { position: sticky; top: 0; z-index: 3; min-width: 220px; box-shadow: inset 0 -2px 0 #d0d7e3; border-bottom: 0; }
-  .ov-body .matrix th:first-child { left: 0; z-index: 4; min-width: 160px; }
-  .ov-body .matrix td { min-width: 220px; }
-  .ov-body .matrix td:first-child { position: sticky; left: 0; z-index: 2; background: #fff; min-width: 160px; box-shadow: inset -1px 0 0 #e6eaf1; }
-  .ov-body .matrix tr:hover td:first-child { background: #fafbfd; }
-  .ov-body h4.sub { position: sticky; left: 0; font-size: 15px; margin: 22px 0 8px; }
-  .ov-body .lead, .ov-body p.lead { position: sticky; left: 0; }
+  .ov-body .matrix table { table-layout: fixed; width: 100%; font-size: 12px; line-height: 1.45; border-collapse: separate; border-spacing: 0; }
+  .ov-body .matrix th { position: sticky; top: 0; z-index: 3; min-width: 0; white-space: normal; font-size: 11px; padding: 8px 8px; box-shadow: inset 0 -2px 0 #d0d7e3; border-bottom: 0; }
+  .ov-body .matrix th:first-child { width: 12%; min-width: 0; }
+  .ov-body .matrix td { min-width: 0; padding: 8px 8px; overflow-wrap: anywhere; }
+  .ov-body .matrix td:first-child { min-width: 0; white-space: normal; font-size: 11.5px; }
+  .ov-body .matrix td a { overflow-wrap: anywhere; }
+  .ov-body .grp { font-size: 9px; }
+  .ov-body h4.sub { font-size: 15px; margin: 22px 0 8px; }
+  @media (min-width: 1600px) { .ov-body .matrix table { font-size: 13px; } .ov-body .matrix th { font-size: 11.5px; } }
   body.ov-open { overflow: hidden; }
   .grp { display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: #3366cc; margin-bottom: 2px; }
   .ev { display: inline-block; font-size: 10px; font-weight: 700; line-height: 1; padding: 3px 5px; border-radius: 4px; margin-left: 4px; vertical-align: middle; color: #fff; }
@@ -100,7 +101,7 @@
   <!-- How to read -->
   <div class="section-title" id="how-to-read"><span>How to Read the Matrices</span></div>
   <div class="card">
-    <p>Three conventions were added on September 21, 2026 after reviewer feedback; every matrix below and every table on the <a href="peer-ai-tool-detail.html">Tool detail page</a> follows them. Click any bucket heading (or its Expand button) to open that bucket full-screen with a pinned header row and capability column.</p>
+    <p>Three conventions were added on September 21, 2026 after reviewer feedback; every matrix below and every table on the <a href="peer-ai-tool-detail.html">Tool detail page</a> follows them. Click any bucket heading (or its Expand button) to open that bucket full-screen, with every peer column fitted to the width of your screen and the header row pinned.</p>
     <p><strong>Capability groups.</strong> Rows are grouped into five families so like-for-like comparison holds across firms: <strong>Advisor productivity</strong> (general assistant, meeting prep, research, compliance and drafting) &middot; <strong>Growth analytics &amp; next-best-action</strong> &middot; <strong>Client-facing experiences</strong> &middot; <strong>Agentic workflow automation</strong> (ops and account-servicing agents) &middot; <strong>External-agent access</strong> (MCP, bring-your-own-agent). &ldquo;Firm-wide program / partners&rdquo; is a footer row, not a capability.</p>
     <p><strong>Maturity scale.</strong> Every dated status uses one of five levels: <span class="lvl">Announced</span> (stated intent, demo or roadmap; no users) &rarr; <span class="lvl">Pilot</span> (limited users, beta or early access) &rarr; <span class="lvl">Limited rollout</span> (in production for a defined subset: a region, client tier or waitlist) &rarr; <span class="lvl">Live</span> (generally available to the target population; adoption not disclosed) &rarr; <span class="lvl">Scaled adoption</span> (a disclosed adoption or usage metric covering the majority of the target population, or a firm-wide user count). Availability alone never earns Scaled adoption; a cell holding two tools shows both levels.</p>
     <p><strong>Evidence tags.</strong> Each populated cell ends with a tag for the strength of its best source: <span class="ev ev-p">P</span> primary-verified (SEC filing, earnings transcript, regulator record, or a firm disclosure corroborated by Reuters, Bloomberg, WSJ, FT or CNBC) &middot; <span class="ev ev-c">C</span> company-reported (the firm&rsquo;s own release, newsroom, IR page or a named executive quote) &middot; <span class="ev ev-v">V</span> vendor-reported (the vendor&rsquo;s or partner&rsquo;s release, customer story or self-reported metric) &middot; <span class="ev ev-d">D</span> directional (a single trade-press or syndicated report, a survey, or unverified). Adoption and ROI figures tagged V are self-reported and should not be weighted as audited. No cell yet qualifies for P; upgrading the wirehouse rows from earnings transcripts is the open workstream, as is replacing the remaining syndicated links with primary pages.</p>
@@ -224,7 +225,7 @@
 <div id="bucket-overlay" role="dialog" aria-modal="true" aria-label="Expanded bucket">
   <div class="ov-bar">
     <h2 id="ov-title"></h2>
-    <span class="hint">Scroll sideways for more peers &middot; Esc to close</span>
+    <span class="hint">All peers fit the screen &middot; scroll down for more rows &middot; Esc to close</span>
     <button type="button" class="ov-btn" id="ov-prev" title="Previous bucket">&larr; Prev</button>
     <button type="button" class="ov-btn" id="ov-next" title="Next bucket">Next &rarr;</button>
     <button type="button" class="ov-btn" id="ov-close">Close &#x2715;</button>
