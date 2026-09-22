@@ -252,10 +252,12 @@
   // links inside a summary should navigate, not toggle
   document.addEventListener('click', function (ev) { var a = ev.target.closest('summary a'); if (a) ev.stopPropagation(); }, true);
   function place(d) {
+    // Keep the popover inside the viewport: shift it left only as far as needed, never off the left edge.
     var tip = d.querySelector('.tip'); if (!tip) return;
-    tip.classList.remove('right');
+    tip.classList.remove('right'); tip.style.left = '';
     var r = tip.getBoundingClientRect();
-    if (r.right > window.innerWidth - 8) tip.classList.add('right');
+    var over = r.right - (window.innerWidth - 8);
+    if (over > 0) tip.style.left = (-Math.min(over, Math.max(0, r.left - 8))) + 'px';
   }
   // Hover opens a popover on mouse/trackpad devices (a closed <details> never renders its
   // content, so CSS :hover alone cannot show it); a click pins it open until closed or clicked away.
