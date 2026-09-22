@@ -145,7 +145,7 @@ table.heat tr.fam td, table.cond tr.fam td { border-bottom: 0; padding: 14px 8px
 table.heat tr.fam td .fam-caption { display: block; }
 table.heat td { height: 52px; padding: 6px 8px; text-align: center; vertical-align: middle; }
 table.heat td:first-child { text-align: left; }
-.sq { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; font-size: 13px; font-weight: 700; line-height: 1; cursor: default; }
+details.more > summary.sq, .sq { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; font-size: 13px; font-weight: 700; line-height: 1; cursor: default; }
 .sq:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .dotc { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--dot); }
 td.divl, th.divl { box-shadow: inset 1px 0 0 var(--rule); }
@@ -205,6 +205,9 @@ details.more:not([open]) .tip .tip-close { display: none; }
 body.ov-open { overflow: hidden; }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  table.heat colgroup col.cap, table.cond colgroup col.cap { width: 220px; }
+}
 @media (max-width: 900px) {
   table.cond { display: block; min-width: 0; }
   table.cond colgroup, table.cond thead { display: none; }
