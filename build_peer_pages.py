@@ -123,7 +123,7 @@ def heat_grid(bucket):
             if r['cap'] == cap:
                 return r['cells'][fi]
         return None
-    out = [f'<div class="heat-wrap"><table class="heat" style="min-width:{300 + 64 * n}px"><colgroup><col class="cap">' + '<col>' * n + '</colgroup><thead>']
+    out = [f'<div class="heat-wrap"><table class="heat" style="min-width:{300 + 72 * n}px"><colgroup><col class="cap">' + '<col>' * n + '</colgroup><thead>']
     if len(subs) > 1:
         out.append('<tr class="subs"><th></th>')
         for si, st in enumerate(subs):
