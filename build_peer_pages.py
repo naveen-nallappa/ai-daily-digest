@@ -45,13 +45,14 @@ HEAD = '''<!DOCTYPE html>
 '''
 
 def legend_html():
-    parts = ['<div class="legend" aria-label="Key"><span class="legend-title">Maturity</span>']
+    # Two rows: Maturity on the first line, Evidence on its own line below.
+    parts = ['<div class="legend" aria-label="Key"><div class="legend-row"><span class="legend-title">Maturity</span>']
     for m in D['maturity']:
         parts.append(f'<span class="legend-item"><span class="swatch" style="background:{m["color"]}"></span>{esc(m["name"])}</span>')
-    parts.append('<span class="legend-div"></span><span class="legend-title">Evidence</span>')
+    parts.append('</div><div class="legend-row"><span class="legend-title">Evidence</span>')
     for e in D['evidence']:
         parts.append(f'<span class="legend-item"><span class="ev">{e["tag"]}</span>{esc(e["name"])}</span>')
-    parts.append('</div>')
+    parts.append('</div></div>')
     return ''.join(parts)
 
 def tool_tip(cell, firm, cap):

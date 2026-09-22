@@ -117,8 +117,9 @@ h4.sub { font-family: var(--serif); font-size: 18px; font-weight: 600; color: va
 .m-1, .m-2, .m-3 { color: var(--ink); } .m-4, .m-5 { color: #fff; }
 
 /* Legend strip */
-.legend { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 16px; margin: 0 0 18px; font-size: 13px; color: var(--ink); }
-.legend .legend-title { margin-right: 4px; }
+.legend { display: flex; flex-direction: column; gap: 8px; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 16px; margin: 0 0 18px; font-size: 13px; color: var(--ink); }
+.legend .legend-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
+.legend .legend-title { margin-right: 4px; min-width: 64px; }
 .legend .legend-item { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
 .legend .legend-item .swatch { width: 14px; height: 14px; border-radius: 4px; }
 .legend .legend-div { width: 1px; height: 22px; background: var(--rule); margin: 0 4px; }
