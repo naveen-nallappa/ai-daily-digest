@@ -173,8 +173,7 @@ table.cond tr.seg-row td { font-size: 12px; color: var(--caption); }
 details.more { display: inline; }
 details.more > summary { list-style: none; display: inline-block; cursor: pointer; }
 details.more > summary::-webkit-details-marker { display: none; }
-details.more .tip { position: absolute; z-index: 20; left: 0; top: calc(100% + 6px); width: 340px; max-width: min(340px, 90vw); background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: 10px; box-shadow: 0 8px 28px rgba(28,27,26,0.14); padding: 12px 14px; font-size: 13.5px; line-height: 1.45; font-weight: 400; text-align: left; white-space: normal; }
-details.more .tip.right { left: auto; right: 0; }
+details.more .tip { position: fixed; z-index: 20; left: 0; top: 0; width: 340px; max-width: min(340px, 90vw); background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: 10px; box-shadow: 0 8px 28px rgba(28,27,26,0.14); padding: 12px 14px; font-size: 13.5px; line-height: 1.45; font-weight: 400; text-align: left; white-space: normal; }
 details.more .tip .tip-close { position: absolute; top: 6px; right: 8px; font: inherit; font-size: 12px; color: var(--ink-2); background: none; border: 0; cursor: pointer; padding: 2px 6px; }
 details.more .tip .tip-close:hover { color: var(--ink); }
 details.more .tip .tip-title { font-weight: 600; margin-bottom: 4px; padding-right: 28px; }

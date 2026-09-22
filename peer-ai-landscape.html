@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=36734a73">
+<link rel="stylesheet" href="styles.css?v=9bfc8c79">
 </head>
 <body>
 <div class="container wide">
@@ -252,13 +252,25 @@
   // links inside a summary should navigate, not toggle
   document.addEventListener('click', function (ev) { var a = ev.target.closest('summary a'); if (a) ev.stopPropagation(); }, true);
   function place(d) {
-    // Keep the popover inside the viewport: shift it left only as far as needed, never off the left edge.
+    // Popovers are position:fixed so the scrollable table wrappers cannot clip them (the rightmost
+    // columns used to lose their tooltips). Anchor to the summary, clamp inside the viewport, and
+    // flip above the anchor when there is no room below.
     var tip = d.querySelector('.tip'); if (!tip) return;
-    tip.classList.remove('right'); tip.style.left = '';
-    var r = tip.getBoundingClientRect();
-    var over = r.right - (window.innerWidth - 8);
-    if (over > 0) tip.style.left = (-Math.min(over, Math.max(0, r.left - 8))) + 'px';
+    var sm = d.querySelector(':scope > summary'); var a = (sm || d).getBoundingClientRect();
+    tip.style.left = '0px'; tip.style.top = '0px';
+    var w = tip.offsetWidth, h = tip.offsetHeight, vw = window.innerWidth, vh = window.innerHeight;
+    var left = Math.min(Math.max(8, a.left), Math.max(8, vw - w - 8));
+    var top = a.bottom + 6;
+    if (top + h > vh - 8) { top = a.top - h - 6; if (top < 8) top = Math.max(8, vh - h - 8); }
+    tip.style.left = left + 'px'; tip.style.top = top + 'px';
   }
+  var placeRaf = null;
+  function replaceOpen() {
+    if (placeRaf) return;
+    placeRaf = requestAnimationFrame(function () { placeRaf = null; document.querySelectorAll('details.more[open]').forEach(place); });
+  }
+  window.addEventListener('resize', replaceOpen);
+  document.addEventListener('scroll', replaceOpen, true);
   // Hover opens a popover on mouse/trackpad devices (a closed <details> never renders its
   // content, so CSS :hover alone cannot show it); a click pins it open until closed or clicked away.
   // Delegated so it also works on the cloned bucket inside the full-screen overlay.
