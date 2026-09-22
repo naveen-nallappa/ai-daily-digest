@@ -252,8 +252,31 @@
     var r = tip.getBoundingClientRect();
     if (r.right > window.innerWidth - 8) tip.classList.add('right');
   }
+  // Hover opens the popover on mouse/trackpad devices (a closed <details> never renders its
+  // content, so CSS :hover alone cannot show it); a click pins it open until closed or clicked away.
+  var hoverable = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   document.querySelectorAll('.cellwrap').forEach(function (w) {
-    w.addEventListener('mouseenter', function () { var d = w.querySelector('details.more'); if (d && !d.open) place(d); });
+    var d = w.querySelector('details.more'); if (!d) return;
+    var timer = null;
+    if (hoverable) {
+      w.addEventListener('mouseenter', function () {
+        clearTimeout(timer);
+        if (!d.open) { d.setAttribute('data-hover', '1'); d.open = true; }
+      });
+      w.addEventListener('mouseleave', function () {
+        timer = setTimeout(function () {
+          if (d.hasAttribute('data-hover')) { d.removeAttribute('data-hover'); d.open = false; }
+        }, 150);
+      });
+      d.addEventListener('toggle', function () { if (!d.open) d.removeAttribute('data-hover'); });
+      var sm = d.querySelector(':scope > summary');
+      if (sm) sm.addEventListener('click', function (ev) {
+        if (ev.target.closest('a')) return;
+        if (d.hasAttribute('data-hover')) { ev.preventDefault(); d.removeAttribute('data-hover'); }
+      });
+    } else {
+      w.addEventListener('mouseenter', function () { if (!d.open) place(d); });
+    }
   });
 })();
 </script>

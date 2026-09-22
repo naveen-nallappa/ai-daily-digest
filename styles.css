@@ -188,6 +188,7 @@ details.more .tip .tip-src { margin-top: 6px; font-size: 12px; color: var(--ink-
 }
 details.more[open] .tip { display: block; }
 details.more:not([open]) .tip .tip-close { display: none; }
+details.more[data-hover] .tip .tip-close { display: none; }
 
 /* Full-screen bucket overlay */
 #bucket-overlay { display: none; position: fixed; inset: 0; z-index: 1000; background: var(--ground); flex-direction: column; }
