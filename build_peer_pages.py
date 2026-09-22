@@ -199,9 +199,17 @@ def export_table(st, title):
     out.append('</tbody></table></div>')
     return ''.join(out)
 
+def howto_html(anchor=False):
+    # "How to read" popover: same hover/tap/keyboard mechanics as the cell popovers.
+    idattr = ' id="how-to-read"' if anchor else ''
+    return (f'<span class="cellwrap howto"><details class="more"{idattr}>'
+            f'<summary class="expand-btn howto-btn" aria-label="How to read the matrices" title="Capability groups, maturity scale and evidence tags">How to read &#x24D8;</summary>'
+            f'<div class="tip tip-wide" role="tooltip"><button type="button" class="tip-close" aria-label="Close">Close &#x2715;</button>'
+            f'<div class="tip-title">How to read the matrices</div>{D["prose"]["how_to_read"]}</div></details></span>')
+
 def bucket_section(b):
     bid = b['id']
-    out = [f'\n  <!-- Bucket {bid} -->\n  <div class="section-title bucket-title" id="bucket-{bid}" data-bucket="{bid}" title="Click to expand to full screen"><span>{esc(b["title"])}</span><button type="button" class="expand-btn" aria-label="Expand {esc(b["title"])} to full screen">Expand &#x2922;</button></div>\n  <div class="card">\n']
+    out = [f'\n  <!-- Bucket {bid} -->\n  <div class="section-title bucket-title" id="bucket-{bid}" data-bucket="{bid}" title="Click to expand to full screen"><span>{esc(b["title"])}</span><button type="button" class="expand-btn" aria-label="Expand {esc(b["title"])} to full screen">Expand &#x2922;</button>{howto_html(anchor=(str(bid) == "1"))}</div>\n  <div class="card">\n']
     out.append(f'    <p class="lead">{b["lead"]}</p>\n')
     out.append('    ' + legend_html() + '\n')
     out.append('    <div class="view-title"><h2>At a glance</h2><span class="hint">Darker means further along. The letter is the evidence grade.</span></div>\n')
@@ -221,6 +229,7 @@ OVERLAY = '''
   <div class="ov-bar">
     <h2 id="ov-title"></h2>
     <span class="hint">All peers fit the screen · scroll down for more rows · Esc to close</span>
+    {howto}
     <button type="button" class="ov-btn" id="ov-prev" title="Previous bucket">&larr; Prev</button>
     <button type="button" class="ov-btn" id="ov-next" title="Next bucket">Next &rarr;</button>
     <button type="button" class="ov-btn" id="ov-close">Close &#x2715;</button>
@@ -259,7 +268,7 @@ OVERLAY = '''
     if (current >= 0 && history.replaceState) history.replaceState(null, '', '#' + titles[current].id);
     current = -1;
   }
-  titles.forEach(function (t, i) { t.addEventListener('click', function (ev) { ev.preventDefault(); open(i); }); });
+  titles.forEach(function (t, i) { t.addEventListener('click', function (ev) { if (ev.target.closest('.howto')) return; ev.preventDefault(); open(i); }); });
   document.getElementById('ov-close').addEventListener('click', close);
   document.getElementById('ov-prev').addEventListener('click', function () { open(current - 1); });
   document.getElementById('ov-next').addEventListener('click', function () { open(current + 1); });
@@ -298,32 +307,45 @@ OVERLAY = '''
     var r = tip.getBoundingClientRect();
     if (r.right > window.innerWidth - 8) tip.classList.add('right');
   }
-  // Hover opens the popover on mouse/trackpad devices (a closed <details> never renders its
+  // Hover opens a popover on mouse/trackpad devices (a closed <details> never renders its
   // content, so CSS :hover alone cannot show it); a click pins it open until closed or clicked away.
+  // Delegated so it also works on the cloned bucket inside the full-screen overlay.
   var hoverable = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  document.querySelectorAll('.cellwrap').forEach(function (w) {
-    var d = w.querySelector('details.more'); if (!d) return;
-    var timer = null;
-    if (hoverable) {
-      w.addEventListener('mouseenter', function () {
-        clearTimeout(timer);
-        if (!d.open) { d.setAttribute('data-hover', '1'); d.open = true; }
-      });
-      w.addEventListener('mouseleave', function () {
-        timer = setTimeout(function () {
-          if (d.hasAttribute('data-hover')) { d.removeAttribute('data-hover'); d.open = false; }
-        }, 150);
-      });
-      d.addEventListener('toggle', function () { if (!d.open) d.removeAttribute('data-hover'); });
-      var sm = d.querySelector(':scope > summary');
-      if (sm) sm.addEventListener('click', function (ev) {
-        if (ev.target.closest('a')) return;
-        if (d.hasAttribute('data-hover')) { ev.preventDefault(); d.removeAttribute('data-hover'); }
-      });
-    } else {
-      w.addEventListener('mouseenter', function () { if (!d.open) place(d); });
-    }
-  });
+  var hoverTimers = new WeakMap();
+  function detailsOf(el) { var w = el && el.closest ? el.closest('.cellwrap') : null; return w ? { w: w, d: w.querySelector('details.more') } : null; }
+  if (hoverable) {
+    document.addEventListener('mouseover', function (ev) {
+      var x = detailsOf(ev.target); if (!x || !x.d) return;
+      if (ev.relatedTarget && x.w.contains(ev.relatedTarget)) return;
+      clearTimeout(hoverTimers.get(x.d));
+      if (!x.d.open) { x.d.setAttribute('data-hover', '1'); x.d.open = true; }
+    });
+    document.addEventListener('mouseout', function (ev) {
+      var x = detailsOf(ev.target); if (!x || !x.d) return;
+      if (ev.relatedTarget && x.w.contains(ev.relatedTarget)) return;
+      var d = x.d;
+      hoverTimers.set(d, setTimeout(function () {
+        if (d.hasAttribute('data-hover')) { d.removeAttribute('data-hover'); d.open = false; }
+      }, 150));
+    });
+    document.addEventListener('toggle', function (ev) {
+      var d = ev.target; if (d instanceof HTMLDetailsElement && !d.open) d.removeAttribute('data-hover');
+    }, true);
+    document.addEventListener('click', function (ev) {
+      var sm = ev.target.closest('details.more > summary'); if (!sm || ev.target.closest('a')) return;
+      var d = sm.parentNode;
+      if (d.hasAttribute('data-hover')) { ev.preventDefault(); d.removeAttribute('data-hover'); }
+    });
+  } else {
+    document.addEventListener('mouseover', function (ev) { var x = detailsOf(ev.target); if (x && x.d && !x.d.open) place(x.d); });
+  }
+  function openHowTo() {
+    if (location.hash !== '#how-to-read') return;
+    var d = document.getElementById('how-to-read'); if (!d) return;
+    d.removeAttribute('data-hover'); d.open = true;
+    d.closest('.section-title').scrollIntoView({ block: 'start' });
+  }
+  window.addEventListener('hashchange', openHowTo); openHowTo();
 })();
 </script>
 '''
@@ -543,11 +565,6 @@ def landscape():
     {P['scope']}
   </div>
 
-  <div class="section-title" id="how-to-read"><span>How to Read the Matrices</span></div>
-  <div class="card">
-    {P['how_to_read']}
-  </div>
-
   <div class="section-title"><span>Executive Takeaways</span></div>
   <div class="card">
     {P['exec']}
@@ -578,7 +595,7 @@ def landscape():
 
 </div>
 ''')
-    out.append(OVERLAY)
+    out.append(OVERLAY.replace('{howto}', howto_html()))
     out.append(PEERDECK)
     out.append(wiring(D['meta']['site'] + 'peer-ai-landscape.html', 'matrix', 'dl-matrix', 'Peer-AI-Landscape-tables', 'Peers across, capabilities down \\u2014 one table per slide'))
     out.append('</body>\n</html>\n')

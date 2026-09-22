@@ -189,6 +189,16 @@ details.more .tip .tip-src { margin-top: 6px; font-size: 12px; color: var(--ink-
 details.more[open] .tip { display: block; }
 details.more:not([open]) .tip .tip-close { display: none; }
 details.more[data-hover] .tip .tip-close { display: none; }
+/* "How to read" popover beside each bucket's Expand button */
+.section-title .howto { display: inline-block; }
+.section-title .howto details.more > summary.howto-btn { display: inline-block; }
+details.more .tip.tip-wide { width: 640px; max-width: min(640px, 92vw); max-height: 70vh; overflow: auto; font-size: 14px; line-height: 1.5; text-transform: none; letter-spacing: normal; font-weight: 400; }
+details.more .tip.tip-wide p { margin: 0 0 10px; }
+details.more .tip.tip-wide p:last-child { margin-bottom: 0; }
+.section-title.bucket-title:hover .tip span { color: inherit; }
+.ov-bar .howto details.more > summary.howto-btn { color: #fff; background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.3); }
+.ov-bar .howto details.more > summary.howto-btn:hover { background: rgba(255,255,255,0.24); }
+.ov-bar .howto .tip { color: var(--ink); }
 
 /* Full-screen bucket overlay */
 #bucket-overlay { display: none; position: fixed; inset: 0; z-index: 1000; background: var(--ground); flex-direction: column; }
