@@ -21,6 +21,7 @@ MCOLOR = {m['level']: m['color'] for m in D['maturity']}
 SHORT_LEVEL = {'Announced': 'Announced', 'Pilot': 'Pilot', 'Limited rollout': 'Limited rollout', 'Live': 'Live', 'Scaled adoption': 'Scaled'}
 SHORT_GROUP = {'Advisor productivity': 'Advisor productivity', 'Growth analytics & next-best-action': 'Growth analytics', 'Client-facing experiences': 'Client-facing experiences', 'Agentic workflow automation': 'Agentic workflow', 'External-agent access': 'External-agent access'}
 EVNAME = {e['tag']: e['name'] for e in D['evidence']}
+SHORT_FIRM = {'Stifel, Creative Planning, Fisher, Captrust, Corient, WEG, Mariner': 'Stifel + 6 others', 'Origin, Mezzi, PortfolioPilot': 'Origin, Mezzi, PortfolioPilot'}
 
 def esc(s): return html.escape(s or '', quote=False)
 
@@ -122,7 +123,7 @@ def heat_grid(bucket):
             if r['cap'] == cap:
                 return r['cells'][fi]
         return None
-    out = ['<div class="heat-wrap"><table class="heat"><colgroup><col class="cap">' + '<col>' * n + '</colgroup><thead>']
+    out = [f'<div class="heat-wrap"><table class="heat" style="min-width:{300 + 64 * n}px"><colgroup><col class="cap">' + '<col>' * n + '</colgroup><thead>']
     if len(subs) > 1:
         out.append('<tr class="subs"><th></th>')
         for si, st in enumerate(subs):
@@ -132,7 +133,9 @@ def heat_grid(bucket):
     for name, seg, si, first in firms:
         cls = 'firm' + (' divl' if (si and first) else '')
         segh = f'<span class="seg">{esc(seg)}</span>' if seg else ''
-        out.append(f'<th class="{cls}">{esc(name)}{segh}</th>')
+        short = SHORT_FIRM.get(name)
+        label = f'<abbr title="{esc(name)}">{esc(short)}</abbr>' if short else esc(name)
+        out.append(f'<th class="{cls}">{label}{segh}</th>')
     out.append('</tr></thead><tbody>')
     last_g = None
     for cap, g in caps:

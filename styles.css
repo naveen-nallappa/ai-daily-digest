@@ -132,7 +132,8 @@ h4.sub { font-family: var(--serif); font-size: 18px; font-weight: 600; color: va
 table.heat, table.cond { table-layout: fixed; width: 100%; min-width: 720px; border-collapse: separate; border-spacing: 0; }
 table.heat th, table.cond th { position: sticky; top: 0; z-index: 3; background: var(--surface); padding: 10px 8px 8px; white-space: normal; }
 table.heat th:first-child, table.cond th:first-child { text-align: left; }
-table.heat th.firm, table.cond th.firm { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 0; text-transform: none; color: var(--ink); }
+table.heat th.firm, table.cond th.firm { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 0; text-transform: none; color: var(--ink); overflow-wrap: anywhere; hyphens: auto; }
+table.heat th.firm abbr { text-decoration: none; border-bottom: 1px dotted var(--caption); cursor: help; }
 table.heat th.firm .seg, table.cond th.firm .seg { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--caption); margin-top: 2px; }
 table.heat th.sub-cap, table.cond th.sub-cap { text-align: center; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--caption); padding: 6px 8px 2px; border-bottom: 0; }
 table.heat thead tr.firms th, table.cond thead tr.firms th { border-bottom: 2px solid var(--ink); }
@@ -200,7 +201,8 @@ details.more:not([open]) .tip .tip-close { display: none; }
 .ov-body { flex: 1 1 auto; overflow: auto; padding: 16px 20px 32px; }
 .ov-body .card { padding: 20px 22px; }
 .ov-body .heat-wrap, .ov-body .cond-wrap { overflow: visible; }
-.ov-body table.heat, .ov-body table.cond { min-width: 0; }
+.ov-body table.heat, .ov-body table.cond { min-width: 0 !important; }
+.ov-body table.heat th.firm { font-size: 12px; padding-left: 4px; padding-right: 4px; }
 .ov-body table.heat colgroup col.cap, .ov-body table.cond colgroup col.cap { width: 240px; }
 body.ov-open { overflow: hidden; }
 
