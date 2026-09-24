@@ -3008,7 +3008,13 @@
  "meta": {
   "as_of": "2026-09-23",
   "doc_url": "https://claude.ai/code/artifact/f5338748-fa97-4add-a60d-d782d678c2a4",
-  "site": "https://naveen-nallappa.github.io/ai-daily-digest/"
+  "site": "https://naveen-nallappa.github.io/ai-daily-digest/",
+  "siblings": [
+   {
+    "label": "Asset management landscape",
+    "href": "am-ai-landscape.html"
+   }
+  ]
  },
  "groups": [
   "Advisor productivity",

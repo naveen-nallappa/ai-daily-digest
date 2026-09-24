@@ -11,7 +11,16 @@ are stored as HTML strings in the same file.
 import json, html, re, os, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-D = json.load(open(os.path.join(HERE, 'peer-data.json')))
+# Usage: python3 build_peer_pages.py [peer-data.json]  (default: the wealth-management data file)
+import sys
+DATA_FILE = sys.argv[1] if len(sys.argv) > 1 else 'peer-data.json'
+D = json.load(open(os.path.join(HERE, DATA_FILE)))
+M = D['meta']
+TITLE = M.get('title', 'Peer AI Landscape in Wealth Management')
+LAND_FILE = M.get('landscape_file', 'peer-ai-landscape.html')
+DETAIL_FILE = M.get('detail_file', 'peer-ai-tool-detail.html')
+PPTX_PREFIX = M.get('pptx_prefix', 'Peer-AI-Landscape')
+SIBLINGS = M.get('siblings', [])  # [{"label": "...", "href": "..."}] extra nav pills
 # Cache-buster for the shared stylesheet: GitHub Pages caches styles.css for 10 minutes, so a
 # style change would otherwise render stale on a page that was just regenerated.
 import hashlib
@@ -24,6 +33,7 @@ LV = {m['name']: m['level'] for m in D['maturity']}
 MCOLOR = {m['level']: m['color'] for m in D['maturity']}
 SHORT_LEVEL = {'Announced': 'Announced', 'Pilot': 'Pilot', 'Limited rollout': 'Limited rollout', 'Live': 'Live', 'Scaled adoption': 'Scaled'}
 SHORT_GROUP = {'Advisor productivity': 'Advisor productivity', 'Growth analytics & next-best-action': 'Growth analytics', 'Client-facing experiences': 'Client-facing experiences', 'Agentic workflow automation': 'Agentic workflow', 'External-agent access': 'External-agent access'}
+SHORT_GROUP.update(M.get('short_groups', {}))
 EVNAME = {e['tag']: e['name'] for e in D['evidence']}
 SHORT_FIRM = {'Stifel, Creative Planning, Fisher, Captrust, Corient, WEG, Mariner': 'Stifel + 6 others', 'Origin, Mezzi, PortfolioPilot': 'Origin, Mezzi, PortfolioPilot'}
 
@@ -225,7 +235,7 @@ def bucket_section(b):
             out.append(f'    <h4 class="sub">{st["id"]}. {esc(st["name"])}</h4>\n')
         out.append('    ' + cond_table(st, b) + '\n')
         out.append('    ' + export_table(st, (f'{st["id"]}. {st["name"]}' if st.get('name') else b['title'])) + '\n')
-    out.append(f'    <p class="lead" style="margin-top:12px">Row-per-tool detail with partner and facing columns: <a href="peer-ai-tool-detail.html#bucket-{bid}">Tool detail page</a>.</p>\n')
+    out.append(f'    <p class="lead" style="margin-top:12px">Row-per-tool detail with partner and facing columns: <a href="{DETAIL_FILE}#bucket-{bid}">Tool detail page</a>.</p>\n')
     out.append('    ' + b['after_html'] + '\n  </div>\n')
     return ''.join(out)
 
@@ -453,14 +463,14 @@ PEERDECK = r'''
     opts = opts || {};
     var pptx = new PptxGenJS();
     pptx.layout = 'LAYOUT_WIDE';
-    pptx.title = 'Peer AI Landscape in Wealth Management';
+    pptx.title = opts.title || 'Peer AI Landscape';
     pptx.author = opts.author || 'Naveen Nallappa';
     var asOf = opts.asOf || '';
     var W = 13.333, M = 0.3, TOP = 1.3, BOTTOM = 0.4, tableW = W - 2 * M;
     var s0 = pptx.addSlide();
     s0.background = { color: INK };
     s0.addText('PEER AI LANDSCAPE', { x: 0.8, y: 2.2, w: 11, h: 0.4, fontFace: 'Calibri', fontSize: 12, bold: true, color: 'BFBAB2', charSpacing: 3 });
-    s0.addText(opts.title || 'Peer AI Landscape in Wealth Management', { x: 0.8, y: 2.6, w: 11.5, h: 1.0, fontFace: 'Georgia', fontSize: 34, bold: true, color: 'FFFFFF' });
+    s0.addText(opts.title || 'Peer AI Landscape', { x: 0.8, y: 2.6, w: 11.5, h: 1.0, fontFace: 'Georgia', fontSize: 34, bold: true, color: 'FFFFFF' });
     s0.addText(opts.subtitle || 'Peers across, capabilities down — one table per slide', { x: 0.8, y: 3.6, w: 11.5, h: 0.5, fontFace: 'Calibri', fontSize: 16, color: 'D9D5CD' });
     if (asOf) s0.addText('As of ' + asOf, { x: 0.8, y: 4.2, w: 11.5, h: 0.4, fontFace: 'Calibri', fontSize: 12, color: 'D9D5CD' });
     if (opts.sourceUrl) s0.addText(opts.sourceUrl, { x: 0.8, y: 6.6, w: 11.5, h: 0.4, fontFace: 'Calibri', fontSize: 10, color: 'BFBAB2', hyperlink: { url: opts.sourceUrl } });
@@ -551,7 +561,7 @@ def wiring(page_url, which, btn, fname, subtitle):
     var name = '{fname}-' + new Date().toISOString().slice(0, 10) + '.pptx';
     try {{
       var tables = PeerDeck.extractTables(document, '{which}');
-      var pptx = PeerDeck.buildPeerDeck(PptxGenJS, tables, {{ asOf: asOf(), sourceUrl: PAGE, subtitle: '{subtitle}' }});
+      var pptx = PeerDeck.buildPeerDeck(PptxGenJS, tables, {{ asOf: asOf(), sourceUrl: PAGE, subtitle: '{subtitle}', title: document.querySelector('.header h1').textContent.trim() }});
       pptx.write({{ outputType: 'blob' }}).then(function (blob) {{
         btn.classList.remove('busy');
         var url = saveBlob(blob, name);
@@ -566,16 +576,17 @@ def wiring(page_url, which, btn, fname, subtitle):
 
 def landscape():
     P = D['prose']
-    out = [HEAD.format(title='Peer AI Landscape in Wealth Management — AI Daily Digest', cssv=CSS_VERSION)]
+    out = [HEAD.format(title=f'{TITLE} — AI Daily Digest', cssv=CSS_VERSION)]
     out.append(f'''
   <div class="header">
     <div class="header-label">Living Reference</div>
-    <h1>Peer AI Landscape in Wealth Management</h1>
+    <h1>{TITLE}</h1>
     <div class="date">As of {AS_OF} · Naveen Nallappa</div>
     <a class="pill" href="index.html">&larr; Back to digests</a>
     <a class="pill" href="{DOC}" target="_blank">Live doc (Claude)</a>
-    <a class="pill" href="peer-ai-tool-detail.html">Tool detail (page)</a>
+    <a class="pill" href="{DETAIL_FILE}">Tool detail (page)</a>
     <a class="pill" href="#changes">Change log</a>
+    {sibling_pills()}
     <a class="pill pill-btn" href="#" id="dl-matrix" title="One slide per peer-by-capability table, full text with maturity swatches">&#8681; PowerPoint: peer tables</a>
   </div>
 
@@ -609,36 +620,34 @@ def landscape():
 
   <div class="footer">
     <div class="divider"></div>
-    Mirrors the <a href="{DOC}" target="_blank">living Claude doc</a> as of {AS_OF_SHORT} · Built from peer-data.json · <a href="index.html">AI Daily Digest home</a>
+    Mirrors the <a href="{DOC}" target="_blank">living Claude doc</a> as of {AS_OF_SHORT} · Built from {DATA_FILE} · <a href="index.html">AI Daily Digest home</a>
   </div>
 
 </div>
 ''')
     out.append(OVERLAY.replace('{howto}', howto_html()))
     out.append(PEERDECK)
-    out.append(wiring(D['meta']['site'] + 'peer-ai-landscape.html', 'matrix', 'dl-matrix', 'Peer-AI-Landscape-tables', 'Peers across, capabilities down \\u2014 one table per slide'))
+    out.append(wiring(D['meta']['site'] + LAND_FILE, 'matrix', 'dl-matrix', PPTX_PREFIX + '-tables', 'Peers across, capabilities down \\u2014 one table per slide'))
     out.append('</body>\n</html>\n')
     return ''.join(out)
 
 def detail():
-    out = [HEAD.format(title='Peer AI Landscape — Tool Detail — AI Daily Digest', cssv=CSS_VERSION)]
+    out = [HEAD.format(title=f'{TITLE} — Tool Detail — AI Daily Digest', cssv=CSS_VERSION)]
     out.append(f'''
   <div class="header">
     <div class="header-label">Living Reference &middot; Detail</div>
-    <h1>Peer AI Landscape &mdash; Tool Detail</h1>
+    <h1>{TITLE} &mdash; Tool Detail</h1>
     <div class="date">As of {AS_OF} · Naveen Nallappa</div>
     <a class="pill" href="index.html">&larr; Back to digests</a>
-    <a class="pill" href="peer-ai-landscape.html">&larr; Landscape (matrices)</a>
+    <a class="pill" href="{LAND_FILE}">&larr; Landscape (matrices)</a>
     <a class="pill" href="{DOC}" target="_blank">Live doc (Claude)</a>
-    <a class="pill" href="#bucket-1">Bucket 1</a>
-    <a class="pill" href="#bucket-2">Bucket 2</a>
-    <a class="pill" href="#bucket-3">Bucket 3</a>
+    {''.join(f'<a class="pill" href="#bucket-{t["id"][-1]}">Bucket {t["id"][-1]}</a>' for t in D['detail_tables'])}
     <a class="pill pill-btn" href="#" id="dl-detail" title="Row-per-tool tables, one bucket per slide">&#8681; PowerPoint: tool detail</a>
   </div>
 
   <div class="section-title" id="tool-detail"><span>Tool detail (row per tool)</span></div>
   <div class="card">
-    <p class="lead">Row-per-tool detail behind the capability matrices on the <a href="peer-ai-landscape.html">landscape page</a>. Same sources; updated with the doc. Maturity uses the five-level scale and Evidence the P/C/V/D tags defined in <a href="peer-ai-landscape.html#how-to-read">How to read the matrices</a>.</p>
+    <p class="lead">Row-per-tool detail behind the capability matrices on the <a href="{LAND_FILE}">landscape page</a>. Same sources; updated with the doc. Maturity uses the five-level scale and Evidence the P/C/V/D tags defined in <a href="{LAND_FILE}#how-to-read">How to read the matrices</a>.</p>
     {legend_html()}
 ''')
     for t in D['detail_tables']:
@@ -659,7 +668,7 @@ def detail():
             return '<tr>' + ''.join(f'<td>{x}</td>' for x in tds) + '</tr>'
         tbody = re.sub(r'<tr>.*?</tr>', fix_row, tbody, flags=re.S)
         out.append(f'''    <h4 class="sub" id="bucket-{n}">{t['title']}</h4>
-    <p class="lead back-link"><a href="peer-ai-landscape.html#bucket-{n}">&larr; Back to this bucket&rsquo;s matrices</a></p>
+    <p class="lead back-link"><a href="{LAND_FILE}#bucket-{n}">&larr; Back to this bucket&rsquo;s matrices</a></p>
     <div class="table-wrap">
     <table>
       <thead>{t['thead']}</thead>
@@ -673,17 +682,20 @@ def detail():
 
   <div class="footer">
     <div class="divider"></div>
-    Mirrors the <a href="{DOC}" target="_blank">living Claude doc</a> (Tool detail tab) as of {AS_OF_SHORT} · <a href="peer-ai-landscape.html">Landscape page</a> · <a href="index.html">AI Daily Digest home</a>
+    Mirrors the <a href="{DOC}" target="_blank">living Claude doc</a> (Tool detail tab) as of {AS_OF_SHORT} · <a href="{LAND_FILE}">Landscape page</a> · <a href="index.html">AI Daily Digest home</a>
   </div>
 
 </div>
 ''')
     out.append(PEERDECK)
-    out.append(wiring(D['meta']['site'] + 'peer-ai-tool-detail.html', 'detail', 'dl-detail', 'Peer-AI-Landscape-tool-detail', 'Row-per-tool detail \\u2014 one bucket per slide'))
+    out.append(wiring(D['meta']['site'] + DETAIL_FILE, 'detail', 'dl-detail', PPTX_PREFIX + '-tool-detail', 'Row-per-tool detail \\u2014 one bucket per slide'))
     out.append('</body>\n</html>\n')
     return ''.join(out)
 
+def sibling_pills():
+    return ''.join(f'<a class="pill" href="{s["href"]}">{s["label"]}</a>' for s in SIBLINGS)
+
 if __name__ == '__main__':
-    open(os.path.join(HERE, 'peer-ai-landscape.html'), 'w').write(landscape())
-    open(os.path.join(HERE, 'peer-ai-tool-detail.html'), 'w').write(detail())
-    print('wrote peer-ai-landscape.html and peer-ai-tool-detail.html (as of', AS_OF_ISO + ')')
+    open(os.path.join(HERE, LAND_FILE), 'w').write(landscape())
+    open(os.path.join(HERE, DETAIL_FILE), 'w').write(detail())
+    print(f'wrote {LAND_FILE} and {DETAIL_FILE} (as of', AS_OF_ISO + ')')
